@@ -14,6 +14,8 @@ Everything needed to run the live build, in one folder.
     .claude/agents/       analyst · sceptic · storywright
     prompts/DEMO.md       the four prompts, to paste in order
     RUNBOOK.md            what to type, what to say, what to do if it stalls
+    output/               where every build lands, overwritten every run
+    fallback/             a saved copy of a working build, never overwritten
 
 ## Running it
 

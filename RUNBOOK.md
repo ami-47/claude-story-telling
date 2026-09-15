@@ -8,8 +8,10 @@ For whoever is driving. Everything below is what to do and what to say, in order
     python3 verify_calls.py
     python3 build_story.py
 
-Run all four demo prompts once yourself and keep the outputs. If a stage stalls
-live, open the saved one and carry on talking. Nobody can tell.
+Run all four demo prompts once yourself. When the page is finished, copy
+`output/story.html` and `output/story.artifact.html` into `fallback/` before
+you touch anything again — `output/` gets overwritten by every later build, so
+`fallback/` is the only copy that survives a stall.
 
 Have `output/story.html`, `arch/pipeline.html` and `prompts/DEMO.md` open in
 tabs before you start. Copy each prompt from the DEMO.md tab, never retype one
@@ -103,9 +105,9 @@ That is the moment the session stops being a demo.
 
 ## If something goes wrong
 
-**A generation stalls.** "Let me show you the one I ran this morning." Open the
-saved output. Keep talking. Do not wait, do not apologise, do not debug on
-screen. Debugging live teaches nothing and costs four minutes.
+**A generation stalls.** "Let me show you the one I ran this morning." Open
+`fallback/story.html`. Keep talking. Do not wait, do not apologise, do not
+debug on screen. Debugging live teaches nothing and costs four minutes.
 
 **A connector fails.** Skip it. Nothing in the pipeline depends on one. Point at
 the architecture map instead and make the same point in words.
