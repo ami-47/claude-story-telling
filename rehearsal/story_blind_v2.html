@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The hour Northgate loses new patients</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --marble:#FBF7F1;
+    --marble-2:#DEF0E9;
+    --marble-3:#FBEED3;
+    --wash-coral:#FCE2D8;
+    --wash-plum:#F3E3EF;
+    --ink:#271C15;
+    --ink-2:#5B4A3E;
+    --action:#E1421F;
+    --action-deep:#A8330F;
+    --sea:#0B7A62;
+    --premium:#B9790A;
+    --premium-deep:#8F5C05;
+    --out: cubic-bezier(.23,1,.32,1);
+    --inout: cubic-bezier(.77,0,.175,1);
+    --sp: 4px;
+  }
+
+  *{box-sizing:border-box;}
+  html{background:var(--marble);}
+  body{
+    margin:0;
+    background:var(--marble);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.55;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.display,.section-head,.card-head,.num{
+    font-family:'Fraunces',serif;
+    font-style:normal;
+  }
+  .mono,.label,.axis-label{
+    font-family:'IBM Plex Mono',monospace;
+  }
+
+  .display{
+    font-size:clamp(46px,8.4vw,124px);
+    line-height:.92;
+    font-weight:800;
+    letter-spacing:-.035em;
+    text-wrap:balance;
+    margin:0;
+  }
+  .section-head{
+    font-size:clamp(32px,4.6vw,62px);
+    line-height:1.04;
+    font-weight:800;
+    letter-spacing:-.025em;
+    text-wrap:balance;
+    margin:0 0 20px;
+  }
+  .card-head{
+    font-size:clamp(21px,2.2vw,28px);
+    line-height:1.15;
+    font-weight:700;
+    margin:0 0 8px;
+  }
+  .lead{
+    font-size:clamp(18px,1.9vw,23px);
+    line-height:1.5;
+    font-weight:400;
+    max-width:62ch;
+    text-wrap:pretty;
+  }
+  p.body-text{
+    font-size:17px;
+    line-height:1.55;
+    font-weight:400;
+    max-width:66ch;
+    text-wrap:pretty;
+    color:var(--ink);
+  }
+  .label{
+    font-size:11px;
+    line-height:1.4;
+    font-weight:500;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+  }
+  .axis-label{
+    font-size:11px;
+    letter-spacing:.02em;
+    fill:var(--ink-2);
+  }
+
+  strong{font-weight:700;}
+  em{font-style:normal;font-weight:700;} /* never italic: emphasis is a weight step only */
+
+  .tabular{font-variant-numeric: tabular-nums;}
+
+  section{
+    position:relative;
+    padding:96px 8vw;
+  }
+  section.cover, section.question{padding:160px 8vw;}
+  section.connective{padding:56px 8vw;}
+
+  .marble-2{background:var(--marble-2);}
+  .marble-3{background:var(--marble-3);}
+  .wash-coral{background:var(--wash-coral);}
+  .wash-plum{background:var(--wash-plum);}
+
+  .wrap{max-width:1080px;margin:0 auto;}
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 12px;
+    border-radius:4px;
+    background:rgba(39,28,21,.06);
+    color:var(--ink-2);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    margin-bottom:24px;
+  }
+
+  .n-note{color:var(--ink-2);font-size:14px;}
+  .n-note .mono{font-size:12px;}
+
+  /* cards */
+  .card{
+    background:rgba(255,255,255,.55);
+    border-radius:8px;
+    padding:32px;
+    margin-top:32px;
+  }
+  .card + .card{margin-top:32px;}
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+    margin-top:32px;
+  }
+  .card-grid .card{margin-top:0;padding:24px;border-radius:8px;}
+
+  /* buttons */
+  button.replay{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--action-deep);
+    background:transparent;
+    border:1px solid var(--action-deep);
+    border-radius:4px;
+    padding:8px 14px;
+    cursor:pointer;
+    margin-top:20px;
+    transition:transform 150ms var(--inout);
+  }
+  button.replay:active{transform:scale(.96);}
+  @media (hover:hover) and (pointer:fine){
+    button.replay:hover{background:rgba(225,66,31,.08);}
+  }
+
+  /* entry animation */
+  .enter{opacity:0;transform:translateY(12px);filter:blur(4px);
+    transition:opacity 420ms var(--out), transform 420ms var(--out), filter 420ms var(--out);}
+  .enter.in{opacity:1;transform:translateY(0);filter:blur(0);}
+  .enter.g1{transition-delay:0ms;}
+  .enter.g2{transition-delay:100ms;}
+  .enter.g3{transition-delay:200ms;}
+
+  .word{display:inline-block;opacity:0;transform:translateY(12px);filter:blur(4px);
+    transition:opacity 420ms var(--out), transform 420ms var(--out), filter 420ms var(--out);}
+  .word.in{opacity:1;transform:translateY(0);filter:blur(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    .enter,.word{transition:opacity 420ms var(--out) !important; transform:none !important; filter:none !important;}
+    .enter{opacity:0;} .enter.in{opacity:1;}
+    .word{opacity:0;} .word.in{opacity:1;}
+  }
+
+  /* rail wayfinding, one element for the whole page */
+  .rail{
+    position:fixed;
+    right:22px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    z-index:40;
+  }
+  .rail button{
+    width:8px;height:8px;border-radius:50%;
+    background:rgba(39,28,21,.18);
+    border:none;padding:0;cursor:pointer;
+    transition:transform 150ms var(--inout), background 150ms var(--inout);
+  }
+  .rail button.active{background:var(--action-deep);transform:scale(1.35);}
+  @media (max-width:720px){.rail{display:none;}}
+
+  /* chart chrome */
+  svg.chart{width:100%;height:auto;display:block;overflow:visible;}
+  .gridline{stroke:rgba(39,28,21,.09);stroke-dasharray:2 4;stroke-width:1;}
+  .baseline{stroke:rgba(39,28,21,.22);stroke-width:1;}
+  .bar{rx:2;}
+  .series-label{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:var(--ink-2);}
+
+  .fact-table{width:100%;border-collapse:collapse;}
+  .fact-table th,.fact-table td{
+    text-align:left;
+    padding:10px 12px;
+    border-bottom:1px solid rgba(39,28,21,.1);
+    font-size:14px;
+    vertical-align:top;
+  }
+  .fact-table th{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    font-weight:500;
+  }
+  .fact-id{font-family:'IBM Plex Mono',monospace;color:var(--action-deep);font-size:13px;}
+  footer.close{padding:64px 8vw;text-align:center;color:var(--ink-2);}
+</style>
+</head>
+<body>
+
+<nav class="rail" aria-label="Section position" id="rail"></nav>
+
+<!-- ============ COVER / BEAT 1 - THE BELIEF ============ -->
+<section class="cover" id="s-belief">
+  <div class="wrap">
+    <h1 class="display" id="belief-h1"></h1>
+    <p class="lead enter g2" style="margin-top:28px;">
+      The front desk read the missed calls as background noise: a receptionist
+      away from her post, a bad line, spread evenly across a long day, the
+      ordinary cost of running a busy practice.
+    </p>
+    <div class="card enter g3">
+      <p class="body-text">
+        Across the six months in the export, Northgate logged
+        <span class="tabular fact" data-fact="F01"></span> patient calls.
+        <span class="tabular fact" data-fact="F02"></span> of them were never
+        picked up by a person, a rate of
+        <span class="tabular fact" data-fact="F03"></span>
+        <span class="n-note">(n = <span class="tabular fact" data-fact="F01" data-field="n"></span>)</span>
+        for the whole window, start to finish. Nothing in that number says
+        where in the day it happened.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEAT 2 - THE QUESTION ============ -->
+<section class="question marble-3" id="s-question">
+  <div class="wrap" style="text-align:center;">
+    <h2 class="section-head enter g1" style="max-width:18ch;margin:0 auto;">
+      What happens to a call that arrives at half past twelve?
+    </h2>
+  </div>
+</section>
+
+<!-- ============ BEAT 3 - THE REVEAL ============ -->
+<section class="wash-coral" id="s-reveal">
+  <div class="wrap">
+    <span class="eyebrow enter g1">The finding</span>
+    <h2 class="section-head enter g2">One hour holds most of the loss.</h2>
+
+    <div class="card enter g3">
+      <p class="card-head">Unanswered rate, by hour of day</p>
+      <div id="chart-hours"></div>
+      <button class="replay" data-replay="chart-hours">Play again</button>
+    </div>
+
+    <div class="card-grid">
+      <div class="card enter g1">
+        <p class="card-head">Share of every lost call</p>
+        <div id="chart-ring"></div>
+        <button class="replay" data-replay="chart-ring">Play again</button>
+      </div>
+      <div class="card enter g2">
+        <p class="body-text">
+          Inside the 12:30 to 13:30 window, <span class="tabular fact" data-fact="F05"></span>
+          of calls go unanswered
+          <span class="n-note">(n = <span class="tabular fact" data-fact="F04"></span>)</span>,
+          against <span class="tabular fact" data-fact="F06"></span> for every other
+          hour combined
+          <span class="n-note">(n = <span class="tabular fact" data-fact="F06" data-field="n"></span>)</span>.
+          That single hour accounts for
+          <span class="tabular fact" data-fact="F07"></span> of every unanswered
+          call across the whole six-month export
+          <span class="n-note">(n = <span class="tabular fact" data-fact="F07" data-field="n"></span>)</span>,
+          not just the calls that happened to arrive during it.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEAT 4 - THE MECHANISM ============ -->
+<section class="marble-2" id="s-mechanism">
+  <div class="wrap">
+    <h2 class="section-head enter g1">The phones do not thin out. The desk does.</h2>
+    <p class="lead enter g2">
+      Call volume does not fall at lunch. The number of people answering it does.
+    </p>
+    <div class="card enter g3">
+      <p class="card-head">Calls arriving, against receptionists on the phones</p>
+      <div id="chart-panels"></div>
+      <button class="replay" data-replay="chart-panels">Play again</button>
+    </div>
+    <div class="card enter g1">
+      <p class="body-text">
+        The rota carries <span class="tabular fact" data-fact="F12"></span>
+        receptionist on the phones for the length of the lunch window, against
+        <span class="tabular fact" data-fact="F13"></span> at the busiest other
+        point in the day. At the practice's own measured pace of
+        <span class="tabular fact" data-fact="F16"></span> calls a person can
+        handle in an hour, one receptionist meets only a fraction of the
+        <span class="tabular fact" data-fact="F17"></span> calls that arrive in
+        an average lunch hour, averaged across the
+        <span class="tabular fact" data-fact="F18"></span> working days in the
+        export.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEAT 5 - THE DECISION AND ITS UNCERTAINTY ============ -->
+<section class="marble-3" id="s-decision">
+  <div class="wrap">
+    <h2 class="section-head enter g1">Staff the hour, before spending on more calls.</h2>
+
+    <div class="card enter g2" style="text-align:center;">
+      <p class="label" style="margin-bottom:8px;">New patient calls missed, per week on average</p>
+      <div class="num tabular fact" data-fact="F11" style="font-size:clamp(90px,14vw,180px);font-weight:800;line-height:.95;color:var(--action-deep);"></div>
+      <p class="label" style="margin-top:8px;">averaged across the full six-month export, not one hour or one week</p>
+    </div>
+
+    <div class="card enter g3">
+      <p class="body-text">
+        On the New Patients line alone, <span class="tabular fact" data-fact="F08"></span>
+        calls came in across the six months and
+        <span class="tabular fact" data-fact="F09"></span> of them went
+        unanswered, a <span class="tabular fact" data-fact="F10"></span> miss
+        rate for the enquiries the marketing budget exists to bring in
+        <span class="n-note">(n = <span class="tabular fact" data-fact="F10" data-field="n"></span>)</span>.
+        That total is not restricted to the lunch window; it is every hour of
+        every day the New Patients line was called.
+      </p>
+    </div>
+
+    <div class="card enter g1">
+      <p class="card-head">Spend and enquiries, indexed to January</p>
+      <div id="chart-lines"></div>
+      <button class="replay" data-replay="chart-lines">Play again</button>
+      <p class="body-text" style="margin-top:20px;">
+        Advertising spend rose <span class="tabular fact" data-fact="F14"></span>
+        from the first quarter to the second
+        <span class="n-note">(n = <span class="tabular fact" data-fact="F14" data-field="n"></span>)</span>,
+        and enquiries per working day rose
+        <span class="tabular fact" data-fact="F15"></span> over the same
+        stretch <span class="n-note">(n = <span class="tabular fact" data-fact="F15" data-field="n"></span>)</span>.
+        The two coincided. Nothing in this ledger decomposes how much of the
+        second followed from the first, so the sentence stops at coincided
+        with, not caused.
+      </p>
+    </div>
+
+    <div class="card enter g2 wash-plum" style="background:var(--wash-plum);">
+      <p class="card-head">What this data cannot settle</p>
+      <p class="body-text">
+        No field in the export records whether a caller who reaches voicemail
+        at 12:45 tries again later the same day and eventually gets through,
+        or gives up on Northgate for good. The
+        <span class="tabular fact" data-fact="F11"></span> figure above is
+        therefore a floor on the true weekly cost of the lunch gap, not the
+        full number. The decision, add a second receptionist to the lunch
+        rota, is worth taking on the numbers already in hand; how much it is
+        worth in recovered new patients is something only a second measurement,
+        after the change, can tell.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIXTH SECTION - EVERY FACT USED ============ -->
+<section class="connective" id="s-ledger">
+  <div class="wrap">
+    <h2 class="section-head enter g1" style="font-size:clamp(28px,3.4vw,40px);">Every figure on this page</h2>
+    <p class="body-text enter g2">
+      Every number above is a placeholder substituted from this ledger at
+      build time, never typed into the sentence around it. Here is the full
+      list: what it measures, how it was computed, where it came from, and the
+      count it rests on.
+    </p>
+    <div class="card enter g3" style="overflow-x:auto;">
+      <table class="fact-table" id="ledger-table">
+        <thead>
+          <tr><th>id</th><th>label</th><th>value</th><th>method</th><th>source</th><th>n</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="close">
+  <p class="label">Northgate Health, inbound calls, 5 Jan to 30 Jun 2026</p>
+</footer>
+
+<script>
+const FACTS = {
+  F01:{id:"F01",label:"Patient calls received",value:9162,unit:"calls",method:"rows in calls.csv after removing duplicate call_ids and vendor test rows",sources:["calls.csv"],n:9162,note:"109 duplicates and 3 test rows removed"},
+  F02:{id:"F02",label:"Calls not answered by a person",value:1299,unit:"calls",method:"outcome in missed, abandoned, voicemail, case normalised",sources:["calls.csv"],n:9162,note:""},
+  F03:{id:"F03",label:"Share of calls not answered",value:14.2,unit:"percent",method:"F02 divided by F01",sources:["calls.csv"],n:9162,note:""},
+  F04:{id:"F04",label:"Calls received 12:30 to 13:30",value:1473,unit:"calls",method:"received_at minute of day inside the window",sources:["calls.csv"],n:1473,note:""},
+  F05:{id:"F05",label:"Unanswered rate inside 12:30 to 13:30",value:53.8,unit:"percent",method:"unanswered calls inside the window over all calls inside it",sources:["calls.csv"],n:1473,note:""},
+  F06:{id:"F06",label:"Unanswered rate outside 12:30 to 13:30",value:6.6,unit:"percent",method:"unanswered calls outside the window over all calls outside it",sources:["calls.csv"],n:7689,note:""},
+  F07:{id:"F07",label:"Share of all unanswered calls falling in that one hour",value:61.0,unit:"percent",method:"unanswered calls inside the window over all unanswered calls",sources:["calls.csv"],n:1299,note:""},
+  F08:{id:"F08",label:"New patient calls received",value:3248,unit:"calls",method:"line equals New Patients after trimming whitespace",sources:["calls.csv"],n:3248,note:""},
+  F09:{id:"F09",label:"New patient calls not answered",value:437,unit:"calls",method:"unanswered new patient calls",sources:["calls.csv"],n:3248,note:""},
+  F10:{id:"F10",label:"Unanswered rate on the New Patients line",value:13.5,unit:"percent",method:"F09 divided by F08",sources:["calls.csv"],n:3248,note:""},
+  F11:{id:"F11",label:"New patient calls missed per week",value:16.8,unit:"calls per week",method:"F09 divided by 26 calendar weeks in the export",sources:["calls.csv"],n:437,note:""},
+  F12:{id:"F12",label:"Receptionists on the phones during the lunch window",value:1,unit:"people",method:"rota.csv, staff on shift and not on break, minimum across the window",sources:["rota.csv"],n:123,note:""},
+  F13:{id:"F13",label:"Receptionists on the phones at the busiest other time",value:4,unit:"people",method:"rota.csv, maximum staff on shift and not on break",sources:["rota.csv"],n:123,note:""},
+  F14:{id:"F14",label:"Change in advertising spend, Q1 to Q2",value:47.1,unit:"percent",method:"total spend_gbp Q2 over Q1",sources:["marketing_spend.csv"],n:18,note:""},
+  F15:{id:"F15",label:"Change in enquiries per working day, Q1 to Q2",value:10.4,unit:"percent",method:"enquiries per working day, Q2 over Q1. Per day, not total, because Q1 opens on 5 January and has fewer working days",sources:["enquiries.csv","rota.csv"],n:2230,note:"Q1 62 working days, Q2 61"},
+  F16:{id:"F16",label:"Calls one receptionist can handle in an hour",value:13.8,unit:"calls",method:"sixty divided by mean talk time of answered calls in minutes",sources:["calls.csv"],n:7863,note:""},
+  F17:{id:"F17",label:"Calls arriving in the lunch window on an average day",value:12.0,unit:"calls",method:"F04 divided by working days in the export",sources:["calls.csv"],n:1473,note:""},
+  F18:{id:"F18",label:"Working days in the export",value:123,unit:"days",method:"distinct dates in rota.csv",sources:["rota.csv"],n:123,note:""}
+};
+
+const SERIES = {
+  by_hour:[
+    {hour:8,calls:1028,unanswered:140,rate:13.6},
+    {hour:9,calls:1580,unanswered:202,rate:12.8},
+    {hour:10,calls:1212,unanswered:28,rate:2.3},
+    {hour:11,calls:620,unanswered:2,rate:0.3},
+    {hour:12,calls:1050,unanswered:395,rate:37.6},
+    {hour:13,calls:1056,unanswered:400,rate:37.9},
+    {hour:14,calls:352,unanswered:0,rate:0.0},
+    {hour:15,calls:608,unanswered:0,rate:0.0},
+    {hour:16,calls:978,unanswered:67,rate:6.9},
+    {hour:17,calls:678,unanswered:65,rate:9.6}
+  ],
+  by_half_hour:[
+    {minute:480,calls:439,unanswered:45,rate:10.3},{minute:510,calls:589,unanswered:95,rate:16.1},
+    {minute:540,calls:756,unanswered:190,rate:25.1},{minute:570,calls:824,unanswered:12,rate:1.5},
+    {minute:600,calls:685,unanswered:22,rate:3.2},{minute:630,calls:527,unanswered:6,rate:1.1},
+    {minute:660,calls:369,unanswered:2,rate:0.5},{minute:690,calls:251,unanswered:0,rate:0.0},
+    {minute:720,calls:323,unanswered:0,rate:0.0},{minute:750,calls:727,unanswered:395,rate:54.3},
+    {minute:780,calls:746,unanswered:397,rate:53.2},{minute:810,calls:310,unanswered:3,rate:1.0},
+    {minute:840,calls:178,unanswered:0,rate:0.0},{minute:870,calls:174,unanswered:0,rate:0.0},
+    {minute:900,calls:238,unanswered:0,rate:0.0},{minute:930,calls:370,unanswered:0,rate:0.0},
+    {minute:960,calls:477,unanswered:2,rate:0.4},{minute:990,calls:501,unanswered:65,rate:13.0},
+    {minute:1020,calls:395,unanswered:47,rate:11.9},{minute:1050,calls:283,unanswered:18,rate:6.4}
+  ],
+  cover:[
+    {minute:480,staff:2},{minute:510,staff:2},{minute:540,staff:2},{minute:570,staff:4},
+    {minute:600,staff:4},{minute:630,staff:4},{minute:660,staff:4},{minute:690,staff:4},
+    {minute:720,staff:4},{minute:750,staff:1},{minute:780,staff:1},{minute:810,staff:3},
+    {minute:840,staff:3},{minute:870,staff:4},{minute:900,staff:4},{minute:930,staff:4},
+    {minute:960,staff:4},{minute:990,staff:2},{minute:1020,staff:2},{minute:1050,staff:2}
+  ],
+  monthly:[
+    {month:"2026-01",enquiries_per_day:17.45,spend:8200},
+    {month:"2026-02",enquiries_per_day:16.5,spend:8350},
+    {month:"2026-03",enquiries_per_day:17.73,spend:8400},
+    {month:"2026-04",enquiries_per_day:19.3,spend:11950},
+    {month:"2026-05",enquiries_per_day:18.79,spend:12400},
+    {month:"2026-06",enquiries_per_day:19.0,spend:12350}
+  ]
+};
+
+function formatFact(f, field){
+  if(field === 'n'){ return f.n.toLocaleString('en-GB'); }
+  if(f.unit === 'percent'){ return f.value.toFixed(1) + '%'; }
+  if(f.unit === 'calls per week'){ return f.value.toFixed(1); }
+  if(f.unit === 'calls' && !Number.isInteger(f.value)){ return f.value.toFixed(1); }
+  return Math.round(f.value).toLocaleString('en-GB');
+}
+
+function applyFacts(){
+  document.querySelectorAll('[data-fact]').forEach(el=>{
+    const id = el.dataset.fact;
+    const f = FACTS[id];
+    if(!f){ return; }
+    const field = el.dataset.field || 'value';
+    el.textContent = formatFact(f, field);
+  });
+}
+
+function buildBelief(){
+  const el = document.getElementById('belief-h1');
+  const words = "Missed calls were treated as an off day, not an hour.".split(' ');
+  el.innerHTML = words.map((w,i)=>`<span class="word" style="transition-delay:${i*80}ms">${w}</span>`).join(' ');
+}
+
+function buildLedger(){
+  const tbody = document.querySelector('#ledger-table tbody');
+  Object.values(FACTS).forEach(f=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="fact-id mono">${f.id}</td>
+      <td>${f.label}</td>
+      <td class="tabular">${formatFact(f,'value')}</td>
+      <td>${f.method}</td>
+      <td class="mono">${f.sources.join(', ')}</td>
+      <td class="tabular">${f.n.toLocaleString('en-GB')}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+/* ---------- charts ---------- */
+const NS = 'http://www.w3.org/2000/svg';
+function svgEl(tag, attrs){
+  const e = document.createElementNS(NS, tag);
+  for(const k in attrs){ e.setAttribute(k, attrs[k]); }
+  return e;
+}
+
+function chartHours(container){
+  const W=880,H=280,padL=40,padB=30,padT=10,padR=10;
+  const data = SERIES.by_hour;
+  const innerW = W-padL-padR, innerH = H-padT-padB;
+  const maxRate = 45;
+  const bw = innerW/data.length*0.62;
+  const gap = innerW/data.length;
+  const svg = svgEl('svg',{class:'chart',viewBox:`0 0 ${W} ${H}`,'aria-hidden':'true'});
+  [0,10,20,30,40].forEach(v=>{
+    const y = padT + innerH - (v/maxRate)*innerH;
+    svg.appendChild(svgEl('line',{class:'gridline',x1:padL,x2:W-padR,y1:y,y2:y}));
+  });
+  svg.appendChild(svgEl('line',{class:'baseline',x1:padL,x2:W-padR,y1:padT+innerH,y2:padT+innerH}));
+  const bars=[];
+  data.forEach((d,i)=>{
+    const x = padL + i*gap + (gap-bw)/2;
+    const h = (d.rate/maxRate)*innerH;
+    const y = padT + innerH - h;
+    const isLunch = d.hour===12 || d.hour===13;
+    const rect = svgEl('rect',{x, y:padT+innerH, width:bw, height:0, rx:2, fill: isLunch ? 'var(--action)' : 'var(--sea)'});
+    rect.style.transformOrigin = `${x+bw/2}px ${padT+innerH}px`;
+    rect.dataset.targetY = y; rect.dataset.targetH = h;
+    svg.appendChild(rect); bars.push(rect);
+    const label = svgEl('text',{class:'axis-label',x:x+bw/2,y:padT+innerH+18,'text-anchor':'middle'});
+    label.textContent = d.hour + ':00';
+    svg.appendChild(label);
+    if(isLunch){
+      const vlab = svgEl('text',{class:'series-label tabular',x:x+bw/2,y:y-8,'text-anchor':'middle',fill:'var(--action-deep)'});
+      vlab.textContent = d.rate.toFixed(1)+'%';
+      svg.appendChild(vlab);
+    }
+  });
+  container.innerHTML='';
+  container.appendChild(svg);
+  return ()=>{
+    bars.forEach((r,i)=>{
+      r.style.transition = `y ${1100+i*10}ms var(--out), height ${1100+i*10}ms var(--out)`;
+      requestAnimationFrame(()=>{
+        r.setAttribute('y', r.dataset.targetY);
+        r.setAttribute('height', r.dataset.targetH);
+      });
+    });
+  };
+}
+
+function chartRing(container){
+  const size=180, r=72, stroke=16, C=2*Math.PI*r;
+  const share = FACTS.F07.value/100;
+  const svg = svgEl('svg',{class:'chart',viewBox:`0 0 ${size} ${size}`, style:'max-width:220px;margin:0 auto;display:block;'});
+  const cx=size/2, cy=size/2;
+  svg.appendChild(svgEl('circle',{cx,cy,r,fill:'none',stroke:'rgba(39,28,21,.09)','stroke-width':stroke}));
+  const arc = svgEl('circle',{cx,cy,r,fill:'none',stroke:'var(--action)','stroke-width':stroke,'stroke-linecap':'round',
+    'stroke-dasharray':C,'stroke-dashoffset':C, transform:`rotate(-90 ${cx} ${cy})`});
+  svg.appendChild(arc);
+  const label = svgEl('text',{x:cx,y:cy+10,'text-anchor':'middle',class:'num tabular',
+    style:'font-family:Fraunces,serif;font-weight:800;font-size:34px;fill:var(--ink);'});
+  label.textContent='0%';
+  svg.appendChild(label);
+  container.innerHTML='';
+  container.appendChild(svg);
+  return ()=>{
+    arc.style.transition = 'stroke-dashoffset 1200ms var(--out)';
+    requestAnimationFrame(()=>{ arc.setAttribute('stroke-dashoffset', C*(1-share)); });
+    const start = performance.now(), dur=1200;
+    function step(t){
+      const p = Math.min(1,(t-start)/dur);
+      label.textContent = (share*100*p).toFixed(1)+'%';
+      if(p<1){ requestAnimationFrame(step); }
+    }
+    requestAnimationFrame(step);
+  };
+}
+
+function chartPanels(container){
+  const W=880, H=340, padL=40, padR=10, mid=170, padTop=10, padBottom=10;
+  const data = SERIES.by_half_hour, cover = SERIES.cover;
+  const innerW = W-padL-padR;
+  const topH = mid-padTop, botH = H-mid-padBottom;
+  const maxCalls = 900, maxStaff = 4;
+  const gap = innerW/data.length;
+  const bw = gap*0.62;
+  const svg = svgEl('svg',{class:'chart',viewBox:`0 0 ${W} ${H}`});
+  svg.appendChild(svgEl('line',{class:'baseline',x1:padL,x2:W-padR,y1:mid,y2:mid}));
+  const topBars=[], botBars=[];
+  data.forEach((d,i)=>{
+    const x = padL + i*gap + (gap-bw)/2;
+    const h = (d.calls/maxCalls)*topH;
+    const isLunch = d.minute>=750 && d.minute<=810;
+    const rect = svgEl('rect',{x, y:mid, width:bw, height:0, rx:2, fill: isLunch? 'var(--action)':'var(--sea)'});
+    rect.dataset.targetY = mid-h; rect.dataset.targetH = h;
+    svg.appendChild(rect); topBars.push(rect);
+  });
+  cover.forEach((d,i)=>{
+    const x = padL + i*gap + (gap-bw)/2;
+    const h = (d.staff/maxStaff)*botH;
+    const isLunch = d.minute>=750 && d.minute<=810;
+    const rect = svgEl('rect',{x, y:mid, width:bw, height:0, rx:2, fill: isLunch? 'var(--premium)':'var(--premium-deep)', opacity:isLunch?1:0.55});
+    rect.dataset.targetH = h;
+    svg.appendChild(rect); botBars.push(rect);
+  });
+  svg.appendChild(svgEl('text',{class:'series-label',x:padL,y:padTop+8,fill:'var(--sea)'})).textContent='Calls arriving';
+  svg.appendChild(svgEl('text',{class:'series-label',x:padL,y:H-4,fill:'var(--premium-deep)'})).textContent='Receptionists on the phones';
+  container.innerHTML='';
+  container.appendChild(svg);
+  return ()=>{
+    topBars.forEach((r,i)=>{
+      r.style.transition = `y ${1100+i*6}ms var(--out), height ${1100+i*6}ms var(--out)`;
+      requestAnimationFrame(()=>{ r.setAttribute('y', r.dataset.targetY); r.setAttribute('height', r.dataset.targetH); });
+    });
+    botBars.forEach((r,i)=>{
+      r.style.transition = `height ${1100+i*6}ms var(--out)`;
+      requestAnimationFrame(()=>{ r.setAttribute('height', r.dataset.targetH); });
+    });
+  };
+}
+
+function chartLines(container){
+  const W=880,H=280,padL=44,padR=70,padT=20,padB=30;
+  const data = SERIES.monthly;
+  const innerW=W-padL-padR, innerH=H-padT-padB;
+  const base = data[0];
+  const idxSpend = data.map(d=>d.spend/base.spend*100);
+  const idxEnq = data.map(d=>d.enquiries_per_day/base.enquiries_per_day*100);
+  const maxV = Math.max(...idxSpend,...idxEnq)*1.05;
+  const minV = 90;
+  const x = i => padL + innerW*(i/(data.length-1));
+  const y = v => padT + innerH - (v-minV)/(maxV-minV)*innerH;
+  const svg = svgEl('svg',{class:'chart',viewBox:`0 0 ${W} ${H}`});
+  [100,120,140,160].forEach(v=>{
+    if(v>maxV) return;
+    svg.appendChild(svgEl('line',{class:'gridline',x1:padL,x2:W-padR,y1:y(v),y2:y(v)}));
+  });
+  data.forEach((d,i)=>{
+    const lab = svgEl('text',{class:'axis-label',x:x(i),y:H-8,'text-anchor':'middle'});
+    lab.textContent = d.month.slice(5);
+    svg.appendChild(lab);
+  });
+  function pathFor(vals){ return vals.map((v,i)=>`${i===0?'M':'L'} ${x(i)} ${y(v)}`).join(' '); }
+  const areaPath = svgEl('path',{
+    d: `${pathFor(idxSpend)} L ${x(data.length-1)} ${y(idxEnq[data.length-1])} ${idxEnq.slice().reverse().map((v,ri)=>`L ${x(data.length-1-ri)} ${y(v)}`).join(' ')} Z`,
+    fill:'rgba(225,66,31,.08)', stroke:'none'
+  });
+  svg.appendChild(areaPath);
+  const spendPath = svgEl('path',{d:pathFor(idxSpend), fill:'none', stroke:'var(--premium)','stroke-width':2.5,'stroke-linecap':'round','stroke-linejoin':'round'});
+  const enqPath = svgEl('path',{d:pathFor(idxEnq), fill:'none', stroke:'var(--sea)','stroke-width':2.5,'stroke-linecap':'round','stroke-linejoin':'round'});
+  [spendPath,enqPath].forEach(p=>{
+    const len = 1200;
+    p.setAttribute('stroke-dasharray', len);
+    p.setAttribute('stroke-dashoffset', len);
+    svg.appendChild(p);
+  });
+  [idxSpend,idxEnq].forEach((vals,si)=>{
+    vals.forEach((v,i)=>{
+      svg.appendChild(svgEl('circle',{cx:x(i),cy:y(v),r:3.5,fill:'var(--marble-3)',stroke: si===0?'var(--premium)':'var(--sea)','stroke-width':2.5}));
+    });
+  });
+  const spendLbl = svgEl('text',{class:'series-label',x:x(data.length-1)+8,y:y(idxSpend[idxSpend.length-1])+4,fill:'var(--premium-deep)'});
+  spendLbl.textContent='Spend';
+  const enqLbl = svgEl('text',{class:'series-label',x:x(data.length-1)+8,y:y(idxEnq[idxEnq.length-1])+4,fill:'var(--sea)'});
+  enqLbl.textContent='Enquiries per day';
+  svg.appendChild(spendLbl); svg.appendChild(enqLbl);
+  container.innerHTML='';
+  container.appendChild(svg);
+  return ()=>{
+    [spendPath,enqPath].forEach(p=>{
+      p.style.transition='stroke-dashoffset 1300ms var(--out)';
+      requestAnimationFrame(()=>{ p.setAttribute('stroke-dashoffset',0); });
+    });
+  };
+}
+
+/* ---------- wiring ---------- */
+const chartInits = {};
+function mountCharts(){
+  chartInits['chart-hours'] = chartHours(document.getElementById('chart-hours'));
+  chartInits['chart-ring'] = chartRing(document.getElementById('chart-ring'));
+  chartInits['chart-panels'] = chartPanels(document.getElementById('chart-panels'));
+  chartInits['chart-lines'] = chartLines(document.getElementById('chart-lines'));
+}
+
+document.querySelectorAll('button.replay').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const id = btn.dataset.replay;
+    const container = document.getElementById(id);
+    let rebuild;
+    if(id==='chart-hours') rebuild = chartHours(container);
+    if(id==='chart-ring') rebuild = chartRing(container);
+    if(id==='chart-panels') rebuild = chartPanels(container);
+    if(id==='chart-lines') rebuild = chartLines(container);
+    requestAnimationFrame(()=>requestAnimationFrame(rebuild));
+  });
+});
+
+function setupEntryObserver(){
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const targets = document.querySelectorAll('.enter, .word');
+  const chartHosts = { 's-reveal':'chart-hours', 's-mechanism':'chart-panels', 's-decision':'chart-lines' };
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+      }
+    });
+  }, {threshold:.3});
+  targets.forEach(t=>io.observe(t));
+
+  const played = new Set();
+  const sectionIo = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting && !played.has(entry.target.id)){
+        played.add(entry.target.id);
+        if(entry.target.id==='s-reveal'){ chartInits['chart-hours'](); chartInits['chart-ring'](); }
+        if(entry.target.id==='s-mechanism'){ chartInits['chart-panels'](); }
+        if(entry.target.id==='s-decision'){ chartInits['chart-lines'](); }
+      }
+    });
+  }, {threshold:.3});
+  ['s-reveal','s-mechanism','s-decision'].forEach(id=>sectionIo.observe(document.getElementById(id)));
+}
+
+function buildRail(){
+  const ids = ['s-belief','s-question','s-reveal','s-mechanism','s-decision','s-ledger'];
+  const rail = document.getElementById('rail');
+  ids.forEach(id=>{
+    const b = document.createElement('button');
+    b.setAttribute('aria-label','Go to section '+id);
+    b.addEventListener('click', ()=>document.getElementById(id).scrollIntoView({behavior:'smooth'}));
+    rail.appendChild(b);
+  });
+  const buttons = Array.from(rail.children);
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const idx = ids.indexOf(entry.target.id);
+      if(entry.isIntersecting){
+        buttons.forEach(b=>b.classList.remove('active'));
+        buttons[idx].classList.add('active');
+      }
+    });
+  }, {threshold:.5});
+  ids.forEach(id=>io.observe(document.getElementById(id)));
+}
+
+applyFacts();
+buildBelief();
+buildLedger();
+mountCharts();
+setupEntryObserver();
+buildRail();
+</script>
+</body>
+</html>

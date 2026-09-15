@@ -24,6 +24,15 @@ Structure every story in five beats:
    this data honestly cannot settle. The last beat contains something genuinely
    unresolved. If everything is resolved, you have hidden something.
 
+The five beats are the argument. They are not the whole page. After the fifth
+beat, close with a sixth, unnumbered section: every fact used, listed openly,
+with its method, its sources and its n. This is not optional and it is not the
+same thing as a footer claiming the numbers are trustworthy. A sentence that
+says "every figure here is read from the ledger, not typed" is an assertion a
+reader cannot check. A list of the facts themselves, with how each one was
+computed, is the only thing that makes that assertion checkable. A build has
+shipped the claim without the list before. Do not repeat it.
+
 Follow `story-craft` for form, type and motion. Follow `fact-ledger` for the
 placeholder discipline, including its scope rule: before a beat is finished,
 reread every sentence carrying a fact id against that fact's own `method` and
