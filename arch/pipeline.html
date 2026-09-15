@@ -1,0 +1,244 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400..800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marble:#F8F7F4; --marble-2:#F1EFE9;
+  --trust:#0C1446; --ink:#14162B; --ink-2:#4A4F6A;
+  --action:#C4581A; --premium:#6A55A8; --sea:#00899B;
+  --rule:rgba(12,20,70,.14); --hair:rgba(12,20,70,.07);
+  --out:cubic-bezier(.23,1,.32,1);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--marble);color:var(--ink);
+  font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+.wrap{width:min(1120px,calc(100% - 44px));margin:0 auto;padding:56px 0 90px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Inter,sans-serif;font-optical-sizing:auto}
+h1{font-size:clamp(34px,5vw,60px);line-height:1.02;letter-spacing:-.025em;
+  font-weight:700;margin:0 0 14px;font-variation-settings:'wdth' 94;text-wrap:balance}
+h1 .serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;
+  font-weight:400;color:var(--action);font-size:1.12em}
+.kick{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink-2);opacity:.75;
+  border-top:2px solid var(--action);display:inline-block;padding-top:12px;margin-bottom:24px}
+.lead{font-size:19px;color:var(--ink-2);max-width:62ch;margin:0 0 42px}
+figure{margin:0 0 14px}
+svg{max-width:100%;height:auto;display:block}
+figcaption{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-2);
+  line-height:1.6;margin-top:16px;max-width:88ch}
+.stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
+  gap:0;margin-top:56px;border-top:1.5px solid var(--rule)}
+.st{padding:22px 24px 26px 0;border-right:1px solid var(--hair)}
+.st:last-child{border-right:0}
+.st .n{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;
+  color:var(--action);display:block;margin-bottom:9px}
+.st h3{font-size:19px;margin:0 0 7px;letter-spacing:-.01em;font-weight:600}
+.st p{margin:0 0 10px;font-size:14.5px;color:var(--ink-2)}
+.st code{font-family:'JetBrains Mono',monospace;font-size:11.5px;
+  background:rgba(12,20,70,.05);padding:2px 6px;border-radius:3px;color:var(--ink-2)}
+.note{margin-top:52px;border-top:1.5px solid var(--rule);padding-top:22px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:34px}
+.note h3{font-size:17px;margin:0 0 6px;font-weight:600}
+.note p{font-size:14.5px;color:var(--ink-2);margin:0}
+.tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;display:block;margin-bottom:9px}
+@media(max-width:760px){.st{border-right:0;border-bottom:1px solid var(--hair);padding-right:0}}
+</style>
+
+<div class="wrap">
+  <div class="kick">Session 6 · the pipeline</div>
+  <h1>Four stages, and a folder<br>that <span class="serif">runs them again</span></h1>
+  <p class="lead">Data comes in on the left and a defensible story goes out on the
+    right. Each stage has one job, writes one artefact, and hands it on. The skills
+    and subagents in the middle row are what make the whole thing repeat on the next
+    client without anyone remembering how it went the first time.</p>
+
+  <figure>
+    <svg viewBox="0 0 1100 420" role="img"
+         aria-label="Four stage pipeline: sources feed a profile stage, which produces a risk list; a compute stage, which produces the fact ledger; an attack stage, which produces a verdict; and a compose stage, which produces the story page. A skills and agents layer sits beneath all four and is what makes the pipeline repeatable.">
+      <defs>
+        <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7"
+                markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+        </marker>
+        <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7"
+                markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" fill="#C4581A"/>
+        </marker>
+      </defs>
+
+      <!-- lane labels -->
+      <text x="0" y="14" font-family="JetBrains Mono, monospace" font-size="10.5"
+            letter-spacing="1.6" fill="#4A4F6A">SOURCES</text>
+      <text x="0" y="134" font-family="JetBrains Mono, monospace" font-size="10.5"
+            letter-spacing="1.6" fill="#4A4F6A">PIPELINE</text>
+      <text x="0" y="288" font-family="JetBrains Mono, monospace" font-size="10.5"
+            letter-spacing="1.6" fill="#C4581A">THE REPEATABLE PART</text>
+
+      <!-- sources -->
+      <g font-family="Inter, sans-serif" font-size="12.5" fill="#14162B">
+        <rect x="0" y="26" width="170" height="30" fill="none" stroke="#0C1446"
+              stroke-opacity=".28" rx="3"/>
+        <text x="12" y="46">Call export · CSV</text>
+        <rect x="0" y="62" width="170" height="30" fill="none" stroke="#0C1446"
+              stroke-opacity=".28" rx="3"/>
+        <text x="12" y="82">Rota · Google Calendar</text>
+        <rect x="186" y="26" width="164" height="30" fill="none" stroke="#0C1446"
+              stroke-opacity=".28" rx="3"/>
+        <text x="198" y="46">Enquiries · CRM</text>
+        <rect x="186" y="62" width="164" height="30" fill="none" stroke="#0C1446"
+              stroke-opacity=".28" rx="3"/>
+        <text x="198" y="82">Ad spend · Meta Ads</text>
+      </g>
+      <g stroke="#0C1446" stroke-opacity=".4" fill="none" color="#0C1446">
+        <path d="M85 96 L85 120 L114 120"/>
+        <path d="M268 96 L268 120 L114 120"/>
+        <line x1="114" y1="120" x2="114" y2="142" marker-end="url(#a)"/>
+      </g>
+      <text x="300" y="124" font-family="JetBrains Mono, monospace" font-size="10"
+            fill="#4A4F6A">read only. Never pasted into a chat window</text>
+
+      <!-- pipeline row -->
+      <g font-family="Inter, sans-serif">
+        <g>
+          <rect x="0" y="146" width="228" height="86" fill="#F1EFE9"
+                stroke="#0C1446" stroke-opacity=".22" rx="4"/>
+          <text x="16" y="172" font-family="Bricolage Grotesque, sans-serif"
+                font-size="17" font-weight="600" fill="#14162B">1 · Profile</text>
+          <text x="16" y="194" font-size="12.5" fill="#4A4F6A">Describe it. Analyse nothing.</text>
+          <text x="16" y="215" font-family="JetBrains Mono, monospace" font-size="11"
+                fill="#C4581A">→ risk list</text>
+        </g>
+        <g>
+          <rect x="252" y="146" width="228" height="86" fill="#F1EFE9"
+                stroke="#0C1446" stroke-opacity=".22" rx="4"/>
+          <text x="268" y="172" font-family="Bricolage Grotesque, sans-serif"
+                font-size="17" font-weight="600" fill="#14162B">2 · Compute</text>
+          <text x="268" y="194" font-size="12.5" fill="#4A4F6A">Code does the arithmetic.</text>
+          <text x="268" y="215" font-family="JetBrains Mono, monospace" font-size="11"
+                fill="#C4581A">→ fact ledger</text>
+        </g>
+        <g>
+          <rect x="504" y="146" width="228" height="86" fill="#F1EFE9"
+                stroke="#C4581A" stroke-opacity=".55" rx="4"/>
+          <text x="520" y="172" font-family="Bricolage Grotesque, sans-serif"
+                font-size="17" font-weight="600" fill="#14162B">3 · Attack</text>
+          <text x="520" y="194" font-size="12.5" fill="#4A4F6A">Try to break the finding.</text>
+          <text x="520" y="215" font-family="JetBrains Mono, monospace" font-size="11"
+                fill="#C4581A">→ verdict</text>
+        </g>
+        <g>
+          <rect x="756" y="146" width="228" height="86" fill="#F1EFE9"
+                stroke="#0C1446" stroke-opacity=".22" rx="4"/>
+          <text x="772" y="172" font-family="Bricolage Grotesque, sans-serif"
+                font-size="17" font-weight="600" fill="#14162B">4 · Compose</text>
+          <text x="772" y="194" font-size="12.5" fill="#4A4F6A">Prose holds ids, not numbers.</text>
+          <text x="772" y="215" font-family="JetBrains Mono, monospace" font-size="11"
+                fill="#C4581A">→ story page</text>
+        </g>
+      </g>
+
+      <!-- flow arrows with labels -->
+      <g stroke="#0C1446" stroke-opacity=".55" fill="none" color="#0C1446">
+        <line x1="228" y1="189" x2="248" y2="189" marker-end="url(#a)"/>
+        <line x1="480" y1="189" x2="500" y2="189" marker-end="url(#a)"/>
+        <line x1="732" y1="189" x2="752" y2="189" marker-end="url(#a)"/>
+      </g>
+
+      <!-- the loop back: a failed verdict returns to compute -->
+      <g fill="none" color="#C4581A">
+        <path d="M618 232 L618 258 L366 258 L366 232" stroke="#C4581A"
+              stroke-width="1.4" stroke-dasharray="4 4" marker-end="url(#ao)"/>
+      </g>
+      <text x="394" y="252" font-family="JetBrains Mono, monospace" font-size="10.5"
+            fill="#C4581A">does not hold, recompute</text>
+
+      <!-- output -->
+      <rect x="1004" y="160" width="96" height="58" fill="none" stroke="#0C1446"
+            stroke-opacity=".28" rx="3"/>
+      <text x="1016" y="184" font-family="Inter, sans-serif" font-size="12.5"
+            fill="#14162B">Client</text>
+      <text x="1016" y="202" font-family="Inter, sans-serif" font-size="12.5"
+            fill="#14162B">reads it</text>
+      <line x1="984" y1="189" x2="1000" y2="189" stroke="#0C1446" stroke-opacity=".55"
+            fill="none" color="#0C1446" marker-end="url(#a)"/>
+
+      <!-- the repeatable layer -->
+      <rect x="0" y="300" width="984" height="94" fill="none" stroke="#C4581A"
+            stroke-opacity=".5" stroke-width="1.4" rx="4"/>
+      <g font-family="Inter, sans-serif" font-size="12.5" fill="#4A4F6A">
+        <text x="16" y="326" font-family="Bricolage Grotesque, sans-serif" font-size="15"
+              font-weight="600" fill="#14162B">.claude</text>
+        <text x="16" y="350">skills · data-profile, fact-ledger, story-craft</text>
+        <text x="16" y="372">agents · analyst, sceptic, storywright</text>
+      </g>
+      <g stroke="#C4581A" stroke-opacity=".45" stroke-dasharray="3 4" fill="none">
+        <line x1="114" y1="300" x2="114" y2="234"/>
+        <line x1="366" y1="300" x2="366" y2="266"/>
+        <line x1="618" y1="300" x2="618" y2="266"/>
+        <line x1="870" y1="300" x2="870" y2="234"/>
+      </g>
+      <text x="520" y="350" font-family="Inter, sans-serif" font-size="12.5" fill="#4A4F6A">
+        Clone the folder and the method comes with it.</text>
+      <text x="520" y="372" font-family="Inter, sans-serif" font-size="12.5" fill="#4A4F6A">
+        Nothing in it mentions clinics, or calls.</text>
+    </svg>
+    <figcaption>Each stage writes one artefact and hands it on. Stage three is the
+      one most teams skip, and the dashed return is what it is for: a verdict of
+      does not hold sends the work back to stage two rather than forward to the
+      client. The orange box is the deliverable that outlives the engagement.</figcaption>
+  </figure>
+
+  <div class="stages">
+    <div class="st">
+      <span class="n">STAGE 01</span>
+      <h3>Profile</h3>
+      <p>Describe every column, every join risk, every row that is not a real
+        transaction. Answer nothing yet.</p>
+      <p><code>data-profile</code></p>
+    </div>
+    <div class="st">
+      <span class="n">STAGE 02</span>
+      <h3>Compute</h3>
+      <p>Clean, join, calculate. Code produces every figure and writes it to the
+        ledger with its method, sources and sample size.</p>
+      <p><code>analyst</code> <code>fact-ledger</code></p>
+    </div>
+    <div class="st">
+      <span class="n">STAGE 03</span>
+      <h3>Attack</h3>
+      <p>Recompute the headline independently, test three alternative explanations,
+        say what the data cannot settle.</p>
+      <p><code>sceptic</code></p>
+    </div>
+    <div class="st">
+      <span class="n">STAGE 04</span>
+      <h3>Compose</h3>
+      <p>Five beats. Every sentence with a figure carries a fact id, and the build
+        step substitutes the values at the end.</p>
+      <p><code>storywright</code> <code>story-craft</code></p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div>
+      <span class="tag" style="color:var(--action)">The point of stage three</span>
+      <h3>A finding that survives an attack is worth charging for</h3>
+      <p>Anyone can find a correlation in twenty seconds now. What a client pays for
+        is being able to say what else you ruled out.</p>
+    </div>
+    <div>
+      <span class="tag" style="color:var(--sea)">Why the ledger sits in the middle</span>
+      <h3>The model plans and writes. It never types a number</h3>
+      <p>Code computes, the ledger stores, the prose references by id. If a figure is
+        wrong the fix is in the script, never in the document.</p>
+    </div>
+    <div>
+      <span class="tag" style="color:var(--premium)">Why this is a folder</span>
+      <h3>A method you can hand to someone else</h3>
+      <p>The skills and agents carry no client, no sector and no dataset. The next
+        engagement starts at stage one rather than at the beginning.</p>
+    </div>
+  </div>
+</div>

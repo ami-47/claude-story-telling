@@ -1,0 +1,3303 @@
+enquiry_id,created_at,source,channel,caller_ref,became_patient
+E01565,2026-01-05 08:18,Phone,Paid social,P03153,N
+E01566,2026-01-05 08:20,Phone,Paid search,P02186,Y
+E00009,2026-01-05 08:35,Web form,Paid search,,N
+E01567,2026-01-05 08:45,Phone,Paid search,P04003,N
+E01568,2026-01-05 09:14,Phone,Paid social,P00581,N
+E00139,2026-01-05 09:35,Web form,Directories,,N
+E01569,2026-01-05 09:36,Phone,Organic,P03987,Y
+E01570,2026-01-05 09:37,Phone,Directories,P02570,Y
+E01571,2026-01-05 09:39,Phone,Paid search,P02592,N
+E00030,2026-01-05 09:42,Web form,Paid search,,Y
+E01572,2026-01-05 09:51,Phone,Directories,P00065,N
+E01573,2026-01-05 09:53,Phone,Organic,P02163,N
+E00074,2026-01-05 09:56,Web form,Paid search,,N
+E01574,2026-01-05 10:21,Phone,Paid social,P02713,N
+E00078,2026-01-05 10:32,Web form,Paid search,,N
+E00168,2026-01-05 10:44,Web form,Directories,,N
+E01575,2026-01-05 10:49,Phone,Directories,P04188,Y
+E01576,2026-01-05 11:03,Phone,Paid social,P02746,N
+E01577,2026-01-05 12:23,Phone,Paid search,P04050,Y
+E00001,2026-01-05 13:33,Web form,Paid search,,Y
+E01242,2026-01-05 14:55,Web form,Organic,,N
+E01578,2026-01-05 15:26,Phone,Directories,P03568,Y
+E01579,2026-01-05 16:06,Phone,Paid search,P03672,N
+E01580,2026-01-05 16:14,Phone,Organic,P02817,N
+E00097,2026-01-05 16:44,Web form,Paid social,,Y
+E01581,2026-01-05 17:12,Phone,Organic,P00813,N
+E01241,2026-01-05 19:32,Web form,Organic,,N
+E00106,2026-01-05 20:16,Web form,Paid social,,N
+E01240,2026-01-05 20:54,Web form,Organic,,N
+E00125,2026-01-06 08:38,Web form,Paid social,,N
+E01582,2026-01-06 10:13,Phone,Directories,P02054,Y
+E01246,2026-01-06 10:29,Web form,Organic,,N
+E01245,2026-01-06 10:45,Web form,Organic,,N
+E01583,2026-01-06 10:49,Phone,Paid search,P02531,N
+E01584,2026-01-06 10:54,Phone,Organic,P02106,N
+E01585,2026-01-06 11:13,Phone,Paid social,P02997,N
+E01586,2026-01-06 12:14,Phone,Paid search,P00563,N
+E01587,2026-01-06 12:31,Phone,Directories,P01080,Y
+E01588,2026-01-06 12:53,Phone,Paid search,P02471,N
+E01589,2026-01-06 13:07,Phone,Paid search,P01762,N
+E00042,2026-01-06 13:11,Web form,Paid search,,N
+E01244,2026-01-06 14:13,Web form,Organic,,Y
+E00014,2026-01-06 14:24,Web form,Paid search,,Y
+E01590,2026-01-06 15:12,Phone,Organic,P02869,N
+E01591,2026-01-06 16:01,Phone,Organic,P00408,N
+E00115,2026-01-06 16:03,Web form,Paid social,,N
+E01592,2026-01-06 16:40,Phone,Directories,P02372,N
+E01593,2026-01-06 16:58,Phone,Paid search,P01994,Y
+E01594,2026-01-06 17:30,Phone,Organic,P01816,Y
+E00098,2026-01-06 17:37,Web form,Paid social,,N
+E01243,2026-01-06 18:30,Web form,Organic,,N
+E00023,2026-01-07 08:42,Web form,Paid search,,N
+E01595,2026-01-07 08:51,Phone,Directories,P01590,N
+E01596,2026-01-07 09:13,Phone,Directories,P02235,N
+E01597,2026-01-07 09:56,Phone,Organic,P03745,Y
+E01598,2026-01-07 09:59,Phone,Organic,P02387,N
+E01599,2026-01-07 10:09,Phone,Organic,P03807,N
+E00085,2026-01-07 10:43,Web form,Paid search,,N
+E01600,2026-01-07 11:24,Phone,Organic,P02619,N
+E01601,2026-01-07 11:24,Phone,Paid search,P01427,N
+E00140,2026-01-07 11:54,Web form,Directories,,N
+E00054,2026-01-07 12:05,Web form,Paid search,,N
+E01602,2026-01-07 12:13,Phone,Paid search,P01058,Y
+E01603,2026-01-07 12:24,Phone,Paid search,P00766,N
+E01604,2026-01-07 12:24,Phone,Organic,P02766,Y
+E01605,2026-01-07 12:33,Phone,Directories,P00249,Y
+E01606,2026-01-07 12:55,Phone,Paid search,P02830,Y
+E01607,2026-01-07 13:41,Phone,Paid social,P03881,N
+E01608,2026-01-07 15:39,Phone,Directories,P02571,Y
+E00146,2026-01-07 15:53,Web form,Directories,,N
+E01609,2026-01-07 15:53,Phone,Paid search,P02166,Y
+E00060,2026-01-07 15:57,Web form,Paid search,,N
+E00063,2026-01-07 16:14,Web form,Paid search,,N
+E01610,2026-01-07 16:21,Phone,Paid search,P02241,N
+E01611,2026-01-07 16:26,Phone,Directories,P01200,Y
+E01612,2026-01-07 16:26,Phone,Paid search,P02226,N
+E01613,2026-01-07 16:46,Phone,Paid social,P01903,N
+E01248,2026-01-07 16:55,Web form,Organic,,Y
+E00077,2026-01-07 17:30,Web form,Paid search,,N
+E01247,2026-01-07 18:13,Web form,Organic,,Y
+E00160,2026-01-07 19:25,Web form,Directories,,N
+E01249,2026-01-07 19:39,Web form,Organic,,Y
+E01250,2026-01-07 20:12,Web form,Organic,,Y
+E00012,2026-01-08 08:21,Web form,Paid search,,N
+E01614,2026-01-08 08:36,Phone,Organic,P00129,N
+E01615,2026-01-08 09:00,Phone,Paid search,P03413,N
+E01616,2026-01-08 09:14,Phone,Organic,P02319,Y
+E00163,2026-01-08 09:33,Web form,Directories,,Y
+E01617,2026-01-08 09:36,Phone,Organic,P01196,N
+E00061,2026-01-08 09:56,Web form,Paid search,,Y
+E01618,2026-01-08 10:09,Phone,Organic,P01469,N
+E01254,2026-01-08 10:10,Web form,Organic,,N
+E01252,2026-01-08 10:52,Web form,Organic,,N
+E01253,2026-01-08 12:25,Web form,Organic,,N
+E01619,2026-01-08 12:40,Phone,Paid social,P02700,N
+E00008,2026-01-08 12:46,Web form,Paid search,,N
+E01620,2026-01-08 12:55,Phone,Paid search,P03352,N
+E01621,2026-01-08 13:02,Phone,Paid search,P03089,Y
+E00033,2026-01-08 13:45,Web form,Paid search,,N
+E01622,2026-01-08 14:14,Phone,Organic,P00943,N
+E01623,2026-01-08 14:50,Phone,Directories,P01527,Y
+E01624,2026-01-08 14:53,Phone,Directories,P01686,Y
+E01625,2026-01-08 15:02,Phone,Directories,P01532,N
+E00068,2026-01-08 15:32,Web form,Paid search,,N
+E00051,2026-01-08 15:40,Web form,Paid search,,N
+E00167,2026-01-08 15:51,Web form,Directories,,Y
+E01626,2026-01-08 16:31,Phone,Organic,P03637,Y
+E01627,2026-01-08 16:43,Phone,Directories,P01378,Y
+E00083,2026-01-08 18:03,Web form,Paid search,,N
+E01251,2026-01-08 20:03,Web form,Organic,,N
+E01628,2026-01-09 08:11,Phone,Organic,P00765,N
+E00142,2026-01-09 08:26,Web form,Directories,,Y
+E01629,2026-01-09 08:28,Phone,Directories,P01919,Y
+E01630,2026-01-09 08:50,Phone,Paid social,P01091,Y
+E01631,2026-01-09 09:05,Phone,Organic,P01241,N
+E01255,2026-01-09 12:19,Web form,Organic,,N
+E00122,2026-01-09 12:20,Web form,Paid social,,N
+E01632,2026-01-09 12:55,Phone,Organic,P04141,N
+E00057,2026-01-09 14:20,Web form,Paid search,,N
+E01633,2026-01-09 14:56,Phone,Paid search,P02717,N
+E00149,2026-01-09 15:27,Web form,Directories,,N
+E01634,2026-01-09 16:10,Phone,Paid search,P02940,N
+E01635,2026-01-09 16:18,Phone,Organic,P02651,Y
+E01636,2026-01-09 16:20,Phone,Organic,P02758,Y
+E01637,2026-01-09 16:29,Phone,Paid search,P01428,N
+E01638,2026-01-09 16:43,Phone,Directories,P00727,N
+E01639,2026-01-09 16:46,Phone,Organic,P00395,Y
+E01257,2026-01-09 17:25,Web form,Organic,,N
+E01640,2026-01-09 17:30,Phone,Paid social,P00763,N
+E01641,2026-01-09 17:33,Phone,Paid social,P03557,Y
+E00138,2026-01-09 20:32,Web form,Directories,,Y
+E01256,2026-01-09 20:41,Web form,Organic,,N
+E01642,2026-01-12 08:22,Phone,Directories,P00805,N
+E01643,2026-01-12 08:27,Phone,Paid search,P00732,N
+E00147,2026-01-12 08:29,Web form,Directories,,Y
+E01644,2026-01-12 08:56,Phone,Organic,P00165,Y
+E01645,2026-01-12 09:12,Phone,Directories,P02316,Y
+E01646,2026-01-12 09:12,Phone,Paid search,P02269,N
+E01647,2026-01-12 09:20,Phone,Directories,P02812,Y
+E01648,2026-01-12 09:34,Phone,Paid search,P00584,Y
+E01649,2026-01-12 09:39,Phone,Directories,P01236,Y
+E01650,2026-01-12 09:52,Phone,Organic,P04011,Y
+E01651,2026-01-12 10:04,Phone,Organic,P02039,N
+E00131,2026-01-12 10:29,Web form,Paid social,,N
+E00151,2026-01-12 10:35,Web form,Directories,,Y
+E00069,2026-01-12 11:25,Web form,Paid search,,N
+E01652,2026-01-12 11:49,Phone,Directories,P00762,Y
+E01653,2026-01-12 12:45,Phone,Paid social,P00781,N
+E00102,2026-01-12 12:55,Web form,Paid social,,N
+E01654,2026-01-12 13:17,Phone,Directories,P01562,Y
+E01655,2026-01-12 13:23,Phone,Organic,P01010,N
+E00084,2026-01-12 13:57,Web form,Paid search,,Y
+E00118,2026-01-12 14:11,Web form,Paid social,,N
+E01258,2026-01-12 14:26,Web form,Organic,,N
+E01656,2026-01-12 15:29,Phone,Paid search,P00840,N
+E01657,2026-01-12 15:31,Phone,Paid social,P02357,N
+E00043,2026-01-12 15:42,Web form,Paid search,,Y
+E01658,2026-01-12 16:01,Phone,Organic,P02468,Y
+E01659,2026-01-12 16:22,Phone,Paid search,P00073,Y
+E01660,2026-01-12 16:43,Phone,Organic,P00591,Y
+E01661,2026-01-12 17:16,Phone,Paid search,P01118,N
+E01259,2026-01-12 17:30,Web form,Organic,,N
+E01662,2026-01-13 08:20,Phone,Directories,P02158,Y
+E01663,2026-01-13 09:22,Phone,Paid social,P03715,N
+E01664,2026-01-13 09:37,Phone,Directories,P04132,N
+E01665,2026-01-13 10:07,Phone,Organic,P00059,N
+E01666,2026-01-13 10:29,Phone,Directories,P01883,N
+E01667,2026-01-13 10:31,Phone,Paid social,P00427,N
+E01668,2026-01-13 10:52,Phone,Paid search,P04183,Y
+E00048,2026-01-13 10:58,Web form,Paid search,,N
+E01260,2026-01-13 11:00,Web form,Organic,,Y
+E01261,2026-01-13 12:05,Web form,Organic,,N
+E00017,2026-01-13 12:12,Web form,Paid search,,Y
+E00132,2026-01-13 13:25,Web form,Paid social,,N
+E01669,2026-01-13 15:22,Phone,Directories,P03240,Y
+E00024,2026-01-13 15:36,Web form,Paid search,,Y
+E00028,2026-01-13 16:23,Web form,Paid search,,N
+E01670,2026-01-13 16:23,Phone,Organic,P03564,N
+E00007,2026-01-13 17:00,Web form,Paid search,,N
+E00006,2026-01-13 18:12,Web form,Paid search,,N
+E00067,2026-01-13 20:59,Web form,Paid search,,N
+E00055,2026-01-13 21:18,Web form,Paid search,,N
+E00080,2026-01-14 08:14,Web form,Paid search,,N
+E00062,2026-01-14 08:47,Web form,Paid search,,N
+E01671,2026-01-14 09:08,Phone,Paid search,P02933,Y
+E00079,2026-01-14 09:25,Web form,Paid search,,N
+E01672,2026-01-14 09:36,Phone,Paid search,P03953,N
+E01673,2026-01-14 09:45,Phone,Paid social,P01858,N
+E01674,2026-01-14 09:46,Phone,Directories,P02678,N
+E01675,2026-01-14 09:58,Phone,Organic,P01986,N
+E01676,2026-01-14 10:45,Phone,Paid search,P01894,Y
+E01677,2026-01-14 10:47,Phone,Organic,P00722,Y
+E01678,2026-01-14 11:01,Phone,Paid search,P02733,N
+E01679,2026-01-14 11:30,Phone,Organic,P01694,Y
+E00013,2026-01-14 11:32,Web form,Paid search,,N
+E00144,2026-01-14 12:17,Web form,Directories,,Y
+E01680,2026-01-14 12:42,Phone,Organic,P01903,N
+E01681,2026-01-14 13:22,Phone,Organic,P04014,N
+E01682,2026-01-14 13:35,Phone,Directories,P00404,N
+E00059,2026-01-14 14:49,Web form,Paid search,,Y
+E01683,2026-01-14 14:57,Phone,Paid search,P00964,Y
+E00111,2026-01-14 15:08,Web form,Paid social,,N
+E01684,2026-01-14 15:34,Phone,Organic,P00054,N
+E00011,2026-01-14 15:40,Web form,Paid search,,N
+E01263,2026-01-14 15:44,Web form,Organic,,N
+E00113,2026-01-14 16:23,Web form,Paid social,,N
+E01264,2026-01-14 16:42,Web form,Organic,,N
+E00150,2026-01-14 17:04,Web form,Directories,,Y
+E01685,2026-01-14 17:30,Phone,Organic,P00477,N
+E00031,2026-01-14 17:58,Web form,Paid search,,N
+E00070,2026-01-14 18:37,Web form,Paid search,,N
+E00052,2026-01-14 19:08,Web form,Paid search,,Y
+E00066,2026-01-14 19:19,Web form,Paid search,,N
+E01262,2026-01-14 21:17,Web form,Organic,,N
+E01686,2026-01-15 08:04,Phone,Organic,P01088,N
+E00021,2026-01-15 08:18,Web form,Paid search,,N
+E01687,2026-01-15 10:06,Phone,Organic,P03284,N
+E01688,2026-01-15 10:14,Phone,Organic,P03793,Y
+E01689,2026-01-15 10:18,Phone,Paid social,P00002,N
+E01690,2026-01-15 10:57,Phone,Directories,P03891,N
+E00105,2026-01-15 11:59,Web form,Paid social,,N
+E00075,2026-01-15 13:12,Web form,Paid search,,N
+E01691,2026-01-15 13:25,Phone,Directories,P00098,Y
+E01692,2026-01-15 13:32,Phone,Organic,P03778,Y
+E01693,2026-01-15 14:30,Phone,Paid search,P01514,N
+E01694,2026-01-15 15:25,Phone,Paid social,P01790,N
+E01695,2026-01-15 15:34,Phone,Paid social,P00993,N
+E01696,2026-01-15 15:45,Phone,Organic,P02449,Y
+E01697,2026-01-15 16:01,Phone,Organic,P01147,N
+E01698,2026-01-15 16:14,Phone,Organic,P01909,N
+E00155,2026-01-15 16:20,Web form,Directories,,N
+E01699,2026-01-15 16:30,Phone,Paid search,P00524,N
+E01700,2026-01-15 16:42,Phone,Organic,P02635,N
+E01701,2026-01-15 16:55,Phone,Paid search,P03082,N
+E01702,2026-01-15 17:09,Phone,Directories,P03376,N
+E01703,2026-01-15 17:17,Phone,Organic,P00722,N
+E01704,2026-01-15 17:31,Phone,Organic,P04158,N
+E00165,2026-01-15 17:53,Web form,Directories,,Y
+E00020,2026-01-15 19:20,Web form,Paid search,,Y
+E01265,2026-01-15 19:54,Web form,Organic,,N
+E00044,2026-01-15 20:36,Web form,Paid search,,N
+E00162,2026-01-15 20:53,Web form,Directories,,N
+E00035,2026-01-16 08:44,Web form,Paid search,,N
+E01705,2026-01-16 08:48,Phone,Paid search,P00200,Y
+E01706,2026-01-16 08:53,Phone,Directories,P03035,Y
+E01707,2026-01-16 09:04,Phone,Directories,P00664,Y
+E01708,2026-01-16 09:20,Phone,Paid social,P00538,N
+E01709,2026-01-16 10:15,Phone,Organic,P03883,Y
+E01710,2026-01-16 10:15,Phone,Organic,P03924,N
+E00116,2026-01-16 10:45,Web form,Paid social,,N
+E01269,2026-01-16 11:50,Web form,Organic,,N
+E01711,2026-01-16 12:02,Phone,Directories,P02748,Y
+E00086,2026-01-16 12:26,Web form,Paid search,,N
+E01268,2026-01-16 12:41,Web form,Organic,,N
+E01712,2026-01-16 13:03,Phone,Paid search,P01198,N
+E01713,2026-01-16 13:27,Phone,Paid search,P02467,N
+E00036,2026-01-16 13:45,Web form,Paid search,,N
+E01714,2026-01-16 14:12,Phone,Organic,P00934,N
+E00050,2026-01-16 14:28,Web form,Paid search,,N
+E00148,2026-01-16 15:08,Web form,Directories,,N
+E00107,2026-01-16 16:22,Web form,Paid social,,N
+E01715,2026-01-16 16:22,Phone,Directories,P00834,N
+E01267,2026-01-16 16:23,Web form,Organic,,N
+E01716,2026-01-16 16:39,Phone,Paid search,P03279,N
+E01266,2026-01-16 17:42,Web form,Organic,,Y
+E01717,2026-01-16 17:55,Phone,Organic,P03849,N
+E00047,2026-01-16 18:13,Web form,Paid search,,N
+E00029,2026-01-16 18:33,Web form,Paid search,,N
+E01270,2026-01-16 20:32,Referral,Referral,,Y
+E01718,2026-01-19 08:13,Phone,Paid search,P00777,N
+E01719,2026-01-19 08:19,Phone,Organic,P03713,Y
+E01720,2026-01-19 08:28,Phone,Organic,P01745,N
+E01721,2026-01-19 10:37,Phone,Directories,P01839,N
+E00099,2026-01-19 10:57,Web form,Paid social,,N
+E00032,2026-01-19 11:11,Web form,Paid search,,N
+E00040,2026-01-19 11:56,Web form,Paid search,,Y
+E00134,2026-01-19 12:12,Web form,Paid social,,N
+E01722,2026-01-19 12:16,Phone,Paid search,P03754,N
+E01723,2026-01-19 13:04,Phone,Paid search,P03605,N
+E00133,2026-01-19 13:37,Web form,Paid social,,Y
+E01272,2026-01-19 14:47,Referral,Referral,,Y
+E01271,2026-01-19 16:05,Web form,Organic,,N
+E00130,2026-01-19 16:20,Web form,Paid social,,N
+E01724,2026-01-19 16:41,Phone,Directories,P02461,Y
+E00088,2026-01-19 17:15,Web form,Paid search,,N
+E00049,2026-01-19 19:01,Web form,Paid search,,Y
+E00016,2026-01-19 19:53,Web form,Paid search,,N
+E00090,2026-01-19 20:10,Web form,Paid search,,N
+E00045,2026-01-19 21:33,Web form,Paid search,,N
+E01725,2026-01-20 08:48,Phone,Organic,P00868,N
+E01726,2026-01-20 09:00,Phone,Paid social,P02742,N
+E01727,2026-01-20 09:16,Phone,Paid search,P02423,N
+E01728,2026-01-20 09:26,Phone,Paid social,P02570,Y
+E01729,2026-01-20 09:41,Phone,Directories,P03195,Y
+E01730,2026-01-20 09:44,Phone,Directories,P01311,N
+E01731,2026-01-20 09:53,Phone,Paid search,P01022,N
+E01732,2026-01-20 10:03,Phone,Organic,P01916,N
+E01733,2026-01-20 11:23,Phone,Paid search,P00698,N
+E01273,2026-01-20 11:42,Web form,Organic,,N
+E01734,2026-01-20 11:43,Phone,Organic,P00694,N
+E00123,2026-01-20 11:45,Web form,Paid social,,N
+E01735,2026-01-20 11:58,Phone,Directories,P00483,Y
+E01736,2026-01-20 13:15,Phone,Organic,P03647,N
+E01737,2026-01-20 13:39,Phone,Directories,P01812,Y
+E01274,2026-01-20 13:41,Web form,Organic,,N
+E01738,2026-01-20 14:17,Phone,Paid search,P01868,Y
+E00018,2026-01-20 14:21,Web form,Paid search,,Y
+E00046,2026-01-20 14:29,Web form,Paid search,,N
+E01739,2026-01-20 14:40,Phone,Paid search,P02591,N
+E00015,2026-01-20 14:47,Web form,Paid search,,N
+E01740,2026-01-20 16:14,Phone,Paid search,P00784,N
+E01741,2026-01-20 16:59,Phone,Directories,P03829,Y
+E00109,2026-01-20 17:10,Web form,Paid social,,N
+E01742,2026-01-20 17:58,Phone,Paid search,P01167,Y
+E01743,2026-01-21 08:14,Phone,Paid search,P03812,Y
+E01744,2026-01-21 08:32,Phone,Organic,P02249,N
+E01745,2026-01-21 08:38,Phone,Paid search,P03840,N
+E01746,2026-01-21 08:45,Phone,Directories,P03422,N
+E00065,2026-01-21 08:47,Web form,Paid search,,N
+E01747,2026-01-21 09:10,Phone,Organic,P02455,N
+E01748,2026-01-21 09:21,Phone,Organic,P03124,N
+E01749,2026-01-21 09:27,Phone,Paid search,P00574,Y
+E01750,2026-01-21 09:31,Phone,Organic,P01065,Y
+E00158,2026-01-21 09:38,Web form,Directories,,N
+E00114,2026-01-21 09:42,Web form,Paid social,,N
+E01751,2026-01-21 09:45,Phone,Paid search,P01435,N
+E01752,2026-01-21 10:38,Phone,Paid social,P01653,N
+E00034,2026-01-21 11:52,Web form,Paid search,,N
+E01753,2026-01-21 12:51,Phone,Organic,P00325,Y
+E00089,2026-01-21 13:16,Web form,Paid search,,N
+E01277,2026-01-21 13:20,Web form,Organic,,Y
+E00053,2026-01-21 13:30,Web form,Paid search,,Y
+E01276,2026-01-21 13:44,Web form,Organic,,N
+E01754,2026-01-21 15:42,Phone,Organic,P00232,N
+E00108,2026-01-21 16:12,Web form,Paid social,,Y
+E01755,2026-01-21 16:40,Phone,Directories,P03519,N
+E01756,2026-01-21 17:07,Phone,Directories,P00667,Y
+E01757,2026-01-21 17:57,Phone,Paid search,P01113,Y
+E00005,2026-01-21 18:18,Web form,Paid search,,Y
+E01275,2026-01-21 18:41,Web form,Organic,,Y
+E01758,2026-01-22 08:06,Phone,Directories,P03226,Y
+E01759,2026-01-22 08:35,Phone,Organic,P00462,N
+E01760,2026-01-22 09:13,Phone,Paid social,P01700,N
+E01761,2026-01-22 09:38,Phone,Paid social,P01338,Y
+E01762,2026-01-22 10:12,Phone,Organic,P00060,N
+E01763,2026-01-22 12:20,Phone,Directories,P03186,N
+E01764,2026-01-22 12:52,Phone,Paid search,P03520,N
+E01765,2026-01-22 13:17,Phone,Organic,P01896,N
+E01766,2026-01-22 13:34,Phone,Paid search,P03530,N
+E01280,2026-01-22 14:02,Web form,Organic,,N
+E01767,2026-01-22 14:04,Phone,Paid search,P01068,Y
+E01768,2026-01-22 14:18,Phone,Organic,P03045,N
+E01769,2026-01-22 14:21,Phone,Organic,P00337,N
+E01770,2026-01-22 14:35,Phone,Organic,P02846,N
+E00019,2026-01-22 15:05,Web form,Paid search,,Y
+E01278,2026-01-22 15:08,Web form,Organic,,N
+E00135,2026-01-22 15:59,Web form,Paid social,,Y
+E01771,2026-01-22 16:17,Phone,Directories,P00569,Y
+E01772,2026-01-22 17:28,Phone,Organic,P03920,N
+E00159,2026-01-22 17:59,Web form,Directories,,Y
+E01279,2026-01-22 18:10,Web form,Organic,,N
+E00071,2026-01-22 20:14,Web form,Paid search,,N
+E01773,2026-01-23 08:02,Phone,Directories,P02454,Y
+E01281,2026-01-23 08:20,Web form,Organic,,Y
+E01774,2026-01-23 08:20,Phone,Directories,P01026,N
+E01775,2026-01-23 08:34,Phone,Organic,P00633,N
+E01776,2026-01-23 08:35,Phone,Directories,P01596,Y
+E01777,2026-01-23 09:24,Phone,Paid search,P00646,N
+E00129,2026-01-23 09:33,Web form,Paid social,,N
+E01778,2026-01-23 10:03,Phone,Organic,P00715,N
+E00124,2026-01-23 10:17,Web form,Paid social,,N
+E01779,2026-01-23 10:37,Phone,Organic,P02382,Y
+E01780,2026-01-23 10:41,Phone,Directories,P00766,Y
+E00064,2026-01-23 10:54,Web form,Paid search,,N
+E00152,2026-01-23 13:07,Web form,Directories,,N
+E01781,2026-01-23 13:47,Phone,Organic,P03126,N
+E01782,2026-01-23 14:47,Phone,Paid search,P00813,N
+E01783,2026-01-23 14:54,Phone,Organic,P01736,N
+E01282,2026-01-23 15:05,Web form,Organic,,N
+E00112,2026-01-23 15:12,Web form,Paid social,,Y
+E01784,2026-01-23 15:59,Phone,Paid social,P03516,N
+E00073,2026-01-23 16:28,Web form,Paid search,,N
+E01283,2026-01-23 17:29,Web form,Organic,,N
+E00025,2026-01-23 17:43,Web form,Paid search,,N
+E01785,2026-01-23 17:53,Phone,Directories,P03517,Y
+E00161,2026-01-23 19:31,Web form,Directories,,N
+E00166,2026-01-23 19:39,Web form,Directories,,Y
+E01284,2026-01-23 19:51,Web form,Organic,,N
+E00087,2026-01-23 20:38,Web form,Paid search,,N
+E01786,2026-01-26 08:24,Phone,Organic,P00679,N
+E00128,2026-01-26 08:30,Web form,Paid social,,N
+E01787,2026-01-26 08:45,Phone,Paid search,P00837,N
+E00095,2026-01-26 09:32,Web form,Paid social,,N
+E01788,2026-01-26 09:35,Phone,Paid search,P04001,N
+E00037,2026-01-26 09:37,Web form,Paid search,,N
+E01789,2026-01-26 09:45,Phone,Organic,P02244,N
+E01790,2026-01-26 09:59,Phone,Organic,P02488,N
+E00143,2026-01-26 10:42,Web form,Directories,,N
+E01791,2026-01-26 10:55,Phone,Directories,P02404,N
+E00136,2026-01-26 11:32,Web form,Paid social,,N
+E01792,2026-01-26 11:36,Phone,Paid social,P00992,N
+E00103,2026-01-26 12:13,Web form,Paid social,,N
+E01793,2026-01-26 12:13,Phone,Paid social,P03801,N
+E00002,2026-01-26 12:50,Web form,Paid search,,N
+E01794,2026-01-26 13:13,Phone,Paid search,P03442,N
+E01795,2026-01-26 14:03,Phone,Organic,P04065,N
+E01796,2026-01-26 14:04,Phone,Paid search,P00551,N
+E00100,2026-01-26 14:05,Web form,Paid social,,N
+E00119,2026-01-26 14:09,Web form,Paid social,,N
+E00164,2026-01-26 14:10,Web form,Directories,,N
+E00056,2026-01-26 15:29,Web form,Paid search,,N
+E01285,2026-01-26 15:46,Web form,Organic,,N
+E01287,2026-01-26 16:05,Web form,Organic,,Y
+E00120,2026-01-26 16:10,Web form,Paid social,,N
+E01286,2026-01-26 20:14,Web form,Organic,,Y
+E01288,2026-01-26 20:31,Web form,Organic,,N
+E00117,2026-01-26 21:38,Web form,Paid social,,N
+E01797,2026-01-27 08:12,Phone,Paid search,P00652,Y
+E00082,2026-01-27 09:01,Web form,Paid search,,Y
+E01798,2026-01-27 09:38,Phone,Paid social,P02819,N
+E01799,2026-01-27 09:58,Phone,Organic,P02404,N
+E00004,2026-01-27 10:48,Web form,Paid search,,N
+E01291,2026-01-27 10:53,Web form,Organic,,Y
+E01800,2026-01-27 11:04,Phone,Paid search,P00212,Y
+E00076,2026-01-27 11:08,Web form,Paid search,,Y
+E01801,2026-01-27 11:42,Phone,Paid search,P00292,N
+E00039,2026-01-27 11:47,Web form,Paid search,,N
+E01802,2026-01-27 12:38,Phone,Directories,P02174,Y
+E00003,2026-01-27 13:32,Web form,Paid search,,Y
+E00094,2026-01-27 14:15,Web form,Paid social,,N
+E00027,2026-01-27 14:23,Web form,Paid search,,N
+E01803,2026-01-27 15:13,Phone,Organic,P01244,N
+E01804,2026-01-27 15:19,Phone,Paid search,P02652,N
+E01805,2026-01-27 15:21,Phone,Paid social,P03085,N
+E01806,2026-01-27 16:05,Phone,Paid social,P03880,N
+E01807,2026-01-27 16:27,Phone,Directories,P03426,N
+E01808,2026-01-27 17:50,Phone,Organic,P03879,N
+E00121,2026-01-27 17:52,Web form,Paid social,,Y
+E00141,2026-01-27 18:41,Web form,Directories,,Y
+E00091,2026-01-27 18:49,Web form,Paid search,,N
+E01290,2026-01-27 18:55,Web form,Organic,,Y
+E00154,2026-01-27 20:28,Web form,Directories,,Y
+E00104,2026-01-27 21:16,Web form,Paid social,,N
+E01289,2026-01-27 21:27,Web form,Organic,,Y
+E01809,2026-01-28 08:07,Phone,Organic,P02593,N
+E00026,2026-01-28 08:16,Web form,Paid search,,N
+E01810,2026-01-28 09:48,Phone,Paid search,P02116,Y
+E01811,2026-01-28 12:09,Phone,Paid social,P02842,N
+E01812,2026-01-28 13:08,Phone,Organic,P00950,N
+E01292,2026-01-28 13:28,Web form,Organic,,N
+E01813,2026-01-28 13:32,Phone,Paid social,P03728,N
+E01814,2026-01-28 13:39,Phone,Paid search,P03026,Y
+E01815,2026-01-28 13:56,Phone,Organic,P01465,Y
+E01816,2026-01-28 14:23,Phone,Paid search,P03246,Y
+E01817,2026-01-28 14:36,Phone,Paid social,P03532,N
+E01818,2026-01-28 14:53,Phone,Directories,P03756,Y
+E00157,2026-01-28 15:09,Web form,Directories,,N
+E01819,2026-01-28 16:02,Phone,Organic,P01522,N
+E01820,2026-01-28 16:14,Phone,Organic,P03774,N
+E00145,2026-01-28 17:01,Web form,Directories,,Y
+E01821,2026-01-28 17:10,Phone,Directories,P03682,Y
+E01822,2026-01-28 17:13,Phone,Paid search,P00806,Y
+E01823,2026-01-28 17:57,Phone,Organic,P01637,Y
+E00153,2026-01-28 19:45,Web form,Directories,,N
+E00101,2026-01-28 19:53,Web form,Paid social,,N
+E00092,2026-01-28 19:56,Web form,Paid social,,N
+E00081,2026-01-29 08:04,Web form,Paid search,,N
+E01824,2026-01-29 08:21,Phone,Directories,P00980,Y
+E01825,2026-01-29 08:42,Phone,Paid search,P00651,N
+E01826,2026-01-29 09:03,Phone,Paid search,P01762,N
+E01827,2026-01-29 09:19,Phone,Organic,P01899,Y
+E01828,2026-01-29 09:34,Phone,Organic,P03416,N
+E00137,2026-01-29 09:42,Web form,Paid social,,Y
+E01829,2026-01-29 10:20,Phone,Organic,P00494,N
+E01830,2026-01-29 10:30,Phone,Organic,P00550,Y
+E01831,2026-01-29 10:31,Phone,Organic,P03838,Y
+E01832,2026-01-29 10:41,Phone,Paid search,P03543,N
+E01293,2026-01-29 12:41,Web form,Organic,,N
+E01833,2026-01-29 12:50,Phone,Paid search,P01183,Y
+E00038,2026-01-29 12:51,Web form,Paid search,,Y
+E00093,2026-01-29 13:18,Web form,Paid social,,N
+E00096,2026-01-29 13:51,Web form,Paid social,,Y
+E01834,2026-01-29 14:04,Phone,Paid search,P02764,N
+E01835,2026-01-29 14:19,Phone,Directories,P02805,Y
+E00072,2026-01-29 14:38,Web form,Paid search,,Y
+E01836,2026-01-29 15:18,Phone,Organic,P01244,N
+E01837,2026-01-29 16:03,Phone,Paid search,P01987,Y
+E01838,2026-01-29 16:58,Phone,Organic,P01841,N
+E00022,2026-01-29 17:10,Web form,Paid search,,N
+E01294,2026-01-29 21:53,Web form,Organic,,N
+E01839,2026-01-30 08:53,Phone,Directories,P02158,Y
+E00010,2026-01-30 09:08,Web form,Paid search,,N
+E01840,2026-01-30 09:52,Phone,Directories,P04158,N
+E01841,2026-01-30 11:03,Phone,Directories,P03124,N
+E01295,2026-01-30 11:24,Web form,Organic,,Y
+E00156,2026-01-30 11:33,Web form,Directories,,N
+E01297,2026-01-30 11:35,Web form,Organic,,N
+E01296,2026-01-30 11:37,Web form,Organic,,N
+E01842,2026-01-30 12:43,Phone,Directories,P03071,Y
+E00127,2026-01-30 13:09,Web form,Paid social,,N
+E00041,2026-01-30 14:00,Web form,Paid search,,Y
+E01843,2026-01-30 14:24,Phone,Organic,P03230,Y
+E01844,2026-01-30 14:48,Phone,Paid search,P00452,Y
+E01845,2026-01-30 15:55,Phone,Organic,P01056,Y
+E01846,2026-01-30 16:19,Phone,Paid search,P03596,Y
+E01847,2026-01-30 16:22,Phone,Paid search,P02602,N
+E00058,2026-01-30 16:55,Web form,Paid search,,N
+E01848,2026-01-30 17:19,Phone,Directories,P03183,N
+E01849,2026-01-30 17:34,Phone,Organic,P03296,N
+E00126,2026-01-30 17:58,Web form,Paid social,,N
+E00110,2026-01-30 18:15,Web form,Paid social,,N
+E01850,2026-02-02 09:16,Phone,Organic,P00665,N
+E01851,2026-02-02 09:21,Phone,Paid social,P01552,N
+E01852,2026-02-02 09:30,Phone,Organic,P01866,N
+E00273,2026-02-02 09:31,Web form,Paid social,,N
+E01853,2026-02-02 11:22,Phone,Organic,P01542,N
+E01854,2026-02-02 11:45,Phone,Organic,P01286,N
+E01855,2026-02-02 11:53,Phone,Directories,P03073,N
+E00334,2026-02-02 13:02,Web form,Directories,,N
+E01856,2026-02-02 13:03,Phone,Organic,P03243,Y
+E01298,2026-02-02 13:41,Web form,Organic,,Y
+E00221,2026-02-02 14:15,Web form,Paid search,,Y
+E01857,2026-02-02 14:25,Phone,Paid search,P01691,Y
+E00188,2026-02-02 14:33,Web form,Paid search,,N
+E01299,2026-02-02 14:43,Referral,Referral,,Y
+E01858,2026-02-02 15:33,Phone,Organic,P02238,Y
+E00232,2026-02-02 15:35,Web form,Paid search,,N
+E00248,2026-02-02 15:39,Web form,Paid search,,Y
+E01859,2026-02-02 15:48,Phone,Paid search,P00016,N
+E00253,2026-02-02 15:50,Web form,Paid search,,N
+E01860,2026-02-02 16:17,Phone,Paid social,P00388,N
+E01861,2026-02-02 16:35,Phone,Paid social,P01346,N
+E00201,2026-02-02 16:38,Web form,Paid search,,N
+E01862,2026-02-02 16:49,Phone,Paid social,P01795,Y
+E01863,2026-02-02 16:58,Phone,Paid search,P02482,N
+E00183,2026-02-02 17:47,Web form,Paid search,,Y
+E00170,2026-02-02 17:51,Web form,Paid search,,Y
+E01864,2026-02-03 08:48,Phone,Directories,P01289,Y
+E01865,2026-02-03 09:06,Phone,Paid search,P00516,N
+E01866,2026-02-03 09:25,Phone,Paid search,P03072,N
+E01867,2026-02-03 09:31,Phone,Directories,P03221,N
+E01868,2026-02-03 09:38,Phone,Directories,P02270,Y
+E00275,2026-02-03 09:45,Web form,Paid social,,N
+E01869,2026-02-03 09:48,Phone,Paid search,P02186,N
+E01302,2026-02-03 09:50,Web form,Organic,,N
+E00317,2026-02-03 11:23,Web form,Directories,,Y
+E00281,2026-02-03 11:48,Web form,Paid social,,Y
+E01870,2026-02-03 13:17,Phone,Organic,P01146,N
+E01871,2026-02-03 14:17,Phone,Directories,P04145,N
+E01872,2026-02-03 14:48,Phone,Paid search,P02189,Y
+E00180,2026-02-03 15:12,Web form,Paid search,,Y
+E01300,2026-02-03 16:58,Web form,Organic,,Y
+E00268,2026-02-03 18:52,Web form,Paid social,,N
+E00278,2026-02-03 20:27,Web form,Paid social,,N
+E00218,2026-02-03 20:40,Web form,Paid search,,N
+E00332,2026-02-03 20:44,Web form,Directories,,N
+E00252,2026-02-03 20:57,Web form,Paid search,,Y
+E01301,2026-02-03 21:59,Web form,Organic,,N
+E01873,2026-02-04 08:30,Phone,Organic,P03424,N
+E01874,2026-02-04 08:48,Phone,Organic,P03419,Y
+E01875,2026-02-04 09:04,Phone,Paid search,P00333,N
+E01304,2026-02-04 09:06,Web form,Organic,,N
+E00241,2026-02-04 09:31,Web form,Paid search,,Y
+E01876,2026-02-04 09:38,Phone,Organic,P02366,Y
+E01877,2026-02-04 09:59,Phone,Paid search,P00708,Y
+E01878,2026-02-04 10:02,Phone,Organic,P02879,N
+E01879,2026-02-04 10:12,Phone,Directories,P02582,Y
+E01880,2026-02-04 11:27,Phone,Paid search,P02029,Y
+E01881,2026-02-04 12:29,Phone,Paid search,P03234,N
+E01305,2026-02-04 14:17,Web form,Organic,,Y
+E01882,2026-02-04 14:25,Phone,Paid search,P03308,Y
+E00272,2026-02-04 14:27,Web form,Paid social,,N
+E00184,2026-02-04 14:30,Web form,Paid search,,Y
+E01883,2026-02-04 15:26,Phone,Paid social,P01499,N
+E01884,2026-02-04 15:55,Phone,Organic,P02924,N
+E01885,2026-02-04 16:44,Phone,Organic,P01346,N
+E01303,2026-02-04 16:57,Web form,Organic,,Y
+E00173,2026-02-04 17:06,Web form,Paid search,,Y
+E00283,2026-02-04 18:15,Web form,Paid social,,N
+E00337,2026-02-04 18:35,Web form,Directories,,Y
+E01306,2026-02-04 19:53,Web form,Organic,,N
+E01886,2026-02-05 08:59,Phone,Directories,P00435,Y
+E01887,2026-02-05 09:07,Phone,Directories,P00041,N
+E01888,2026-02-05 09:12,Phone,Organic,P01538,Y
+E01889,2026-02-05 09:41,Phone,Organic,P03018,Y
+E00207,2026-02-05 09:56,Web form,Paid search,,N
+E01890,2026-02-05 10:38,Phone,Organic,P00108,N
+E01891,2026-02-05 11:56,Phone,Paid search,P03337,N
+E01892,2026-02-05 12:25,Phone,Organic,P02409,N
+E01893,2026-02-05 12:31,Phone,Directories,P01947,N
+E00324,2026-02-05 12:57,Web form,Directories,,Y
+E00250,2026-02-05 12:58,Web form,Paid search,,N
+E00284,2026-02-05 12:59,Web form,Paid social,,N
+E01894,2026-02-05 13:02,Phone,Organic,P03666,N
+E01895,2026-02-05 13:33,Phone,Paid social,P03447,N
+E01896,2026-02-05 13:43,Phone,Organic,P01593,N
+E00234,2026-02-05 14:00,Web form,Paid search,,N
+E01307,2026-02-05 14:29,Web form,Organic,,N
+E00299,2026-02-05 14:33,Web form,Paid social,,N
+E01897,2026-02-05 14:38,Phone,Organic,P01869,Y
+E01898,2026-02-05 16:25,Phone,Paid search,P01605,Y
+E01899,2026-02-05 16:43,Phone,Directories,P04032,N
+E00312,2026-02-05 16:48,Web form,Directories,,Y
+E01900,2026-02-05 17:30,Phone,Organic,P00392,N
+E00199,2026-02-05 21:01,Web form,Paid search,,N
+E01901,2026-02-06 08:11,Phone,Paid search,P01428,N
+E01308,2026-02-06 08:30,Web form,Organic,,N
+E01902,2026-02-06 08:57,Phone,Organic,P00294,N
+E01903,2026-02-06 09:09,Phone,Paid social,P03576,Y
+E01309,2026-02-06 09:11,Web form,Organic,,N
+E00302,2026-02-06 10:10,Web form,Paid social,,Y
+E01904,2026-02-06 10:20,Phone,Organic,P00129,Y
+E01905,2026-02-06 10:37,Phone,Organic,P03943,N
+E01906,2026-02-06 10:51,Phone,Organic,P02205,N
+E01907,2026-02-06 11:01,Phone,Paid search,P00798,Y
+E01908,2026-02-06 11:24,Phone,Organic,P03874,N
+E01909,2026-02-06 11:38,Phone,Paid search,P02854,N
+E00208,2026-02-06 11:46,Web form,Paid search,,N
+E01910,2026-02-06 11:55,Phone,Organic,P02290,N
+E00333,2026-02-06 12:15,Web form,Directories,,Y
+E01911,2026-02-06 12:31,Phone,Paid social,P02600,N
+E00328,2026-02-06 12:33,Web form,Directories,,N
+E00195,2026-02-06 13:56,Web form,Paid search,,N
+E00258,2026-02-06 15:33,Web form,Paid search,,Y
+E01912,2026-02-06 15:51,Phone,Organic,P01665,N
+E01913,2026-02-06 16:00,Phone,Organic,P03794,N
+E01914,2026-02-06 17:04,Phone,Directories,P02628,Y
+E00238,2026-02-06 18:18,Web form,Paid search,,Y
+E01310,2026-02-06 18:53,Web form,Organic,,Y
+E00257,2026-02-06 21:12,Web form,Paid search,,N
+E00326,2026-02-09 08:25,Web form,Directories,,Y
+E01915,2026-02-09 08:59,Phone,Directories,P01883,Y
+E00182,2026-02-09 09:01,Web form,Paid search,,Y
+E01916,2026-02-09 09:07,Phone,Organic,P02959,N
+E01311,2026-02-09 09:15,Web form,Organic,,Y
+E01917,2026-02-09 09:22,Phone,Paid social,P03601,Y
+E00289,2026-02-09 09:30,Web form,Paid social,,N
+E01918,2026-02-09 09:57,Phone,Directories,P01628,Y
+E01919,2026-02-09 10:15,Phone,Directories,P02369,Y
+E01920,2026-02-09 10:22,Phone,Paid search,P02164,N
+E01921,2026-02-09 10:36,Phone,Organic,P00779,N
+E01314,2026-02-09 10:41,Web form,Organic,,N
+E01922,2026-02-09 10:48,Phone,Paid search,P01474,N
+E00233,2026-02-09 12:14,Web form,Paid search,,Y
+E01923,2026-02-09 12:27,Phone,Organic,P03470,Y
+E00246,2026-02-09 13:17,Web form,Paid search,,N
+E01924,2026-02-09 13:22,Phone,Organic,P00774,N
+E00321,2026-02-09 13:59,Web form,Directories,,Y
+E01925,2026-02-09 14:02,Phone,Organic,P00536,Y
+E01926,2026-02-09 14:29,Phone,Paid search,P00343,N
+E01927,2026-02-09 16:02,Phone,Directories,P01114,Y
+E01928,2026-02-09 16:28,Phone,Directories,P03124,Y
+E00276,2026-02-09 16:30,Web form,Paid social,,N
+E01313,2026-02-09 16:30,Web form,Organic,,N
+E01929,2026-02-09 17:04,Phone,Directories,P00123,Y
+E00200,2026-02-09 18:08,Web form,Paid search,,N
+E00286,2026-02-09 19:32,Web form,Paid social,,N
+E00256,2026-02-09 20:00,Web form,Paid search,,N
+E01312,2026-02-09 20:11,Web form,Organic,,N
+E00288,2026-02-09 21:56,Web form,Paid social,,N
+E00235,2026-02-10 08:11,Web form,Paid search,,N
+E01930,2026-02-10 08:39,Phone,Organic,P03609,N
+E01931,2026-02-10 09:09,Phone,Organic,P00128,N
+E01932,2026-02-10 09:27,Phone,Organic,P01952,N
+E01933,2026-02-10 10:14,Phone,Paid social,P03039,N
+E00215,2026-02-10 11:07,Web form,Paid search,,Y
+E01934,2026-02-10 12:10,Phone,Paid search,P01531,N
+E00320,2026-02-10 12:11,Web form,Directories,,Y
+E01935,2026-02-10 13:14,Phone,Paid social,P03300,N
+E01315,2026-02-10 13:25,Web form,Organic,,N
+E01936,2026-02-10 14:27,Phone,Organic,P00484,N
+E01937,2026-02-10 16:00,Phone,Paid social,P03304,N
+E00265,2026-02-10 16:04,Web form,Paid search,,N
+E01316,2026-02-10 16:09,Referral,Referral,,N
+E01938,2026-02-10 16:27,Phone,Organic,P03135,N
+E01939,2026-02-10 16:47,Phone,Organic,P00834,Y
+E01940,2026-02-10 17:43,Phone,Paid search,P00395,N
+E00217,2026-02-10 17:44,Web form,Paid search,,Y
+E00174,2026-02-10 19:31,Web form,Paid search,,Y
+E00239,2026-02-10 19:33,Web form,Paid search,,N
+E01318,2026-02-11 08:17,Web form,Organic,,Y
+E01941,2026-02-11 09:15,Phone,Organic,P04005,N
+E01942,2026-02-11 09:24,Phone,Organic,P03854,Y
+E01943,2026-02-11 09:34,Phone,Organic,P02783,N
+E01944,2026-02-11 09:36,Phone,Paid social,P01267,N
+E01945,2026-02-11 10:29,Phone,Paid search,P00735,Y
+E01946,2026-02-11 11:07,Phone,Directories,P02462,N
+E01319,2026-02-11 11:36,Web form,Organic,,Y
+E01947,2026-02-11 11:56,Phone,Directories,P02815,Y
+E01948,2026-02-11 12:10,Phone,Organic,P00322,N
+E00210,2026-02-11 12:11,Web form,Paid search,,Y
+E00255,2026-02-11 13:00,Web form,Paid search,,N
+E00236,2026-02-11 14:55,Web form,Paid search,,N
+E00209,2026-02-11 15:48,Web form,Paid search,,N
+E01949,2026-02-11 16:05,Phone,Organic,P01210,N
+E01950,2026-02-11 16:52,Phone,Organic,P01012,N
+E01951,2026-02-11 17:08,Phone,Paid search,P01442,Y
+E00307,2026-02-11 17:55,Web form,Directories,,N
+E01317,2026-02-11 18:13,Web form,Organic,,Y
+E00287,2026-02-11 19:34,Web form,Paid social,,N
+E01952,2026-02-12 08:11,Phone,Paid search,P02654,N
+E01320,2026-02-12 08:35,Web form,Organic,,N
+E01953,2026-02-12 09:03,Phone,Organic,P00583,N
+E01954,2026-02-12 09:30,Phone,Paid search,P03566,N
+E01955,2026-02-12 12:12,Phone,Organic,P00356,Y
+E00224,2026-02-12 13:44,Web form,Paid search,,Y
+E01956,2026-02-12 13:49,Phone,Organic,P00154,Y
+E00192,2026-02-12 14:11,Web form,Paid search,,N
+E01957,2026-02-12 14:42,Phone,Directories,P03004,Y
+E01958,2026-02-12 15:41,Phone,Paid search,P00077,Y
+E00301,2026-02-12 15:57,Web form,Paid social,,N
+E01959,2026-02-12 16:08,Phone,Organic,P02583,N
+E01960,2026-02-12 16:26,Phone,Paid social,P00135,Y
+E01961,2026-02-12 16:59,Phone,Directories,P03844,Y
+E00335,2026-02-12 17:05,Web form,Directories,,Y
+E01962,2026-02-13 08:13,Phone,Directories,P01412,Y
+E01963,2026-02-13 08:14,Phone,Organic,P00222,N
+E00319,2026-02-13 08:20,Web form,Directories,,N
+E01964,2026-02-13 08:41,Phone,Paid search,P00332,N
+E01965,2026-02-13 08:46,Phone,Organic,P01449,N
+E01966,2026-02-13 09:33,Phone,Paid social,P00512,N
+E01967,2026-02-13 09:51,Phone,Directories,P01401,Y
+E00177,2026-02-13 10:03,Web form,Paid search,,N
+E01968,2026-02-13 10:24,Phone,Directories,P00163,N
+E01324,2026-02-13 10:39,Web form,Organic,,N
+E00245,2026-02-13 11:14,Web form,Paid search,,Y
+E01969,2026-02-13 11:18,Phone,Paid social,P00074,N
+E00185,2026-02-13 11:24,Web form,Paid search,,N
+E00308,2026-02-13 12:30,Web form,Directories,,N
+E01970,2026-02-13 12:40,Phone,Directories,P00502,Y
+E01971,2026-02-13 12:59,Phone,Directories,P03881,N
+E00172,2026-02-13 13:09,Web form,Paid search,,Y
+E01972,2026-02-13 13:28,Phone,Directories,P00160,Y
+E00179,2026-02-13 13:52,Web form,Paid search,,Y
+E00206,2026-02-13 14:00,Web form,Paid search,,Y
+E01321,2026-02-13 16:29,Web form,Organic,,N
+E00223,2026-02-13 19:05,Web form,Paid search,,N
+E00240,2026-02-13 19:27,Web form,Paid search,,N
+E01322,2026-02-13 20:03,Web form,Organic,,Y
+E01323,2026-02-13 20:20,Web form,Organic,,N
+E01325,2026-02-16 09:22,Web form,Organic,,N
+E00313,2026-02-16 09:27,Web form,Directories,,N
+E00254,2026-02-16 11:28,Web form,Paid search,,Y
+E01973,2026-02-16 12:27,Phone,Organic,P00575,Y
+E01974,2026-02-16 13:32,Phone,Organic,P01888,Y
+E01975,2026-02-16 14:36,Phone,Directories,P01378,Y
+E01976,2026-02-16 15:55,Phone,Directories,P02041,Y
+E01977,2026-02-16 15:56,Phone,Directories,P02123,N
+E01978,2026-02-16 16:12,Phone,Directories,P02322,N
+E00187,2026-02-16 16:48,Web form,Paid search,,Y
+E00227,2026-02-16 19:23,Web form,Paid search,,Y
+E00191,2026-02-16 20:08,Web form,Paid search,,N
+E00285,2026-02-16 21:10,Web form,Paid social,,N
+E01326,2026-02-16 21:38,Web form,Organic,,N
+E00310,2026-02-16 21:59,Web form,Directories,,Y
+E00290,2026-02-17 08:28,Web form,Paid social,,N
+E01979,2026-02-17 08:29,Phone,Directories,P01410,Y
+E01980,2026-02-17 09:03,Phone,Paid social,P04139,N
+E01981,2026-02-17 09:16,Phone,Organic,P00406,Y
+E00203,2026-02-17 09:30,Web form,Paid search,,N
+E01982,2026-02-17 09:36,Phone,Organic,P02334,Y
+E01983,2026-02-17 09:50,Phone,Paid social,P00461,N
+E01984,2026-02-17 10:06,Phone,Paid social,P03814,N
+E01985,2026-02-17 10:10,Phone,Paid search,P03133,Y
+E01328,2026-02-17 11:03,Web form,Organic,,N
+E01986,2026-02-17 11:27,Phone,Organic,P00911,N
+E01987,2026-02-17 12:39,Phone,Organic,P03565,N
+E00247,2026-02-17 14:01,Web form,Paid search,,N
+E00309,2026-02-17 14:33,Web form,Directories,,N
+E00171,2026-02-17 15:14,Web form,Paid search,,N
+E01988,2026-02-17 15:32,Phone,Paid search,P03285,Y
+E01989,2026-02-17 15:53,Phone,Paid search,P02682,N
+E01990,2026-02-17 16:15,Phone,Paid social,P02128,N
+E00202,2026-02-17 16:50,Web form,Paid search,,N
+E01991,2026-02-17 17:02,Phone,Directories,P03692,N
+E01327,2026-02-17 17:11,Web form,Organic,,N
+E01992,2026-02-17 17:34,Phone,Organic,P03517,Y
+E00296,2026-02-17 19:59,Web form,Paid social,,N
+E00216,2026-02-17 20:48,Web form,Paid search,,N
+E00212,2026-02-17 20:59,Web form,Paid search,,Y
+E01993,2026-02-18 08:34,Phone,Paid search,P02454,Y
+E00222,2026-02-18 08:39,Web form,Paid search,,N
+E01994,2026-02-18 09:10,Phone,Directories,P00657,Y
+E01995,2026-02-18 09:23,Phone,Directories,P01434,Y
+E01996,2026-02-18 09:40,Phone,Organic,P00409,Y
+E01997,2026-02-18 09:46,Phone,Organic,P03440,N
+E01998,2026-02-18 09:54,Phone,Paid search,P01202,N
+E01999,2026-02-18 10:36,Phone,Directories,P03676,Y
+E01330,2026-02-18 11:56,Web form,Organic,,N
+E00294,2026-02-18 12:08,Web form,Paid social,,N
+E02000,2026-02-18 12:54,Phone,Directories,P00490,Y
+E00305,2026-02-18 13:12,Web form,Paid social,,N
+E02001,2026-02-18 13:16,Phone,Paid social,P04127,N
+E00176,2026-02-18 14:20,Web form,Paid search,,N
+E00298,2026-02-18 14:29,Web form,Paid social,,N
+E02002,2026-02-18 15:02,Phone,Organic,P01912,Y
+E00260,2026-02-18 15:05,Web form,Paid search,,Y
+E01331,2026-02-18 15:13,Referral,Referral,,Y
+E00230,2026-02-18 15:15,Web form,Paid search,,N
+E02003,2026-02-18 15:32,Phone,Paid social,P01921,N
+E02004,2026-02-18 15:54,Phone,Organic,P00618,N
+E00213,2026-02-18 16:22,Web form,Paid search,,N
+E02005,2026-02-18 16:32,Phone,Organic,P00538,N
+E02006,2026-02-18 17:17,Phone,Directories,P00921,Y
+E02007,2026-02-18 17:28,Phone,Paid search,P00138,N
+E00300,2026-02-18 19:06,Web form,Paid social,,N
+E01329,2026-02-18 19:53,Web form,Organic,,N
+E00237,2026-02-18 20:35,Web form,Paid search,,N
+E00306,2026-02-18 21:28,Web form,Paid social,,N
+E02008,2026-02-19 08:26,Phone,Organic,P00784,Y
+E00318,2026-02-19 09:04,Web form,Directories,,Y
+E02009,2026-02-19 10:27,Phone,Organic,P02583,Y
+E02010,2026-02-19 11:05,Phone,Paid search,P01693,N
+E02011,2026-02-19 11:26,Phone,Paid search,P03993,N
+E02012,2026-02-19 12:03,Phone,Paid social,P03102,N
+E02013,2026-02-19 12:20,Phone,Paid search,P01302,N
+E00316,2026-02-19 12:40,Web form,Directories,,N
+E02014,2026-02-19 13:57,Phone,Paid search,P00990,N
+E02015,2026-02-19 15:14,Phone,Organic,P00250,Y
+E01333,2026-02-19 15:21,Web form,Organic,,N
+E02016,2026-02-19 16:57,Phone,Directories,P02174,N
+E00270,2026-02-19 17:01,Web form,Paid social,,N
+E00259,2026-02-19 17:24,Web form,Paid search,,N
+E00214,2026-02-19 18:17,Web form,Paid search,,N
+E01334,2026-02-19 18:36,Web form,Organic,,N
+E00297,2026-02-19 20:32,Web form,Paid social,,N
+E00169,2026-02-19 20:41,Web form,Paid search,,Y
+E01332,2026-02-19 20:48,Web form,Organic,,N
+E00280,2026-02-19 21:48,Web form,Paid social,,N
+E00197,2026-02-19 21:56,Web form,Paid search,,N
+E00193,2026-02-20 08:11,Web form,Paid search,,Y
+E02017,2026-02-20 08:43,Phone,Paid search,P03969,N
+E01338,2026-02-20 08:45,Web form,Organic,,N
+E02018,2026-02-20 09:06,Phone,Organic,P03576,N
+E02019,2026-02-20 09:13,Phone,Paid search,P00612,Y
+E02020,2026-02-20 09:46,Phone,Directories,P02207,Y
+E02021,2026-02-20 09:54,Phone,Paid social,P03644,Y
+E02022,2026-02-20 10:10,Phone,Directories,P03400,Y
+E02023,2026-02-20 10:16,Phone,Organic,P02426,N
+E02024,2026-02-20 10:45,Phone,Organic,P00100,Y
+E02025,2026-02-20 11:18,Phone,Organic,P00108,N
+E02026,2026-02-20 11:24,Phone,Paid search,P04032,N
+E02027,2026-02-20 11:42,Phone,Directories,P00155,N
+E02028,2026-02-20 11:55,Phone,Organic,P00738,N
+E02029,2026-02-20 12:01,Phone,Organic,P00144,N
+E01335,2026-02-20 12:37,Web form,Organic,,N
+E02030,2026-02-20 14:23,Phone,Paid search,P03510,N
+E00243,2026-02-20 14:29,Web form,Paid search,,N
+E00314,2026-02-20 15:02,Web form,Directories,,Y
+E01336,2026-02-20 15:22,Web form,Organic,,N
+E02031,2026-02-20 15:43,Phone,Organic,P00326,Y
+E02032,2026-02-20 16:25,Phone,Organic,P01478,N
+E02033,2026-02-20 16:39,Phone,Directories,P00818,Y
+E02034,2026-02-20 16:44,Phone,Directories,P04185,Y
+E02035,2026-02-20 17:01,Phone,Organic,P01893,N
+E01337,2026-02-20 17:09,Web form,Organic,,N
+E02036,2026-02-20 17:24,Phone,Directories,P01846,N
+E00303,2026-02-20 18:05,Web form,Paid social,,Y
+E00311,2026-02-20 18:53,Web form,Directories,,Y
+E00291,2026-02-20 19:35,Web form,Paid social,,Y
+E00279,2026-02-20 19:58,Web form,Paid social,,Y
+E00329,2026-02-20 20:06,Web form,Directories,,N
+E00219,2026-02-23 08:33,Web form,Paid search,,N
+E02037,2026-02-23 09:10,Phone,Paid search,P01028,Y
+E02038,2026-02-23 09:29,Phone,Paid search,P00235,N
+E02039,2026-02-23 11:10,Phone,Organic,P03481,Y
+E02040,2026-02-23 11:27,Phone,Directories,P00636,N
+E00330,2026-02-23 11:35,Web form,Directories,,N
+E00175,2026-02-23 12:26,Web form,Paid search,,N
+E00249,2026-02-23 14:10,Web form,Paid search,,Y
+E01339,2026-02-23 14:25,Web form,Organic,,N
+E02041,2026-02-23 15:22,Phone,Organic,P01840,N
+E02042,2026-02-23 16:39,Phone,Directories,P03770,Y
+E00338,2026-02-23 17:29,Web form,Directories,,N
+E02043,2026-02-23 17:38,Phone,Paid search,P04044,N
+E02044,2026-02-23 17:41,Phone,Paid search,P00390,N
+E00331,2026-02-23 19:09,Web form,Directories,,Y
+E00267,2026-02-23 21:26,Web form,Paid social,,N
+E00292,2026-02-23 21:36,Web form,Paid social,,N
+E00194,2026-02-23 21:50,Web form,Paid search,,N
+E02045,2026-02-24 08:21,Phone,Directories,P03105,N
+E02046,2026-02-24 08:36,Phone,Paid search,P00624,N
+E02047,2026-02-24 09:06,Phone,Organic,P03449,N
+E00181,2026-02-24 09:19,Web form,Paid search,,Y
+E00323,2026-02-24 09:28,Web form,Directories,,N
+E01343,2026-02-24 09:28,Referral,Referral,,N
+E02048,2026-02-24 10:04,Phone,Paid social,P01969,N
+E02049,2026-02-24 10:08,Phone,Organic,P01035,N
+E02050,2026-02-24 10:52,Phone,Paid search,P01863,Y
+E01340,2026-02-24 11:19,Web form,Organic,,N
+E00261,2026-02-24 11:35,Web form,Paid search,,N
+E02051,2026-02-24 11:55,Phone,Organic,P03643,Y
+E00277,2026-02-24 11:58,Web form,Paid social,,N
+E00229,2026-02-24 12:03,Web form,Paid search,,N
+E02052,2026-02-24 12:03,Phone,Paid search,P02648,N
+E02053,2026-02-24 13:01,Phone,Organic,P04195,N
+E02054,2026-02-24 13:45,Phone,Paid search,P00075,N
+E00282,2026-02-24 14:49,Web form,Paid social,,N
+E00295,2026-02-24 15:36,Web form,Paid social,,N
+E02055,2026-02-24 16:11,Phone,Directories,P01142,Y
+E02056,2026-02-24 16:17,Phone,Paid search,P03214,N
+E01341,2026-02-24 16:18,Web form,Organic,,N
+E02057,2026-02-24 16:58,Phone,Organic,P01734,Y
+E00264,2026-02-24 18:41,Web form,Paid search,,N
+E00190,2026-02-24 19:05,Web form,Paid search,,N
+E00263,2026-02-24 19:52,Web form,Paid search,,N
+E01342,2026-02-24 19:57,Web form,Organic,,N
+E00336,2026-02-25 08:47,Web form,Directories,,N
+E00228,2026-02-25 09:08,Web form,Paid search,,Y
+E02058,2026-02-25 09:22,Phone,Paid search,P02394,Y
+E02059,2026-02-25 10:22,Phone,Paid search,P01673,N
+E00225,2026-02-25 11:03,Web form,Paid search,,N
+E00327,2026-02-25 11:27,Web form,Directories,,N
+E02060,2026-02-25 11:28,Phone,Organic,P02090,N
+E02061,2026-02-25 11:55,Phone,Directories,P01368,Y
+E00315,2026-02-25 12:34,Web form,Directories,,Y
+E02062,2026-02-25 12:40,Phone,Paid social,P03094,N
+E02063,2026-02-25 13:19,Phone,Organic,P01808,N
+E02064,2026-02-25 13:40,Phone,Directories,P03385,N
+E00226,2026-02-25 14:03,Web form,Paid search,,N
+E01344,2026-02-25 14:09,Web form,Organic,,Y
+E00178,2026-02-25 14:24,Web form,Paid search,,N
+E00322,2026-02-25 14:59,Web form,Directories,,N
+E02065,2026-02-25 15:33,Phone,Directories,P02769,N
+E02066,2026-02-25 16:51,Phone,Paid social,P00541,N
+E02067,2026-02-25 16:51,Phone,Paid search,P00368,Y
+E00262,2026-02-25 16:54,Web form,Paid search,,N
+E02068,2026-02-25 17:02,Phone,Directories,P01886,N
+E00189,2026-02-25 17:41,Web form,Paid search,,Y
+E00196,2026-02-25 20:44,Web form,Paid search,,Y
+E00231,2026-02-26 08:18,Web form,Paid search,,N
+E00274,2026-02-26 08:58,Web form,Paid social,,N
+E02069,2026-02-26 09:03,Phone,Directories,P03154,Y
+E02070,2026-02-26 09:07,Phone,Directories,P02362,Y
+E00269,2026-02-26 09:08,Web form,Paid social,,N
+E02071,2026-02-26 09:37,Phone,Directories,P03432,N
+E02072,2026-02-26 10:08,Phone,Organic,P03873,Y
+E02073,2026-02-26 10:54,Phone,Directories,P03116,Y
+E02074,2026-02-26 11:10,Phone,Organic,P00336,N
+E02075,2026-02-26 11:19,Phone,Paid search,P01112,N
+E02076,2026-02-26 11:39,Phone,Paid search,P00486,Y
+E02077,2026-02-26 11:50,Phone,Directories,P03431,Y
+E00293,2026-02-26 12:04,Web form,Paid social,,N
+E00266,2026-02-26 12:24,Web form,Paid search,,N
+E00304,2026-02-26 13:08,Web form,Paid social,,N
+E02078,2026-02-26 13:19,Phone,Paid search,P03763,Y
+E02079,2026-02-26 15:05,Phone,Paid social,P00660,N
+E00198,2026-02-26 15:49,Web form,Paid search,,N
+E01345,2026-02-26 16:09,Web form,Organic,,N
+E02080,2026-02-26 16:11,Phone,Directories,P01782,N
+E02081,2026-02-26 16:26,Phone,Directories,P03069,N
+E02082,2026-02-26 16:26,Phone,Organic,P01698,N
+E02083,2026-02-26 16:45,Phone,Organic,P01484,Y
+E02084,2026-02-26 16:50,Phone,Paid search,P01374,N
+E02085,2026-02-26 17:14,Phone,Organic,P03281,N
+E02086,2026-02-26 17:16,Phone,Organic,P02065,Y
+E01346,2026-02-26 17:54,Web form,Organic,,N
+E00205,2026-02-26 20:10,Web form,Paid search,,N
+E01347,2026-02-26 21:54,Web form,Organic,,Y
+E01348,2026-02-27 08:08,Web form,Organic,,N
+E02087,2026-02-27 08:56,Phone,Paid search,P00762,Y
+E02088,2026-02-27 09:11,Phone,Paid search,P02215,Y
+E00204,2026-02-27 09:17,Web form,Paid search,,N
+E02089,2026-02-27 09:37,Phone,Paid social,P00533,N
+E02090,2026-02-27 09:44,Phone,Paid social,P00579,N
+E02091,2026-02-27 10:16,Phone,Organic,P01889,N
+E01349,2026-02-27 10:57,Web form,Organic,,N
+E00186,2026-02-27 11:20,Web form,Paid search,,Y
+E02092,2026-02-27 12:59,Phone,Paid social,P01481,Y
+E02093,2026-02-27 13:46,Phone,Organic,P00689,N
+E00220,2026-02-27 13:53,Web form,Paid search,,N
+E02094,2026-02-27 15:13,Phone,Paid search,P02004,N
+E00244,2026-02-27 15:40,Web form,Paid search,,N
+E02095,2026-02-27 16:07,Phone,Paid search,P01967,N
+E02096,2026-02-27 16:19,Phone,Organic,P02158,N
+E02097,2026-02-27 16:28,Phone,Paid search,P00638,N
+E02098,2026-02-27 16:34,Phone,Directories,P02576,N
+E00251,2026-02-27 16:45,Web form,Paid search,,Y
+E02099,2026-02-27 16:45,Phone,Paid search,P02267,N
+E02100,2026-02-27 16:56,Phone,Paid search,P00130,N
+E02101,2026-02-27 16:58,Phone,Paid search,P00556,N
+E02102,2026-02-27 17:50,Phone,Organic,P01364,N
+E00271,2026-02-27 18:24,Web form,Paid social,,N
+E00211,2026-02-27 20:05,Web form,Paid search,,Y
+E00242,2026-02-27 21:23,Web form,Paid search,,Y
+E00325,2026-02-27 21:49,Web form,Directories,,N
+E02103,2026-03-02 08:32,Phone,Directories,P02563,N
+E02104,2026-03-02 09:04,Phone,Paid search,P03420,N
+E02105,2026-03-02 09:14,Phone,Paid search,P00032,N
+E02106,2026-03-02 09:38,Phone,Paid search,P03664,N
+E02107,2026-03-02 10:04,Phone,Paid social,P02715,N
+E00442,2026-03-02 10:07,Web form,Paid social,,N
+E02108,2026-03-02 10:09,Phone,Directories,P03310,Y
+E02109,2026-03-02 10:09,Phone,Organic,P01367,Y
+E01351,2026-03-02 10:20,Web form,Organic,,N
+E02110,2026-03-02 12:23,Phone,Paid social,P03895,N
+E02111,2026-03-02 12:28,Phone,Paid social,P01762,N
+E02112,2026-03-02 12:31,Phone,Organic,P00276,Y
+E01350,2026-03-02 13:10,Web form,Organic,,Y
+E02113,2026-03-02 13:12,Phone,Paid search,P03899,Y
+E02114,2026-03-02 15:11,Phone,Directories,P01094,Y
+E02115,2026-03-02 15:52,Phone,Paid search,P02819,N
+E01352,2026-03-02 16:14,Web form,Organic,,Y
+E02116,2026-03-02 16:20,Phone,Organic,P04008,N
+E02117,2026-03-02 16:39,Phone,Directories,P01937,Y
+E00449,2026-03-02 16:53,Web form,Paid social,,N
+E00453,2026-03-02 17:03,Web form,Paid social,,Y
+E00380,2026-03-02 18:25,Web form,Paid search,,N
+E00500,2026-03-02 20:08,Web form,Directories,,N
+E01353,2026-03-02 20:11,Web form,Organic,,N
+E00490,2026-03-02 21:03,Web form,Directories,,N
+E00386,2026-03-03 08:22,Web form,Paid search,,Y
+E00428,2026-03-03 09:02,Web form,Paid search,,N
+E00372,2026-03-03 09:41,Web form,Paid search,,Y
+E02118,2026-03-03 09:52,Phone,Directories,P00668,Y
+E02119,2026-03-03 10:05,Phone,Paid search,P02628,Y
+E02120,2026-03-03 10:13,Phone,Organic,P03728,N
+E02121,2026-03-03 10:22,Phone,Paid social,P04095,Y
+E02122,2026-03-03 10:35,Phone,Organic,P00354,N
+E00456,2026-03-03 12:06,Web form,Paid social,,Y
+E00389,2026-03-03 12:54,Web form,Paid search,,N
+E02123,2026-03-03 12:56,Phone,Organic,P00226,N
+E02124,2026-03-03 13:06,Phone,Paid social,P02503,N
+E00454,2026-03-03 14:11,Web form,Paid social,,N
+E00480,2026-03-03 15:27,Web form,Directories,,Y
+E02125,2026-03-03 15:28,Phone,Directories,P01423,Y
+E02126,2026-03-03 16:18,Phone,Paid search,P01546,N
+E02127,2026-03-03 16:49,Phone,Organic,P03260,Y
+E00503,2026-03-03 19:05,Web form,Directories,,Y
+E00423,2026-03-03 20:48,Web form,Paid search,,Y
+E00481,2026-03-03 20:56,Web form,Directories,,N
+E01354,2026-03-03 21:07,Web form,Organic,,Y
+E02128,2026-03-04 09:03,Phone,Organic,P01215,Y
+E02129,2026-03-04 09:18,Phone,Organic,P01986,N
+E00440,2026-03-04 09:39,Web form,Paid social,,N
+E02130,2026-03-04 09:39,Phone,Organic,P00456,N
+E02131,2026-03-04 09:42,Phone,Organic,P02467,Y
+E01355,2026-03-04 09:54,Web form,Organic,,N
+E02132,2026-03-04 10:07,Phone,Paid search,P02841,N
+E02133,2026-03-04 10:08,Phone,Paid search,P00808,N
+E02134,2026-03-04 10:19,Phone,Organic,P00414,N
+E02135,2026-03-04 12:01,Phone,Directories,P02275,N
+E02136,2026-03-04 12:43,Phone,Organic,P03158,Y
+E00462,2026-03-04 13:35,Web form,Paid social,,N
+E02137,2026-03-04 13:37,Phone,Paid social,P03042,N
+E00437,2026-03-04 13:56,Web form,Paid social,,N
+E00387,2026-03-04 14:52,Web form,Paid search,,N
+E02138,2026-03-04 16:09,Phone,Paid social,P01711,N
+E01357,2026-03-04 16:22,Web form,Organic,,Y
+E02139,2026-03-04 16:28,Phone,Organic,P00487,N
+E02140,2026-03-04 16:43,Phone,Paid search,P03094,N
+E02141,2026-03-04 17:00,Phone,Organic,P00941,N
+E02142,2026-03-04 17:30,Phone,Paid social,P00901,N
+E02143,2026-03-04 17:35,Phone,Paid search,P02160,N
+E00444,2026-03-04 18:56,Web form,Paid social,,N
+E00495,2026-03-04 19:39,Web form,Directories,,Y
+E01356,2026-03-04 21:03,Web form,Organic,,N
+E00455,2026-03-04 21:46,Web form,Paid social,,N
+E01360,2026-03-05 08:06,Referral,Referral,,Y
+E02144,2026-03-05 09:00,Phone,Paid search,P03200,N
+E02145,2026-03-05 09:38,Phone,Paid search,P00911,N
+E02146,2026-03-05 10:06,Phone,Organic,P02629,Y
+E02147,2026-03-05 10:08,Phone,Paid social,P02281,N
+E02148,2026-03-05 10:25,Phone,Directories,P00458,Y
+E02149,2026-03-05 10:52,Phone,Organic,P02208,Y
+E02150,2026-03-05 11:06,Phone,Organic,P00853,N
+E02151,2026-03-05 11:24,Phone,Paid search,P01142,Y
+E00407,2026-03-05 11:37,Web form,Paid search,,N
+E02152,2026-03-05 12:05,Phone,Directories,P04015,Y
+E02153,2026-03-05 12:21,Phone,Organic,P01056,Y
+E02154,2026-03-05 13:01,Phone,Paid social,P03861,N
+E02155,2026-03-05 13:52,Phone,Organic,P00058,N
+E01359,2026-03-05 14:27,Web form,Organic,,N
+E00451,2026-03-05 14:52,Web form,Paid social,,N
+E02156,2026-03-05 15:52,Phone,Organic,P03808,Y
+E02157,2026-03-05 16:59,Phone,Organic,P03926,N
+E02158,2026-03-05 17:10,Phone,Organic,P04196,N
+E02159,2026-03-05 17:31,Phone,Directories,P00034,N
+E02160,2026-03-05 17:31,Phone,Organic,P02435,N
+E00346,2026-03-05 20:14,Web form,Paid search,,N
+E00344,2026-03-05 21:03,Web form,Paid search,,Y
+E01358,2026-03-05 21:18,Web form,Organic,,N
+E00433,2026-03-05 21:35,Web form,Paid social,,N
+E02161,2026-03-06 08:59,Phone,Directories,P01165,N
+E01363,2026-03-06 09:19,Web form,Organic,,Y
+E02162,2026-03-06 09:26,Phone,Organic,P03096,N
+E00467,2026-03-06 09:38,Web form,Paid social,,Y
+E02163,2026-03-06 09:43,Phone,Directories,P03495,N
+E00345,2026-03-06 09:48,Web form,Paid search,,N
+E02164,2026-03-06 09:48,Phone,Directories,P00116,N
+E02165,2026-03-06 09:51,Phone,Paid search,P00434,N
+E02166,2026-03-06 09:52,Phone,Organic,P01271,N
+E02167,2026-03-06 10:07,Phone,Directories,P03013,Y
+E02168,2026-03-06 10:11,Phone,Organic,P00702,N
+E01361,2026-03-06 11:07,Web form,Organic,,Y
+E02169,2026-03-06 11:26,Phone,Paid search,P02839,Y
+E00359,2026-03-06 12:19,Web form,Paid search,,Y
+E02170,2026-03-06 13:08,Phone,Directories,P00069,N
+E02171,2026-03-06 13:32,Phone,Organic,P02310,N
+E00364,2026-03-06 15:14,Web form,Paid search,,N
+E01362,2026-03-06 15:29,Web form,Organic,,Y
+E02172,2026-03-06 15:51,Phone,Organic,P02058,Y
+E02173,2026-03-06 15:52,Phone,Organic,P02863,N
+E00492,2026-03-06 15:59,Web form,Directories,,Y
+E02174,2026-03-06 16:01,Phone,Organic,P01967,N
+E01364,2026-03-06 17:10,Web form,Organic,,N
+E02175,2026-03-06 17:35,Phone,Paid search,P02541,N
+E02176,2026-03-06 17:55,Phone,Directories,P03771,N
+E00415,2026-03-06 20:35,Web form,Paid search,,N
+E00363,2026-03-06 21:07,Web form,Paid search,,N
+E00497,2026-03-06 21:51,Web form,Directories,,Y
+E02177,2026-03-09 08:04,Phone,Paid search,P01827,Y
+E00498,2026-03-09 08:58,Web form,Directories,,N
+E02178,2026-03-09 09:17,Phone,Paid search,P02563,N
+E02179,2026-03-09 10:17,Phone,Paid search,P00759,Y
+E02180,2026-03-09 10:22,Phone,Directories,P02341,N
+E02181,2026-03-09 10:23,Phone,Paid search,P00181,N
+E02182,2026-03-09 10:28,Phone,Paid social,P01350,N
+E02183,2026-03-09 11:27,Phone,Paid social,P00576,N
+E02184,2026-03-09 11:37,Phone,Directories,P00296,Y
+E02185,2026-03-09 12:01,Phone,Directories,P00567,N
+E00435,2026-03-09 12:29,Web form,Paid social,,Y
+E01366,2026-03-09 13:08,Web form,Organic,,Y
+E02186,2026-03-09 13:11,Phone,Paid social,P01712,N
+E01365,2026-03-09 14:12,Web form,Organic,,N
+E02187,2026-03-09 14:20,Phone,Paid social,P00539,N
+E02188,2026-03-09 15:25,Phone,Organic,P01191,N
+E02189,2026-03-09 17:21,Phone,Directories,P02662,Y
+E02190,2026-03-09 17:53,Phone,Organic,P00158,N
+E00370,2026-03-09 20:04,Web form,Paid search,,Y
+E01367,2026-03-09 21:05,Web form,Organic,,N
+E00390,2026-03-09 21:10,Web form,Paid search,,Y
+E00432,2026-03-09 21:19,Web form,Paid social,,N
+E01368,2026-03-09 21:56,Referral,Referral,,Y
+E01369,2026-03-10 08:29,Web form,Organic,,N
+E00463,2026-03-10 08:33,Web form,Paid social,,N
+E02191,2026-03-10 08:39,Phone,Directories,P00845,Y
+E02192,2026-03-10 08:49,Phone,Directories,P01514,N
+E02193,2026-03-10 09:19,Phone,Organic,P01095,N
+E02194,2026-03-10 09:39,Phone,Organic,P02204,N
+E02195,2026-03-10 09:58,Phone,Paid search,P02095,N
+E02196,2026-03-10 09:59,Phone,Directories,P00271,N
+E02197,2026-03-10 10:07,Phone,Organic,P01712,N
+E02198,2026-03-10 10:26,Phone,Organic,P02558,Y
+E00397,2026-03-10 11:06,Web form,Paid search,,Y
+E02199,2026-03-10 11:07,Phone,Directories,P03045,N
+E02200,2026-03-10 12:46,Phone,Directories,P03840,Y
+E01370,2026-03-10 13:53,Web form,Organic,,N
+E02201,2026-03-10 14:07,Phone,Directories,P01916,N
+E02202,2026-03-10 14:07,Phone,Organic,P02668,N
+E02203,2026-03-10 14:30,Phone,Directories,P03625,N
+E02204,2026-03-10 14:38,Phone,Organic,P04117,N
+E02205,2026-03-10 16:14,Phone,Paid search,P00364,Y
+E00425,2026-03-10 19:04,Web form,Paid search,,N
+E00505,2026-03-10 20:39,Web form,Directories,,N
+E02206,2026-03-11 08:20,Phone,Paid search,P00702,N
+E02207,2026-03-11 08:35,Phone,Directories,P03384,Y
+E00401,2026-03-11 09:13,Web form,Paid search,,N
+E00471,2026-03-11 10:41,Web form,Paid social,,N
+E02208,2026-03-11 10:48,Phone,Directories,P01117,Y
+E00458,2026-03-11 11:07,Web form,Paid social,,N
+E01372,2026-03-11 11:13,Web form,Organic,,N
+E00452,2026-03-11 11:40,Web form,Paid social,,N
+E00434,2026-03-11 12:34,Web form,Paid social,,N
+E02209,2026-03-11 12:49,Phone,Paid search,P02916,N
+E02210,2026-03-11 13:02,Phone,Organic,P00369,Y
+E02211,2026-03-11 13:19,Phone,Organic,P04067,Y
+E02212,2026-03-11 13:55,Phone,Paid search,P01619,Y
+E02213,2026-03-11 14:52,Phone,Paid social,P02271,Y
+E02214,2026-03-11 15:02,Phone,Organic,P02880,N
+E02215,2026-03-11 15:36,Phone,Directories,P03327,Y
+E02216,2026-03-11 15:51,Phone,Organic,P03226,Y
+E02217,2026-03-11 15:57,Phone,Organic,P00734,Y
+E02218,2026-03-11 16:16,Phone,Paid search,P01685,N
+E02219,2026-03-11 16:26,Phone,Organic,P02404,Y
+E02220,2026-03-11 16:55,Phone,Paid social,P00296,N
+E01371,2026-03-11 17:30,Web form,Organic,,N
+E00385,2026-03-11 18:39,Web form,Paid search,,N
+E00347,2026-03-12 08:28,Web form,Paid search,,N
+E02221,2026-03-12 08:40,Phone,Organic,P02190,N
+E02222,2026-03-12 08:48,Phone,Directories,P02469,N
+E01375,2026-03-12 09:09,Web form,Organic,,N
+E02223,2026-03-12 09:26,Phone,Paid search,P03046,Y
+E02224,2026-03-12 09:32,Phone,Organic,P01353,N
+E02225,2026-03-12 09:35,Phone,Paid search,P00493,N
+E00470,2026-03-12 09:41,Web form,Paid social,,N
+E02226,2026-03-12 09:46,Phone,Organic,P00459,Y
+E02227,2026-03-12 09:50,Phone,Organic,P02700,N
+E02228,2026-03-12 09:52,Phone,Paid search,P03982,N
+E02229,2026-03-12 10:04,Phone,Paid social,P00944,N
+E00348,2026-03-12 10:27,Web form,Paid search,,N
+E00408,2026-03-12 11:18,Web form,Paid search,,Y
+E02230,2026-03-12 11:26,Phone,Paid search,P02319,N
+E02231,2026-03-12 11:33,Phone,Paid social,P00458,N
+E02232,2026-03-12 12:00,Phone,Paid search,P02631,N
+E02233,2026-03-12 13:06,Phone,Organic,P03384,N
+E02234,2026-03-12 13:40,Phone,Directories,P02043,N
+E00394,2026-03-12 14:10,Web form,Paid search,,N
+E01373,2026-03-12 15:12,Web form,Organic,,N
+E00351,2026-03-12 16:30,Web form,Paid search,,Y
+E01374,2026-03-12 17:19,Web form,Organic,,N
+E00374,2026-03-12 18:28,Web form,Paid search,,N
+E00409,2026-03-12 18:43,Web form,Paid search,,Y
+E00371,2026-03-12 20:23,Web form,Paid search,,N
+E00457,2026-03-12 21:58,Web form,Paid social,,Y
+E02235,2026-03-13 08:16,Phone,Organic,P03065,N
+E02236,2026-03-13 08:32,Phone,Paid search,P02112,Y
+E02237,2026-03-13 08:46,Phone,Paid social,P00055,N
+E02238,2026-03-13 08:46,Phone,Organic,P03485,N
+E02239,2026-03-13 09:31,Phone,Paid search,P03287,N
+E02240,2026-03-13 10:11,Phone,Paid search,P01776,N
+E02241,2026-03-13 10:17,Phone,Paid social,P04022,N
+E00357,2026-03-13 10:36,Web form,Paid search,,N
+E00377,2026-03-13 11:05,Web form,Paid search,,N
+E01376,2026-03-13 13:11,Web form,Organic,,N
+E02242,2026-03-13 13:31,Phone,Paid search,P00636,Y
+E02243,2026-03-13 13:49,Phone,Paid social,P00683,N
+E00450,2026-03-13 14:06,Web form,Paid social,,N
+E02244,2026-03-13 15:13,Phone,Paid search,P03573,Y
+E02245,2026-03-13 16:18,Phone,Organic,P03251,Y
+E02246,2026-03-13 16:44,Phone,Paid search,P02568,Y
+E02247,2026-03-13 17:03,Phone,Directories,P01932,N
+E01377,2026-03-13 17:24,Web form,Organic,,N
+E01378,2026-03-13 21:40,Web form,Organic,,Y
+E02248,2026-03-16 08:14,Phone,Directories,P00468,N
+E02249,2026-03-16 08:32,Phone,Organic,P01335,N
+E02250,2026-03-16 09:32,Phone,Organic,P01570,N
+E02251,2026-03-16 09:40,Phone,Organic,P00089,N
+E02252,2026-03-16 09:59,Phone,Paid search,P00171,N
+E02253,2026-03-16 10:12,Phone,Organic,P01048,Y
+E02254,2026-03-16 10:22,Phone,Paid search,P04070,N
+E02255,2026-03-16 11:06,Phone,Paid search,P02665,N
+E02256,2026-03-16 11:36,Phone,Organic,P02188,N
+E02257,2026-03-16 12:05,Phone,Paid search,P00558,Y
+E00469,2026-03-16 12:14,Web form,Paid social,,N
+E02258,2026-03-16 12:32,Phone,Directories,P03395,Y
+E00343,2026-03-16 12:35,Web form,Paid search,,N
+E02259,2026-03-16 12:54,Phone,Paid search,P03624,N
+E02260,2026-03-16 13:33,Phone,Directories,P02549,Y
+E02261,2026-03-16 13:59,Phone,Organic,P03021,N
+E01380,2026-03-16 14:37,Web form,Organic,,N
+E02262,2026-03-16 14:38,Phone,Paid search,P04166,N
+E02263,2026-03-16 15:00,Phone,Directories,P02415,N
+E01381,2026-03-16 15:03,Web form,Organic,,N
+E01379,2026-03-16 15:46,Web form,Organic,,Y
+E02264,2026-03-16 15:54,Phone,Paid search,P00170,N
+E02265,2026-03-16 15:56,Phone,Organic,P03565,N
+E02266,2026-03-16 16:52,Phone,Organic,P02359,N
+E00350,2026-03-16 17:12,Web form,Paid search,,N
+E00491,2026-03-16 17:16,Web form,Directories,,N
+E00376,2026-03-16 18:44,Web form,Paid search,,N
+E00485,2026-03-16 19:56,Web form,Directories,,Y
+E00477,2026-03-16 20:08,Web form,Directories,,N
+E02267,2026-03-17 08:01,Phone,Paid search,P03913,N
+E02268,2026-03-17 08:26,Phone,Organic,P00550,N
+E01383,2026-03-17 08:34,Web form,Organic,,N
+E02269,2026-03-17 09:28,Phone,Directories,P03437,Y
+E02270,2026-03-17 09:36,Phone,Directories,P02920,Y
+E00417,2026-03-17 09:49,Web form,Paid search,,Y
+E02271,2026-03-17 10:28,Phone,Paid social,P04092,N
+E02272,2026-03-17 10:40,Phone,Organic,P00056,N
+E02273,2026-03-17 10:41,Phone,Paid social,P00583,N
+E02274,2026-03-17 11:53,Phone,Organic,P04107,N
+E02275,2026-03-17 12:16,Phone,Organic,P03538,Y
+E02276,2026-03-17 13:22,Phone,Paid search,P02512,N
+E00367,2026-03-17 14:30,Web form,Paid search,,N
+E02277,2026-03-17 15:29,Phone,Paid social,P02359,N
+E02278,2026-03-17 15:36,Phone,Organic,P02266,N
+E00419,2026-03-17 16:15,Web form,Paid search,,N
+E00411,2026-03-17 19:35,Web form,Paid search,,Y
+E01382,2026-03-17 20:58,Web form,Organic,,N
+E02279,2026-03-18 08:27,Phone,Paid search,P01622,N
+E02280,2026-03-18 08:36,Phone,Directories,P03866,N
+E02281,2026-03-18 09:36,Phone,Paid search,P01199,N
+E02282,2026-03-18 09:44,Phone,Paid search,P02492,N
+E00461,2026-03-18 09:55,Web form,Paid social,,N
+E02283,2026-03-18 10:17,Phone,Paid search,P02951,N
+E00349,2026-03-18 11:11,Web form,Paid search,,N
+E02284,2026-03-18 11:21,Phone,Organic,P00932,N
+E00393,2026-03-18 12:02,Web form,Paid search,,N
+E02285,2026-03-18 12:14,Phone,Organic,P02870,N
+E02286,2026-03-18 13:46,Phone,Paid search,P00734,Y
+E02287,2026-03-18 14:34,Phone,Organic,P01019,N
+E01385,2026-03-18 14:38,Web form,Organic,,N
+E00459,2026-03-18 15:12,Web form,Paid social,,Y
+E02288,2026-03-18 15:36,Phone,Paid search,P01496,N
+E00379,2026-03-18 15:54,Web form,Paid search,,N
+E01384,2026-03-18 16:40,Web form,Organic,,Y
+E02289,2026-03-18 17:27,Phone,Organic,P00961,N
+E02290,2026-03-18 17:48,Phone,Paid search,P01008,N
+E00426,2026-03-18 20:22,Web form,Paid search,,N
+E02291,2026-03-19 08:29,Phone,Paid search,P02343,N
+E02292,2026-03-19 08:41,Phone,Organic,P02639,Y
+E02293,2026-03-19 08:50,Phone,Organic,P00817,N
+E02294,2026-03-19 09:32,Phone,Organic,P02380,Y
+E02295,2026-03-19 09:42,Phone,Paid search,P03508,Y
+E00468,2026-03-19 09:45,Web form,Paid social,,N
+E02296,2026-03-19 09:48,Phone,Paid search,P03950,N
+E00472,2026-03-19 10:14,Web form,Paid social,,N
+E02297,2026-03-19 10:14,Phone,Organic,P00396,N
+E02298,2026-03-19 10:20,Phone,Directories,P02049,N
+E00355,2026-03-19 11:10,Web form,Paid search,,N
+E00473,2026-03-19 11:17,Web form,Paid social,,N
+E00396,2026-03-19 11:33,Web form,Paid search,,Y
+E00475,2026-03-19 11:57,Web form,Directories,,Y
+E00486,2026-03-19 12:10,Web form,Directories,,N
+E00404,2026-03-19 12:33,Web form,Paid search,,N
+E02299,2026-03-19 13:06,Phone,Paid search,P03997,Y
+E00482,2026-03-19 13:56,Web form,Directories,,Y
+E01388,2026-03-19 13:58,Web form,Organic,,N
+E00378,2026-03-19 15:50,Web form,Paid search,,N
+E01386,2026-03-19 16:14,Web form,Organic,,N
+E02300,2026-03-19 16:18,Phone,Directories,P02371,Y
+E02301,2026-03-19 16:23,Phone,Organic,P02528,N
+E01387,2026-03-19 16:26,Web form,Organic,,N
+E02302,2026-03-19 16:37,Phone,Organic,P01240,N
+E02303,2026-03-19 16:40,Phone,Organic,P02700,N
+E02304,2026-03-19 16:46,Phone,Directories,P00844,Y
+E02305,2026-03-19 16:54,Phone,Directories,P02293,N
+E00493,2026-03-19 17:02,Web form,Directories,,N
+E01389,2026-03-19 17:39,Web form,Organic,,N
+E02306,2026-03-19 17:39,Phone,Paid search,P02279,N
+E02307,2026-03-19 17:41,Phone,Organic,P00882,Y
+E00441,2026-03-19 18:38,Web form,Paid social,,N
+E00392,2026-03-19 19:26,Web form,Paid search,,Y
+E02308,2026-03-20 08:39,Phone,Directories,P00741,Y
+E01392,2026-03-20 10:33,Web form,Organic,,N
+E02309,2026-03-20 10:46,Phone,Organic,P01609,N
+E02310,2026-03-20 10:54,Phone,Organic,P00298,N
+E02311,2026-03-20 10:57,Phone,Paid search,P02623,N
+E00427,2026-03-20 11:51,Web form,Paid search,,N
+E00341,2026-03-20 12:11,Web form,Paid search,,N
+E00464,2026-03-20 12:25,Web form,Paid social,,N
+E01390,2026-03-20 12:25,Web form,Organic,,N
+E02312,2026-03-20 12:41,Phone,Paid search,P02182,N
+E00479,2026-03-20 12:55,Web form,Directories,,N
+E00360,2026-03-20 13:13,Web form,Paid search,,N
+E02313,2026-03-20 13:46,Phone,Paid social,P02001,N
+E02314,2026-03-20 13:52,Phone,Organic,P03855,Y
+E02315,2026-03-20 14:19,Phone,Directories,P03193,Y
+E02316,2026-03-20 14:42,Phone,Paid social,P03791,N
+E00400,2026-03-20 15:42,Web form,Paid search,,N
+E02317,2026-03-20 15:45,Phone,Paid search,P03210,N
+E02318,2026-03-20 16:12,Phone,Organic,P03578,N
+E02319,2026-03-20 17:54,Phone,Paid social,P00051,N
+E00494,2026-03-20 18:07,Web form,Directories,,N
+E01391,2026-03-20 18:22,Web form,Organic,,N
+E00388,2026-03-20 19:58,Web form,Paid search,,Y
+E00416,2026-03-20 20:14,Web form,Paid search,,N
+E02320,2026-03-23 08:10,Phone,Paid social,P02994,N
+E02321,2026-03-23 08:51,Phone,Organic,P00384,Y
+E02322,2026-03-23 09:02,Phone,Paid search,P03960,N
+E02323,2026-03-23 09:38,Phone,Organic,P02036,Y
+E02324,2026-03-23 09:45,Phone,Paid social,P01112,N
+E02325,2026-03-23 09:49,Phone,Directories,P03730,Y
+E00431,2026-03-23 11:00,Web form,Paid social,,N
+E02326,2026-03-23 11:16,Phone,Organic,P00783,Y
+E02327,2026-03-23 12:41,Phone,Paid search,P02905,N
+E00398,2026-03-23 13:33,Web form,Paid search,,N
+E02328,2026-03-23 13:38,Phone,Organic,P03202,Y
+E00362,2026-03-23 15:23,Web form,Paid search,,Y
+E02329,2026-03-23 15:46,Phone,Paid search,P00601,N
+E02330,2026-03-23 16:57,Phone,Directories,P03536,Y
+E02331,2026-03-23 17:27,Phone,Organic,P00321,N
+E02332,2026-03-23 17:46,Phone,Organic,P02475,N
+E00447,2026-03-23 18:06,Web form,Paid social,,N
+E01394,2026-03-23 18:49,Web form,Organic,,N
+E01393,2026-03-23 19:15,Web form,Organic,,N
+E00369,2026-03-23 21:42,Web form,Paid search,,N
+E00413,2026-03-23 21:44,Web form,Paid search,,N
+E00429,2026-03-24 08:00,Web form,Paid social,,N
+E00421,2026-03-24 08:03,Web form,Paid search,,Y
+E00504,2026-03-24 08:16,Web form,Directories,,Y
+E00399,2026-03-24 08:29,Web form,Paid search,,N
+E01395,2026-03-24 09:03,Web form,Organic,,N
+E02333,2026-03-24 09:25,Phone,Paid search,P01750,N
+E02334,2026-03-24 09:45,Phone,Organic,P00410,N
+E02335,2026-03-24 10:06,Phone,Paid social,P02315,N
+E02336,2026-03-24 10:56,Phone,Paid social,P03885,Y
+E02337,2026-03-24 11:03,Phone,Directories,P02668,Y
+E02338,2026-03-24 11:08,Phone,Organic,P02747,N
+E02339,2026-03-24 12:10,Phone,Organic,P01260,Y
+E00403,2026-03-24 13:21,Web form,Paid search,,Y
+E00502,2026-03-24 13:31,Web form,Directories,,N
+E00496,2026-03-24 13:32,Web form,Directories,,N
+E02340,2026-03-24 14:02,Phone,Directories,P00414,Y
+E00383,2026-03-24 14:15,Web form,Paid search,,N
+E00443,2026-03-24 14:34,Web form,Paid social,,N
+E02341,2026-03-24 14:49,Phone,Paid social,P00314,Y
+E02342,2026-03-24 15:53,Phone,Paid search,P01601,Y
+E02343,2026-03-24 16:14,Phone,Directories,P02742,Y
+E02344,2026-03-24 16:17,Phone,Paid social,P03148,N
+E02345,2026-03-24 16:42,Phone,Organic,P04017,N
+E02346,2026-03-24 16:47,Phone,Paid search,P01453,N
+E02347,2026-03-24 17:30,Phone,Paid search,P04087,N
+E02348,2026-03-24 17:40,Phone,Organic,P02590,Y
+E00501,2026-03-24 18:40,Web form,Directories,,Y
+E00381,2026-03-24 19:47,Web form,Paid search,,N
+E00438,2026-03-24 21:23,Web form,Paid social,,N
+E00356,2026-03-24 21:27,Web form,Paid search,,N
+E00412,2026-03-24 21:59,Web form,Paid search,,Y
+E02349,2026-03-25 09:36,Phone,Paid search,P00332,N
+E02350,2026-03-25 09:48,Phone,Paid search,P03330,N
+E02351,2026-03-25 10:03,Phone,Directories,P00453,Y
+E00384,2026-03-25 10:20,Web form,Paid search,,N
+E02352,2026-03-25 11:12,Phone,Organic,P00019,Y
+E02353,2026-03-25 11:19,Phone,Paid search,P03039,N
+E00445,2026-03-25 11:36,Web form,Paid social,,N
+E00488,2026-03-25 12:34,Web form,Directories,,N
+E01396,2026-03-25 14:43,Web form,Organic,,N
+E02354,2026-03-25 15:41,Phone,Organic,P02005,Y
+E02355,2026-03-25 16:06,Phone,Directories,P00369,Y
+E02356,2026-03-25 16:26,Phone,Directories,P01066,N
+E00506,2026-03-25 16:43,Web form,Directories,,N
+E01397,2026-03-25 17:33,Web form,Organic,,Y
+E01398,2026-03-25 17:47,Web form,Organic,,N
+E00373,2026-03-25 18:49,Web form,Paid search,,Y
+E00365,2026-03-25 19:04,Web form,Paid search,,Y
+E00424,2026-03-25 19:40,Web form,Paid search,,N
+E00489,2026-03-25 20:30,Web form,Directories,,Y
+E00395,2026-03-25 21:48,Web form,Paid search,,N
+E00366,2026-03-26 08:09,Web form,Paid search,,Y
+E02357,2026-03-26 08:24,Phone,Paid search,P03793,Y
+E02358,2026-03-26 09:14,Phone,Directories,P01409,N
+E02359,2026-03-26 09:20,Phone,Directories,P01736,Y
+E02360,2026-03-26 09:41,Phone,Paid social,P00038,N
+E02361,2026-03-26 09:59,Phone,Organic,P01291,Y
+E02362,2026-03-26 10:23,Phone,Directories,P00773,Y
+E02363,2026-03-26 10:31,Phone,Paid search,P00692,N
+E02364,2026-03-26 10:39,Phone,Directories,P02764,Y
+E02365,2026-03-26 10:48,Phone,Organic,P03463,N
+E00375,2026-03-26 11:07,Web form,Paid search,,N
+E00487,2026-03-26 11:11,Web form,Directories,,Y
+E00465,2026-03-26 12:21,Web form,Paid social,,N
+E00439,2026-03-26 13:39,Web form,Paid social,,N
+E00422,2026-03-26 14:12,Web form,Paid search,,Y
+E00474,2026-03-26 14:52,Web form,Paid social,,N
+E02366,2026-03-26 16:03,Phone,Paid search,P04041,N
+E02367,2026-03-26 16:04,Phone,Organic,P00945,N
+E01400,2026-03-26 16:56,Web form,Organic,,N
+E01401,2026-03-26 17:25,Web form,Organic,,N
+E01402,2026-03-26 18:12,Web form,Organic,,N
+E01399,2026-03-26 20:05,Web form,Organic,,Y
+E02368,2026-03-27 08:38,Phone,Organic,P03841,Y
+E01405,2026-03-27 08:51,Web form,Organic,,N
+E02369,2026-03-27 08:52,Phone,Directories,P00627,Y
+E02370,2026-03-27 08:52,Phone,Directories,P01756,N
+E00460,2026-03-27 09:25,Web form,Paid social,,N
+E02371,2026-03-27 10:03,Phone,Paid social,P03731,N
+E02372,2026-03-27 10:12,Phone,Paid search,P04028,Y
+E02373,2026-03-27 11:03,Phone,Paid search,P01460,N
+E02374,2026-03-27 11:05,Phone,Organic,P02636,N
+E02375,2026-03-27 11:07,Phone,Paid search,P02037,N
+E02376,2026-03-27 11:27,Phone,Paid search,P03657,Y
+E01406,2026-03-27 11:48,Web form,Organic,,Y
+E02377,2026-03-27 12:42,Phone,Organic,P01019,N
+E02378,2026-03-27 13:04,Phone,Paid social,P02791,N
+E01403,2026-03-27 13:17,Web form,Organic,,N
+E02379,2026-03-27 13:31,Phone,Directories,P00566,Y
+E00430,2026-03-27 13:32,Web form,Paid social,,N
+E00414,2026-03-27 15:30,Web form,Paid search,,N
+E00353,2026-03-27 15:34,Web form,Paid search,,N
+E00446,2026-03-27 15:49,Web form,Paid social,,N
+E02380,2026-03-27 16:17,Phone,Paid search,P00651,N
+E02381,2026-03-27 16:38,Phone,Paid search,P01989,N
+E02382,2026-03-27 17:04,Phone,Paid search,P03611,Y
+E00420,2026-03-27 17:20,Web form,Paid search,,Y
+E02383,2026-03-27 17:59,Phone,Organic,P03941,N
+E00382,2026-03-27 19:48,Web form,Paid search,,N
+E00361,2026-03-27 19:51,Web form,Paid search,,N
+E01404,2026-03-27 21:21,Web form,Organic,,N
+E02384,2026-03-30 08:48,Phone,Paid social,P01742,N
+E00402,2026-03-30 09:09,Web form,Paid search,,N
+E02385,2026-03-30 09:15,Phone,Directories,P01072,Y
+E02386,2026-03-30 10:14,Phone,Organic,P02659,N
+E02387,2026-03-30 10:49,Phone,Paid search,P04187,N
+E02388,2026-03-30 11:10,Phone,Organic,P01405,N
+E02389,2026-03-30 11:17,Phone,Paid search,P03143,N
+E01407,2026-03-30 11:25,Web form,Organic,,N
+E00405,2026-03-30 11:37,Web form,Paid search,,N
+E00484,2026-03-30 13:17,Web form,Directories,,Y
+E00436,2026-03-30 13:44,Web form,Paid social,,Y
+E02390,2026-03-30 13:58,Phone,Paid search,P00358,Y
+E02391,2026-03-30 14:58,Phone,Organic,P01263,N
+E02392,2026-03-30 15:48,Phone,Organic,P01820,Y
+E02393,2026-03-30 15:51,Phone,Organic,P00838,N
+E00507,2026-03-30 16:27,Web form,Directories,,N
+E00483,2026-03-30 17:10,Web form,Directories,,N
+E02394,2026-03-30 17:26,Phone,Paid search,P03393,N
+E00466,2026-03-30 19:12,Web form,Paid social,,N
+E00354,2026-03-30 19:46,Web form,Paid search,,N
+E00476,2026-03-30 19:56,Web form,Directories,,N
+E00368,2026-03-30 20:00,Web form,Paid search,,N
+E00340,2026-03-30 20:56,Web form,Paid search,,Y
+E00339,2026-03-30 21:09,Web form,Paid search,,N
+E00406,2026-03-30 21:26,Web form,Paid search,,N
+E00448,2026-03-31 08:17,Web form,Paid social,,N
+E02395,2026-03-31 08:54,Phone,Organic,P00850,N
+E02396,2026-03-31 09:26,Phone,Directories,P02414,N
+E02397,2026-03-31 10:04,Phone,Paid social,P03684,N
+E02398,2026-03-31 10:08,Phone,Paid search,P03628,N
+E00410,2026-03-31 10:20,Web form,Paid search,,N
+E02399,2026-03-31 10:29,Phone,Organic,P04068,N
+E02400,2026-03-31 10:33,Phone,Paid search,P01641,Y
+E01410,2026-03-31 10:34,Web form,Organic,,N
+E00352,2026-03-31 11:20,Web form,Paid search,,N
+E00418,2026-03-31 11:22,Web form,Paid search,,N
+E02401,2026-03-31 12:12,Phone,Paid search,P01663,N
+E02402,2026-03-31 12:20,Phone,Paid social,P03452,N
+E01409,2026-03-31 12:30,Web form,Organic,,N
+E00358,2026-03-31 12:40,Web form,Paid search,,Y
+E01408,2026-03-31 13:18,Web form,Organic,,N
+E02403,2026-03-31 13:37,Phone,Paid search,P03276,N
+E02404,2026-03-31 14:54,Phone,Paid search,P03391,Y
+E02405,2026-03-31 16:45,Phone,Organic,P04087,Y
+E02406,2026-03-31 16:58,Phone,Organic,P01232,N
+E02407,2026-03-31 17:02,Phone,Paid search,P00611,Y
+E02408,2026-03-31 17:40,Phone,Paid search,P03847,N
+E02409,2026-03-31 17:57,Phone,Paid social,P03829,N
+E00499,2026-03-31 18:25,Web form,Directories,,Y
+E00391,2026-03-31 20:54,Web form,Paid search,,N
+E00478,2026-03-31 21:10,Web form,Directories,,Y
+E00342,2026-03-31 21:26,Web form,Paid search,,N
+E00541,2026-04-01 08:12,Web form,Paid search,,Y
+E02410,2026-04-01 09:05,Phone,Paid search,P04080,N
+E02411,2026-04-01 09:13,Phone,Directories,P02599,Y
+E02412,2026-04-01 09:23,Phone,Paid social,P01098,N
+E02413,2026-04-01 09:36,Phone,Organic,P01156,N
+E02414,2026-04-01 09:44,Phone,Directories,P01873,N
+E00715,2026-04-01 10:10,Web form,Paid social,,N
+E02415,2026-04-01 10:41,Phone,Directories,P00576,Y
+E02416,2026-04-01 10:46,Phone,Organic,P00414,N
+E02417,2026-04-01 11:19,Phone,Paid search,P03766,N
+E02418,2026-04-01 11:19,Phone,Paid social,P03845,N
+E02419,2026-04-01 11:48,Phone,Organic,P02548,Y
+E02420,2026-04-01 12:23,Phone,Paid search,P02407,N
+E02421,2026-04-01 12:30,Phone,Paid search,P00976,N
+E00737,2026-04-01 12:45,Web form,Directories,,Y
+E00686,2026-04-01 13:04,Web form,Paid social,,N
+E02422,2026-04-01 13:43,Phone,Paid social,P03566,N
+E02423,2026-04-01 14:12,Phone,Paid search,P00824,Y
+E01412,2026-04-01 16:07,Web form,Organic,,Y
+E02424,2026-04-01 16:10,Phone,Organic,P00841,N
+E00607,2026-04-01 16:36,Web form,Paid search,,N
+E02425,2026-04-01 17:15,Phone,Paid search,P04021,N
+E00738,2026-04-01 17:21,Web form,Directories,,Y
+E02426,2026-04-01 17:35,Phone,Paid social,P01289,N
+E00641,2026-04-01 17:56,Web form,Paid search,,Y
+E01411,2026-04-01 19:25,Web form,Organic,,N
+E01413,2026-04-01 19:34,Referral,Referral,,Y
+E00530,2026-04-01 19:48,Web form,Paid search,,N
+E00725,2026-04-01 21:26,Web form,Directories,,N
+E02427,2026-04-02 08:24,Phone,Organic,P02011,N
+E02428,2026-04-02 09:22,Phone,Organic,P03842,N
+E00621,2026-04-02 09:29,Web form,Paid search,,Y
+E02429,2026-04-02 09:32,Phone,Paid search,P02533,N
+E02430,2026-04-02 10:38,Phone,Paid search,P02956,Y
+E02431,2026-04-02 11:16,Phone,Directories,P02325,N
+E00700,2026-04-02 11:21,Web form,Paid social,,N
+E01414,2026-04-02 11:52,Web form,Organic,,Y
+E00593,2026-04-02 12:28,Web form,Paid search,,Y
+E02432,2026-04-02 12:39,Phone,Paid search,P02499,Y
+E02433,2026-04-02 12:51,Phone,Organic,P00954,N
+E02434,2026-04-02 13:14,Phone,Paid search,P00931,N
+E02435,2026-04-02 13:33,Phone,Paid search,P02892,Y
+E02436,2026-04-02 13:41,Phone,Organic,P01272,Y
+E02437,2026-04-02 14:52,Phone,Directories,P03354,N
+E02438,2026-04-02 15:40,Phone,Paid search,P01596,Y
+E02439,2026-04-02 17:47,Phone,Organic,P03505,Y
+E01415,2026-04-02 18:58,Web form,Organic,,N
+E01416,2026-04-02 20:10,Web form,Organic,,N
+E00512,2026-04-02 20:11,Web form,Paid search,,N
+E00594,2026-04-02 20:36,Web form,Paid search,,N
+E00585,2026-04-02 21:31,Web form,Paid search,,Y
+E00533,2026-04-02 21:49,Web form,Paid search,,Y
+E00565,2026-04-07 08:34,Web form,Paid search,,Y
+E02440,2026-04-07 08:38,Phone,Organic,P00785,N
+E01418,2026-04-07 08:52,Web form,Organic,,N
+E02441,2026-04-07 09:32,Phone,Directories,P02290,N
+E02442,2026-04-07 09:38,Phone,Paid search,P00008,Y
+E02443,2026-04-07 09:52,Phone,Directories,P03496,N
+E02444,2026-04-07 10:00,Phone,Organic,P03044,N
+E02445,2026-04-07 10:35,Phone,Directories,P00254,Y
+E02446,2026-04-07 11:26,Phone,Organic,P03700,N
+E02447,2026-04-07 11:32,Phone,Paid search,P03150,N
+E02448,2026-04-07 11:35,Phone,Directories,P02542,Y
+E00574,2026-04-07 12:22,Web form,Paid search,,N
+E02449,2026-04-07 12:27,Phone,Directories,P03975,Y
+E02450,2026-04-07 13:16,Phone,Paid search,P00992,Y
+E01419,2026-04-07 13:42,Web form,Organic,,N
+E00636,2026-04-07 13:51,Web form,Paid search,,N
+E01420,2026-04-07 13:57,Web form,Organic,,N
+E00602,2026-04-07 14:17,Web form,Paid search,,Y
+E00662,2026-04-07 14:27,Web form,Paid social,,N
+E00578,2026-04-07 14:51,Web form,Paid search,,N
+E02451,2026-04-07 15:39,Phone,Directories,P03049,N
+E00742,2026-04-07 15:53,Web form,Directories,,N
+E02452,2026-04-07 16:03,Phone,Paid search,P00754,N
+E02453,2026-04-07 16:24,Phone,Organic,P03369,N
+E02454,2026-04-07 16:30,Phone,Directories,P03452,N
+E00582,2026-04-07 17:28,Web form,Paid search,,N
+E00601,2026-04-07 17:46,Web form,Paid search,,N
+E02455,2026-04-07 17:54,Phone,Directories,P03936,Y
+E00634,2026-04-07 18:29,Web form,Paid search,,Y
+E00543,2026-04-07 19:51,Web form,Paid search,,N
+E01417,2026-04-07 21:45,Web form,Organic,,N
+E02456,2026-04-08 08:32,Phone,Paid search,P03464,Y
+E01421,2026-04-08 08:58,Web form,Organic,,Y
+E02457,2026-04-08 09:23,Phone,Paid search,P00135,Y
+E02458,2026-04-08 09:46,Phone,Directories,P03135,N
+E02459,2026-04-08 09:53,Phone,Directories,P03626,N
+E02460,2026-04-08 10:54,Phone,Organic,P02961,N
+E02461,2026-04-08 10:56,Phone,Organic,P03090,Y
+E02462,2026-04-08 11:07,Phone,Paid social,P00284,N
+E02463,2026-04-08 11:13,Phone,Organic,P02203,N
+E02464,2026-04-08 12:05,Phone,Organic,P00590,N
+E00567,2026-04-08 13:00,Web form,Paid search,,N
+E02465,2026-04-08 13:00,Phone,Directories,P01813,Y
+E00713,2026-04-08 13:25,Web form,Paid social,,N
+E02466,2026-04-08 13:48,Phone,Paid social,P03035,N
+E02467,2026-04-08 14:05,Phone,Organic,P01843,N
+E00545,2026-04-08 14:23,Web form,Paid search,,Y
+E02468,2026-04-08 14:38,Phone,Directories,P00681,N
+E02469,2026-04-08 14:53,Phone,Paid social,P01782,N
+E00531,2026-04-08 16:05,Web form,Paid search,,Y
+E02470,2026-04-08 16:05,Phone,Directories,P00240,N
+E02471,2026-04-08 16:13,Phone,Paid search,P00866,Y
+E02472,2026-04-08 16:29,Phone,Paid search,P03719,N
+E02473,2026-04-08 17:12,Phone,Organic,P00800,N
+E00557,2026-04-08 17:22,Web form,Paid search,,Y
+E00598,2026-04-08 18:21,Web form,Paid search,,N
+E00650,2026-04-08 18:24,Web form,Paid search,,N
+E00749,2026-04-08 18:38,Web form,Directories,,N
+E00654,2026-04-08 19:18,Web form,Paid social,,N
+E00558,2026-04-08 19:21,Web form,Paid search,,Y
+E01422,2026-04-09 08:49,Web form,Organic,,N
+E02474,2026-04-09 09:30,Phone,Organic,P02680,N
+E02475,2026-04-09 09:35,Phone,Organic,P00357,Y
+E02476,2026-04-09 09:47,Phone,Paid search,P00973,N
+E00647,2026-04-09 10:04,Web form,Paid search,,Y
+E02477,2026-04-09 11:12,Phone,Paid search,P04190,N
+E00670,2026-04-09 11:14,Web form,Paid social,,N
+E00556,2026-04-09 11:48,Web form,Paid search,,N
+E02478,2026-04-09 12:01,Phone,Directories,P03925,Y
+E02479,2026-04-09 12:50,Phone,Paid search,P03993,N
+E00672,2026-04-09 12:54,Web form,Paid social,,N
+E02480,2026-04-09 13:01,Phone,Organic,P02855,Y
+E00631,2026-04-09 13:09,Web form,Paid search,,N
+E00684,2026-04-09 13:13,Web form,Paid social,,N
+E02481,2026-04-09 13:44,Phone,Organic,P03260,Y
+E00705,2026-04-09 14:08,Web form,Paid social,,N
+E02482,2026-04-09 14:09,Phone,Paid search,P00185,N
+E02483,2026-04-09 15:13,Phone,Directories,P00109,Y
+E00710,2026-04-09 16:04,Web form,Paid social,,Y
+E02484,2026-04-09 17:04,Phone,Organic,P04137,N
+E02485,2026-04-09 17:11,Phone,Organic,P04107,N
+E00546,2026-04-09 18:16,Web form,Paid search,,Y
+E00663,2026-04-09 19:52,Web form,Paid social,,N
+E02486,2026-04-10 08:01,Phone,Organic,P03937,N
+E00511,2026-04-10 08:29,Web form,Paid search,,N
+E02487,2026-04-10 08:31,Phone,Paid social,P02632,N
+E00610,2026-04-10 08:32,Web form,Paid search,,N
+E02488,2026-04-10 08:56,Phone,Paid social,P03812,N
+E02489,2026-04-10 09:02,Phone,Paid social,P03373,N
+E02490,2026-04-10 09:17,Phone,Paid search,P01469,N
+E00668,2026-04-10 09:29,Web form,Paid social,,N
+E02491,2026-04-10 09:34,Phone,Paid search,P02014,Y
+E02492,2026-04-10 09:46,Phone,Paid search,P02951,Y
+E02493,2026-04-10 10:24,Phone,Directories,P02843,N
+E01423,2026-04-10 10:27,Web form,Organic,,N
+E00694,2026-04-10 11:10,Web form,Paid social,,N
+E02494,2026-04-10 11:17,Phone,Paid social,P00745,Y
+E02495,2026-04-10 11:36,Phone,Paid search,P00457,Y
+E02496,2026-04-10 14:02,Phone,Organic,P01517,Y
+E00729,2026-04-10 14:44,Web form,Directories,,Y
+E00688,2026-04-10 15:30,Web form,Paid social,,N
+E00555,2026-04-10 16:23,Web form,Paid search,,Y
+E02497,2026-04-10 16:24,Phone,Organic,P01566,N
+E02498,2026-04-10 16:32,Phone,Organic,P04121,N
+E02499,2026-04-10 17:04,Phone,Paid search,P01378,N
+E02500,2026-04-10 17:09,Phone,Paid search,P03122,N
+E00642,2026-04-10 17:27,Web form,Paid search,,Y
+E00683,2026-04-10 17:36,Web form,Paid social,,Y
+E00681,2026-04-10 18:04,Web form,Paid social,,N
+E00566,2026-04-10 18:55,Web form,Paid search,,Y
+E00513,2026-04-10 19:29,Web form,Paid search,,N
+E00568,2026-04-10 20:57,Web form,Paid search,,N
+E01424,2026-04-10 21:39,Referral,Referral,,Y
+E00519,2026-04-13 08:18,Web form,Paid search,,N
+E02501,2026-04-13 08:30,Phone,Organic,P02436,Y
+E01425,2026-04-13 09:08,Web form,Organic,,N
+E02502,2026-04-13 10:04,Phone,Organic,P02506,N
+E02503,2026-04-13 10:31,Phone,Paid search,P00682,Y
+E02504,2026-04-13 10:50,Phone,Directories,P00475,N
+E02505,2026-04-13 10:54,Phone,Paid social,P00717,N
+E02506,2026-04-13 11:04,Phone,Paid search,P02839,N
+E00550,2026-04-13 11:34,Web form,Paid search,,Y
+E02507,2026-04-13 11:55,Phone,Paid search,P01787,Y
+E02508,2026-04-13 13:14,Phone,Paid social,P00862,N
+E02509,2026-04-13 13:56,Phone,Directories,P03242,Y
+E01426,2026-04-13 15:42,Web form,Organic,,N
+E02510,2026-04-13 16:42,Phone,Paid search,P00304,Y
+E00605,2026-04-13 17:29,Web form,Paid search,,N
+E02511,2026-04-13 17:48,Phone,Paid social,P00363,N
+E00739,2026-04-13 18:51,Web form,Directories,,N
+E00510,2026-04-13 19:03,Web form,Paid search,,N
+E00696,2026-04-13 19:05,Web form,Paid social,,N
+E00652,2026-04-13 20:46,Web form,Paid search,,Y
+E00746,2026-04-13 21:05,Web form,Directories,,N
+E00661,2026-04-13 21:33,Web form,Paid social,,N
+E00638,2026-04-14 08:25,Web form,Paid search,,Y
+E02512,2026-04-14 08:27,Phone,Paid search,P03144,N
+E00592,2026-04-14 08:28,Web form,Paid search,,N
+E02513,2026-04-14 08:57,Phone,Directories,P00504,N
+E02514,2026-04-14 09:38,Phone,Directories,P00512,Y
+E02515,2026-04-14 09:38,Phone,Paid search,P01841,N
+E02516,2026-04-14 10:12,Phone,Paid search,P03536,Y
+E02517,2026-04-14 10:16,Phone,Organic,P01032,N
+E00644,2026-04-14 10:50,Web form,Paid search,,N
+E00581,2026-04-14 11:05,Web form,Paid search,,N
+E02518,2026-04-14 11:56,Phone,Paid social,P01032,N
+E00716,2026-04-14 12:30,Web form,Paid social,,N
+E02519,2026-04-14 12:30,Phone,Organic,P01773,N
+E00579,2026-04-14 12:56,Web form,Paid search,,N
+E02520,2026-04-14 13:00,Phone,Directories,P02251,N
+E02521,2026-04-14 13:21,Phone,Directories,P01644,Y
+E02522,2026-04-14 13:49,Phone,Directories,P00224,Y
+E00721,2026-04-14 13:50,Web form,Directories,,Y
+E00718,2026-04-14 14:15,Web form,Paid social,,Y
+E02523,2026-04-14 15:43,Phone,Organic,P03691,N
+E00693,2026-04-14 16:11,Web form,Paid social,,N
+E02524,2026-04-14 16:36,Phone,Organic,P00351,N
+E00671,2026-04-14 19:48,Web form,Paid social,,N
+E01429,2026-04-14 20:10,Web form,Organic,,N
+E00689,2026-04-14 20:18,Web form,Paid social,,Y
+E01428,2026-04-14 20:28,Web form,Organic,,Y
+E01427,2026-04-14 20:41,Web form,Organic,,N
+E02525,2026-04-15 08:43,Phone,Organic,P02153,N
+E02526,2026-04-15 09:11,Phone,Paid search,P02505,N
+E00653,2026-04-15 09:13,Web form,Paid social,,N
+E00624,2026-04-15 09:33,Web form,Paid search,,N
+E00553,2026-04-15 09:38,Web form,Paid search,,N
+E00664,2026-04-15 09:58,Web form,Paid social,,N
+E02527,2026-04-15 10:04,Phone,Directories,P02340,N
+E02528,2026-04-15 10:33,Phone,Directories,P03799,N
+E02529,2026-04-15 11:09,Phone,Paid social,P03771,N
+E00563,2026-04-15 11:20,Web form,Paid search,,N
+E02530,2026-04-15 11:20,Phone,Directories,P03058,N
+E01432,2026-04-15 11:40,Web form,Organic,,Y
+E01431,2026-04-15 11:58,Web form,Organic,,N
+E01430,2026-04-15 12:02,Web form,Organic,,N
+E02531,2026-04-15 12:44,Phone,Paid search,P03698,Y
+E00651,2026-04-15 13:36,Web form,Paid search,,Y
+E00734,2026-04-15 13:40,Web form,Directories,,Y
+E01433,2026-04-15 14:55,Web form,Organic,,Y
+E02532,2026-04-15 15:05,Phone,Organic,P02555,Y
+E00657,2026-04-15 15:25,Web form,Paid social,,N
+E00615,2026-04-15 15:28,Web form,Paid search,,Y
+E02533,2026-04-15 15:28,Phone,Paid social,P03005,N
+E02534,2026-04-15 15:58,Phone,Directories,P03756,Y
+E02535,2026-04-15 17:05,Phone,Paid social,P02983,N
+E02536,2026-04-15 17:55,Phone,Paid social,P00293,N
+E00717,2026-04-15 18:07,Web form,Paid social,,N
+E00735,2026-04-15 18:13,Web form,Directories,,N
+E00655,2026-04-15 19:48,Web form,Paid social,,N
+E00648,2026-04-15 20:16,Web form,Paid search,,N
+E00633,2026-04-15 20:24,Web form,Paid search,,Y
+E00743,2026-04-15 21:05,Web form,Directories,,Y
+E00596,2026-04-15 21:07,Web form,Paid search,,N
+E00704,2026-04-15 21:30,Web form,Paid social,,N
+E00587,2026-04-15 21:54,Web form,Paid search,,Y
+E00549,2026-04-16 08:27,Web form,Paid search,,Y
+E02537,2026-04-16 08:31,Phone,Paid social,P00562,N
+E01436,2026-04-16 08:40,Web form,Organic,,N
+E00571,2026-04-16 09:26,Web form,Paid search,,Y
+E02538,2026-04-16 09:41,Phone,Organic,P01153,N
+E00649,2026-04-16 09:47,Web form,Paid search,,N
+E02539,2026-04-16 10:08,Phone,Organic,P01941,N
+E02540,2026-04-16 10:29,Phone,Paid search,P02236,Y
+E01437,2026-04-16 12:00,Referral,Referral,,Y
+E00685,2026-04-16 12:14,Web form,Paid social,,N
+E00509,2026-04-16 12:26,Web form,Paid search,,N
+E02541,2026-04-16 12:54,Phone,Paid search,P01797,Y
+E01434,2026-04-16 13:49,Web form,Organic,,N
+E01435,2026-04-16 15:00,Web form,Organic,,N
+E02542,2026-04-16 16:06,Phone,Paid search,P02382,Y
+E02543,2026-04-16 16:31,Phone,Organic,P01915,N
+E00632,2026-04-16 18:28,Web form,Paid search,,Y
+E00569,2026-04-16 18:41,Web form,Paid search,,N
+E00595,2026-04-16 18:51,Web form,Paid search,,N
+E00611,2026-04-16 19:52,Web form,Paid search,,N
+E00584,2026-04-16 21:20,Web form,Paid search,,Y
+E00690,2026-04-16 21:44,Web form,Paid social,,N
+E00597,2026-04-17 08:06,Web form,Paid search,,N
+E02544,2026-04-17 08:16,Phone,Directories,P00449,N
+E00625,2026-04-17 08:33,Web form,Paid search,,N
+E02545,2026-04-17 08:55,Phone,Paid search,P02490,Y
+E00614,2026-04-17 09:57,Web form,Paid search,,N
+E02546,2026-04-17 10:06,Phone,Paid search,P04036,N
+E02547,2026-04-17 10:16,Phone,Organic,P02566,Y
+E02548,2026-04-17 10:20,Phone,Directories,P00546,Y
+E02549,2026-04-17 10:44,Phone,Paid social,P00789,N
+E00741,2026-04-17 11:09,Web form,Directories,,N
+E02550,2026-04-17 11:21,Phone,Paid search,P00836,Y
+E00517,2026-04-17 11:30,Web form,Paid search,,N
+E02551,2026-04-17 12:44,Phone,Organic,P01077,N
+E02552,2026-04-17 13:05,Phone,Paid social,P03144,N
+E02553,2026-04-17 13:24,Phone,Directories,P00806,N
+E00669,2026-04-17 14:11,Web form,Paid social,,N
+E02554,2026-04-17 14:14,Phone,Organic,P03875,N
+E02555,2026-04-17 14:22,Phone,Directories,P02742,Y
+E00554,2026-04-17 15:06,Web form,Paid search,,N
+E00577,2026-04-17 15:24,Web form,Paid search,,N
+E02556,2026-04-17 16:07,Phone,Organic,P02768,N
+E02557,2026-04-17 16:18,Phone,Organic,P02726,Y
+E02558,2026-04-17 16:21,Phone,Organic,P04168,N
+E00645,2026-04-17 16:31,Web form,Paid search,,N
+E00714,2026-04-17 16:35,Web form,Paid social,,N
+E02559,2026-04-17 16:59,Phone,Directories,P02975,Y
+E00536,2026-04-17 17:28,Web form,Paid search,,Y
+E01439,2026-04-17 17:49,Web form,Organic,,N
+E01438,2026-04-17 17:59,Web form,Organic,,N
+E00572,2026-04-17 20:52,Web form,Paid search,,N
+E00520,2026-04-17 21:04,Web form,Paid search,,Y
+E00620,2026-04-20 09:15,Web form,Paid search,,N
+E02560,2026-04-20 09:23,Phone,Paid search,P02416,N
+E01440,2026-04-20 09:31,Web form,Organic,,N
+E00525,2026-04-20 09:33,Web form,Paid search,,N
+E02561,2026-04-20 10:12,Phone,Paid search,P02676,N
+E00551,2026-04-20 10:19,Web form,Paid search,,N
+E02562,2026-04-20 10:23,Phone,Paid search,P03712,Y
+E00534,2026-04-20 10:56,Web form,Paid search,,N
+E02563,2026-04-20 11:34,Phone,Organic,P02013,Y
+E00527,2026-04-20 13:01,Web form,Paid search,,N
+E01441,2026-04-20 13:32,Referral,Referral,,Y
+E00643,2026-04-20 13:48,Web form,Paid search,,N
+E00731,2026-04-20 15:00,Web form,Directories,,N
+E00573,2026-04-20 15:32,Web form,Paid search,,N
+E02564,2026-04-20 15:34,Phone,Directories,P03557,N
+E02565,2026-04-20 16:05,Phone,Paid search,P02496,Y
+E02566,2026-04-20 16:42,Phone,Paid search,P02460,N
+E02567,2026-04-20 16:48,Phone,Organic,P01789,N
+E00521,2026-04-20 16:56,Web form,Paid search,,N
+E00576,2026-04-20 16:58,Web form,Paid search,,N
+E00726,2026-04-20 16:58,Web form,Directories,,Y
+E02568,2026-04-20 17:09,Phone,Directories,P03318,N
+E02569,2026-04-20 17:21,Phone,Organic,P02752,N
+E02570,2026-04-20 17:28,Phone,Organic,P01419,N
+E00679,2026-04-20 19:38,Web form,Paid social,,N
+E00609,2026-04-20 19:45,Web form,Paid search,,Y
+E00703,2026-04-20 20:22,Web form,Paid social,,Y
+E00630,2026-04-20 21:49,Web form,Paid search,,N
+E00524,2026-04-20 21:58,Web form,Paid search,,Y
+E00720,2026-04-21 08:06,Web form,Directories,,N
+E02571,2026-04-21 08:06,Phone,Organic,P01008,Y
+E02572,2026-04-21 08:06,Phone,Paid search,P02989,N
+E00701,2026-04-21 08:36,Web form,Paid social,,N
+E01443,2026-04-21 08:42,Web form,Organic,,N
+E02573,2026-04-21 08:57,Phone,Organic,P00687,N
+E01442,2026-04-21 09:17,Web form,Organic,,N
+E02574,2026-04-21 09:17,Phone,Paid search,P02898,Y
+E02575,2026-04-21 09:22,Phone,Organic,P03243,N
+E02576,2026-04-21 10:02,Phone,Organic,P03006,N
+E02577,2026-04-21 10:07,Phone,Directories,P00158,N
+E00618,2026-04-21 10:24,Web form,Paid search,,Y
+E02578,2026-04-21 10:25,Phone,Paid search,P00867,N
+E00699,2026-04-21 10:51,Web form,Paid social,,N
+E00606,2026-04-21 10:55,Web form,Paid search,,Y
+E02579,2026-04-21 11:49,Phone,Paid search,P04138,N
+E00750,2026-04-21 12:03,Web form,Directories,,Y
+E02580,2026-04-21 12:25,Phone,Paid search,P01450,N
+E00626,2026-04-21 12:35,Web form,Paid search,,N
+E00730,2026-04-21 12:44,Web form,Directories,,Y
+E02581,2026-04-21 13:46,Phone,Directories,P02913,N
+E00744,2026-04-21 14:55,Web form,Directories,,N
+E00665,2026-04-21 15:12,Web form,Paid social,,N
+E00561,2026-04-21 15:16,Web form,Paid search,,Y
+E02582,2026-04-21 15:44,Phone,Organic,P03369,N
+E02583,2026-04-21 15:47,Phone,Paid search,P02972,N
+E02584,2026-04-21 15:58,Phone,Paid search,P01502,N
+E02585,2026-04-21 16:08,Phone,Directories,P02412,Y
+E02586,2026-04-21 16:12,Phone,Organic,P04017,N
+E02587,2026-04-21 16:27,Phone,Directories,P03213,N
+E00708,2026-04-21 16:39,Web form,Paid social,,N
+E00702,2026-04-21 17:31,Web form,Paid social,,N
+E00712,2026-04-21 18:34,Web form,Paid social,,N
+E00707,2026-04-21 18:35,Web form,Paid social,,N
+E00564,2026-04-21 18:40,Web form,Paid search,,Y
+E00727,2026-04-21 21:36,Web form,Directories,,Y
+E02588,2026-04-22 08:12,Phone,Paid search,P03511,Y
+E02589,2026-04-22 08:13,Phone,Directories,P03188,N
+E02590,2026-04-22 08:25,Phone,Organic,P01664,N
+E00667,2026-04-22 09:00,Web form,Paid social,,N
+E02591,2026-04-22 09:11,Phone,Organic,P01931,N
+E02592,2026-04-22 09:32,Phone,Paid search,P03631,Y
+E00589,2026-04-22 09:36,Web form,Paid search,,N
+E02593,2026-04-22 09:38,Phone,Organic,P01780,N
+E02594,2026-04-22 09:55,Phone,Organic,P04081,Y
+E02595,2026-04-22 10:00,Phone,Directories,P03224,N
+E02596,2026-04-22 10:08,Phone,Paid search,P02645,N
+E02597,2026-04-22 10:11,Phone,Organic,P00068,N
+E02598,2026-04-22 10:15,Phone,Paid social,P01320,N
+E02599,2026-04-22 11:04,Phone,Organic,P01177,N
+E02600,2026-04-22 11:19,Phone,Directories,P03061,N
+E00623,2026-04-22 12:04,Web form,Paid search,,Y
+E02601,2026-04-22 12:05,Phone,Paid social,P00522,N
+E02602,2026-04-22 12:10,Phone,Paid social,P01878,N
+E00691,2026-04-22 13:03,Web form,Paid social,,N
+E01444,2026-04-22 13:08,Web form,Organic,,Y
+E02603,2026-04-22 14:12,Phone,Directories,P03176,Y
+E00698,2026-04-22 15:18,Web form,Paid social,,N
+E00508,2026-04-22 15:21,Web form,Paid search,,N
+E02604,2026-04-22 16:11,Phone,Organic,P00949,N
+E02605,2026-04-22 16:23,Phone,Organic,P00874,N
+E00666,2026-04-22 16:45,Web form,Paid social,,Y
+E02606,2026-04-22 17:18,Phone,Paid search,P02966,Y
+E00570,2026-04-22 18:05,Web form,Paid search,,N
+E00747,2026-04-22 19:17,Web form,Directories,,Y
+E00616,2026-04-22 19:30,Web form,Paid search,,Y
+E00692,2026-04-22 21:41,Web form,Paid social,,N
+E01446,2026-04-23 08:35,Web form,Organic,,N
+E02607,2026-04-23 08:39,Phone,Paid search,P03699,Y
+E00723,2026-04-23 08:46,Web form,Directories,,N
+E01447,2026-04-23 09:11,Web form,Organic,,N
+E02608,2026-04-23 09:12,Phone,Organic,P02943,N
+E00622,2026-04-23 09:13,Web form,Paid search,,N
+E02609,2026-04-23 09:47,Phone,Organic,P04192,N
+E00659,2026-04-23 09:52,Web form,Paid social,,N
+E02610,2026-04-23 09:55,Phone,Paid search,P00486,N
+E02611,2026-04-23 10:09,Phone,Organic,P03756,Y
+E02612,2026-04-23 10:23,Phone,Paid search,P01538,N
+E02613,2026-04-23 11:30,Phone,Directories,P03720,N
+E01445,2026-04-23 11:48,Web form,Organic,,Y
+E02614,2026-04-23 11:53,Phone,Directories,P02783,Y
+E00575,2026-04-23 12:30,Web form,Paid search,,Y
+E02615,2026-04-23 12:52,Phone,Directories,P00710,Y
+E02616,2026-04-23 12:59,Phone,Organic,P00055,N
+E00583,2026-04-23 13:15,Web form,Paid search,,Y
+E02617,2026-04-23 13:20,Phone,Organic,P01781,N
+E02618,2026-04-23 13:29,Phone,Organic,P00072,N
+E02619,2026-04-23 13:42,Phone,Paid social,P03292,N
+E00540,2026-04-23 13:56,Web form,Paid search,,Y
+E02620,2026-04-23 14:50,Phone,Paid search,P02201,N
+E02621,2026-04-23 14:58,Phone,Paid social,P02378,N
+E02622,2026-04-23 15:37,Phone,Paid social,P02709,N
+E00635,2026-04-23 15:40,Web form,Paid search,,N
+E02623,2026-04-23 16:06,Phone,Paid search,P00946,N
+E02624,2026-04-23 16:17,Phone,Organic,P00117,N
+E00603,2026-04-23 16:20,Web form,Paid search,,N
+E02625,2026-04-23 16:44,Phone,Paid search,P03279,N
+E00629,2026-04-23 17:13,Web form,Paid search,,N
+E00675,2026-04-23 17:55,Web form,Paid social,,N
+E00591,2026-04-23 18:38,Web form,Paid search,,N
+E00537,2026-04-23 19:28,Web form,Paid search,,N
+E00518,2026-04-23 19:58,Web form,Paid search,,N
+E00711,2026-04-23 21:06,Web form,Paid social,,N
+E00733,2026-04-23 21:38,Web form,Directories,,N
+E00724,2026-04-24 08:04,Web form,Directories,,Y
+E00560,2026-04-24 08:33,Web form,Paid search,,N
+E01450,2026-04-24 08:47,Web form,Organic,,N
+E02626,2026-04-24 09:29,Phone,Organic,P01105,N
+E02627,2026-04-24 09:30,Phone,Paid search,P02883,N
+E01449,2026-04-24 09:50,Web form,Organic,,N
+E00697,2026-04-24 09:52,Web form,Paid social,,N
+E02628,2026-04-24 10:08,Phone,Paid social,P01263,N
+E02629,2026-04-24 10:19,Phone,Organic,P03597,N
+E02630,2026-04-24 10:22,Phone,Directories,P02401,Y
+E02631,2026-04-24 10:43,Phone,Organic,P02291,N
+E02632,2026-04-24 10:59,Phone,Directories,P02708,Y
+E02633,2026-04-24 11:55,Phone,Organic,P01457,N
+E00627,2026-04-24 11:56,Web form,Paid search,,N
+E00608,2026-04-24 12:35,Web form,Paid search,,N
+E00728,2026-04-24 13:23,Web form,Directories,,Y
+E00673,2026-04-24 14:53,Web form,Paid social,,N
+E00719,2026-04-24 15:27,Web form,Directories,,Y
+E00580,2026-04-24 15:36,Web form,Paid search,,N
+E02634,2026-04-24 15:38,Phone,Paid social,P01811,N
+E02635,2026-04-24 16:44,Phone,Paid search,P02085,N
+E00522,2026-04-24 16:54,Web form,Paid search,,Y
+E01448,2026-04-24 17:38,Web form,Organic,,Y
+E00535,2026-04-24 17:58,Web form,Paid search,,N
+E00674,2026-04-24 19:49,Web form,Paid social,,N
+E00586,2026-04-24 21:06,Web form,Paid search,,Y
+E00745,2026-04-24 21:23,Web form,Directories,,N
+E01452,2026-04-27 09:52,Referral,Referral,,N
+E02636,2026-04-27 09:57,Phone,Paid social,P03605,N
+E02637,2026-04-27 10:12,Phone,Directories,P01542,N
+E02638,2026-04-27 10:18,Phone,Organic,P04104,N
+E02639,2026-04-27 10:24,Phone,Paid search,P03132,Y
+E01451,2026-04-27 10:32,Web form,Organic,,Y
+E02640,2026-04-27 10:32,Phone,Organic,P00237,Y
+E02641,2026-04-27 10:35,Phone,Organic,P01584,N
+E02642,2026-04-27 11:09,Phone,Organic,P02174,N
+E02643,2026-04-27 11:31,Phone,Paid search,P02976,N
+E00678,2026-04-27 12:35,Web form,Paid social,,N
+E02644,2026-04-27 12:43,Phone,Paid search,P02658,N
+E00677,2026-04-27 12:45,Web form,Paid social,,N
+E02645,2026-04-27 13:18,Phone,Directories,P01941,Y
+E02646,2026-04-27 13:29,Phone,Paid social,P02960,N
+E00617,2026-04-27 13:47,Web form,Paid search,,N
+E00523,2026-04-27 14:02,Web form,Paid search,,Y
+E02647,2026-04-27 14:58,Phone,Directories,P03498,N
+E00646,2026-04-27 15:00,Web form,Paid search,,N
+E02648,2026-04-27 15:08,Phone,Paid social,P00239,Y
+E00559,2026-04-27 15:34,Web form,Paid search,,N
+E00528,2026-04-27 16:16,Web form,Paid search,,Y
+E02649,2026-04-27 16:50,Phone,Directories,P03589,Y
+E02650,2026-04-27 16:59,Phone,Organic,P03517,N
+E00526,2026-04-27 17:03,Web form,Paid search,,N
+E00687,2026-04-27 17:21,Web form,Paid social,,N
+E00656,2026-04-27 17:30,Web form,Paid social,,N
+E00706,2026-04-27 17:31,Web form,Paid social,,N
+E00532,2026-04-27 18:13,Web form,Paid search,,Y
+E00590,2026-04-27 20:10,Web form,Paid search,,N
+E00516,2026-04-27 20:42,Web form,Paid search,,N
+E00695,2026-04-28 08:35,Web form,Paid social,,N
+E00538,2026-04-28 09:03,Web form,Paid search,,N
+E00680,2026-04-28 09:13,Web form,Paid social,,N
+E00539,2026-04-28 09:15,Web form,Paid search,,Y
+E02651,2026-04-28 09:56,Phone,Directories,P03985,N
+E02652,2026-04-28 10:00,Phone,Paid social,P02464,N
+E02653,2026-04-28 10:40,Phone,Paid search,P00322,N
+E02654,2026-04-28 10:59,Phone,Organic,P00977,N
+E02655,2026-04-28 11:05,Phone,Directories,P00148,Y
+E02656,2026-04-28 11:06,Phone,Organic,P01381,Y
+E02657,2026-04-28 12:06,Phone,Paid social,P00640,N
+E00722,2026-04-28 12:07,Web form,Directories,,N
+E00600,2026-04-28 13:30,Web form,Paid search,,N
+E02658,2026-04-28 14:05,Phone,Paid search,P04154,N
+E02659,2026-04-28 14:45,Phone,Organic,P03016,Y
+E02660,2026-04-28 15:23,Phone,Paid social,P04161,Y
+E02661,2026-04-28 15:27,Phone,Directories,P04096,Y
+E02662,2026-04-28 16:03,Phone,Organic,P03729,N
+E02663,2026-04-28 16:18,Phone,Paid social,P00184,N
+E02664,2026-04-28 16:26,Phone,Directories,P00721,Y
+E02665,2026-04-28 17:06,Phone,Organic,P03932,N
+E02666,2026-04-28 17:15,Phone,Organic,P02175,N
+E00604,2026-04-28 17:19,Web form,Paid search,,N
+E02667,2026-04-28 17:32,Phone,Organic,P03517,N
+E00612,2026-04-28 18:07,Web form,Paid search,,Y
+E00637,2026-04-28 18:28,Web form,Paid search,,Y
+E00736,2026-04-28 19:04,Web form,Directories,,N
+E01454,2026-04-28 19:16,Web form,Organic,,N
+E00709,2026-04-28 20:04,Web form,Paid social,,N
+E00640,2026-04-28 20:05,Web form,Paid search,,N
+E00628,2026-04-28 20:24,Web form,Paid search,,Y
+E00639,2026-04-28 20:57,Web form,Paid search,,N
+E01453,2026-04-28 21:14,Web form,Organic,,Y
+E02668,2026-04-29 08:49,Phone,Paid search,P02276,N
+E00676,2026-04-29 08:50,Web form,Paid social,,Y
+E02669,2026-04-29 08:51,Phone,Directories,P03683,N
+E02670,2026-04-29 09:16,Phone,Organic,P02243,N
+E02671,2026-04-29 09:33,Phone,Paid search,P03880,Y
+E02672,2026-04-29 09:53,Phone,Directories,P03618,N
+E02673,2026-04-29 09:55,Phone,Organic,P02475,Y
+E00544,2026-04-29 10:12,Web form,Paid search,,N
+E01455,2026-04-29 10:48,Web form,Organic,,N
+E02674,2026-04-29 10:49,Phone,Directories,P02162,N
+E02675,2026-04-29 11:08,Phone,Paid search,P02575,Y
+E02676,2026-04-29 11:35,Phone,Organic,P02360,Y
+E02677,2026-04-29 12:10,Phone,Directories,P03028,Y
+E00740,2026-04-29 12:51,Web form,Directories,,Y
+E00682,2026-04-29 13:17,Web form,Paid social,,N
+E02678,2026-04-29 13:22,Phone,Organic,P00395,N
+E00658,2026-04-29 14:06,Web form,Paid social,,Y
+E00588,2026-04-29 14:36,Web form,Paid search,,Y
+E00748,2026-04-29 14:46,Web form,Directories,,Y
+E02679,2026-04-29 15:23,Phone,Organic,P00045,N
+E02680,2026-04-29 15:34,Phone,Paid search,P00471,N
+E02681,2026-04-29 15:46,Phone,Organic,P03859,N
+E02682,2026-04-29 15:59,Phone,Organic,P01456,N
+E00514,2026-04-29 16:02,Web form,Paid search,,N
+E02683,2026-04-29 16:20,Phone,Paid social,P03400,N
+E02684,2026-04-29 16:30,Phone,Organic,P01097,Y
+E02685,2026-04-29 16:52,Phone,Directories,P03879,Y
+E00542,2026-04-29 17:24,Web form,Paid search,,N
+E02686,2026-04-29 17:52,Phone,Paid search,P00956,N
+E00613,2026-04-29 19:59,Web form,Paid search,,N
+E00529,2026-04-29 21:23,Web form,Paid search,,N
+E01456,2026-04-29 21:48,Web form,Organic,,N
+E01457,2026-04-29 21:58,Web form,Organic,,Y
+E02687,2026-04-30 08:22,Phone,Paid search,P02211,N
+E02688,2026-04-30 08:30,Phone,Directories,P03616,Y
+E02689,2026-04-30 08:38,Phone,Organic,P01752,Y
+E00562,2026-04-30 08:43,Web form,Paid search,,N
+E02690,2026-04-30 08:43,Phone,Organic,P04179,Y
+E02691,2026-04-30 09:15,Phone,Organic,P01328,N
+E02692,2026-04-30 09:17,Phone,Paid search,P02499,N
+E02693,2026-04-30 09:42,Phone,Directories,P03309,Y
+E02694,2026-04-30 09:42,Phone,Paid search,P00151,Y
+E01459,2026-04-30 09:51,Web form,Organic,,N
+E00548,2026-04-30 10:33,Web form,Paid search,,N
+E02695,2026-04-30 11:28,Phone,Organic,P02940,N
+E02696,2026-04-30 11:34,Phone,Paid search,P03793,N
+E02697,2026-04-30 12:11,Phone,Organic,P02539,N
+E02698,2026-04-30 12:36,Phone,Paid social,P02294,N
+E00547,2026-04-30 12:58,Web form,Paid search,,N
+E02699,2026-04-30 13:04,Phone,Paid social,P01263,N
+E02700,2026-04-30 13:28,Phone,Directories,P02394,N
+E02701,2026-04-30 13:32,Phone,Directories,P00209,Y
+E00660,2026-04-30 14:02,Web form,Paid social,,N
+E01458,2026-04-30 14:52,Web form,Organic,,N
+E02702,2026-04-30 15:15,Phone,Organic,P02261,Y
+E02703,2026-04-30 16:05,Phone,Directories,P02624,N
+E02704,2026-04-30 16:49,Phone,Organic,P03644,N
+E00732,2026-04-30 17:04,Web form,Directories,,N
+E02705,2026-04-30 17:21,Phone,Organic,P00661,N
+E00619,2026-04-30 18:11,Web form,Paid search,,Y
+E00515,2026-04-30 20:34,Web form,Paid search,,N
+E00552,2026-04-30 20:39,Web form,Paid search,,N
+E00599,2026-04-30 21:15,Web form,Paid search,,Y
+E02706,2026-05-01 09:14,Phone,Paid search,P00429,N
+E02707,2026-05-01 09:25,Phone,Organic,P00016,Y
+E02708,2026-05-01 09:45,Phone,Paid social,P03245,N
+E02709,2026-05-01 09:48,Phone,Directories,P02109,N
+E00841,2026-05-01 10:21,Web form,Paid search,,N
+E02710,2026-05-01 10:31,Phone,Paid search,P00136,N
+E00959,2026-05-01 10:38,Web form,Directories,,Y
+E02711,2026-05-01 10:38,Phone,Organic,P01978,Y
+E00895,2026-05-01 10:41,Web form,Paid social,,N
+E02712,2026-05-01 12:01,Phone,Organic,P03192,N
+E00972,2026-05-01 13:22,Web form,Directories,,Y
+E02713,2026-05-01 13:26,Phone,Organic,P02993,N
+E00957,2026-05-01 13:32,Web form,Directories,,Y
+E00848,2026-05-01 13:44,Web form,Paid search,,Y
+E00806,2026-05-01 13:57,Web form,Paid search,,Y
+E00988,2026-05-01 16:11,Web form,Directories,,N
+E01460,2026-05-01 16:11,Web form,Organic,,N
+E02714,2026-05-01 16:24,Phone,Paid social,P02843,N
+E00779,2026-05-01 16:44,Web form,Paid search,,N
+E00934,2026-05-01 16:44,Web form,Paid social,,N
+E01461,2026-05-01 17:26,Web form,Organic,,N
+E00768,2026-05-01 17:46,Web form,Paid search,,N
+E00927,2026-05-01 19:30,Web form,Paid social,,N
+E00805,2026-05-01 19:34,Web form,Paid search,,N
+E00879,2026-05-01 19:34,Web form,Paid search,,Y
+E00970,2026-05-01 20:36,Web form,Directories,,Y
+E00937,2026-05-01 20:38,Web form,Paid social,,Y
+E02715,2026-05-05 08:45,Phone,Organic,P04158,N
+E00800,2026-05-05 09:08,Web form,Paid search,,N
+E00761,2026-05-05 09:50,Web form,Paid search,,N
+E02716,2026-05-05 10:15,Phone,Organic,P02417,N
+E02717,2026-05-05 10:18,Phone,Directories,P00954,Y
+E00814,2026-05-05 11:09,Web form,Paid search,,N
+E00917,2026-05-05 11:26,Web form,Paid social,,N
+E00920,2026-05-05 11:45,Web form,Paid social,,N
+E02718,2026-05-05 11:48,Phone,Paid search,P03091,N
+E02719,2026-05-05 11:53,Phone,Directories,P01532,N
+E00828,2026-05-05 11:54,Web form,Paid search,,N
+E02720,2026-05-05 12:05,Phone,Paid search,P00264,N
+E00776,2026-05-05 12:13,Web form,Paid search,,N
+E00901,2026-05-05 12:22,Web form,Paid social,,N
+E00932,2026-05-05 12:36,Web form,Paid social,,N
+E02721,2026-05-05 13:30,Phone,Directories,P01161,Y
+E02722,2026-05-05 14:34,Phone,Paid search,P01322,N
+E02723,2026-05-05 15:03,Phone,Organic,P03732,N
+E02724,2026-05-05 16:02,Phone,Directories,P03939,N
+E00960,2026-05-05 16:08,Web form,Directories,,Y
+E02725,2026-05-05 16:11,Phone,Organic,P02484,N
+E00976,2026-05-05 17:07,Web form,Directories,,N
+E02726,2026-05-05 17:26,Phone,Paid search,P01822,Y
+E00981,2026-05-05 17:29,Web form,Directories,,N
+E00821,2026-05-05 17:35,Web form,Paid search,,N
+E00840,2026-05-05 17:35,Web form,Paid search,,N
+E00793,2026-05-05 18:08,Web form,Paid search,,N
+E00785,2026-05-05 18:45,Web form,Paid search,,Y
+E01462,2026-05-05 19:17,Web form,Organic,,N
+E00984,2026-05-05 19:18,Web form,Directories,,Y
+E00940,2026-05-05 21:35,Web form,Paid social,,N
+E02727,2026-05-06 08:39,Phone,Directories,P04168,Y
+E00908,2026-05-06 09:06,Web form,Paid social,,N
+E02728,2026-05-06 09:36,Phone,Paid search,P01576,Y
+E02729,2026-05-06 09:45,Phone,Paid social,P00843,Y
+E00865,2026-05-06 09:57,Web form,Paid search,,N
+E02730,2026-05-06 10:13,Phone,Organic,P01588,N
+E00930,2026-05-06 10:32,Web form,Paid social,,N
+E02731,2026-05-06 11:15,Phone,Paid search,P04160,N
+E00918,2026-05-06 11:45,Web form,Paid social,,N
+E02732,2026-05-06 12:07,Phone,Organic,P01280,Y
+E00949,2026-05-06 12:14,Web form,Paid social,,Y
+E00753,2026-05-06 12:46,Web form,Paid search,,N
+E02733,2026-05-06 13:02,Phone,Organic,P03666,N
+E02734,2026-05-06 13:11,Phone,Directories,P01677,N
+E00826,2026-05-06 13:29,Web form,Paid search,,N
+E02735,2026-05-06 13:37,Phone,Paid search,P03456,Y
+E02736,2026-05-06 14:04,Phone,Paid social,P03690,N
+E00760,2026-05-06 15:01,Web form,Paid search,,Y
+E02737,2026-05-06 15:23,Phone,Paid social,P02197,N
+E00912,2026-05-06 15:43,Web form,Paid social,,N
+E02738,2026-05-06 15:48,Phone,Paid social,P04108,N
+E02739,2026-05-06 16:21,Phone,Organic,P02940,N
+E02740,2026-05-06 16:51,Phone,Organic,P04103,Y
+E02741,2026-05-06 17:04,Phone,Organic,P03430,N
+E01463,2026-05-06 17:35,Web form,Organic,,N
+E00943,2026-05-06 18:03,Web form,Paid social,,N
+E00885,2026-05-06 18:06,Web form,Paid search,,N
+E00832,2026-05-06 20:59,Web form,Paid search,,Y
+E01464,2026-05-06 21:00,Referral,Referral,,N
+E00929,2026-05-06 21:01,Web form,Paid social,,N
+E00904,2026-05-07 08:37,Web form,Paid social,,N
+E02742,2026-05-07 09:00,Phone,Organic,P04083,N
+E00887,2026-05-07 09:25,Web form,Paid search,,N
+E00974,2026-05-07 10:11,Web form,Directories,,Y
+E00844,2026-05-07 10:16,Web form,Paid search,,Y
+E02743,2026-05-07 10:36,Phone,Paid search,P01724,N
+E02744,2026-05-07 10:57,Phone,Organic,P02459,N
+E02745,2026-05-07 11:03,Phone,Directories,P00355,Y
+E00915,2026-05-07 11:54,Web form,Paid social,,Y
+E00946,2026-05-07 11:56,Web form,Paid social,,N
+E02746,2026-05-07 12:29,Phone,Paid search,P02084,N
+E02747,2026-05-07 12:31,Phone,Directories,P01434,Y
+E02748,2026-05-07 12:51,Phone,Paid search,P02162,N
+E01465,2026-05-07 13:38,Web form,Organic,,Y
+E02749,2026-05-07 13:51,Phone,Organic,P00486,N
+E00938,2026-05-07 14:24,Web form,Paid social,,N
+E02750,2026-05-07 14:42,Phone,Organic,P01254,N
+E00931,2026-05-07 14:48,Web form,Paid social,,N
+E02751,2026-05-07 15:16,Phone,Paid search,P00815,N
+E00958,2026-05-07 15:24,Web form,Directories,,Y
+E00830,2026-05-07 15:32,Web form,Paid search,,N
+E02752,2026-05-07 15:45,Phone,Paid search,P03526,N
+E00869,2026-05-07 15:51,Web form,Paid search,,N
+E00922,2026-05-07 15:54,Web form,Paid social,,N
+E02753,2026-05-07 16:11,Phone,Organic,P02093,N
+E02754,2026-05-07 16:12,Phone,Paid search,P01868,N
+E00916,2026-05-07 16:30,Web form,Paid social,,Y
+E02755,2026-05-07 16:37,Phone,Organic,P01629,N
+E02756,2026-05-07 17:19,Phone,Organic,P03580,N
+E02757,2026-05-07 17:54,Phone,Directories,P00237,Y
+E00902,2026-05-07 19:16,Web form,Paid social,,N
+E00980,2026-05-07 19:49,Web form,Directories,,Y
+E00817,2026-05-07 20:23,Web form,Paid search,,N
+E00754,2026-05-07 21:16,Web form,Paid search,,Y
+E02758,2026-05-08 08:29,Phone,Organic,P01545,N
+E02759,2026-05-08 08:50,Phone,Paid search,P02693,Y
+E02760,2026-05-08 09:41,Phone,Organic,P03566,N
+E00919,2026-05-08 09:49,Web form,Paid social,,N
+E02761,2026-05-08 10:03,Phone,Directories,P01088,Y
+E02762,2026-05-08 10:23,Phone,Paid search,P00037,N
+E02763,2026-05-08 10:24,Phone,Paid social,P03294,N
+E02764,2026-05-08 10:26,Phone,Organic,P02410,N
+E00898,2026-05-08 10:28,Web form,Paid social,,N
+E02765,2026-05-08 10:54,Phone,Paid social,P03261,N
+E00950,2026-05-08 11:49,Web form,Paid social,,N
+E00941,2026-05-08 12:20,Web form,Paid social,,N
+E00851,2026-05-08 12:26,Web form,Paid search,,Y
+E01467,2026-05-08 12:47,Web form,Organic,,Y
+E02766,2026-05-08 13:15,Phone,Directories,P02376,Y
+E00838,2026-05-08 13:43,Web form,Paid search,,Y
+E02767,2026-05-08 14:11,Phone,Paid social,P03826,N
+E02768,2026-05-08 14:20,Phone,Directories,P03965,Y
+E02769,2026-05-08 14:26,Phone,Organic,P02727,N
+E02770,2026-05-08 14:59,Phone,Organic,P01664,Y
+E01466,2026-05-08 15:00,Web form,Organic,,N
+E02771,2026-05-08 15:27,Phone,Organic,P01829,N
+E02772,2026-05-08 15:36,Phone,Paid search,P00764,Y
+E01469,2026-05-08 15:40,Web form,Organic,,N
+E00839,2026-05-08 16:02,Web form,Paid search,,Y
+E02773,2026-05-08 16:51,Phone,Paid social,P01196,N
+E02774,2026-05-08 17:22,Phone,Paid social,P01024,N
+E01468,2026-05-08 18:42,Web form,Organic,,N
+E00897,2026-05-08 19:46,Web form,Paid social,,Y
+E00829,2026-05-08 21:25,Web form,Paid search,,Y
+E00890,2026-05-11 08:11,Web form,Paid search,,Y
+E00802,2026-05-11 08:42,Web form,Paid search,,N
+E00886,2026-05-11 09:15,Web form,Paid search,,N
+E02775,2026-05-11 09:32,Phone,Paid social,P03538,N
+E01470,2026-05-11 09:52,Web form,Organic,,N
+E02776,2026-05-11 09:58,Phone,Paid search,P02582,N
+E02777,2026-05-11 10:01,Phone,Organic,P00222,Y
+E02778,2026-05-11 10:08,Phone,Paid search,P01444,N
+E02779,2026-05-11 10:27,Phone,Organic,P03218,N
+E00783,2026-05-11 11:36,Web form,Paid search,,N
+E02780,2026-05-11 12:16,Phone,Paid social,P01708,N
+E02781,2026-05-11 12:21,Phone,Directories,P01795,Y
+E02782,2026-05-11 13:14,Phone,Paid social,P02242,N
+E00983,2026-05-11 13:35,Web form,Directories,,Y
+E00883,2026-05-11 13:36,Web form,Paid search,,N
+E02783,2026-05-11 13:38,Phone,Paid search,P01321,N
+E00792,2026-05-11 13:55,Web form,Paid search,,N
+E00846,2026-05-11 14:32,Web form,Paid search,,N
+E01471,2026-05-11 15:43,Web form,Organic,,N
+E02784,2026-05-11 15:50,Phone,Organic,P00122,Y
+E00880,2026-05-11 15:54,Web form,Paid search,,N
+E02785,2026-05-11 16:00,Phone,Organic,P02923,N
+E00982,2026-05-11 17:12,Web form,Directories,,N
+E00831,2026-05-11 17:13,Web form,Paid search,,N
+E02786,2026-05-11 17:14,Phone,Paid search,P00019,N
+E02787,2026-05-11 17:16,Phone,Directories,P01341,N
+E00875,2026-05-11 17:32,Web form,Paid search,,N
+E00954,2026-05-11 18:06,Web form,Paid social,,N
+E00797,2026-05-11 19:42,Web form,Paid search,,N
+E00989,2026-05-11 20:12,Web form,Directories,,N
+E02788,2026-05-12 08:07,Phone,Paid search,P01308,N
+E02789,2026-05-12 08:36,Phone,Paid search,P02765,Y
+E02790,2026-05-12 08:41,Phone,Paid search,P00632,N
+E02791,2026-05-12 08:56,Phone,Organic,P00590,N
+E00936,2026-05-12 09:07,Web form,Paid social,,N
+E02792,2026-05-12 09:16,Phone,Paid search,P02091,N
+E02793,2026-05-12 09:25,Phone,Directories,P01373,Y
+E02794,2026-05-12 09:38,Phone,Paid search,P00057,N
+E02795,2026-05-12 09:39,Phone,Organic,P02308,N
+E02796,2026-05-12 09:51,Phone,Organic,P00558,N
+E02797,2026-05-12 10:25,Phone,Organic,P03935,N
+E02798,2026-05-12 10:41,Phone,Paid search,P01482,Y
+E00866,2026-05-12 10:48,Web form,Paid search,,Y
+E02799,2026-05-12 11:08,Phone,Paid search,P01670,Y
+E01472,2026-05-12 12:23,Web form,Organic,,N
+E02800,2026-05-12 12:26,Phone,Directories,P03080,Y
+E02801,2026-05-12 15:13,Phone,Organic,P04118,Y
+E02802,2026-05-12 15:44,Phone,Paid search,P03890,N
+E02803,2026-05-12 15:53,Phone,Directories,P03754,Y
+E00825,2026-05-12 15:55,Web form,Paid search,,N
+E02804,2026-05-12 16:42,Phone,Directories,P01315,N
+E00859,2026-05-12 16:49,Web form,Paid search,,N
+E02805,2026-05-12 17:00,Phone,Organic,P03889,Y
+E02806,2026-05-12 17:07,Phone,Organic,P03197,N
+E02807,2026-05-12 17:24,Phone,Paid search,P01042,N
+E00819,2026-05-12 18:22,Web form,Paid search,,Y
+E00789,2026-05-12 21:37,Web form,Paid search,,N
+E02808,2026-05-13 08:23,Phone,Directories,P00334,Y
+E02809,2026-05-13 08:25,Phone,Organic,P00771,N
+E02810,2026-05-13 08:52,Phone,Paid search,P00886,N
+E02811,2026-05-13 09:24,Phone,Paid social,P01252,N
+E02812,2026-05-13 09:30,Phone,Paid social,P00026,N
+E00926,2026-05-13 10:02,Web form,Paid social,,N
+E02813,2026-05-13 10:04,Phone,Paid search,P03681,Y
+E00751,2026-05-13 10:29,Web form,Paid search,,N
+E02814,2026-05-13 10:30,Phone,Paid social,P01960,N
+E02815,2026-05-13 10:58,Phone,Directories,P00765,Y
+E02816,2026-05-13 11:50,Phone,Paid social,P01353,N
+E01475,2026-05-13 12:17,Web form,Organic,,N
+E02817,2026-05-13 12:35,Phone,Paid social,P02244,N
+E02818,2026-05-13 12:51,Phone,Paid search,P03732,N
+E02819,2026-05-13 13:00,Phone,Paid social,P03170,N
+E02820,2026-05-13 14:12,Phone,Paid social,P02239,N
+E02821,2026-05-13 14:18,Phone,Organic,P00306,Y
+E00822,2026-05-13 14:48,Web form,Paid search,,Y
+E00868,2026-05-13 15:10,Web form,Paid search,,N
+E00884,2026-05-13 15:18,Web form,Paid search,,Y
+E00914,2026-05-13 16:00,Web form,Paid social,,N
+E02822,2026-05-13 16:24,Phone,Organic,P03524,Y
+E02823,2026-05-13 16:27,Phone,Organic,P01458,Y
+E00892,2026-05-13 16:39,Web form,Paid search,,N
+E02824,2026-05-13 16:57,Phone,Paid social,P02894,N
+E01474,2026-05-13 18:10,Web form,Organic,,Y
+E01473,2026-05-13 18:59,Web form,Organic,,N
+E00933,2026-05-13 19:26,Web form,Paid social,,N
+E00767,2026-05-13 20:25,Web form,Paid search,,Y
+E00854,2026-05-13 20:46,Web form,Paid search,,Y
+E00803,2026-05-13 21:04,Web form,Paid search,,N
+E00835,2026-05-13 21:09,Web form,Paid search,,Y
+E02825,2026-05-14 08:01,Phone,Paid social,P02163,N
+E02826,2026-05-14 08:36,Phone,Directories,P03266,N
+E00771,2026-05-14 08:46,Web form,Paid search,,N
+E02827,2026-05-14 09:34,Phone,Organic,P00304,Y
+E02828,2026-05-14 09:51,Phone,Organic,P00797,N
+E00799,2026-05-14 09:52,Web form,Paid search,,Y
+E02829,2026-05-14 09:55,Phone,Paid search,P03514,N
+E00911,2026-05-14 09:56,Web form,Paid social,,Y
+E02830,2026-05-14 10:14,Phone,Paid search,P02281,N
+E00944,2026-05-14 10:36,Web form,Paid social,,N
+E02831,2026-05-14 10:51,Phone,Directories,P02644,Y
+E02832,2026-05-14 11:21,Phone,Directories,P00358,Y
+E00849,2026-05-14 11:57,Web form,Paid search,,Y
+E02833,2026-05-14 12:07,Phone,Organic,P03018,N
+E02834,2026-05-14 12:40,Phone,Paid search,P00989,N
+E00801,2026-05-14 12:59,Web form,Paid search,,N
+E02835,2026-05-14 13:23,Phone,Paid search,P02255,N
+E02836,2026-05-14 15:25,Phone,Directories,P01564,Y
+E00867,2026-05-14 16:32,Web form,Paid search,,Y
+E01476,2026-05-14 16:47,Web form,Organic,,N
+E02837,2026-05-14 16:51,Phone,Paid search,P01125,N
+E02838,2026-05-14 17:10,Phone,Paid social,P03371,N
+E00906,2026-05-14 17:23,Web form,Paid social,,N
+E00961,2026-05-14 17:23,Web form,Directories,,N
+E01477,2026-05-14 17:52,Web form,Organic,,N
+E00913,2026-05-14 18:27,Web form,Paid social,,N
+E00893,2026-05-14 18:28,Web form,Paid social,,N
+E00811,2026-05-14 19:53,Web form,Paid search,,N
+E00948,2026-05-14 20:22,Web form,Paid social,,N
+E00891,2026-05-14 20:58,Web form,Paid search,,Y
+E00910,2026-05-14 21:09,Web form,Paid social,,N
+E00894,2026-05-14 21:13,Web form,Paid social,,N
+E02839,2026-05-15 08:15,Phone,Directories,P02163,Y
+E02840,2026-05-15 10:06,Phone,Paid social,P02114,N
+E02841,2026-05-15 10:44,Phone,Paid search,P03463,N
+E02842,2026-05-15 11:22,Phone,Paid search,P02374,N
+E00850,2026-05-15 11:41,Web form,Paid search,,N
+E00864,2026-05-15 12:03,Web form,Paid search,,N
+E00951,2026-05-15 13:38,Web form,Paid social,,N
+E02843,2026-05-15 15:20,Phone,Organic,P02843,N
+E00834,2026-05-15 15:24,Web form,Paid search,,N
+E02844,2026-05-15 15:35,Phone,Paid search,P02978,Y
+E02845,2026-05-15 15:44,Phone,Paid search,P03330,Y
+E00878,2026-05-15 15:47,Web form,Paid search,,Y
+E02846,2026-05-15 15:51,Phone,Paid social,P03131,N
+E00853,2026-05-15 16:02,Web form,Paid search,,N
+E02847,2026-05-15 16:53,Phone,Organic,P02386,N
+E02848,2026-05-15 16:54,Phone,Directories,P02358,N
+E02849,2026-05-15 17:02,Phone,Paid social,P04102,N
+E02850,2026-05-15 17:22,Phone,Organic,P03208,N
+E02851,2026-05-15 17:30,Phone,Paid search,P00553,N
+E02852,2026-05-15 17:36,Phone,Organic,P01381,N
+E00973,2026-05-15 18:29,Web form,Directories,,N
+E01478,2026-05-15 18:36,Web form,Organic,,Y
+E00784,2026-05-15 19:54,Web form,Paid search,,N
+E01479,2026-05-15 20:18,Web form,Organic,,N
+E00837,2026-05-15 20:39,Web form,Paid search,,N
+E02853,2026-05-18 09:31,Phone,Paid social,P03464,N
+E00808,2026-05-18 09:39,Web form,Paid search,,N
+E02854,2026-05-18 10:20,Phone,Directories,P03074,Y
+E02855,2026-05-18 10:24,Phone,Paid search,P02222,N
+E02856,2026-05-18 10:28,Phone,Organic,P01412,N
+E02857,2026-05-18 11:07,Phone,Paid search,P00896,N
+E02858,2026-05-18 11:12,Phone,Paid search,P00388,Y
+E00942,2026-05-18 11:33,Web form,Paid social,,N
+E01480,2026-05-18 12:09,Web form,Organic,,N
+E00810,2026-05-18 12:58,Web form,Paid search,,Y
+E00823,2026-05-18 13:10,Web form,Paid search,,Y
+E02859,2026-05-18 13:39,Phone,Organic,P00166,N
+E00975,2026-05-18 15:21,Web form,Directories,,Y
+E02860,2026-05-18 15:21,Phone,Organic,P01595,N
+E00862,2026-05-18 15:54,Web form,Paid search,,N
+E00778,2026-05-18 16:06,Web form,Paid search,,Y
+E02861,2026-05-18 16:57,Phone,Paid search,P02359,N
+E02862,2026-05-18 17:18,Phone,Paid search,P02580,N
+E00964,2026-05-18 17:52,Web form,Directories,,N
+E00956,2026-05-18 20:28,Web form,Paid social,,N
+E00816,2026-05-18 21:00,Web form,Paid search,,Y
+E00860,2026-05-18 21:11,Web form,Paid search,,Y
+E00847,2026-05-18 21:23,Web form,Paid search,,N
+E02863,2026-05-19 08:00,Phone,Directories,P02496,Y
+E02864,2026-05-19 08:01,Phone,Directories,P00711,Y
+E02865,2026-05-19 08:32,Phone,Organic,P00899,N
+E02866,2026-05-19 08:44,Phone,Directories,P03117,N
+E02867,2026-05-19 08:57,Phone,Directories,P01072,Y
+E02868,2026-05-19 09:15,Phone,Paid search,P00357,N
+E00969,2026-05-19 09:37,Web form,Directories,,Y
+E00791,2026-05-19 10:00,Web form,Paid search,,N
+E02869,2026-05-19 10:00,Phone,Paid search,P02987,Y
+E02870,2026-05-19 10:04,Phone,Paid search,P02832,Y
+E00852,2026-05-19 10:10,Web form,Paid search,,Y
+E00842,2026-05-19 10:15,Web form,Paid search,,N
+E02871,2026-05-19 10:20,Phone,Directories,P01148,Y
+E00809,2026-05-19 10:34,Web form,Paid search,,Y
+E02872,2026-05-19 10:40,Phone,Organic,P04104,Y
+E00900,2026-05-19 10:55,Web form,Paid social,,N
+E01481,2026-05-19 11:11,Web form,Organic,,N
+E02873,2026-05-19 12:41,Phone,Organic,P03022,N
+E02874,2026-05-19 12:53,Phone,Paid search,P00333,N
+E00757,2026-05-19 13:09,Web form,Paid search,,Y
+E00876,2026-05-19 13:18,Web form,Paid search,,Y
+E02875,2026-05-19 13:30,Phone,Paid search,P01505,N
+E00928,2026-05-19 13:32,Web form,Paid social,,N
+E02876,2026-05-19 13:57,Phone,Organic,P01411,N
+E00945,2026-05-19 14:20,Web form,Paid social,,N
+E02877,2026-05-19 14:31,Phone,Organic,P00458,Y
+E00990,2026-05-19 14:49,Web form,Directories,,N
+E00781,2026-05-19 15:22,Web form,Paid search,,N
+E00861,2026-05-19 15:44,Web form,Paid search,,N
+E01483,2026-05-19 15:55,Web form,Organic,,N
+E02878,2026-05-19 16:25,Phone,Paid social,P03847,N
+E00899,2026-05-19 16:39,Web form,Paid social,,N
+E00977,2026-05-19 16:44,Web form,Directories,,Y
+E01482,2026-05-19 17:05,Web form,Organic,,Y
+E00881,2026-05-19 20:08,Web form,Paid search,,N
+E00871,2026-05-19 21:46,Web form,Paid search,,Y
+E00863,2026-05-20 08:11,Web form,Paid search,,N
+E02879,2026-05-20 08:16,Phone,Paid search,P00136,N
+E00971,2026-05-20 08:21,Web form,Directories,,N
+E02880,2026-05-20 08:32,Phone,Directories,P03854,N
+E00987,2026-05-20 08:35,Web form,Directories,,N
+E02881,2026-05-20 08:39,Phone,Organic,P03160,N
+E02882,2026-05-20 09:22,Phone,Directories,P01915,N
+E02883,2026-05-20 09:35,Phone,Directories,P01711,N
+E02884,2026-05-20 09:43,Phone,Directories,P03928,N
+E02885,2026-05-20 09:43,Phone,Paid search,P03730,N
+E02886,2026-05-20 09:52,Phone,Organic,P00237,Y
+E00758,2026-05-20 10:02,Web form,Paid search,,N
+E01484,2026-05-20 10:17,Web form,Organic,,Y
+E02887,2026-05-20 10:26,Phone,Paid social,P04038,N
+E02888,2026-05-20 10:29,Phone,Paid search,P00673,Y
+E02889,2026-05-20 10:52,Phone,Paid social,P02012,Y
+E00790,2026-05-20 11:18,Web form,Paid search,,Y
+E02890,2026-05-20 11:33,Phone,Paid social,P03290,N
+E01485,2026-05-20 12:48,Web form,Organic,,N
+E00905,2026-05-20 12:51,Web form,Paid social,,Y
+E00963,2026-05-20 12:53,Web form,Directories,,N
+E02891,2026-05-20 12:57,Phone,Directories,P04171,Y
+E02892,2026-05-20 13:34,Phone,Directories,P01337,Y
+E02893,2026-05-20 13:52,Phone,Organic,P01033,Y
+E02894,2026-05-20 14:24,Phone,Paid social,P03712,N
+E02895,2026-05-20 14:31,Phone,Paid search,P00588,Y
+E02896,2026-05-20 14:54,Phone,Paid social,P00663,N
+E02897,2026-05-20 15:06,Phone,Paid search,P03907,N
+E02898,2026-05-20 15:36,Phone,Paid social,P01587,N
+E02899,2026-05-20 16:07,Phone,Organic,P01286,Y
+E02900,2026-05-20 16:31,Phone,Organic,P01160,Y
+E00872,2026-05-20 16:47,Web form,Paid search,,N
+E00903,2026-05-20 17:27,Web form,Paid social,,N
+E00953,2026-05-20 18:54,Web form,Paid social,,N
+E00780,2026-05-20 20:20,Web form,Paid search,,Y
+E00798,2026-05-20 20:25,Web form,Paid search,,N
+E02901,2026-05-21 08:15,Phone,Organic,P02552,N
+E02902,2026-05-21 08:17,Phone,Organic,P00963,Y
+E02903,2026-05-21 08:40,Phone,Paid social,P04024,N
+E02904,2026-05-21 08:42,Phone,Organic,P01533,N
+E02905,2026-05-21 08:58,Phone,Paid search,P00822,N
+E00770,2026-05-21 08:59,Web form,Paid search,,Y
+E02906,2026-05-21 09:16,Phone,Organic,P01649,N
+E02907,2026-05-21 09:44,Phone,Organic,P03403,Y
+E02908,2026-05-21 10:09,Phone,Paid search,P03831,N
+E00824,2026-05-21 10:26,Web form,Paid search,,N
+E02909,2026-05-21 10:27,Phone,Paid search,P02957,N
+E02910,2026-05-21 11:12,Phone,Directories,P03147,N
+E02911,2026-05-21 12:09,Phone,Organic,P01911,Y
+E02912,2026-05-21 12:24,Phone,Directories,P00962,Y
+E02913,2026-05-21 12:59,Phone,Paid search,P00213,N
+E00939,2026-05-21 13:57,Web form,Paid social,,N
+E01486,2026-05-21 15:33,Web form,Organic,,N
+E02914,2026-05-21 15:33,Phone,Organic,P03820,N
+E02915,2026-05-21 16:59,Phone,Paid search,P03096,Y
+E00782,2026-05-21 17:02,Web form,Paid search,,N
+E00759,2026-05-21 17:50,Web form,Paid search,,Y
+E00857,2026-05-21 18:10,Web form,Paid search,,Y
+E01487,2026-05-21 19:47,Web form,Organic,,N
+E00795,2026-05-21 19:55,Web form,Paid search,,N
+E02916,2026-05-22 08:18,Phone,Organic,P00348,N
+E01488,2026-05-22 08:20,Web form,Organic,,Y
+E02917,2026-05-22 08:29,Phone,Directories,P02349,Y
+E02918,2026-05-22 09:07,Phone,Organic,P00829,N
+E00787,2026-05-22 09:29,Web form,Paid search,,N
+E02919,2026-05-22 10:31,Phone,Organic,P01797,N
+E02920,2026-05-22 11:11,Phone,Organic,P01855,Y
+E00986,2026-05-22 11:54,Web form,Directories,,N
+E02921,2026-05-22 12:31,Phone,Paid social,P03099,N
+E00888,2026-05-22 12:58,Web form,Paid search,,N
+E02922,2026-05-22 13:01,Phone,Organic,P01434,N
+E02923,2026-05-22 13:44,Phone,Organic,P00670,N
+E00755,2026-05-22 16:04,Web form,Paid search,,N
+E02924,2026-05-22 16:06,Phone,Organic,P00067,N
+E00870,2026-05-22 16:19,Web form,Paid search,,Y
+E02925,2026-05-22 16:23,Phone,Organic,P00047,N
+E00764,2026-05-22 16:25,Web form,Paid search,,Y
+E00777,2026-05-22 16:32,Web form,Paid search,,N
+E02926,2026-05-22 16:41,Phone,Organic,P02307,N
+E02927,2026-05-22 16:42,Phone,Organic,P03321,Y
+E02928,2026-05-22 17:36,Phone,Paid search,P02239,N
+E02929,2026-05-22 17:41,Phone,Directories,P02347,Y
+E01489,2026-05-22 17:42,Web form,Organic,,N
+E00752,2026-05-22 19:40,Web form,Paid search,,N
+E00763,2026-05-22 19:49,Web form,Paid search,,N
+E00773,2026-05-22 21:03,Web form,Paid search,,N
+E02930,2026-05-26 08:21,Phone,Organic,P00909,N
+E02931,2026-05-26 09:07,Phone,Paid social,P01292,Y
+E00924,2026-05-26 09:17,Web form,Paid social,,N
+E02932,2026-05-26 09:43,Phone,Paid search,P01189,N
+E01491,2026-05-26 10:17,Web form,Organic,,N
+E02933,2026-05-26 10:19,Phone,Paid social,P03456,N
+E01490,2026-05-26 10:22,Web form,Organic,,N
+E00836,2026-05-26 10:24,Web form,Paid search,,Y
+E02934,2026-05-26 10:44,Phone,Paid search,P02221,N
+E01492,2026-05-26 10:49,Web form,Organic,,N
+E00786,2026-05-26 11:17,Web form,Paid search,,Y
+E00874,2026-05-26 12:34,Web form,Paid search,,Y
+E02935,2026-05-26 12:43,Phone,Organic,P00313,N
+E02936,2026-05-26 13:27,Phone,Paid search,P03219,N
+E02937,2026-05-26 14:35,Phone,Directories,P00155,Y
+E00889,2026-05-26 14:55,Web form,Paid search,,N
+E02938,2026-05-26 15:10,Phone,Organic,P02486,N
+E00812,2026-05-26 15:27,Web form,Paid search,,N
+E00845,2026-05-26 15:34,Web form,Paid search,,N
+E00955,2026-05-26 16:20,Web form,Paid social,,N
+E02939,2026-05-26 16:21,Phone,Organic,P01380,N
+E00856,2026-05-26 16:53,Web form,Paid search,,Y
+E00807,2026-05-26 17:36,Web form,Paid search,,N
+E02940,2026-05-26 17:41,Phone,Paid social,P00997,Y
+E02941,2026-05-26 17:48,Phone,Organic,P04180,N
+E02942,2026-05-26 17:49,Phone,Directories,P02540,N
+E00813,2026-05-26 17:55,Web form,Paid search,,N
+E00947,2026-05-26 20:10,Web form,Paid social,,N
+E02943,2026-05-27 08:32,Phone,Organic,P03381,Y
+E02944,2026-05-27 09:12,Phone,Directories,P00930,N
+E00925,2026-05-27 09:23,Web form,Paid social,,N
+E02945,2026-05-27 09:23,Phone,Paid search,P00075,N
+E02946,2026-05-27 09:51,Phone,Paid search,P03633,N
+E00766,2026-05-27 09:52,Web form,Paid search,,N
+E02947,2026-05-27 10:02,Phone,Paid social,P02735,Y
+E02948,2026-05-27 10:18,Phone,Directories,P01221,N
+E02949,2026-05-27 10:37,Phone,Organic,P04174,Y
+E00804,2026-05-27 11:44,Web form,Paid search,,N
+E02950,2026-05-27 12:10,Phone,Organic,P03849,N
+E01496,2026-05-27 12:27,Web form,Organic,,N
+E00815,2026-05-27 12:35,Web form,Paid search,,Y
+E02951,2026-05-27 12:56,Phone,Directories,P02611,Y
+E00923,2026-05-27 13:24,Web form,Paid social,,Y
+E01493,2026-05-27 14:16,Web form,Organic,,N
+E02952,2026-05-27 15:27,Phone,Organic,P02121,N
+E00967,2026-05-27 15:38,Web form,Directories,,N
+E02953,2026-05-27 16:33,Phone,Directories,P01753,Y
+E00756,2026-05-27 17:47,Web form,Paid search,,N
+E00968,2026-05-27 18:11,Web form,Directories,,Y
+E00921,2026-05-27 18:31,Web form,Paid social,,N
+E00775,2026-05-27 18:52,Web form,Paid search,,N
+E01495,2026-05-27 19:25,Web form,Organic,,N
+E01497,2026-05-27 20:26,Referral,Referral,,Y
+E01494,2026-05-27 20:53,Web form,Organic,,Y
+E00935,2026-05-27 21:10,Web form,Paid social,,N
+E00788,2026-05-27 21:21,Web form,Paid search,,N
+E00762,2026-05-27 21:36,Web form,Paid search,,N
+E00765,2026-05-27 21:53,Web form,Paid search,,N
+E02954,2026-05-28 09:24,Phone,Directories,P02067,Y
+E00796,2026-05-28 09:55,Web form,Paid search,,N
+E02955,2026-05-28 10:16,Phone,Paid search,P02564,N
+E02956,2026-05-28 11:01,Phone,Directories,P00760,Y
+E00877,2026-05-28 11:54,Web form,Paid search,,N
+E02957,2026-05-28 12:34,Phone,Directories,P01446,Y
+E00774,2026-05-28 13:06,Web form,Paid search,,N
+E00855,2026-05-28 13:18,Web form,Paid search,,N
+E02958,2026-05-28 13:27,Phone,Directories,P03870,Y
+E02959,2026-05-28 14:18,Phone,Organic,P01356,Y
+E00769,2026-05-28 14:35,Web form,Paid search,,N
+E00873,2026-05-28 14:46,Web form,Paid search,,N
+E02960,2026-05-28 14:48,Phone,Organic,P02165,Y
+E01499,2026-05-28 15:00,Web form,Organic,,Y
+E02961,2026-05-28 15:36,Phone,Directories,P03895,Y
+E00833,2026-05-28 15:55,Web form,Paid search,,N
+E02962,2026-05-28 16:17,Phone,Organic,P00576,N
+E00966,2026-05-28 16:31,Web form,Directories,,N
+E02963,2026-05-28 16:41,Phone,Directories,P02036,N
+E00907,2026-05-28 16:43,Web form,Paid social,,N
+E02964,2026-05-28 16:51,Phone,Directories,P03926,N
+E00827,2026-05-28 17:36,Web form,Paid search,,Y
+E02965,2026-05-28 17:44,Phone,Directories,P02547,Y
+E02966,2026-05-28 17:59,Phone,Organic,P00467,Y
+E01498,2026-05-28 19:15,Web form,Organic,,N
+E00962,2026-05-28 20:50,Web form,Directories,,N
+E00896,2026-05-28 21:01,Web form,Paid social,,N
+E00843,2026-05-28 21:18,Web form,Paid search,,N
+E02967,2026-05-29 08:22,Phone,Paid search,P02776,Y
+E00978,2026-05-29 08:49,Web form,Directories,,Y
+E01500,2026-05-29 09:21,Web form,Organic,,N
+E00909,2026-05-29 09:37,Web form,Paid social,,N
+E00979,2026-05-29 09:47,Web form,Directories,,Y
+E02968,2026-05-29 10:20,Phone,Paid search,P01939,N
+E02969,2026-05-29 11:18,Phone,Paid search,P01360,Y
+E00882,2026-05-29 11:37,Web form,Paid search,,N
+E00985,2026-05-29 11:53,Web form,Directories,,Y
+E02970,2026-05-29 11:56,Phone,Organic,P02317,N
+E02971,2026-05-29 12:01,Phone,Directories,P01684,Y
+E02972,2026-05-29 12:14,Phone,Directories,P01312,Y
+E00858,2026-05-29 12:50,Web form,Paid search,,N
+E01501,2026-05-29 13:04,Web form,Organic,,N
+E02973,2026-05-29 13:26,Phone,Paid social,P04138,N
+E00965,2026-05-29 14:14,Web form,Directories,,Y
+E01503,2026-05-29 15:31,Referral,Referral,,N
+E02974,2026-05-29 15:58,Phone,Directories,P03848,N
+E00794,2026-05-29 16:08,Web form,Paid search,,Y
+E02975,2026-05-29 16:34,Phone,Paid social,P01307,N
+E00820,2026-05-29 16:36,Web form,Paid search,,Y
+E02976,2026-05-29 16:51,Phone,Paid search,P03651,Y
+E02977,2026-05-29 17:08,Phone,Paid social,P00306,N
+E02978,2026-05-29 17:08,Phone,Organic,P02906,Y
+E02979,2026-05-29 17:58,Phone,Organic,P01284,N
+E00818,2026-05-29 19:44,Web form,Paid search,,N
+E01502,2026-05-29 20:22,Web form,Organic,,N
+E00952,2026-05-29 21:09,Web form,Paid social,,N
+E00772,2026-05-29 21:31,Web form,Paid search,,N
+E02980,2026-06-01 08:23,Phone,Directories,P02154,N
+E02981,2026-06-01 08:58,Phone,Organic,P01922,N
+E01124,2026-06-01 09:01,Web form,Paid search,,Y
+E01081,2026-06-01 09:23,Web form,Paid search,,N
+E01083,2026-06-01 09:40,Web form,Paid search,,Y
+E01505,2026-06-01 09:41,Web form,Organic,,Y
+E02982,2026-06-01 09:46,Phone,Paid social,P02097,N
+E02983,2026-06-01 10:05,Phone,Directories,P01845,N
+E02984,2026-06-01 10:20,Phone,Organic,P01494,N
+E01193,2026-06-01 10:40,Web form,Paid social,,N
+E01018,2026-06-01 10:57,Web form,Paid search,,N
+E02985,2026-06-01 11:10,Phone,Directories,P02144,N
+E02986,2026-06-01 11:46,Phone,Paid search,P00055,N
+E02987,2026-06-01 12:00,Phone,Directories,P03774,N
+E02988,2026-06-01 12:08,Phone,Paid search,P04102,N
+E02989,2026-06-01 12:40,Phone,Paid search,P04091,N
+E01164,2026-06-01 13:02,Web form,Paid social,,N
+E02990,2026-06-01 13:06,Phone,Organic,P01131,N
+E02991,2026-06-01 13:32,Phone,Organic,P00159,Y
+E02992,2026-06-01 14:06,Phone,Paid search,P01630,Y
+E01138,2026-06-01 14:12,Web form,Paid search,,N
+E02993,2026-06-01 14:25,Phone,Organic,P03502,N
+E02994,2026-06-01 15:48,Phone,Paid social,P04072,N
+E02995,2026-06-01 16:39,Phone,Paid social,P03194,N
+E02996,2026-06-01 17:00,Phone,Paid search,P03234,Y
+E02997,2026-06-01 17:20,Phone,Paid search,P03153,N
+E02998,2026-06-01 17:33,Phone,Paid search,P02070,N
+E02999,2026-06-01 17:39,Phone,Paid search,P01366,N
+E01507,2026-06-01 18:43,Web form,Organic,,N
+E01137,2026-06-01 20:03,Web form,Paid search,,Y
+E01196,2026-06-01 20:59,Web form,Paid social,,Y
+E01506,2026-06-01 21:23,Web form,Organic,,N
+E01504,2026-06-01 21:32,Web form,Organic,,N
+E00996,2026-06-02 08:00,Web form,Paid search,,N
+E03000,2026-06-02 08:28,Phone,Paid social,P04085,N
+E03001,2026-06-02 08:43,Phone,Organic,P03678,N
+E01509,2026-06-02 08:56,Web form,Organic,,N
+E01169,2026-06-02 09:14,Web form,Paid social,,N
+E03002,2026-06-02 09:15,Phone,Directories,P01471,Y
+E03003,2026-06-02 09:31,Phone,Paid search,P03074,N
+E01046,2026-06-02 09:42,Web form,Paid search,,N
+E01510,2026-06-02 09:56,Web form,Organic,,N
+E01158,2026-06-02 10:20,Web form,Paid social,,N
+E01235,2026-06-02 10:28,Web form,Directories,,Y
+E03004,2026-06-02 10:38,Phone,Organic,P02749,N
+E00993,2026-06-02 10:44,Web form,Paid search,,N
+E01062,2026-06-02 11:20,Web form,Paid search,,N
+E03005,2026-06-02 11:38,Phone,Paid search,P01804,N
+E03006,2026-06-02 11:54,Phone,Organic,P00107,Y
+E01007,2026-06-02 12:52,Web form,Paid search,,Y
+E03007,2026-06-02 12:55,Phone,Organic,P01634,N
+E03008,2026-06-02 13:04,Phone,Paid search,P00062,N
+E01508,2026-06-02 14:10,Web form,Organic,,N
+E01511,2026-06-02 14:15,Web form,Organic,,N
+E01094,2026-06-02 15:08,Web form,Paid search,,Y
+E01228,2026-06-02 15:27,Web form,Directories,,Y
+E03009,2026-06-02 15:36,Phone,Paid search,P02375,N
+E03010,2026-06-02 16:14,Phone,Directories,P00708,Y
+E03011,2026-06-02 16:17,Phone,Organic,P02354,N
+E01204,2026-06-02 16:31,Web form,Paid social,,N
+E03012,2026-06-02 16:47,Phone,Organic,P02978,N
+E03013,2026-06-02 16:54,Phone,Organic,P03089,Y
+E03014,2026-06-03 09:31,Phone,Paid social,P03734,N
+E01052,2026-06-03 09:36,Web form,Paid search,,N
+E03015,2026-06-03 09:47,Phone,Organic,P01379,Y
+E01218,2026-06-03 10:05,Web form,Directories,,Y
+E03016,2026-06-03 10:10,Phone,Paid social,P03820,N
+E03017,2026-06-03 11:18,Phone,Directories,P03658,N
+E01190,2026-06-03 11:23,Web form,Paid social,,N
+E03018,2026-06-03 12:38,Phone,Paid search,P02987,N
+E03019,2026-06-03 12:54,Phone,Organic,P01554,Y
+E01512,2026-06-03 13:12,Web form,Organic,,N
+E01043,2026-06-03 13:38,Web form,Paid search,,Y
+E01513,2026-06-03 14:13,Web form,Organic,,Y
+E00998,2026-06-03 14:35,Web form,Paid search,,N
+E01080,2026-06-03 14:37,Web form,Paid search,,N
+E01026,2026-06-03 15:34,Web form,Paid search,,Y
+E01086,2026-06-03 15:39,Web form,Paid search,,Y
+E03020,2026-06-03 15:58,Phone,Organic,P00704,N
+E03021,2026-06-03 16:14,Phone,Paid search,P01508,Y
+E03022,2026-06-03 16:53,Phone,Paid social,P01287,N
+E03023,2026-06-03 17:20,Phone,Organic,P02255,N
+E03024,2026-06-03 17:34,Phone,Organic,P03668,Y
+E01112,2026-06-03 18:55,Web form,Paid search,,N
+E01055,2026-06-03 19:26,Web form,Paid search,,Y
+E01216,2026-06-03 19:42,Web form,Directories,,N
+E01162,2026-06-03 20:28,Web form,Paid social,,N
+E03025,2026-06-04 08:19,Phone,Organic,P01787,N
+E03026,2026-06-04 08:26,Phone,Directories,P01884,Y
+E03027,2026-06-04 09:23,Phone,Directories,P00116,N
+E01001,2026-06-04 09:27,Web form,Paid search,,N
+E03028,2026-06-04 09:30,Phone,Directories,P02936,N
+E03029,2026-06-04 09:33,Phone,Directories,P03619,Y
+E01197,2026-06-04 09:34,Web form,Paid social,,Y
+E03030,2026-06-04 09:46,Phone,Organic,P01629,N
+E01099,2026-06-04 10:07,Web form,Paid search,,Y
+E03031,2026-06-04 10:55,Phone,Paid social,P04149,N
+E03032,2026-06-04 11:05,Phone,Organic,P02290,N
+E01019,2026-06-04 11:18,Web form,Paid search,,N
+E03033,2026-06-04 11:47,Phone,Paid search,P03147,N
+E01118,2026-06-04 11:58,Web form,Paid search,,Y
+E01013,2026-06-04 12:20,Web form,Paid search,,N
+E03034,2026-06-04 12:25,Phone,Organic,P03459,N
+E03035,2026-06-04 12:35,Phone,Organic,P03159,N
+E03036,2026-06-04 13:28,Phone,Paid search,P01821,Y
+E01039,2026-06-04 13:47,Web form,Paid search,,N
+E01210,2026-06-04 14:03,Web form,Directories,,Y
+E03037,2026-06-04 14:28,Phone,Paid social,P00890,N
+E01025,2026-06-04 15:15,Web form,Paid search,,N
+E03038,2026-06-04 15:44,Phone,Organic,P01122,Y
+E03039,2026-06-04 15:47,Phone,Directories,P01110,Y
+E03040,2026-06-04 15:54,Phone,Organic,P03245,N
+E01054,2026-06-04 16:15,Web form,Paid search,,N
+E03041,2026-06-04 16:33,Phone,Paid social,P00991,N
+E01127,2026-06-04 17:11,Web form,Paid search,,N
+E01514,2026-06-04 18:40,Web form,Organic,,Y
+E01015,2026-06-04 21:23,Web form,Paid search,,N
+E01224,2026-06-04 21:30,Web form,Directories,,Y
+E01187,2026-06-04 21:47,Web form,Paid social,,N
+E01020,2026-06-05 08:11,Web form,Paid search,,Y
+E01089,2026-06-05 09:18,Web form,Paid search,,N
+E03042,2026-06-05 09:32,Phone,Paid search,P01074,N
+E03043,2026-06-05 09:33,Phone,Paid search,P03501,N
+E03044,2026-06-05 09:58,Phone,Organic,P01624,N
+E03045,2026-06-05 10:04,Phone,Organic,P01558,N
+E03046,2026-06-05 10:08,Phone,Paid search,P00175,N
+E01222,2026-06-05 10:26,Web form,Directories,,N
+E03047,2026-06-05 10:26,Phone,Directories,P02581,Y
+E03048,2026-06-05 10:51,Phone,Organic,P01836,N
+E01223,2026-06-05 12:00,Web form,Directories,,N
+E01073,2026-06-05 12:01,Web form,Paid search,,Y
+E03049,2026-06-05 12:27,Phone,Paid search,P03337,N
+E01122,2026-06-05 12:45,Web form,Paid search,,Y
+E03050,2026-06-05 13:24,Phone,Organic,P03411,Y
+E03051,2026-06-05 14:07,Phone,Directories,P00648,N
+E03052,2026-06-05 15:13,Phone,Paid social,P03972,N
+E01211,2026-06-05 15:49,Web form,Directories,,Y
+E03053,2026-06-05 16:19,Phone,Organic,P01842,N
+E03054,2026-06-05 17:25,Phone,Organic,P00177,Y
+E01159,2026-06-05 18:38,Web form,Paid social,,N
+E01515,2026-06-05 18:48,Web form,Organic,,N
+E01104,2026-06-05 19:06,Web form,Paid search,,N
+E01212,2026-06-05 19:51,Web form,Directories,,Y
+E01090,2026-06-05 21:03,Web form,Paid search,,N
+E03055,2026-06-08 08:21,Phone,Directories,P02688,N
+E01176,2026-06-08 08:32,Web form,Paid social,,N
+E03056,2026-06-08 08:41,Phone,Paid search,P01651,N
+E03057,2026-06-08 09:14,Phone,Organic,P00948,Y
+E01518,2026-06-08 10:14,Web form,Organic,,Y
+E03058,2026-06-08 10:28,Phone,Organic,P02575,Y
+E01120,2026-06-08 10:31,Web form,Paid search,,Y
+E03059,2026-06-08 10:58,Phone,Paid search,P02351,Y
+E01517,2026-06-08 11:42,Web form,Organic,,N
+E03060,2026-06-08 12:03,Phone,Paid search,P00095,N
+E01070,2026-06-08 12:17,Web form,Paid search,,N
+E01519,2026-06-08 12:36,Web form,Organic,,N
+E01225,2026-06-08 13:39,Web form,Directories,,Y
+E01085,2026-06-08 14:17,Web form,Paid search,,Y
+E01170,2026-06-08 14:22,Web form,Paid social,,N
+E03061,2026-06-08 15:13,Phone,Organic,P00922,N
+E01181,2026-06-08 15:26,Web form,Paid social,,N
+E01022,2026-06-08 16:03,Web form,Paid search,,Y
+E01516,2026-06-08 16:03,Web form,Organic,,N
+E03062,2026-06-08 16:07,Phone,Organic,P01363,Y
+E03063,2026-06-08 16:48,Phone,Paid search,P01927,Y
+E01009,2026-06-08 17:03,Web form,Paid search,,Y
+E03064,2026-06-08 17:55,Phone,Organic,P03235,Y
+E01095,2026-06-08 19:48,Web form,Paid search,,Y
+E01157,2026-06-09 08:28,Web form,Paid social,,Y
+E03065,2026-06-09 08:41,Phone,Paid search,P03701,N
+E03066,2026-06-09 08:53,Phone,Organic,P02698,N
+E03067,2026-06-09 08:54,Phone,Paid search,P00789,Y
+E01168,2026-06-09 09:08,Web form,Paid social,,N
+E03068,2026-06-09 09:16,Phone,Paid search,P00579,N
+E01003,2026-06-09 09:36,Web form,Paid search,,N
+E03069,2026-06-09 09:38,Phone,Paid search,P00919,N
+E03070,2026-06-09 09:59,Phone,Paid search,P01913,Y
+E03071,2026-06-09 10:05,Phone,Paid search,P03623,N
+E01147,2026-06-09 10:22,Web form,Paid social,,N
+E01030,2026-06-09 11:06,Web form,Paid search,,N
+E03072,2026-06-09 11:27,Phone,Paid search,P00365,N
+E01021,2026-06-09 11:32,Web form,Paid search,,N
+E01221,2026-06-09 11:59,Web form,Directories,,Y
+E03073,2026-06-09 13:10,Phone,Paid search,P02620,Y
+E01152,2026-06-09 13:29,Web form,Paid social,,N
+E01114,2026-06-09 14:46,Web form,Paid search,,N
+E03074,2026-06-09 16:34,Phone,Paid search,P00423,Y
+E01522,2026-06-09 16:50,Web form,Organic,,Y
+E03075,2026-06-09 16:54,Phone,Paid search,P01689,N
+E03076,2026-06-09 17:10,Phone,Paid social,P02384,N
+E03077,2026-06-09 17:40,Phone,Organic,P01981,Y
+E01154,2026-06-09 18:16,Web form,Paid social,,Y
+E01182,2026-06-09 18:39,Web form,Paid social,,N
+E01178,2026-06-09 18:49,Web form,Paid social,,N
+E01208,2026-06-09 20:02,Web form,Directories,,Y
+E01144,2026-06-09 20:20,Web form,Paid social,,N
+E01520,2026-06-09 20:36,Web form,Organic,,Y
+E01044,2026-06-09 20:55,Web form,Paid search,,N
+E01521,2026-06-09 21:31,Web form,Organic,,Y
+E03078,2026-06-10 08:02,Phone,Directories,P00662,Y
+E03079,2026-06-10 08:36,Phone,Directories,P02967,Y
+E01004,2026-06-10 08:55,Web form,Paid search,,N
+E03080,2026-06-10 09:34,Phone,Paid search,P02254,N
+E03081,2026-06-10 10:16,Phone,Organic,P01422,N
+E01217,2026-06-10 10:22,Web form,Directories,,N
+E03082,2026-06-10 10:34,Phone,Paid search,P01477,N
+E03083,2026-06-10 10:58,Phone,Paid search,P02030,N
+E03084,2026-06-10 11:00,Phone,Paid search,P02378,N
+E03085,2026-06-10 11:08,Phone,Directories,P01443,N
+E01171,2026-06-10 11:57,Web form,Paid social,,N
+E01017,2026-06-10 12:21,Web form,Paid search,,N
+E01156,2026-06-10 12:22,Web form,Paid social,,N
+E01057,2026-06-10 13:05,Web form,Paid search,,N
+E01050,2026-06-10 13:46,Web form,Paid search,,N
+E03086,2026-06-10 13:46,Phone,Paid search,P01449,Y
+E03087,2026-06-10 15:19,Phone,Directories,P00402,N
+E01523,2026-06-10 15:50,Web form,Organic,,Y
+E03088,2026-06-10 16:17,Phone,Paid social,P00504,N
+E03089,2026-06-10 16:20,Phone,Organic,P00789,Y
+E01209,2026-06-10 16:24,Web form,Directories,,N
+E03090,2026-06-10 16:36,Phone,Paid search,P02755,N
+E03091,2026-06-10 17:14,Phone,Organic,P03162,N
+E01006,2026-06-10 17:30,Web form,Paid search,,N
+E01123,2026-06-10 17:33,Web form,Paid search,,N
+E01035,2026-06-10 17:34,Web form,Paid search,,N
+E03092,2026-06-10 17:42,Phone,Paid search,P01224,N
+E01161,2026-06-10 18:12,Web form,Paid social,,N
+E01024,2026-06-10 18:38,Web form,Paid search,,Y
+E01072,2026-06-10 19:31,Web form,Paid search,,N
+E01227,2026-06-10 21:13,Web form,Directories,,Y
+E01524,2026-06-11 08:07,Web form,Organic,,Y
+E01145,2026-06-11 08:51,Web form,Paid social,,N
+E01048,2026-06-11 09:24,Web form,Paid search,,N
+E03093,2026-06-11 09:51,Phone,Directories,P01258,N
+E03094,2026-06-11 09:59,Phone,Paid social,P01221,N
+E03095,2026-06-11 10:01,Phone,Organic,P00476,N
+E03096,2026-06-11 10:04,Phone,Directories,P00547,Y
+E01526,2026-06-11 10:17,Web form,Organic,,N
+E01117,2026-06-11 11:55,Web form,Paid search,,N
+E01111,2026-06-11 12:16,Web form,Paid search,,N
+E03097,2026-06-11 12:26,Phone,Organic,P02339,N
+E03098,2026-06-11 13:38,Phone,Directories,P02815,N
+E01042,2026-06-11 14:08,Web form,Paid search,,N
+E01226,2026-06-11 15:15,Web form,Directories,,N
+E03099,2026-06-11 15:53,Phone,Directories,P02825,N
+E01119,2026-06-11 16:30,Web form,Paid search,,N
+E00997,2026-06-11 16:42,Web form,Paid search,,N
+E03100,2026-06-11 16:54,Phone,Paid social,P01586,N
+E01525,2026-06-11 17:22,Web form,Organic,,N
+E01074,2026-06-11 18:07,Web form,Paid search,,N
+E01184,2026-06-11 18:08,Web form,Paid social,,N
+E01084,2026-06-11 18:09,Web form,Paid search,,N
+E01527,2026-06-11 20:05,Web form,Organic,,N
+E03101,2026-06-12 08:13,Phone,Directories,P03416,N
+E03102,2026-06-12 08:25,Phone,Directories,P00054,Y
+E03103,2026-06-12 08:30,Phone,Organic,P03777,N
+E03104,2026-06-12 08:49,Phone,Organic,P03873,N
+E03105,2026-06-12 08:51,Phone,Directories,P01123,Y
+E01530,2026-06-12 09:51,Web form,Organic,,Y
+E01069,2026-06-12 10:11,Web form,Paid search,,N
+E03106,2026-06-12 10:11,Phone,Organic,P00586,N
+E03107,2026-06-12 10:26,Phone,Paid search,P03535,N
+E03108,2026-06-12 10:37,Phone,Directories,P01517,Y
+E01179,2026-06-12 11:43,Web form,Paid social,,N
+E03109,2026-06-12 12:19,Phone,Directories,P02506,Y
+E01126,2026-06-12 12:33,Web form,Paid search,,N
+E03110,2026-06-12 12:33,Phone,Directories,P03273,Y
+E01101,2026-06-12 16:25,Web form,Paid search,,N
+E03111,2026-06-12 16:31,Phone,Organic,P03762,N
+E01232,2026-06-12 18:19,Web form,Directories,,Y
+E01528,2026-06-12 19:14,Web form,Organic,,Y
+E01529,2026-06-12 20:13,Web form,Organic,,N
+E01038,2026-06-12 20:15,Web form,Paid search,,N
+E01102,2026-06-12 20:39,Web form,Paid search,,N
+E01531,2026-06-12 21:06,Web form,Organic,,N
+E03112,2026-06-15 08:03,Phone,Organic,P01707,Y
+E01177,2026-06-15 08:07,Web form,Paid social,,N
+E03113,2026-06-15 08:08,Phone,Paid social,P02295,N
+E03114,2026-06-15 08:19,Phone,Organic,P03433,N
+E01103,2026-06-15 08:38,Web form,Paid search,,N
+E01131,2026-06-15 08:40,Web form,Paid search,,N
+E01142,2026-06-15 09:32,Web form,Paid social,,N
+E03115,2026-06-15 09:35,Phone,Organic,P02817,Y
+E03116,2026-06-15 09:41,Phone,Directories,P02902,N
+E03117,2026-06-15 09:44,Phone,Paid social,P01929,Y
+E03118,2026-06-15 10:31,Phone,Directories,P01006,N
+E03119,2026-06-15 11:26,Phone,Paid social,P02544,Y
+E03120,2026-06-15 12:24,Phone,Paid search,P01465,Y
+E03121,2026-06-15 12:42,Phone,Paid search,P00192,Y
+E03122,2026-06-15 13:16,Phone,Organic,P01293,N
+E01065,2026-06-15 13:31,Web form,Paid search,,N
+E03123,2026-06-15 13:33,Phone,Organic,P03707,Y
+E00991,2026-06-15 14:26,Web form,Paid search,,N
+E03124,2026-06-15 16:17,Phone,Paid search,P01055,N
+E01059,2026-06-15 16:18,Web form,Paid search,,N
+E03125,2026-06-15 16:18,Phone,Directories,P03026,N
+E03126,2026-06-15 16:35,Phone,Directories,P00181,N
+E03127,2026-06-15 17:58,Phone,Paid social,P03018,N
+E01076,2026-06-15 17:59,Web form,Paid search,,N
+E01091,2026-06-15 18:48,Web form,Paid search,,N
+E01532,2026-06-15 20:19,Web form,Organic,,N
+E01198,2026-06-15 21:01,Web form,Paid social,,N
+E01533,2026-06-16 08:28,Web form,Organic,,N
+E03128,2026-06-16 09:45,Phone,Organic,P02198,Y
+E03129,2026-06-16 09:58,Phone,Paid search,P01449,N
+E03130,2026-06-16 10:19,Phone,Organic,P02694,N
+E03131,2026-06-16 10:45,Phone,Directories,P04183,N
+E01174,2026-06-16 13:51,Web form,Paid social,,N
+E03132,2026-06-16 14:13,Phone,Directories,P00232,N
+E03133,2026-06-16 15:58,Phone,Paid social,P02736,N
+E03134,2026-06-16 17:43,Phone,Directories,P00535,Y
+E03135,2026-06-16 17:56,Phone,Paid social,P03206,N
+E01194,2026-06-16 18:49,Web form,Paid social,,N
+E01215,2026-06-16 19:01,Web form,Directories,,N
+E03136,2026-06-17 08:21,Phone,Directories,P00317,Y
+E03137,2026-06-17 08:39,Phone,Directories,P03681,Y
+E03138,2026-06-17 08:58,Phone,Paid search,P03371,Y
+E01032,2026-06-17 09:03,Web form,Paid search,,Y
+E03139,2026-06-17 09:07,Phone,Directories,P03427,Y
+E01143,2026-06-17 09:16,Web form,Paid social,,Y
+E03140,2026-06-17 09:17,Phone,Paid search,P01471,Y
+E03141,2026-06-17 09:34,Phone,Directories,P04145,N
+E03142,2026-06-17 09:49,Phone,Organic,P00984,N
+E03143,2026-06-17 09:56,Phone,Directories,P00250,Y
+E03144,2026-06-17 10:10,Phone,Organic,P02979,N
+E03145,2026-06-17 10:40,Phone,Paid social,P02953,Y
+E01167,2026-06-17 10:49,Web form,Paid social,,N
+E03146,2026-06-17 10:53,Phone,Paid search,P01963,N
+E03147,2026-06-17 10:54,Phone,Paid search,P01724,N
+E03148,2026-06-17 10:56,Phone,Organic,P02091,N
+E03149,2026-06-17 10:57,Phone,Directories,P01896,Y
+E01536,2026-06-17 11:06,Web form,Organic,,Y
+E01534,2026-06-17 11:51,Web form,Organic,,N
+E00994,2026-06-17 11:56,Web form,Paid search,,N
+E03150,2026-06-17 12:18,Phone,Paid search,P03988,N
+E03151,2026-06-17 12:24,Phone,Organic,P02976,Y
+E03152,2026-06-17 12:27,Phone,Directories,P00473,N
+E03153,2026-06-17 12:28,Phone,Paid search,P03642,N
+E03154,2026-06-17 13:02,Phone,Paid search,P00700,Y
+E01165,2026-06-17 13:28,Web form,Paid social,,N
+E03155,2026-06-17 13:41,Phone,Paid social,P00491,Y
+E03156,2026-06-17 13:46,Phone,Directories,P01428,N
+E01166,2026-06-17 14:52,Web form,Paid social,,N
+E01106,2026-06-17 15:52,Web form,Paid search,,N
+E03157,2026-06-17 16:04,Phone,Organic,P01008,N
+E01078,2026-06-17 16:56,Web form,Paid search,,N
+E03158,2026-06-17 17:02,Phone,Directories,P00637,Y
+E03159,2026-06-17 17:20,Phone,Paid social,P00888,N
+E01068,2026-06-17 17:28,Web form,Paid search,,N
+E01028,2026-06-17 18:11,Web form,Paid search,,N
+E01535,2026-06-17 19:09,Web form,Organic,,N
+E00995,2026-06-17 20:38,Web form,Paid search,,Y
+E01146,2026-06-17 21:01,Web form,Paid social,,Y
+E01231,2026-06-18 08:21,Web form,Directories,,Y
+E03160,2026-06-18 08:35,Phone,Organic,P04126,Y
+E03161,2026-06-18 08:44,Phone,Directories,P00481,N
+E03162,2026-06-18 09:01,Phone,Organic,P02494,N
+E03163,2026-06-18 09:10,Phone,Paid search,P01344,N
+E03164,2026-06-18 09:11,Phone,Organic,P00894,Y
+E03165,2026-06-18 09:22,Phone,Paid search,P03403,Y
+E03166,2026-06-18 09:23,Phone,Paid search,P03723,Y
+E03167,2026-06-18 09:30,Phone,Paid search,P01029,Y
+E03168,2026-06-18 09:35,Phone,Directories,P01389,Y
+E03169,2026-06-18 09:43,Phone,Paid social,P02595,N
+E03170,2026-06-18 09:46,Phone,Organic,P02751,N
+E03171,2026-06-18 09:47,Phone,Organic,P02684,N
+E03172,2026-06-18 10:01,Phone,Directories,P02001,Y
+E03173,2026-06-18 10:21,Phone,Paid social,P02194,N
+E03174,2026-06-18 10:36,Phone,Organic,P00735,N
+E03175,2026-06-18 10:50,Phone,Directories,P02775,Y
+E01205,2026-06-18 11:17,Web form,Paid social,,N
+E01128,2026-06-18 11:28,Web form,Paid search,,N
+E03176,2026-06-18 12:18,Phone,Paid search,P03852,Y
+E03177,2026-06-18 12:19,Phone,Organic,P00581,N
+E01031,2026-06-18 12:28,Web form,Paid search,,N
+E01538,2026-06-18 12:55,Web form,Organic,,Y
+E01093,2026-06-18 12:58,Web form,Paid search,,N
+E03178,2026-06-18 13:25,Phone,Directories,P02373,Y
+E01000,2026-06-18 13:56,Web form,Paid search,,N
+E01189,2026-06-18 14:04,Web form,Paid social,,N
+E03179,2026-06-18 14:32,Phone,Organic,P03551,N
+E03180,2026-06-18 16:05,Phone,Directories,P00389,N
+E01237,2026-06-18 16:30,Web form,Directories,,N
+E01011,2026-06-18 17:18,Web form,Paid search,,N
+E01151,2026-06-18 17:57,Web form,Paid social,,N
+E01537,2026-06-18 18:09,Web form,Organic,,Y
+E01047,2026-06-18 19:00,Web form,Paid search,,N
+E01033,2026-06-18 21:01,Web form,Paid search,,N
+E01010,2026-06-18 21:38,Web form,Paid search,,N
+E03181,2026-06-19 08:28,Phone,Directories,P00766,Y
+E03182,2026-06-19 08:47,Phone,Paid search,P02813,Y
+E03183,2026-06-19 08:57,Phone,Paid social,P03971,N
+E03184,2026-06-19 09:05,Phone,Directories,P04187,N
+E03185,2026-06-19 09:05,Phone,Paid search,P02894,Y
+E03186,2026-06-19 09:43,Phone,Organic,P02051,Y
+E01214,2026-06-19 09:53,Web form,Directories,,Y
+E03187,2026-06-19 10:02,Phone,Organic,P02397,N
+E03188,2026-06-19 10:03,Phone,Directories,P02367,Y
+E03189,2026-06-19 10:14,Phone,Paid search,P01826,Y
+E03190,2026-06-19 10:27,Phone,Paid search,P00926,Y
+E01097,2026-06-19 10:45,Web form,Paid search,,N
+E03191,2026-06-19 10:47,Phone,Organic,P00360,Y
+E01173,2026-06-19 13:11,Web form,Paid social,,N
+E01539,2026-06-19 13:15,Web form,Organic,,N
+E03192,2026-06-19 14:19,Phone,Paid search,P00579,N
+E03193,2026-06-19 14:44,Phone,Organic,P02115,N
+E03194,2026-06-19 15:21,Phone,Paid search,P01112,N
+E01110,2026-06-19 15:34,Web form,Paid search,,N
+E03195,2026-06-19 15:37,Phone,Paid social,P01225,N
+E03196,2026-06-19 15:44,Phone,Directories,P02704,N
+E03197,2026-06-19 16:20,Phone,Paid search,P01305,N
+E01172,2026-06-19 16:23,Web form,Paid social,,Y
+E01058,2026-06-19 16:27,Web form,Paid search,,Y
+E01160,2026-06-19 18:14,Web form,Paid social,,N
+E01060,2026-06-19 19:08,Web form,Paid search,,N
+E01234,2026-06-19 20:44,Web form,Directories,,Y
+E01540,2026-06-19 20:52,Referral,Referral,,Y
+E01092,2026-06-19 21:30,Web form,Paid search,,N
+E01150,2026-06-22 09:10,Web form,Paid social,,Y
+E03198,2026-06-22 09:20,Phone,Paid search,P00822,N
+E03199,2026-06-22 09:33,Phone,Paid search,P00509,N
+E03200,2026-06-22 09:36,Phone,Paid search,P01305,Y
+E03201,2026-06-22 09:41,Phone,Paid search,P03987,Y
+E03202,2026-06-22 09:45,Phone,Paid search,P02405,Y
+E03203,2026-06-22 09:55,Phone,Paid social,P01504,N
+E03204,2026-06-22 09:55,Phone,Directories,P03321,N
+E01107,2026-06-22 09:58,Web form,Paid search,,N
+E03205,2026-06-22 11:10,Phone,Paid search,P03424,N
+E03206,2026-06-22 11:42,Phone,Organic,P03427,N
+E03207,2026-06-22 11:43,Phone,Directories,P02409,N
+E01115,2026-06-22 11:52,Web form,Paid search,,Y
+E03208,2026-06-22 12:43,Phone,Paid search,P01228,Y
+E01034,2026-06-22 12:45,Web form,Paid search,,Y
+E03209,2026-06-22 14:33,Phone,Organic,P01200,Y
+E03210,2026-06-22 15:06,Phone,Paid search,P02964,N
+E01203,2026-06-22 15:37,Web form,Paid social,,N
+E01192,2026-06-22 15:42,Web form,Paid social,,N
+E03211,2026-06-22 16:26,Phone,Paid search,P02394,N
+E01236,2026-06-22 16:38,Web form,Directories,,N
+E03212,2026-06-22 17:09,Phone,Paid search,P00348,N
+E03213,2026-06-22 17:10,Phone,Directories,P02217,N
+E01541,2026-06-22 17:30,Web form,Organic,,N
+E01075,2026-06-22 17:34,Web form,Paid search,,N
+E01066,2026-06-22 18:19,Web form,Paid search,,N
+E01051,2026-06-22 18:27,Web form,Paid search,,N
+E01113,2026-06-22 20:02,Web form,Paid search,,Y
+E01185,2026-06-22 20:03,Web form,Paid social,,N
+E03214,2026-06-23 08:34,Phone,Paid search,P02186,N
+E01229,2026-06-23 08:43,Web form,Directories,,N
+E01542,2026-06-23 08:44,Web form,Organic,,N
+E03215,2026-06-23 08:49,Phone,Paid social,P02827,N
+E03216,2026-06-23 08:57,Phone,Organic,P02956,N
+E03217,2026-06-23 09:19,Phone,Organic,P00966,N
+E03218,2026-06-23 10:04,Phone,Organic,P02394,Y
+E03219,2026-06-23 10:20,Phone,Organic,P00804,Y
+E03220,2026-06-23 10:37,Phone,Paid search,P01946,N
+E03221,2026-06-23 10:52,Phone,Organic,P00641,N
+E03222,2026-06-23 11:02,Phone,Directories,P03688,N
+E01544,2026-06-23 11:07,Web form,Organic,,N
+E01220,2026-06-23 11:14,Web form,Directories,,N
+E03223,2026-06-23 11:26,Phone,Paid social,P01001,N
+E01545,2026-06-23 11:40,Web form,Organic,,N
+E01188,2026-06-23 12:14,Web form,Paid social,,N
+E03224,2026-06-23 12:15,Phone,Paid search,P02277,Y
+E03225,2026-06-23 12:25,Phone,Paid search,P00972,N
+E01141,2026-06-23 12:28,Web form,Paid social,,N
+E03226,2026-06-23 13:12,Phone,Paid search,P00327,N
+E01100,2026-06-23 13:23,Web form,Paid search,,Y
+E01186,2026-06-23 13:23,Web form,Paid social,,Y
+E01098,2026-06-23 13:41,Web form,Paid search,,N
+E01543,2026-06-23 13:44,Web form,Organic,,Y
+E01016,2026-06-23 13:51,Web form,Paid search,,Y
+E01546,2026-06-23 14:59,Referral,Referral,,Y
+E01014,2026-06-23 15:13,Web form,Paid search,,N
+E03227,2026-06-23 15:41,Phone,Directories,P02304,Y
+E01027,2026-06-23 15:54,Web form,Paid search,,N
+E01063,2026-06-23 16:39,Web form,Paid search,,N
+E01077,2026-06-23 19:46,Web form,Paid search,,N
+E01045,2026-06-23 19:47,Web form,Paid search,,N
+E01049,2026-06-23 20:05,Web form,Paid search,,N
+E01551,2026-06-24 08:19,Referral,Referral,,N
+E03228,2026-06-24 08:54,Phone,Directories,P03151,N
+E01238,2026-06-24 09:07,Web form,Directories,,Y
+E03229,2026-06-24 09:26,Phone,Directories,P01701,Y
+E01549,2026-06-24 09:38,Web form,Organic,,N
+E01201,2026-06-24 10:06,Web form,Paid social,,Y
+E01550,2026-06-24 10:10,Web form,Organic,,N
+E03230,2026-06-24 10:32,Phone,Paid search,P03873,Y
+E01207,2026-06-24 11:03,Web form,Paid social,,Y
+E03231,2026-06-24 11:46,Phone,Organic,P03045,Y
+E01547,2026-06-24 12:03,Web form,Organic,,N
+E03232,2026-06-24 12:07,Phone,Paid social,P03614,N
+E03233,2026-06-24 12:29,Phone,Organic,P00921,N
+E03234,2026-06-24 12:54,Phone,Organic,P00589,N
+E01029,2026-06-24 13:30,Web form,Paid search,,N
+E01199,2026-06-24 13:59,Web form,Paid social,,N
+E01139,2026-06-24 14:58,Web form,Paid search,,N
+E01056,2026-06-24 15:19,Web form,Paid search,,N
+E03235,2026-06-24 16:28,Phone,Organic,P01769,N
+E03236,2026-06-24 17:33,Phone,Organic,P01373,Y
+E01213,2026-06-24 18:11,Web form,Directories,,N
+E00999,2026-06-24 18:44,Web form,Paid search,,Y
+E01548,2026-06-24 18:54,Web form,Organic,,N
+E01149,2026-06-24 20:25,Web form,Paid social,,N
+E01130,2026-06-24 20:45,Web form,Paid search,,N
+E01096,2026-06-24 21:45,Web form,Paid search,,N
+E03237,2026-06-25 08:11,Phone,Paid search,P01674,N
+E03238,2026-06-25 09:04,Phone,Paid social,P00346,N
+E03239,2026-06-25 09:13,Phone,Organic,P00552,Y
+E01136,2026-06-25 09:16,Web form,Paid search,,Y
+E03240,2026-06-25 09:23,Phone,Directories,P02409,N
+E01202,2026-06-25 09:43,Web form,Paid social,,Y
+E03241,2026-06-25 09:44,Phone,Paid search,P02218,N
+E01180,2026-06-25 09:48,Web form,Paid social,,N
+E01087,2026-06-25 10:04,Web form,Paid search,,N
+E01105,2026-06-25 10:04,Web form,Paid search,,N
+E03242,2026-06-25 10:13,Phone,Organic,P00629,N
+E03243,2026-06-25 10:14,Phone,Paid search,P03720,Y
+E03244,2026-06-25 10:37,Phone,Paid search,P02812,N
+E01053,2026-06-25 10:46,Web form,Paid search,,N
+E03245,2026-06-25 11:15,Phone,Directories,P00436,N
+E01200,2026-06-25 11:46,Web form,Paid social,,N
+E03246,2026-06-25 12:31,Phone,Organic,P00162,Y
+E01554,2026-06-25 13:01,Referral,Referral,,N
+E03247,2026-06-25 13:29,Phone,Paid search,P03768,Y
+E01553,2026-06-25 14:56,Web form,Organic,,Y
+E03248,2026-06-25 15:35,Phone,Paid search,P00647,Y
+E01148,2026-06-25 15:53,Web form,Paid social,,N
+E03249,2026-06-25 16:30,Phone,Paid social,P01553,N
+E01082,2026-06-25 16:35,Web form,Paid search,,Y
+E01040,2026-06-25 17:35,Web form,Paid search,,N
+E03250,2026-06-25 17:38,Phone,Paid search,P00043,Y
+E01121,2026-06-25 17:52,Web form,Paid search,,Y
+E01135,2026-06-25 18:52,Web form,Paid search,,N
+E01552,2026-06-25 19:00,Web form,Organic,,N
+E01140,2026-06-25 19:45,Web form,Paid search,,N
+E01153,2026-06-25 21:28,Web form,Paid social,,N
+E01036,2026-06-25 21:34,Web form,Paid search,,N
+E01134,2026-06-25 21:54,Web form,Paid search,,N
+E01239,2026-06-26 08:08,Web form,Directories,,N
+E03251,2026-06-26 08:14,Phone,Paid search,P00761,Y
+E01037,2026-06-26 08:29,Web form,Paid search,,N
+E03252,2026-06-26 08:34,Phone,Organic,P04032,N
+E01116,2026-06-26 09:06,Web form,Paid search,,Y
+E03253,2026-06-26 09:06,Phone,Directories,P01128,N
+E03254,2026-06-26 09:23,Phone,Organic,P03730,N
+E03255,2026-06-26 09:50,Phone,Organic,P00767,Y
+E03256,2026-06-26 10:01,Phone,Organic,P01674,N
+E03257,2026-06-26 10:06,Phone,Organic,P03947,N
+E03258,2026-06-26 10:21,Phone,Paid social,P04080,N
+E03259,2026-06-26 10:30,Phone,Paid search,P02236,N
+E03260,2026-06-26 10:49,Phone,Directories,P01083,Y
+E03261,2026-06-26 11:29,Phone,Organic,P00692,N
+E03262,2026-06-26 12:10,Phone,Organic,P01574,N
+E03263,2026-06-26 13:06,Phone,Directories,P03520,N
+E01557,2026-06-26 13:29,Web form,Organic,,N
+E03264,2026-06-26 13:31,Phone,Organic,P04124,N
+E01556,2026-06-26 15:12,Web form,Organic,,N
+E01012,2026-06-26 15:19,Web form,Paid search,,N
+E03265,2026-06-26 15:19,Phone,Organic,P03108,Y
+E03266,2026-06-26 15:37,Phone,Paid search,P02772,N
+E01555,2026-06-26 16:08,Web form,Organic,,N
+E01195,2026-06-26 16:48,Web form,Paid social,,N
+E03267,2026-06-26 16:57,Phone,Paid search,P03682,N
+E03268,2026-06-26 17:02,Phone,Organic,P03851,N
+E03269,2026-06-26 17:23,Phone,Directories,P03999,N
+E01230,2026-06-26 18:37,Web form,Directories,,Y
+E01132,2026-06-26 20:19,Web form,Paid search,,Y
+E01108,2026-06-26 20:58,Web form,Paid search,,Y
+E01558,2026-06-26 21:12,Web form,Organic,,N
+E03270,2026-06-29 08:29,Phone,Organic,P00836,Y
+E03271,2026-06-29 08:41,Phone,Organic,P04041,N
+E03272,2026-06-29 09:04,Phone,Organic,P03687,N
+E03273,2026-06-29 09:35,Phone,Organic,P01150,N
+E01008,2026-06-29 09:36,Web form,Paid search,,N
+E03274,2026-06-29 09:43,Phone,Directories,P02350,N
+E03275,2026-06-29 09:46,Phone,Directories,P00977,N
+E03276,2026-06-29 10:14,Phone,Organic,P04058,N
+E03277,2026-06-29 10:37,Phone,Organic,P03823,Y
+E01559,2026-06-29 10:46,Web form,Organic,,N
+E03278,2026-06-29 11:15,Phone,Organic,P01837,N
+E03279,2026-06-29 11:23,Phone,Directories,P02551,N
+E03280,2026-06-29 11:23,Phone,Organic,P00809,N
+E03281,2026-06-29 11:37,Phone,Paid search,P02851,N
+E01233,2026-06-29 12:31,Web form,Directories,,N
+E01175,2026-06-29 12:39,Web form,Paid social,,N
+E03282,2026-06-29 12:45,Phone,Paid social,P03813,N
+E01064,2026-06-29 13:13,Web form,Paid search,,Y
+E03283,2026-06-29 14:09,Phone,Paid social,P00443,N
+E03284,2026-06-29 14:42,Phone,Organic,P03720,N
+E01155,2026-06-29 15:03,Web form,Paid social,,N
+E01088,2026-06-29 15:23,Web form,Paid search,,N
+E03285,2026-06-29 15:23,Phone,Paid search,P00638,N
+E01023,2026-06-29 15:43,Web form,Paid search,,Y
+E03286,2026-06-29 16:01,Phone,Paid search,P02435,N
+E03287,2026-06-29 16:14,Phone,Directories,P02130,Y
+E03288,2026-06-29 16:24,Phone,Paid search,P02801,N
+E01129,2026-06-29 16:25,Web form,Paid search,,Y
+E03289,2026-06-29 16:26,Phone,Paid search,P03098,N
+E01191,2026-06-29 16:35,Web form,Paid social,,N
+E03290,2026-06-29 16:48,Phone,Directories,P03741,Y
+E01041,2026-06-29 16:50,Web form,Paid search,,N
+E03291,2026-06-29 17:03,Phone,Paid social,P02929,N
+E01561,2026-06-29 17:38,Web form,Organic,,N
+E01560,2026-06-29 19:41,Web form,Organic,,N
+E01206,2026-06-29 21:15,Web form,Paid social,,N
+E01109,2026-06-30 08:24,Web form,Paid search,,Y
+E01079,2026-06-30 09:16,Web form,Paid search,,N
+E01133,2026-06-30 09:19,Web form,Paid search,,N
+E03292,2026-06-30 09:48,Phone,Directories,P01624,N
+E03293,2026-06-30 09:58,Phone,Paid search,P00960,Y
+E03294,2026-06-30 10:08,Phone,Paid search,P02255,N
+E03295,2026-06-30 10:15,Phone,Directories,P03347,Y
+E01163,2026-06-30 10:47,Web form,Paid social,,N
+E01564,2026-06-30 11:29,Web form,Organic,,N
+E01002,2026-06-30 11:39,Web form,Paid search,,N
+E03296,2026-06-30 12:41,Phone,Paid search,P02127,Y
+E03297,2026-06-30 12:59,Phone,Paid search,P01536,N
+E03298,2026-06-30 13:20,Phone,Paid search,P01126,N
+E03299,2026-06-30 13:38,Phone,Organic,P03221,Y
+E03300,2026-06-30 14:04,Phone,Organic,P00697,Y
+E01061,2026-06-30 14:28,Web form,Paid search,,N
+E03301,2026-06-30 15:37,Phone,Organic,P03973,N
+E01219,2026-06-30 16:13,Web form,Directories,,N
+E03302,2026-06-30 16:19,Phone,Organic,P01520,N
+E01183,2026-06-30 16:22,Web form,Paid social,,N
+E01005,2026-06-30 16:25,Web form,Paid search,,N
+E00992,2026-06-30 16:27,Web form,Paid search,,N
+E01125,2026-06-30 16:33,Web form,Paid search,,Y
+E01071,2026-06-30 16:39,Web form,Paid search,,Y
+E01563,2026-06-30 17:07,Web form,Organic,,N
+E01562,2026-06-30 19:47,Web form,Organic,,Y
+E01067,2026-06-30 21:34,Web form,Paid search,,N

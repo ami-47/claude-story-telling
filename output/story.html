@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Hour Nobody Was Watching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* warm light washes, no navy anywhere: teal (calm/data), coral (tension),
+     gold (decision), plum (uncertainty), all light enough that ink text
+     clears 4.5:1 on every one of them, verified numerically before use. */
+  --marble:#FBF7F1; --marble-2:#DEF0E9; --marble-3:#FBEED3; --wash-plum:#F3E3EF;
+  --trust:#7A3566; --ink:#271C15; --ink-2:#5B4A3E;
+  --action:#E1421F; --action-deep:#A8330F; --premium:#B9790A; --premium-deep:#8F5C05;
+  --sea:#0B7A62;
+  --rule:rgba(39,28,21,.14); --hair:rgba(39,28,21,.09);
+  --out:cubic-bezier(.23,1,.32,1);
+  --inout:cubic-bezier(.77,0,.175,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--marble); color:var(--ink);
+  font-family:Figtree,system-ui,sans-serif; font-size:17px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+.mono,.tbl td.v,.meta b,.numeral,text{font-variant-numeric:tabular-nums}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+
+section{padding:clamp(86px,13vh,160px) 0; position:relative; overflow:hidden}
+.wrap{width:min(1200px,calc(100% - 52px)); margin:0 auto}
+.narrow{width:min(760px,calc(100% - 52px)); margin:0 auto}
+
+.bg-bone{background:var(--marble)}
+.bg-sage{background:var(--marble-2)}
+.bg-saged{background:var(--marble-3)}
+.bg-linen{background:var(--marble-3)}
+.bg-plum{background:var(--wash-plum)}
+
+/* ---------- type ----------
+   Fraunces for display, a warm soft-serif with real character, paired with
+   Figtree for body. One deliberate break instead of italics: the cover's
+   last word runs oversized and bleeds past the rest of the headline. */
+h1,h2,h3{
+  font-family:Fraunces,Georgia,serif;
+}
+h1{
+  font-size:clamp(46px,8.4vw,124px); line-height:.92; font-weight:800;
+  letter-spacing:-.035em; margin:0; text-wrap:balance;
+}
+h2{
+  font-size:clamp(32px,4.6vw,62px); line-height:1.04; font-weight:800;
+  letter-spacing:-.025em; margin:0 0 20px; text-wrap:balance;
+}
+h3{font-size:clamp(21px,2.2vw,28px); line-height:1.15; font-weight:700;
+  letter-spacing:-.02em; margin:0 0 10px}
+p{margin:0 0 16px; max-width:64ch; color:var(--ink-2); text-wrap:pretty}
+.lead{font-size:clamp(18px,1.8vw,22px); line-height:1.52; color:var(--ink-2)}
+strong{color:var(--ink); font-weight:600}
+.red{color:var(--action-deep)} .teal{color:var(--sea)} .ochre{color:var(--premium-deep)}
+h1 .red,.q .a{color:var(--action)}
+
+/* the deliberate break: this word runs larger than its own headline */
+.cover h1 .red{font-size:1.16em; margin-left:-.03em; display:inline-block}
+
+/* a numbered marker, not a label with a rule trailing off it */
+.eyebrow{
+  font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--ink-2); opacity:.7; margin:0 0 26px;
+  padding-top:14px; border-top:2px solid var(--action); display:inline-block;
+}
+
+.numeral{
+  font-family:Fraunces,serif;
+  font-size:clamp(88px,15vw,208px); font-weight:800; letter-spacing:-.03em;
+  line-height:.82; display:block; color:var(--action);
+}
+.unit{font-size:.28em; font-weight:700; letter-spacing:-.01em; vertical-align:.95em}
+
+/* ---------- reveal on entry ---------- */
+.rv{opacity:0; transform:translateY(12px); filter:blur(4px);
+  transition:opacity .42s var(--out), transform .42s var(--out), filter .42s var(--out)}
+.on .rv{opacity:1; transform:none; filter:none}
+.on .rv:nth-child(2){transition-delay:.10s}
+.on .rv:nth-child(3){transition-delay:.20s}
+.on .rv:nth-child(4){transition-delay:.30s}
+.on .rv:nth-child(5){transition-delay:.40s}
+@media (prefers-reduced-motion:reduce){
+  .rv{transform:none!important; filter:none!important; transition:opacity .3s}
+  .chev{animation:none!important}
+}
+
+/* ---------- cover ---------- */
+.cover{min-height:92vh; display:flex; flex-direction:column; justify-content:center}
+.cover h1 span{display:block}
+.cover .kicker{
+  font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--ink-2); margin-bottom:34px;
+}
+.cover .sub{margin-top:38px; max-width:58ch; font-size:clamp(17px,1.7vw,20px)}
+.meta{
+  margin-top:54px; display:flex; flex-wrap:wrap; gap:0; border-top:1px solid var(--rule);
+}
+.meta div{padding:16px 26px 0 0; margin-right:26px; border-right:1px solid var(--rule)}
+.meta div:last-child{border-right:0}
+.meta b{display:block; font-size:22px; font-weight:800; letter-spacing:-.02em}
+.meta span{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-2)}
+
+/* ---------- grids ---------- */
+.two{display:grid; grid-template-columns:5fr 7fr; gap:clamp(34px,5.5vw,82px); align-items:center}
+.two.even{grid-template-columns:1fr 1fr}
+.two.top{align-items:start}
+@media(max-width:880px){.two{grid-template-columns:1fr}}
+
+/* ---------- block bars (SVG) ---------- */
+.figure{width:100%}
+.figcap{
+  font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-2);
+  margin-top:14px; letter-spacing:.02em; line-height:1.5;
+}
+.legend{display:flex; gap:20px; margin-bottom:18px; flex-wrap:wrap}
+.legend i{width:11px; height:11px; border-radius:2px; display:inline-block; margin-right:7px}
+.legend span{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-2)}
+
+.replay{
+  background:none; border:1px solid var(--rule); color:var(--ink-2); cursor:pointer;
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; padding:8px 15px; border-radius:99px; margin-top:18px;
+  transition:background .2s,border-color .2s;
+}
+.replay:hover{background:rgba(39,28,21,.05); border-color:var(--ink-2)}
+.replay:active{transform:scale(.96)}
+.replay{transition:background .15s ease-out, border-color .15s ease-out, transform .15s ease-out}
+
+/* ---------- question transition ---------- */
+.q{text-align:center; padding:clamp(96px,16vh,190px) 0}
+.q h2{font-size:clamp(32px,5.4vw,74px); max-width:17ch; margin:0 auto 10px; line-height:1.02}
+.q .a{color:var(--action)}
+.q .chev{margin-top:52px; display:inline-block; animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(11px)}}
+
+/* ---------- callout card ---------- */
+.card{
+  background:none; border:0; border-top:1.5px solid var(--rule);
+  border-radius:0; padding:22px 0 0;
+}
+.card h3{margin-bottom:8px}
+.card p{margin:0; font-size:15.5px}
+.card .tag{
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em;
+  text-transform:uppercase; margin-bottom:12px; display:block;
+}
+
+/* ---------- decision ---------- */
+.slider-row{display:flex; align-items:center; gap:20px; margin:26px 0 8px}
+input[type=range]{
+  -webkit-appearance:none; appearance:none; flex:1; height:3px; border-radius:2px;
+  background:var(--rule); outline:none;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none; width:26px; height:26px; border-radius:50%;
+  background:var(--action); cursor:pointer; border:3px solid var(--marble);
+  box-shadow:0 1px 6px rgba(39,28,21,.28);
+}
+input[type=range]::-moz-range-thumb{
+  width:26px; height:26px; border-radius:50%; background:var(--action);
+  cursor:pointer; border:3px solid var(--marble);
+}
+.stepnum{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink-2); width:96px}
+
+table.tbl{border-collapse:collapse; width:100%; margin-top:8px; font-size:14.5px}
+.tbl th,.tbl td{text-align:right; padding:9px 12px; border-bottom:1px solid var(--rule)}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl th{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-2); font-weight:500}
+.tbl td.v{font-family:'JetBrains Mono',monospace}
+
+/* ---------- receipts ---------- */
+details.receipt{border-top:1px solid var(--rule); padding:14px 0}
+details.receipt summary{
+  cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:12px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2); list-style:none;
+}
+details.receipt summary::-webkit-details-marker{display:none}
+details.receipt summary::before{content:'+ '; color:var(--action)}
+details.receipt[open] summary::before{content:'– '}
+details.receipt .body{padding:14px 0 4px; font-size:14px; color:var(--ink-2)}
+details.receipt .body b{display:inline-block; min-width:92px; color:var(--ink-2);
+  font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em;
+  text-transform:uppercase; font-weight:500}
+
+footer{padding:56px 0 76px; border-top:1px solid var(--rule)}
+footer p{font-size:14px; color:var(--ink-2); max-width:70ch}
+
+/* ---------- progress rail ----------
+   One wayfinding element for the whole page instead of a number repeated
+   in every eyebrow. Tracks which section is in view. */
+.rail{
+  position:fixed; right:26px; top:50%; transform:translateY(-50%); z-index:5;
+  display:flex; flex-direction:column; align-items:center; gap:9px;
+  font-family:'JetBrains Mono',monospace; color:var(--ink-2);
+}
+.rail .now{font-size:15px; font-weight:700; color:var(--ink); letter-spacing:-.01em}
+.rail .total{font-size:11px}
+.rail .bar{width:1px; height:72px; background:var(--rule); position:relative}
+.rail .bar i{
+  position:absolute; left:50%; top:0; width:6px; height:6px; border-radius:50%;
+  background:var(--action); transform:translate(-50%,-50%);
+  transition:transform .4s var(--out);
+}
+@media(max-width:760px){.rail{display:none}}
+
+/* ---------- donut ---------- */
+.donut-wrap{display:flex; align-items:center; gap:28px; flex-wrap:wrap}
+.donut-num{flex:1; min-width:200px}
+</style>
+</head>
+<body>
+
+<nav class="rail" aria-hidden="true">
+  <span class="now" id="rail-now">01</span>
+  <span class="bar"><i id="rail-dot"></i></span>
+  <span class="total" id="rail-total">09</span>
+</nav>
+
+<!-- ============ 1 · COVER ============ -->
+<section class="bg-sage cover sc">
+  <div class="wrap">
+    <div class="kicker rv">Northgate Health · inbound calls · Jan to Jun 2026</div>
+    <h1 class="rv"><span>The hour</span><span>nobody was</span><span class="red">watching</span></h1>
+    <p class="lead sub rv">A clinic raised its advertising budget and waited for the
+      new patients to arrive. The patients had been calling all along. There was
+      just nobody there to pick up.</p>
+    <div class="meta rv">
+      <div><b id="m-calls"></b><span>calls analysed</span></div>
+      <div><b id="m-days"></b><span>working days</span></div>
+      <div><b id="m-files">4</b><span>source files</span></div>
+      <div><b id="m-typed">0</b><span>numbers typed by hand</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · THE BELIEF ============ -->
+<section class="bg-bone sc">
+  <div class="wrap">
+    <div class="eyebrow rv">What they believed</div>
+    <div class="two top">
+      <div>
+        <h2 class="rv">They spent more.<br>Almost nothing<br>came back.</h2>
+        <p class="lead rv">In April the practice raised its advertising budget by
+          nearly half. Six months of monthly spend against six months of enquiries,
+          on the same scale of change.</p>
+        <p class="rv">Enquiries moved up a tenth. Within the normal swing between
+          any two months in this data. The money went out. The patients did not
+          come in.</p>
+      </div>
+      <div class="rv">
+        <div id="fig-belief" class="figure"></div>
+        <div class="figcap" id="cap-belief"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · THE QUESTION ============ -->
+<section class="bg-saged q sc">
+  <div class="narrow">
+    <div class="eyebrow rv">The question</div>
+    <h2 class="rv">Spend rose by <span class="a" id="q-spend"></span>.<br>
+      Enquiries did not follow.</h2>
+    <h2 class="rv" style="margin-top:30px; font-size:clamp(38px,6.4vw,88px)">
+      So where are the patients going?</h2>
+    <div class="chev rv">
+      <svg width="30" height="42" viewBox="0 0 30 42" fill="none" aria-hidden="true">
+        <path d="M15 0v36M4 26l11 12 11-12" stroke="#271C15" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · THE REVEAL ============ -->
+<section class="bg-bone sc" id="reveal">
+  <div class="wrap">
+    <div class="eyebrow rv">What the call log says</div>
+    <h2 class="rv" style="max-width:20ch">They were calling.<br>
+      In one hour of the day, most of them gave up.</h2>
+    <p class="lead rv" style="margin-bottom:34px">Every call the practice received,
+      placed at the minute it came in. One row per call. Nothing aggregated away.</p>
+
+    <div class="rv">
+      <div class="legend">
+        <span><i style="background:var(--sea)"></i>Answered by a person</span>
+        <span><i style="background:var(--action)"></i>Rang out, went to voicemail or hung up</span>
+      </div>
+      <canvas id="dots" class="figure" height="460"></canvas>
+      <div class="figcap" id="cap-dots"></div>
+      <button class="replay" id="replay-dots">Play again</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · THE SHAPE ============ -->
+<section class="bg-sage sc">
+  <div class="wrap">
+    <div class="eyebrow rv">The same thing, counted</div>
+    <div class="two top">
+      <div>
+        <h2 class="rv">One hour holds<br>most of the damage.</h2>
+        <p class="lead rv">Share of calls that never reached a person, by half hour
+          of the working day.</p>
+        <div class="rv donut-wrap" style="margin-top:30px">
+          <div id="fig-share-donut"></div>
+          <p class="donut-num"><strong>of every unanswered
+            call in six months</strong> arrived between 12:30 and 13:30. That window
+            is one tenth of the opening day.</p>
+        </div>
+      </div>
+      <div class="rv">
+        <div id="fig-half" class="figure"></div>
+        <div class="figcap" id="cap-half"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · THE MECHANISM ============ -->
+<section class="bg-bone sc">
+  <div class="wrap">
+    <div class="eyebrow rv">Why that hour</div>
+    <h2 class="rv" style="max-width:22ch">Demand peaks at exactly the moment cover
+      collapses.</h2>
+    <p class="lead rv" style="margin-bottom:34px; max-width:60ch">Patients ring their
+      clinic on their own lunch break. The reception team takes its break at the
+      same time. Two charts, one clock. Read them together.</p>
+    <div class="rv">
+      <div id="fig-mech" class="figure"></div>
+      <div class="figcap" id="cap-mech"></div>
+      <button class="replay" id="replay-mech">Play again</button>
+    </div>
+    <div class="two" style="margin-top:46px">
+      <div class="card rv">
+        <span class="tag red">The collision</span>
+        <h3 id="mech-h1"></h3>
+        <p id="mech-p1"></p>
+      </div>
+      <div class="card rv">
+        <span class="tag teal">Why it is not a staffing shortage</span>
+        <h3 id="mech-h2"></h3>
+        <p id="mech-p2"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · THE DECISION ============ -->
+<section class="bg-linen sc">
+  <div class="wrap">
+    <div class="two top">
+      <div>
+        <h2 class="rv">Move the break.<br>Not the budget.</h2>
+        <p class="lead rv">Stagger reception breaks so the lunch hour keeps cover.
+          Drag to see what each extra person on the phones recovers.</p>
+        <div class="rv">
+          <div class="slider-row">
+            <span class="stepnum" id="slider-label"></span>
+            <input type="range" id="cover" min="1" max="4" step="1" value="1"
+                   aria-label="Receptionists on the phones between 12:30 and 13:30">
+          </div>
+          <table class="tbl">
+            <thead><tr><th>Between 12:30 and 13:30</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td>Calls that reach a person</td><td class="v" id="d-answered"></td></tr>
+              <tr><td>Calls still lost</td><td class="v" id="d-lost"></td></tr>
+              <tr><td>Recovered against today, per week</td><td class="v red" id="d-rec"></td></tr>
+              <tr><td>Of those, new patient calls</td><td class="v" id="d-np"></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="rv">
+        <div id="fig-dec" class="figure"></div>
+        <div class="figcap">Modelled with Erlang B, the standard formula for calls
+          that are lost rather than queued, calibrated so that one receptionist
+          reproduces the rate actually observed in the log. It is an estimate of
+          capacity, not a forecast of behaviour.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8 · THE UNCERTAINTY ============ -->
+<section class="bg-plum sc">
+  <div class="wrap">
+    <div class="eyebrow rv">What this does not prove</div>
+    <h2 class="rv" style="max-width:20ch">Four things a sceptical partner would ask.</h2>
+    <div class="two" style="margin-top:36px; align-items:stretch">
+      <div class="card rv">
+        <span class="tag teal">Checked</span>
+        <h3>It is not a seasonal blip</h3>
+        <p>The pattern holds in all six months and on all five weekdays. It is not
+          one bad fortnight carrying the average.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag teal">Checked</span>
+        <h3>It is not the phone system</h3>
+        <p>Duplicate rows from the export and three vendor test rows were removed
+          before counting. Removing them moves the headline by under a tenth of a point.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag ochre">Not settled</span>
+        <h3>The recovery figure is a ceiling</h3>
+        <p>A call log records the call, not the caller. Some of those people rang
+          back an hour later and were answered. Nothing in these four files can tell
+          you how many. Treat the recovered number as the most you could gain, not
+          what you will gain.</p>
+      </div>
+      <div class="card rv">
+        <span class="tag ochre">Not settled</span>
+        <h3>Enquiries are not patients</h3>
+        <p>An answered call becomes an enquiry, and an enquiry sometimes becomes a
+          patient. The conversion rate sits in the CRM, not in the phone log, so the
+          revenue figure behind all of this is out of scope here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 · RECEIPTS ============ -->
+<section class="bg-bone sc">
+  <div class="wrap">
+    <div class="eyebrow rv">Every number on this page</div>
+    <h2 class="rv" style="max-width:20ch">Each one, and where it came from.</h2>
+    <p class="lead rv" style="margin-bottom:30px">No figure on this page was typed
+      in. Each is read from a ledger written by the checking script, which recomputes
+      it from the raw files every time it runs.</p>
+    <div class="rv" id="receipts"></div>
+  </div>
+  <div class="wrap">
+    <footer>
+      <p id="foot"></p>
+    </footer>
+  </div>
+</section>
+
+<script>
+const D = {"dataset":"Northgate Health inbound calls, 5 Jan to 30 Jun 2026","definition_unanswered":["abandoned","missed","voicemail"],"cleaning":{"duplicate_call_ids_removed":109,"vendor_test_rows_removed":3,"timestamp_formats_parsed":["%d/%m/%Y %H:%M:%S","%Y-%m-%d %H:%M:%S"],"outcome_case_normalised":true,"line_whitespace_trimmed":true,"blank_wait_seconds_read_as_zero":true},"facts":{"F01":{"id":"F01","label":"Patient calls received","value":9162,"unit":"calls","method":"rows in calls.csv after removing duplicate call_ids and vendor test rows","sources":["calls.csv"],"n":9162,"note":"109 duplicates and 3 test rows removed"},"F02":{"id":"F02","label":"Calls not answered by a person","value":1299,"unit":"calls","method":"outcome in {missed, abandoned, voicemail}, case normalised","sources":["calls.csv"],"n":9162,"note":""},"F03":{"id":"F03","label":"Share of calls not answered","value":14.2,"unit":"percent","method":"F02 divided by F01","sources":["calls.csv"],"n":9162,"note":""},"F04":{"id":"F04","label":"Calls received 12:30 to 13:30","value":1473,"unit":"calls","method":"received_at minute of day inside the window","sources":["calls.csv"],"n":1473,"note":""},"F05":{"id":"F05","label":"Unanswered rate inside 12:30 to 13:30","value":53.8,"unit":"percent","method":"unanswered calls inside the window over all calls inside it","sources":["calls.csv"],"n":1473,"note":""},"F06":{"id":"F06","label":"Unanswered rate outside 12:30 to 13:30","value":6.6,"unit":"percent","method":"unanswered calls outside the window over all calls outside it","sources":["calls.csv"],"n":7689,"note":""},"F07":{"id":"F07","label":"Share of all unanswered calls falling in that one hour","value":61.0,"unit":"percent","method":"unanswered calls inside the window over all unanswered calls","sources":["calls.csv"],"n":1299,"note":""},"F08":{"id":"F08","label":"New patient calls received","value":3248,"unit":"calls","method":"line equals New Patients after trimming whitespace","sources":["calls.csv"],"n":3248,"note":""},"F09":{"id":"F09","label":"New patient calls not answered","value":437,"unit":"calls","method":"unanswered new patient calls","sources":["calls.csv"],"n":3248,"note":""},"F10":{"id":"F10","label":"Unanswered rate on the New Patients line","value":13.5,"unit":"percent","method":"F09 divided by F08","sources":["calls.csv"],"n":3248,"note":""},"F11":{"id":"F11","label":"New patient calls missed per week","value":16.8,"unit":"calls per week","method":"F09 divided by 26 calendar weeks in the export","sources":["calls.csv"],"n":437,"note":""},"F12":{"id":"F12","label":"Receptionists on the phones during the lunch window","value":1,"unit":"people","method":"rota.csv, staff on shift and not on break, minimum across the window","sources":["rota.csv"],"n":123,"note":""},"F13":{"id":"F13","label":"Receptionists on the phones at the busiest other time","value":4,"unit":"people","method":"rota.csv, maximum staff on shift and not on break","sources":["rota.csv"],"n":123,"note":""},"F14":{"id":"F14","label":"Change in advertising spend, Q1 to Q2","value":47.1,"unit":"percent","method":"total spend_gbp Q2 over Q1","sources":["marketing_spend.csv"],"n":18,"note":""},"F15":{"id":"F15","label":"Change in enquiries per working day, Q1 to Q2","value":10.4,"unit":"percent","method":"enquiries per working day, Q2 over Q1. Per day, not total, because Q1 opens on 5 January and has fewer working days","sources":["enquiries.csv","rota.csv"],"n":2230,"note":"Q1 62 working days, Q2 61"},"F16":{"id":"F16","label":"Calls one receptionist can handle in an hour","value":13.8,"unit":"calls","method":"sixty divided by mean talk time of answered calls in minutes","sources":["calls.csv"],"n":7863,"note":""},"F17":{"id":"F17","label":"Calls arriving in the lunch window on an average day","value":12.0,"unit":"calls","method":"F04 divided by working days in the export","sources":["calls.csv"],"n":1473,"note":""},"F18":{"id":"F18","label":"Working days in the export","value":123,"unit":"days","method":"distinct dates in rota.csv","sources":["rota.csv"],"n":123,"note":""}},"series":{"by_hour":[{"hour":8,"calls":1028,"unanswered":140,"rate":13.6},{"hour":9,"calls":1580,"unanswered":202,"rate":12.8},{"hour":10,"calls":1212,"unanswered":28,"rate":2.3},{"hour":11,"calls":620,"unanswered":2,"rate":0.3},{"hour":12,"calls":1050,"unanswered":395,"rate":37.6},{"hour":13,"calls":1056,"unanswered":400,"rate":37.9},{"hour":14,"calls":352,"unanswered":0,"rate":0.0},{"hour":15,"calls":608,"unanswered":0,"rate":0.0},{"hour":16,"calls":978,"unanswered":67,"rate":6.9},{"hour":17,"calls":678,"unanswered":65,"rate":9.6}],"by_half_hour":[{"minute":480,"calls":439,"unanswered":45,"rate":10.3},{"minute":510,"calls":589,"unanswered":95,"rate":16.1},{"minute":540,"calls":756,"unanswered":190,"rate":25.1},{"minute":570,"calls":824,"unanswered":12,"rate":1.5},{"minute":600,"calls":685,"unanswered":22,"rate":3.2},{"minute":630,"calls":527,"unanswered":6,"rate":1.1},{"minute":660,"calls":369,"unanswered":2,"rate":0.5},{"minute":690,"calls":251,"unanswered":0,"rate":0.0},{"minute":720,"calls":323,"unanswered":0,"rate":0.0},{"minute":750,"calls":727,"unanswered":395,"rate":54.3},{"minute":780,"calls":746,"unanswered":397,"rate":53.2},{"minute":810,"calls":310,"unanswered":3,"rate":1.0},{"minute":840,"calls":178,"unanswered":0,"rate":0.0},{"minute":870,"calls":174,"unanswered":0,"rate":0.0},{"minute":900,"calls":238,"unanswered":0,"rate":0.0},{"minute":930,"calls":370,"unanswered":0,"rate":0.0},{"minute":960,"calls":477,"unanswered":2,"rate":0.4},{"minute":990,"calls":501,"unanswered":65,"rate":13.0},{"minute":1020,"calls":395,"unanswered":47,"rate":11.9},{"minute":1050,"calls":283,"unanswered":18,"rate":6.4}],"cover":[{"minute":480,"staff":2},{"minute":510,"staff":2},{"minute":540,"staff":2},{"minute":570,"staff":4},{"minute":600,"staff":4},{"minute":630,"staff":4},{"minute":660,"staff":4},{"minute":690,"staff":4},{"minute":720,"staff":4},{"minute":750,"staff":1},{"minute":780,"staff":1},{"minute":810,"staff":3},{"minute":840,"staff":3},{"minute":870,"staff":4},{"minute":900,"staff":4},{"minute":930,"staff":4},{"minute":960,"staff":4},{"minute":990,"staff":2},{"minute":1020,"staff":2},{"minute":1050,"staff":2}],"monthly":[{"month":"2026-01","enquiries_per_day":17.45,"spend":8200},{"month":"2026-02","enquiries_per_day":16.5,"spend":8350},{"month":"2026-03","enquiries_per_day":17.73,"spend":8400},{"month":"2026-04","enquiries_per_day":19.3,"spend":11950},{"month":"2026-05","enquiries_per_day":18.79,"spend":12400},{"month":"2026-06","enquiries_per_day":19.0,"spend":12350}]}};
+const F = D.facts;
+const v = id => F[id].value;
+const fmt = n => n.toLocaleString('en-GB');
+
+/* ---------------- fill the prose ---------------- */
+document.getElementById('m-calls').textContent = fmt(v('F01'));
+document.getElementById('m-days').textContent = v('F18');
+document.getElementById('q-spend').textContent = v('F14') + '%';
+
+document.getElementById('cap-belief').textContent =
+  'Spend, £ per month, and enquiries per working day. Enquiries are shown per working '
+  + 'day because the first quarter opens on 5 January and has fewer of them. '
+  + 'Sources: marketing_spend.csv, enquiries.csv, rota.csv.';
+
+document.getElementById('cap-dots').textContent =
+  fmt(v('F01')) + ' calls. Inside 12:30 to 13:30, ' + v('F05') + ' percent never reached '
+  + 'a person (n=' + F.F05.n + '). Outside it, ' + v('F06') + ' percent (n=' + F.F06.n + ').';
+
+document.getElementById('cap-half').textContent =
+  'Unanswered share by half hour, all ' + v('F18') + ' working days pooled. '
+  + 'Unanswered means the outcome was ' + D.definition_unanswered.join(', ') + '.';
+
+document.getElementById('cap-mech').textContent =
+  'Top: calls arriving per half hour. Bottom: receptionists on the phones, from the '
+  + 'rota. Same clock on both. Sources: calls.csv, rota.csv.';
+
+document.getElementById('mech-h1').textContent =
+  v('F17') + ' calls arrive in that hour, with ' + v('F12') + ' person on the phones';
+document.getElementById('mech-p1').textContent =
+  'One receptionist handles about ' + v('F16') + ' calls an hour at the practice’s '
+  + 'own average talk time. Calls do not arrive evenly, so even a single busy stretch '
+  + 'sends the rest to voicemail.';
+
+document.getElementById('mech-h2').textContent =
+  v('F13') + ' receptionists are rostered at the busiest other hour';
+document.getElementById('mech-p2').textContent =
+  'The practice is not short of people. It has ' + v('F13') + ' on at quiet times and '
+  + v('F12') + ' on at the busiest. This is a rota problem, and a rota is free to change.';
+
+document.getElementById('foot').textContent =
+  D.dataset + '. Generated and verified from four source files by generate_calls.py and '
+  + 'verify_calls.py. Cleaning applied: ' + D.cleaning.duplicate_call_ids_removed
+  + ' duplicate call ids removed, ' + D.cleaning.vendor_test_rows_removed
+  + ' vendor test rows removed, two timestamp formats parsed, outcome casing normalised, '
+  + 'trailing whitespace trimmed from line names, blank wait times read as zero. '
+  + 'This is a teaching dataset. It is synthetic, and it is reproducible with the seed in _meta.json.';
+
+/* receipts */
+document.getElementById('receipts').innerHTML = Object.values(F).map(f => `
+  <details class="receipt"><summary>${f.id} &nbsp; ${f.label} &nbsp;=&nbsp;
+    ${typeof f.value === 'number' ? fmt(f.value) : f.value}${f.unit === 'percent' ? '%' : ' ' + f.unit}</summary>
+    <div class="body">
+      <div><b>How</b> ${f.method}</div>
+      <div><b>From</b> ${f.sources.join(', ')}</div>
+      <div><b>Based on</b> ${fmt(f.n)} rows</div>
+      ${f.note ? `<div><b>Note</b> ${f.note}</div>` : ''}
+    </div></details>`).join('');
+
+/* ---------------- one shot section player ---------------- */
+const players = {};
+const io = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (!e.isIntersecting || e.target.dataset.played) return;
+    e.target.dataset.played = '1';
+    e.target.classList.add('on');
+    const id = e.target.id;
+    if (players[id]) setTimeout(players[id], 260);
+  });
+}, {threshold: .3});
+document.querySelectorAll('.sc').forEach(s => io.observe(s));
+
+/* ---------------- progress rail ---------------- */
+(function(){
+  const secs = Array.from(document.querySelectorAll('.sc'));
+  const now = document.getElementById('rail-now'), dot = document.getElementById('rail-dot');
+  const barH = 72; // px, matches .rail .bar height
+  document.getElementById('rail-total').textContent = String(secs.length).padStart(2, '0');
+  const railIO = new IntersectionObserver(es => {
+    es.forEach(e => {
+      if (!e.isIntersecting) return;
+      const i = secs.indexOf(e.target);
+      now.textContent = String(i + 1).padStart(2, '0');
+      const y = (i / (secs.length - 1)) * barH;
+      dot.style.transform = `translate(-50%, calc(-50% + ${y}px))`;
+    });
+  }, {threshold: .5});
+  secs.forEach(s => railIO.observe(s));
+})();
+
+/* ---------------- block bar chart ----------------
+   A flat rect plus a lighter parallelogram cap, so a bar reads as a solid
+   block rather than a coloured rectangle. One shot: every bar grows at once,
+   staggered by a few frames.                                              */
+const NS = 'http://www.w3.org/2000/svg';
+function el(t, a){const n = document.createElementNS(NS, t);
+  for (const k in a) n.setAttribute(k, a[k]); return n;}
+
+function blockBars(mount, opts){
+  const {data, max, color, height=260, pad=34, capH=9, labelEvery=1,
+         highlight=()=>false, hiColor, band, flip=false} = opts;
+  mount.innerHTML = '';
+  const W = mount.clientWidth || 560, H = height;
+  const svg = el('svg', {viewBox:`0 0 ${W} ${H}`, width:'100%', height:H, role:'img'});
+  const axisY = flip ? pad : H - pad;
+  const plotH = H - pad - capH - 20;
+  const n = data.length;
+  const gap = Math.max(2, W * .012);
+  const bw = (W - gap * (n - 1)) / n;
+  const dir = flip ? 1 : -1;          // which way a bar grows from the axis
+
+  if (band){
+    const x0 = band[0] * (bw + gap), x1 = (band[1] + 1) * (bw + gap) - gap;
+    svg.appendChild(el('rect', {x:x0 - gap/2, y:flip ? pad - 6 : 0,
+      width:x1 - x0 + gap, height:H - pad + 6, fill:'rgba(225,66,31,.11)'}));
+  }
+  svg.appendChild(el('line', {x1:0, y1:axisY, x2:W, y2:axisY,
+    stroke:'rgba(39,28,21,.3)', 'stroke-width':1}));
+
+  data.forEach((d, i) => {
+    const x = i * (bw + gap);
+    const h = Math.max(2, (d.v / max) * plotH);
+    const hi = highlight(d, i);
+    const c = hi ? (hiColor || color) : color;
+    const face = el('rect', {x, y:axisY, width:bw, height:1, fill:c, rx:2});
+    svg.appendChild(face);
+
+    let tv = null;
+    if (hi && d.tag){
+      tv = el('text', {x:x + bw/2, y:0, 'text-anchor':'middle', fill:hiColor || color,
+        'font-size':13, 'font-weight':700, 'font-family':'Figtree, sans-serif', opacity:0});
+      tv.textContent = d.tag; svg.appendChild(tv);
+    }
+
+    d._anim = t => {
+      const hh = h * t;
+      const top = flip ? axisY + hh : axisY - hh;          // outer edge of the bar
+      face.setAttribute('y', flip ? axisY : top);
+      face.setAttribute('height', Math.max(1, hh));
+      if (tv) tv.setAttribute('y', flip ? top + 18 : top - 11);
+    };
+    d._tag = tv;
+
+    if (i % labelEvery === 0 && d.label){
+      const tx = el('text', {x:x + bw/2, y:flip ? pad - 12 : H - pad + 17,
+        'text-anchor':'middle', fill:'#6E5B4C', 'font-size':11,
+        'font-family':'JetBrains Mono, monospace'});
+      tx.textContent = d.label; svg.appendChild(tx);
+    }
+  });
+  mount.appendChild(svg);
+
+  return () => {
+    const t0 = performance.now(), dur = 950;
+    (function step(now){
+      const p = Math.min(1, (now - t0) / dur);
+      data.forEach((d, i) => {
+        const lag = i * 0.02;
+        const pp = Math.max(0, Math.min(1, (p - lag) / (1 - lag || 1)));
+        d._anim(1 - Math.pow(1 - pp, 3));
+        if (d._tag) d._tag.setAttribute('opacity', pp > .75 ? (pp - .75) / .25 : 0);
+      });
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  };
+}
+
+/* indexed lines: change over time for two series on one scale, with the gap
+   between them shaded, because the gap IS the story. Direct end labels, no
+   legend box, hairline gridlines only.                                     */
+function indexLines(mount, opts){
+  const {labels, series, height=340, padL=26, padR=92, padB=34, padT=30} = opts;
+  mount.innerHTML = '';
+  const W = mount.clientWidth || 560, H = height;
+  const svg = el('svg', {viewBox:`0 0 ${W} ${H}`, width:'100%', height:H, role:'img'});
+  const all = series.flatMap(s => s.values);
+  const lo = Math.min(100, Math.min(...all)) - 6;
+  const hi = Math.max(...all) + 8;
+  const xOf = i => padL + (i / (labels.length - 1)) * (W - padL - padR);
+  const yOf = v => padT + (1 - (v - lo) / (hi - lo)) * (H - padT - padB);
+
+  // gridlines, never darker than a hairline
+  for (let g = Math.ceil(lo / 20) * 20; g <= hi; g += 20){
+    svg.appendChild(el('line', {x1:padL, y1:yOf(g), x2:W - padR, y2:yOf(g),
+      stroke: g === 100 ? 'rgba(39,28,21,.22)' : 'rgba(39,28,21,.085)',
+      'stroke-width':1, 'stroke-dasharray': g === 100 ? '' : '2 4'}));
+    const t = el('text', {x:W - padR - 4, y:yOf(g) - 7, 'text-anchor':'end',
+      fill:'#6E5B4C', 'font-size':10, 'font-family':'JetBrains Mono, monospace'});
+    t.textContent = g === 100 ? 'January = 100' : g; svg.appendChild(t);
+  }
+
+  // the divergence wedge between the two lines
+  const gapPath = labels.map((_, i) => `${i ? 'L' : 'M'}${xOf(i)},${yOf(series[0].values[i])}`).join('')
+    + labels.map((_, i) => `L${xOf(labels.length - 1 - i)},${yOf(series[1].values[labels.length - 1 - i])}`).join('') + 'Z';
+  const wedge = el('path', {d:gapPath, fill:'rgba(225,66,31,.10)', opacity:0});
+  svg.appendChild(wedge);
+
+  const drawn = [];
+  series.forEach(sr => {
+    const d = sr.values.map((v, i) => `${i ? 'L' : 'M'}${xOf(i)},${yOf(v)}`).join('');
+    const path = el('path', {d, fill:'none', stroke:sr.color, 'stroke-width':2.5,
+      'stroke-linecap':'round', 'stroke-linejoin':'round'});
+    const len = 900;
+    path.setAttribute('stroke-dasharray', len);
+    path.setAttribute('stroke-dashoffset', len);
+    svg.appendChild(path);
+
+    const dots = sr.values.map((v, i) => {
+      const c = el('circle', {cx:xOf(i), cy:yOf(v), r:3.5, fill:'#FBF7F1',
+        stroke:sr.color, 'stroke-width':2, opacity:0});
+      svg.appendChild(c); return c;
+    });
+
+    const last = sr.values[sr.values.length - 1];
+    const lx = W - padR + 12, ly = yOf(last);
+    const big = el('text', {x:lx, y:ly + 2, fill:sr.color, 'font-size':21,
+      'font-weight':700, 'font-family':'Figtree, sans-serif',
+      'letter-spacing':'-.02em', opacity:0});
+    big.textContent = (last >= 100 ? '+' : '') + Math.round(last - 100) + '%';
+    const sub = el('text', {x:lx, y:ly + 19, fill:'#6E5B4C', 'font-size':11,
+      'font-family':'JetBrains Mono, monospace', opacity:0});
+    sub.textContent = sr.name;
+    svg.appendChild(big); svg.appendChild(sub);
+    drawn.push({path, dots, big, sub, len});
+  });
+
+  labels.forEach((l, i) => {
+    const t = el('text', {x:xOf(i), y:H - padB + 20, 'text-anchor':'middle',
+      fill:'#6E5B4C', 'font-size':11, 'font-family':'JetBrains Mono, monospace'});
+    t.textContent = l; svg.appendChild(t);
+  });
+  mount.appendChild(svg);
+
+  const set = t => {
+    drawn.forEach((d, si) => {
+      const lag = si * .12;
+      const pp = Math.max(0, Math.min(1, (t - lag) / (1 - lag)));
+      d.path.setAttribute('stroke-dashoffset', d.len * (1 - pp));
+      d.dots.forEach((c, i) => {
+        const at = i / (d.dots.length - 1);
+        c.setAttribute('opacity', pp > at ? 1 : 0);
+      });
+      const late = Math.max(0, (pp - .8) / .2);
+      d.big.setAttribute('opacity', late); d.sub.setAttribute('opacity', late * .9);
+    });
+    wedge.setAttribute('opacity', Math.max(0, (t - .55) / .45));
+  };
+  set(0);
+
+  return () => {
+    const t0 = performance.now(), dur = 1400;
+    (function step(now){
+      const p = Math.min(1, (now - t0) / dur);
+      set(1 - Math.pow(1 - p, 3));
+      if (p < 1) requestAnimationFrame(step);
+    })(t0);
+  };
+}
+
+/* a single share, as a ring. The gap is deliberate: this draws attention to
+   one proportion rather than inviting slice-by-slice comparison, which a
+   ring earns and a multi-slice pie does not. Centre digits count up in sync
+   with the stroke so the read and the number land together.             */
+function donut(mount, opts){
+  const {value, size=150, stroke=17, color, track='rgba(39,28,21,.09)',
+         label, suffix='%'} = opts;
+  mount.innerHTML = '';
+  mount.style.cssText = 'display:flex; align-items:center; gap:22px; flex-wrap:wrap';
+  const r = (size - stroke) / 2, c = 2 * Math.PI * r, cx = size / 2, cy = size / 2;
+  const svg = el('svg', {viewBox:`0 0 ${size} ${size}`, width:size, height:size, role:'img'});
+  svg.appendChild(el('circle', {cx, cy, r, fill:'none', stroke:track, 'stroke-width':stroke}));
+  const arc = el('circle', {
+    cx, cy, r, fill:'none', stroke:color, 'stroke-width':stroke,
+    'stroke-linecap':'round', transform:`rotate(-90 ${cx} ${cy})`,
+    'stroke-dasharray':c, 'stroke-dashoffset':c,
+  });
+  svg.appendChild(arc);
+
+  const numEl = document.createElement('div');
+  numEl.className = 'numeral red';
+  numEl.style.cssText = 'font-size:clamp(52px,7vw,84px)';
+  const capEl = document.createElement('div');
+  capEl.style.cssText = 'font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--ink-2); margin-top:6px; max-width:26ch';
+  capEl.textContent = label || '';
+  const box = document.createElement('div');
+  box.append(numEl, capEl);
+  mount.append(svg, box);
+
+  return {
+    play(){
+      const t0 = performance.now(), dur = 1100;
+      (function step(now){
+        const p = Math.min(1, (now - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        arc.setAttribute('stroke-dashoffset', c * (1 - e * (value / 100)));
+        numEl.innerHTML = Math.round(value * e) + '<span class="unit">' + suffix + '</span>';
+        if (p < 1) requestAnimationFrame(step);
+      })(t0);
+    },
+  };
+}
+
+/* ---------------- 2 · belief ---------------- */
+(function(){
+  const m = D.series.monthly;
+  const host = document.getElementById('fig-belief');
+  const lbl = s => ['Jan','Feb','Mar','Apr','May','Jun'][+s.slice(5) - 1];
+  const s0 = m[0].spend, e0 = m[0].enquiries_per_day;
+  let play = () => {};
+  function build(animate){
+    play = indexLines(host, {
+      labels: m.map(r => lbl(r.month)), height: 340,
+      series: [
+        {name:'Ad spend', color:'#B9790A', values:m.map(r => 100 * r.spend / s0)},
+        {name:'Enquiries', color:'#0B7A62',
+         values:m.map(r => 100 * r.enquiries_per_day / e0)},
+      ],
+    });
+    if (animate) play();
+  }
+  build(false);
+  const sec = host.closest('section'); sec.id = 'sec-belief';
+  players['sec-belief'] = () => build(true);
+  addEventListener('resize', () => build(false));
+})();
+
+/* ---------------- 4 · dot field, one shot ---------------- */
+(function(){
+  const cv = document.getElementById('dots');
+  const T0 = 8 * 60, T1 = 18 * 60;
+  const half = D.series.by_half_hour;
+  // rebuild a representative cloud straight from the counted series, so the
+  // picture and the number cannot drift apart
+  const pts = [];
+  half.forEach(h => {
+    for (let i = 0; i < h.calls; i++){
+      pts.push([h.minute + Math.random() * 30, i < h.unanswered ? 1 : 0]);
+    }
+  });
+  for (let i = pts.length - 1; i > 0; i--){
+    const j = (Math.random() * (i + 1)) | 0; [pts[i], pts[j]] = [pts[j], pts[i]];
+  }
+
+  let W = 0, H = 460, dpr = Math.min(2, window.devicePixelRatio || 1);
+  const ctx = cv.getContext('2d');
+  function size(){
+    W = cv.clientWidth; cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  const PADL = 8, PADB = 34;
+  const xOf = m => PADL + ((m - T0) / (T1 - T0)) * (W - PADL - 8);
+
+  const seedY = pts.map(() => Math.random());
+  function draw(count, bandA){
+    ctx.clearRect(0, 0, W, H);
+    const topH = (H - PADB) * .46, botY = (H - PADB) * .52;
+
+    if (bandA > 0){
+      ctx.fillStyle = `rgba(225,66,31,${.10 * bandA})`;
+      ctx.fillRect(xOf(750), 0, xOf(810) - xOf(750), H - PADB);
+      ctx.strokeStyle = `rgba(225,66,31,${.5 * bandA})`;
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(xOf(750), 0); ctx.lineTo(xOf(750), H - PADB);
+      ctx.moveTo(xOf(810), 0); ctx.lineTo(xOf(810), H - PADB); ctx.stroke();
+      ctx.fillStyle = `rgba(225,66,31,${bandA})`;
+      ctx.font = '500 11px JetBrains Mono, monospace';
+      ctx.fillText('12:30 to 13:30', xOf(750) + 6, 16);
+    }
+
+    for (let i = 0; i < count; i++){
+      const [m, miss] = pts[i];
+      const x = xOf(m);
+      const y = miss ? 14 + seedY[i] * topH : botY + seedY[i] * (H - PADB - botY - 4);
+      ctx.fillStyle = miss ? 'rgba(225,66,31,.82)' : 'rgba(11,122,98,.40)';
+      ctx.beginPath(); ctx.arc(x, y, miss ? 1.9 : 1.5, 0, 6.2832); ctx.fill();
+    }
+
+    ctx.strokeStyle = 'rgba(39,28,21,.22)';
+    ctx.beginPath(); ctx.moveTo(0, H - PADB); ctx.lineTo(W, H - PADB); ctx.stroke();
+    ctx.fillStyle = '#6E5B4C'; ctx.font = '400 11px JetBrains Mono, monospace';
+    [[480,'8am'],[600,'10'],[720,'12'],[840,'2pm'],[960,'4'],[1080,'6pm']]
+      .forEach(([m, t]) => ctx.fillText(t, xOf(m) - 8, H - PADB + 18));
+  }
+
+  function play(){
+    size();
+    const t0 = performance.now(), dur = 1500, bandAt = 1150, bandDur = 550;
+    (function step(now){
+      const e = now - t0;
+      const p = Math.min(1, e / dur);
+      const ease = 1 - Math.pow(1 - p, 2.4);
+      const band = Math.max(0, Math.min(1, (e - bandAt) / bandDur));
+      draw(Math.floor(pts.length * ease), band);
+      if (e < bandAt + bandDur) requestAnimationFrame(step);
+      else draw(pts.length, 1);
+    })(t0);
+  }
+  players['reveal'] = play;
+  document.getElementById('replay-dots').onclick = play;
+  size(); draw(0, 0);
+  addEventListener('resize', () => {size(); draw(pts.length, 1);});
+})();
+
+/* ---------------- 5 · half hour bars ---------------- */
+(function(){
+  const half = D.series.by_half_hour;
+  const host = document.getElementById('fig-half');
+  const data = half.map(h => ({
+    label: (h.minute % 60 === 0) ? String(Math.floor(h.minute / 60)) : '',
+    v: h.rate, tag: h.minute === 750 ? h.rate.toFixed(0) + '% missed' : ''
+  }));
+  const li = half.findIndex(h => h.minute === 750);
+  const p = blockBars(host, {
+    data, max: Math.max(...data.map(d => d.v)) * 1.3, color:'#0B7A62',
+    hiColor:'#E1421F', height:430,
+    highlight:(d, i) => i === li || i === li + 1,
+    band:[li, li + 1]
+  });
+  const sec = host.closest('section'); sec.id = 'sec-half';
+
+  const shareHost = document.getElementById('fig-share-donut');
+  const share = donut(shareHost, {
+    value: v('F07'), color:'#E1421F',
+    label: 'n=' + fmt(F.F07.n) + ' unanswered calls',
+  });
+
+  players['sec-half'] = () => { p(); share.play(); };
+})();
+
+/* ---------------- 6 · mechanism, two panels one clock ---------------- */
+(function(){
+  const host = document.getElementById('fig-mech');
+  const a = document.createElement('div'), b = document.createElement('div');
+  b.style.marginTop = '2px'; host.appendChild(a); host.appendChild(b);
+  const half = D.series.by_half_hour, cover = D.series.cover;
+  const li = half.findIndex(h => h.minute === 750);
+  const lab = m => (m % 60 === 0) ? String(Math.floor(m / 60)) : '';
+
+  const calls = half.map(h => ({label:lab(h.minute), v:h.calls}));
+  const cov = cover.map(c => ({label:lab(c.minute), v:c.staff,
+    tag:c.minute === 750 ? '1 person' : ''}));
+
+  const p1 = blockBars(a, {data:calls, max:Math.max(...calls.map(d=>d.v)) * 1.2,
+    color:'#0B7A62', hiColor:'#E1421F', height:190,
+    highlight:(d,i) => i === li || i === li + 1, band:[li, li + 1]});
+  const p2 = blockBars(b, {data:cov, max:4.6, color:'#B9790A', hiColor:'#E1421F',
+    height:165, flip:true, highlight:(d,i) => i === li || i === li + 1,
+    band:[li, li + 1]});
+  const sec = host.closest('section'); sec.id = 'sec-mech';
+  players['sec-mech'] = () => {p1(); p2();};
+  document.getElementById('replay-mech').onclick = () => {p1(); p2();};
+})();
+
+/* ---------------- 7 · decision ---------------- */
+(function(){
+  const arrivals = v('F17');                 // calls in the window, per day
+  const capPerHr = v('F16');                 // one person, calls per hour
+  const holdHrs = 1 / capPerHr;              // mean service time in hours
+  const A = arrivals * holdHrs;              // offered load in erlangs
+  const observed = v('F05') / 100;
+
+  function erlangB(A, N){
+    let b = 1;
+    for (let k = 1; k <= N; k++) b = (A * b) / (k + A * b);
+    return b;
+  }
+  // calibrate so that one receptionist reproduces what the log actually shows
+  const k = observed / erlangB(A, 1);
+  const lossAt = N => Math.min(1, erlangB(A, N) * k);
+
+  const days = v('F18'), weeks = days / 5;
+  const inWindow = v('F04');
+  const npShare = v('F08') / v('F01');
+
+  const host = document.getElementById('fig-dec');
+  let play = () => {};
+  function render(N, animate){
+    const loss = lossAt(N);
+    const ans = Math.round(inWindow * (1 - loss));
+    const lost = inWindow - ans;
+    const base = Math.round(inWindow * (1 - lossAt(1)));
+    const recWeek = Math.round((ans - base) / weeks);
+
+    document.getElementById('slider-label').textContent =
+      N + (N === 1 ? ' person' : ' people');
+    document.getElementById('d-answered').textContent =
+      fmt(ans) + '  (' + (100 * (1 - loss)).toFixed(0) + '%)';
+    document.getElementById('d-lost').textContent = fmt(lost);
+    document.getElementById('d-rec').textContent =
+      recWeek === 0 ? 'today’s position' : '+' + fmt(recWeek) + ' calls';
+    document.getElementById('d-np').textContent =
+      recWeek === 0 ? 'no change' : '+' + Math.round(recWeek * npShare) + ' a week';
+
+    const data = [1,2,3,4].map(n => ({
+      label: n + (n === 1 ? ' person' : ''), v: 100 * (1 - lossAt(n)),
+      tag: (100 * (1 - lossAt(n))).toFixed(0) + '%'
+    }));
+    play = blockBars(host, {data, max:118, color:'#D9CFC2', hiColor:'#E1421F',
+      height:250, highlight:(d, i) => i + 1 === N});
+    if (animate) play();
+    else data.forEach(d => d._anim(1));
+  }
+  render(1, false);
+  const sec = host.closest('section'); sec.id = 'sec-dec';
+  players['sec-dec'] = () => {render(+document.getElementById('cover').value, true);};
+  document.getElementById('cover').addEventListener('input', e => {
+    render(+e.target.value, true);
+  });
+  addEventListener('resize', () => render(+document.getElementById('cover').value, false));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northgate Health: the lunch hour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marble:#FBF7F1;
+  --marble-2:#DEF0E9;
+  --marble-3:#FBEED3;
+  --wash-coral:#FCE2D8;
+  --wash-plum:#F3E3EF;
+  --ink:#271C15;
+  --ink-2:#5B4A3E;
+  --action:#E1421F;
+  --action-deep:#A8330F;
+  --sea:#0B7A62;
+  --premium:#B9790A;
+  --premium-deep:#8F5C05;
+  --out: cubic-bezier(.23,1,.32,1);
+  --inout: cubic-bezier(.77,0,.175,1);
+}
+*{box-sizing:border-box;}
+html{background:var(--marble);}
+body{
+  margin:0;
+  background:var(--marble);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:17px;
+  line-height:1.55;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.numeral{
+  font-family:'Sora',sans-serif;
+  font-style:normal;
+  margin:0;
+}
+.mono{
+  font-family:'IBM Plex Mono',monospace;
+  font-weight:400;
+}
+em, i, .italic{ font-style:normal; } /* italics are never used on this page */
+
+section{ padding:80px 24px; }
+section.connective{ padding:56px 24px; }
+section.cover, section.question{ padding:160px 24px; }
+.wrap{ max-width:960px; margin:0 auto; }
+.measure{ max-width:66ch; }
+
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--ink-2);
+  margin:0 0 16px;
+  display:block;
+}
+
+h1.display{
+  font-size:clamp(46px,8.4vw,124px);
+  line-height:.92;
+  font-weight:800;
+  letter-spacing:-.035em;
+  text-wrap:balance;
+}
+h2.section-head{
+  font-size:clamp(32px,4.6vw,62px);
+  line-height:1.04;
+  font-weight:800;
+  letter-spacing:-.025em;
+  text-wrap:balance;
+  margin-bottom:24px;
+}
+h3.card-head{
+  font-size:clamp(21px,2.2vw,28px);
+  line-height:1.15;
+  font-weight:700;
+  margin:0 0 8px;
+}
+p.lead{
+  font-size:clamp(18px,1.9vw,23px);
+  line-height:1.5;
+  font-weight:400;
+  color:var(--ink-2);
+  text-wrap:pretty;
+}
+p{ text-wrap:pretty; }
+strong{ font-weight:700; }
+
+.fact{ font-variant-numeric:tabular-nums; font-weight:700; }
+.fact-n{ font-variant-numeric:tabular-nums; }
+
+section.belief{ background:var(--marble-2); }
+section.question{ background:var(--marble); }
+section.reveal{ background:var(--wash-coral); }
+section.mechanism{ background:var(--marble-2); }
+section.decision{ background:var(--marble-3); }
+section.uncertainty{ background:var(--wash-plum); }
+
+.stat-row{ display:flex; flex-wrap:wrap; gap:24px; margin-top:48px; }
+.stat-tile{
+  background:rgba(255,255,255,.5);
+  border-radius:8px;
+  padding:24px;
+  flex:1 1 200px;
+}
+.stat-tile .numeral{ font-size:clamp(32px,4vw,48px); font-weight:800; letter-spacing:-.02em; }
+.stat-tile .stat-label{ font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2); margin-top:8px; display:block; }
+
+.card{
+  background:rgba(255,255,255,.55);
+  border-radius:8px;
+  padding:32px;
+  margin-top:40px;
+}
+
+.headline-number{
+  font-family:'Sora',sans-serif;
+  font-weight:800;
+  font-size:clamp(90px,18vw,230px);
+  line-height:.9;
+  letter-spacing:-.03em;
+  color:var(--action-deep);
+  font-variant-numeric:tabular-nums;
+}
+.headline-caption{ font-size:17px; color:var(--ink-2); max-width:40ch; margin-top:8px; }
+
+.question-line{
+  font-family:'Sora',sans-serif;
+  font-weight:800;
+  font-size:clamp(32px,5.4vw,68px);
+  line-height:1.08;
+  letter-spacing:-.025em;
+  text-align:center;
+  max-width:18ch;
+  margin:0 auto;
+}
+
+.replay-btn{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  background:transparent;
+  border:1px solid var(--ink-2);
+  color:var(--ink-2);
+  border-radius:4px;
+  padding:8px 14px;
+  cursor:pointer;
+  margin-top:20px;
+  transition:transform 150ms var(--out), background 150ms var(--out);
+}
+.replay-btn:active{ transform:scale(.96); }
+@media (hover:hover) and (pointer:fine){
+  .replay-btn:hover{ background:rgba(39,28,21,.06); }
+}
+
+/* chart primitives */
+.chart-wrap{ width:100%; overflow:visible; }
+.bar-group{
+  transform-box:fill-box;
+  transform-origin:bottom;
+  transform:scaleY(0);
+  transition:transform 950ms var(--out);
+}
+.bar-group.down{ transform-origin:top; }
+.visible .bar-group{ transform:scaleY(1); }
+.grid-line{ stroke:rgba(39,28,21,.09); stroke-dasharray:2 4; }
+.base-line{ stroke:rgba(39,28,21,.22); }
+.axis-label{ font-family:'IBM Plex Mono',monospace; font-size:10px; fill:var(--ink-2); }
+.direct-label{ font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:500; }
+.series-line{
+  fill:none;
+  stroke-width:2.5px;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.series-dot{ stroke-width:2px; }
+.ring-track{ fill:none; stroke:rgba(39,28,21,.09); }
+.ring-value{ fill:none; stroke-linecap:round; transition:stroke-dashoffset 1200ms var(--out); }
+.line-draw{ transition:stroke-dashoffset 1300ms var(--out); }
+.fade-group{ opacity:0; transform:translateY(12px); filter:blur(4px); transition:opacity 420ms var(--out), transform 420ms var(--out), filter 420ms var(--out); }
+.visible .fade-group{ opacity:1; transform:translateY(0); filter:blur(0); }
+.fade-group:nth-child(1){ transition-delay:0ms; }
+.fade-group:nth-child(2){ transition-delay:100ms; }
+.fade-group:nth-child(3){ transition-delay:200ms; }
+.fade-group:nth-child(4){ transition-delay:300ms; }
+
+.word{ display:inline-block; opacity:0; transform:translateY(12px); filter:blur(4px); transition:opacity 420ms var(--out), transform 420ms var(--out), filter 420ms var(--out); }
+.visible .word{ opacity:1; transform:translateY(0); filter:blur(0); }
+
+.gap-fill{ opacity:.35; }
+
+footer{
+  padding:64px 24px;
+  background:var(--marble);
+  text-align:center;
+}
+footer .mono{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); }
+
+@media (prefers-reduced-motion: reduce){
+  .fade-group, .word{ transform:none !important; filter:none !important; }
+  .bar-group{ transform:scaleY(1) !important; transition:opacity 420ms var(--out) !important; }
+}
+</style>
+</head>
+<body>
+
+<section class="belief cover">
+  <div class="wrap">
+    <span class="eyebrow fade-group">The belief</span>
+    <h1 class="display fade-group">A missed call<br>looked like an ordinary cost of a busy clinic.</h1>
+    <p class="lead measure fade-group" style="margin-top:32px;">
+      Northgate's front desk received <span class="fact" data-fact="F01"></span> patient calls
+      between January and June. The ones that went unanswered were read as background noise,
+      spread evenly across a normal week rather than concentrated anywhere in particular.
+    </p>
+    <div class="stat-row fade-group">
+      <div class="stat-tile">
+        <span class="numeral fact" data-fact="F01"></span>
+        <span class="stat-label">Calls received</span>
+      </div>
+      <div class="stat-tile">
+        <span class="numeral fact" data-fact="F02"></span>
+        <span class="stat-label">Not answered by a person</span>
+      </div>
+      <div class="stat-tile" style="display:flex; align-items:center; gap:20px;">
+        <svg id="ring-f03" width="96" height="96" viewBox="0 0 96 96">
+          <circle class="ring-track" cx="48" cy="48" r="40" stroke-width="10"></circle>
+          <circle class="ring-value" cx="48" cy="48" r="40" stroke-width="10" stroke="var(--action)"
+            transform="rotate(-90 48 48)"></circle>
+          <text id="ring-f03-num" x="48" y="54" text-anchor="middle" class="mono" style="font-size:16px; font-weight:700; fill:var(--ink);"></text>
+        </svg>
+        <span class="stat-label" style="max-width:12ch;">Share of all calls left unanswered, n = <span class="fact-n mono" data-fact-n="F03"></span></span>
+      </div>
+    </div>
+    <button class="replay-btn" data-replay="ring-f03-section">Play again</button>
+  </div>
+</section>
+
+<section class="question connective">
+  <div class="wrap">
+    <span class="eyebrow fade-group" style="text-align:center; display:block;">The question</span>
+    <p class="question-line fade-group">What actually happens between 12:30 and 13:30?</p>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <span class="eyebrow fade-group">The reveal</span>
+    <h2 class="section-head split-words">The lunch window carries most of a bad year</h2>
+    <div class="card fade-group">
+      <svg id="chart-halfhour" class="chart-wrap" viewBox="0 0 880 320" role="img" aria-label="Unanswered call rate by half hour"></svg>
+      <button class="replay-btn" data-replay="reveal">Play again</button>
+    </div>
+    <p class="measure fade-group" style="margin-top:32px;">
+      For most of the day the phones behave normally. Inside the 12:30 to 13:30 window the
+      unanswered rate reaches <span class="fact" data-fact="F05"></span>
+      (n = <span class="fact-n mono" data-fact-n="F05"></span>), against
+      <span class="fact" data-fact="F06"></span> for the rest of the day
+      (n = <span class="fact-n mono" data-fact-n="F06"></span>). That single hour holds
+      <span class="fact" data-fact="F07"></span> of every unanswered call across the whole
+      six months, out of <span class="fact" data-fact="F04"></span> calls received inside it.
+    </p>
+  </div>
+</section>
+
+<section class="mechanism">
+  <div class="wrap">
+    <span class="eyebrow fade-group">The mechanism</span>
+    <h2 class="section-head split-words">One person is on the phones when the day is busiest</h2>
+    <div class="card fade-group">
+      <svg id="chart-mechanism" class="chart-wrap" viewBox="0 0 880 380" role="img" aria-label="Calls unanswered and staff cover by half hour"></svg>
+      <button class="replay-btn" data-replay="mechanism">Play again</button>
+    </div>
+    <p class="measure fade-group" style="margin-top:32px;">
+      Cover during the window drops to <span class="fact" data-fact="F12"></span>, against
+      <span class="fact" data-fact="F13"></span> at the busiest other time of day. On an average
+      day <span class="fact" data-fact="F17"></span> calls arrive inside this window, while one
+      receptionist working alone can answer roughly <span class="fact" data-fact="F16"></span>
+      calls in an hour. Calls go unanswered here because the rota, not the volume, changes at
+      lunch.
+    </p>
+  </div>
+</section>
+
+<section class="decision">
+  <div class="wrap">
+    <span class="eyebrow fade-group">The decision</span>
+    <h2 class="section-head split-words">Move one break, recover a week of new patients every month</h2>
+    <div class="fade-group">
+      <span class="headline-number fact" data-fact="F11"></span>
+      <p class="headline-caption">new patient calls go unanswered inside this one hour, every
+        week.</p>
+    </div>
+    <div class="stat-row fade-group">
+      <div class="stat-tile">
+        <span class="numeral fact" data-fact="F08"></span>
+        <span class="stat-label">New patient calls received</span>
+      </div>
+      <div class="stat-tile">
+        <span class="numeral fact" data-fact="F09"></span>
+        <span class="stat-label">Not answered</span>
+      </div>
+      <div class="stat-tile">
+        <span class="numeral fact" data-fact="F10"></span>
+        <span class="stat-label">Unanswered rate, n = <span class="fact-n mono" data-fact-n="F10"></span></span>
+      </div>
+    </div>
+    <p class="measure fade-group" style="margin-top:32px;">
+      Shifting one receptionist's lunch break to cover 12:30 to 13:30 would only need to close
+      part of the gap between <span class="fact" data-fact="F12"></span> and
+      <span class="fact" data-fact="F13"></span> people on the phones to bring the New Patients
+      line's unanswered rate back toward the rest of the day's average.
+    </p>
+  </div>
+</section>
+
+<section class="uncertainty">
+  <div class="wrap">
+    <span class="eyebrow fade-group">The uncertainty</span>
+    <h2 class="section-head split-words">Spend rose faster than enquiries, and this data cannot say why</h2>
+    <div class="card fade-group">
+      <svg id="chart-uncertainty" class="chart-wrap" viewBox="0 0 880 340" role="img" aria-label="Indexed advertising spend and enquiries per day, January to June"></svg>
+      <button class="replay-btn" data-replay="uncertainty">Play again</button>
+    </div>
+    <p class="measure fade-group" style="margin-top:32px;">
+      Advertising spend rose <span class="fact" data-fact="F14"></span> from Q1 to Q2
+      (n = <span class="fact-n mono" data-fact-n="F14"></span> months of spend records) while
+      enquiries per working day rose only <span class="fact" data-fact="F15"></span>
+      (n = <span class="fact-n mono" data-fact-n="F15"></span>) over the same stretch. The two
+      trends coincided; this data cannot decompose how much of the enquiry growth the extra
+      spend bought against how much would have arrived anyway, and it cannot say how many of
+      those enquiries were themselves lost to the lunch window before anyone logged them at all.
+      That gap is the honest limit of what six months of call records can settle.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <span class="mono">Northgate Health inbound calls, 5 Jan to 30 Jun 2026. Every figure above is read from the fact ledger, not typed.</span>
+</footer>
+
+<script>
+const D = {
+  facts: {
+    F01:{id:"F01",label:"Patient calls received",value:9162,unit:"calls",n:9162},
+    F02:{id:"F02",label:"Calls not answered by a person",value:1299,unit:"calls",n:9162},
+    F03:{id:"F03",label:"Share of calls not answered",value:14.2,unit:"percent",n:9162},
+    F04:{id:"F04",label:"Calls received 12:30 to 13:30",value:1473,unit:"calls",n:1473},
+    F05:{id:"F05",label:"Unanswered rate inside 12:30 to 13:30",value:53.8,unit:"percent",n:1473},
+    F06:{id:"F06",label:"Unanswered rate outside 12:30 to 13:30",value:6.6,unit:"percent",n:7689},
+    F07:{id:"F07",label:"Share of all unanswered calls falling in that one hour",value:61.0,unit:"percent",n:1299},
+    F08:{id:"F08",label:"New patient calls received",value:3248,unit:"calls",n:3248},
+    F09:{id:"F09",label:"New patient calls not answered",value:437,unit:"calls",n:3248},
+    F10:{id:"F10",label:"Unanswered rate on the New Patients line",value:13.5,unit:"percent",n:3248},
+    F11:{id:"F11",label:"New patient calls missed per week",value:16.8,unit:"calls_per_week",n:437},
+    F12:{id:"F12",label:"Receptionists on the phones during the lunch window",value:1,unit:"people",n:123},
+    F13:{id:"F13",label:"Receptionists on the phones at the busiest other time",value:4,unit:"people",n:123},
+    F14:{id:"F14",label:"Change in advertising spend, Q1 to Q2",value:47.1,unit:"percent",n:18},
+    F15:{id:"F15",label:"Change in enquiries per working day, Q1 to Q2",value:10.4,unit:"percent",n:2230},
+    F16:{id:"F16",label:"Calls one receptionist can handle in an hour",value:13.8,unit:"calls",n:7863},
+    F17:{id:"F17",label:"Calls arriving in the lunch window on an average day",value:12.0,unit:"calls",n:1473},
+    F18:{id:"F18",label:"Working days in the export",value:123,unit:"days",n:123}
+  },
+  series:{
+    by_half_hour:[
+      {minute:480,calls:439,unanswered:45,rate:10.3},
+      {minute:510,calls:589,unanswered:95,rate:16.1},
+      {minute:540,calls:756,unanswered:190,rate:25.1},
+      {minute:570,calls:824,unanswered:12,rate:1.5},
+      {minute:600,calls:685,unanswered:22,rate:3.2},
+      {minute:630,calls:527,unanswered:6,rate:1.1},
+      {minute:660,calls:369,unanswered:2,rate:0.5},
+      {minute:690,calls:251,unanswered:0,rate:0.0},
+      {minute:720,calls:323,unanswered:0,rate:0.0},
+      {minute:750,calls:727,unanswered:395,rate:54.3},
+      {minute:780,calls:746,unanswered:397,rate:53.2},
+      {minute:810,calls:310,unanswered:3,rate:1.0},
+      {minute:840,calls:178,unanswered:0,rate:0.0},
+      {minute:870,calls:174,unanswered:0,rate:0.0},
+      {minute:900,calls:238,unanswered:0,rate:0.0},
+      {minute:930,calls:370,unanswered:0,rate:0.0},
+      {minute:960,calls:477,unanswered:2,rate:0.4},
+      {minute:990,calls:501,unanswered:65,rate:13.0},
+      {minute:1020,calls:395,unanswered:47,rate:11.9},
+      {minute:1050,calls:283,unanswered:18,rate:6.4}
+    ],
+    cover:[
+      {minute:480,staff:2},{minute:510,staff:2},{minute:540,staff:2},{minute:570,staff:4},
+      {minute:600,staff:4},{minute:630,staff:4},{minute:660,staff:4},{minute:690,staff:4},
+      {minute:720,staff:4},{minute:750,staff:1},{minute:780,staff:1},{minute:810,staff:3},
+      {minute:840,staff:3},{minute:870,staff:4},{minute:900,staff:4},{minute:930,staff:4},
+      {minute:960,staff:4},{minute:990,staff:2},{minute:1020,staff:2},{minute:1050,staff:2}
+    ],
+    monthly:[
+      {month:"2026-01",enquiries_per_day:17.45,spend:8200},
+      {month:"2026-02",enquiries_per_day:16.5,spend:8350},
+      {month:"2026-03",enquiries_per_day:17.73,spend:8400},
+      {month:"2026-04",enquiries_per_day:19.3,spend:11950},
+      {month:"2026-05",enquiries_per_day:18.79,spend:12400},
+      {month:"2026-06",enquiries_per_day:19.0,spend:12350}
+    ]
+  }
+};
+
+function fmt(f){
+  switch(f.unit){
+    case "percent": return f.value.toFixed(1) + "%";
+    case "calls": return Math.round(f.value).toLocaleString("en-GB");
+    case "calls_per_week": return f.value.toFixed(1);
+    case "people": return String(Math.round(f.value));
+    case "days": return String(Math.round(f.value));
+    default: return String(f.value);
+  }
+}
+
+function populateFacts(){
+  document.querySelectorAll("[data-fact]").forEach(el=>{
+    const f = D.facts[el.getAttribute("data-fact")];
+    if(f) el.textContent = fmt(f);
+  });
+  document.querySelectorAll("[data-fact-n]").forEach(el=>{
+    const f = D.facts[el.getAttribute("data-fact-n")];
+    if(f) el.textContent = f.n.toLocaleString("en-GB");
+  });
+}
+
+function minuteLabel(m){
+  const h = Math.floor(m/60), mm = m%60;
+  const h12 = ((h+11)%12)+1;
+  return h12 + (mm===0 ? "" : ":30");
+}
+
+// --- Reveal: bar chart of unanswered rate by half hour ---
+function buildRevealChart(){
+  const svg = document.getElementById("chart-halfhour");
+  const data = D.series.by_half_hour;
+  const W=880,H=320, padL=36, padR=16, padT=16, padB=36;
+  const plotW = W-padL-padR, plotH = H-padT-padB;
+  const bw = plotW/data.length;
+  const maxRate = 60;
+  let s = "";
+  [0,15,30,45,60].forEach(v=>{
+    const y = padT + plotH - (v/maxRate)*plotH;
+    s += `<line class="grid-line" x1="${padL}" x2="${W-padR}" y1="${y}" y2="${y}"></line>`;
+    s += `<text class="axis-label" x="${padL-8}" y="${y+3}" text-anchor="end">${v}%</text>`;
+  });
+  data.forEach((d,i)=>{
+    const x = padL + i*bw + 2;
+    const bh = (d.rate/maxRate)*plotH;
+    const y = padT + plotH - bh;
+    const inWindow = d.minute===750 || d.minute===780;
+    const fill = inWindow ? "var(--action)" : "var(--sea)";
+    s += `<g class="bar-group" style="transition-delay:${i*18}ms;">
+      <rect x="${x}" y="${y}" width="${bw-4}" height="${bh}" rx="2" fill="${fill}"></rect>
+    </g>`;
+    if(i%2===0){
+      s += `<text class="axis-label" x="${x+bw/2-2}" y="${H-8}" text-anchor="middle">${minuteLabel(d.minute)}</text>`;
+    }
+    if(inWindow && d.minute===780){
+      s += `<text class="direct-label" x="${x+bw/2-2}" y="${y-8}" text-anchor="middle" fill="var(--action-deep)">${d.rate.toFixed(1)}%</text>`;
+    }
+  });
+  s += `<line class="base-line" x1="${padL}" x2="${W-padR}" y1="${padT+plotH}" y2="${padT+plotH}"></line>`;
+  svg.innerHTML = s;
+}
+
+// --- Mechanism: two panels sharing an axis, second hanging downward ---
+function buildMechanismChart(){
+  const svg = document.getElementById("chart-mechanism");
+  const data = D.series.by_half_hour;
+  const cover = D.series.cover;
+  const W=880,H=380;
+  const padL=36, padR=16;
+  const topH=170, gap=30, botH=120, axisY=40+topH;
+  const plotW = W-padL-padR;
+  const bw = plotW/data.length;
+  const maxUnanswered = 420;
+  const maxStaff = 4;
+  let s = "";
+  s += `<text class="axis-label" x="${padL}" y="16">Unanswered calls per half hour</text>`;
+  data.forEach((d,i)=>{
+    const x = padL + i*bw + 2;
+    const bh = (d.unanswered/maxUnanswered)*topH;
+    const y = 40 + topH - bh;
+    const inWindow = d.minute===750 || d.minute===780;
+    const fill = inWindow ? "var(--action)" : "var(--sea)";
+    s += `<g class="bar-group" style="transition-delay:${i*18}ms;">
+      <rect x="${x}" y="${y}" width="${bw-4}" height="${bh}" rx="2" fill="${fill}"></rect>
+    </g>`;
+  });
+  s += `<line class="base-line" x1="${padL}" x2="${W-padR}" y1="${axisY}" y2="${axisY}"></line>`;
+  s += `<text class="axis-label" x="${padL}" y="${axisY+gap-4}">Receptionists on the phones</text>`;
+  const botTop = axisY+gap;
+  cover.forEach((d,i)=>{
+    const x = padL + i*bw + 2;
+    const bh = (d.staff/maxStaff)*botH;
+    const inWindow = d.minute===750 || d.minute===780;
+    const fill = inWindow ? "var(--action)" : "var(--premium)";
+    s += `<g class="bar-group down" style="transition-delay:${i*18}ms;">
+      <rect x="${x}" y="${botTop}" width="${bw-4}" height="${bh}" rx="2" fill="${fill}"></rect>
+    </g>`;
+    if(i%2===0){
+      s += `<text class="axis-label" x="${x+bw/2-2}" y="${botTop+botH+16}" text-anchor="middle">${minuteLabel(d.minute)}</text>`;
+    }
+  });
+  svg.innerHTML = s;
+}
+
+// --- Uncertainty: two indexed lines with shaded gap ---
+function buildUncertaintyChart(){
+  const svg = document.getElementById("chart-uncertainty");
+  const data = D.series.monthly;
+  const base = data[0];
+  const enqIdx = data.map(d=> (d.enquiries_per_day/base.enquiries_per_day)*100);
+  const spendIdx = data.map(d=> (d.spend/base.spend)*100);
+  const W=880,H=340, padL=44, padR=90, padT=20, padB=40;
+  const plotW=W-padL-padR, plotH=H-padT-padB;
+  const minV = 90, maxV = Math.max(...spendIdx, ...enqIdx)+10;
+  const x = i => padL + (i/(data.length-1))*plotW;
+  const y = v => padT + plotH - ((v-minV)/(maxV-minV))*plotH;
+  let s = "";
+  [minV, (minV+maxV)/2, maxV].forEach(v=>{
+    const yy = y(v);
+    s += `<line class="grid-line" x1="${padL}" x2="${W-padR}" y1="${yy}" y2="${yy}"></line>`;
+    s += `<text class="axis-label" x="${padL-8}" y="${yy+3}" text-anchor="end">${Math.round(v)}</text>`;
+  });
+  data.forEach((d,i)=>{
+    s += `<text class="axis-label" x="${x(i)}" y="${H-10}" text-anchor="middle">${d.month.slice(5)}</text>`;
+  });
+  // shaded gap between the two series
+  let gapPath = `M ${x(0)} ${y(spendIdx[0])} `;
+  spendIdx.forEach((v,i)=>{ gapPath += `L ${x(i)} ${y(v)} `; });
+  for(let i=enqIdx.length-1;i>=0;i--){ gapPath += `L ${x(i)} ${y(enqIdx[i])} `; }
+  gapPath += "Z";
+  s += `<path class="gap-fill" d="${gapPath}" fill="var(--wash-coral)"></path>`;
+
+  function linePath(arr){
+    return arr.map((v,i)=> (i===0?"M":"L") + " " + x(i) + " " + y(v)).join(" ");
+  }
+  const spendPath = linePath(spendIdx);
+  const enqPath = linePath(enqIdx);
+  s += `<path class="series-line line-draw" id="line-spend" d="${spendPath}" stroke="var(--action)"></path>`;
+  s += `<path class="series-line line-draw" id="line-enq" d="${enqPath}" stroke="var(--sea)"></path>`;
+  s += `<text class="direct-label" x="${x(data.length-1)+8}" y="${y(spendIdx[spendIdx.length-1])+4}" fill="var(--action-deep)">Spend</text>`;
+  s += `<text class="direct-label" x="${x(data.length-1)+8}" y="${y(enqIdx[enqIdx.length-1])+4}" fill="var(--sea)">Enquiries / day</text>`;
+  s += `<text class="axis-label" x="${padL}" y="14">Indexed to January = 100</text>`;
+  svg.innerHTML = s;
+
+  requestAnimationFrame(()=>{
+    ["line-spend","line-enq"].forEach(id=>{
+      const el = document.getElementById(id);
+      const len = el.getTotalLength();
+      el.style.strokeDasharray = len;
+      el.style.strokeDashoffset = len;
+    });
+  });
+}
+
+function playLineDraw(){
+  ["line-spend","line-enq"].forEach(id=>{
+    const el = document.getElementById(id);
+    if(!el) return;
+    const len = el.getTotalLength();
+    el.style.transition = "none";
+    el.style.strokeDashoffset = len;
+    el.getBoundingClientRect();
+    el.style.transition = "stroke-dashoffset 1300ms var(--out)";
+    requestAnimationFrame(()=>{ el.style.strokeDashoffset = 0; });
+  });
+}
+
+// --- Ring for F03 ---
+function setupRing(){
+  const r = 40, c = 2*Math.PI*r;
+  const circle = document.querySelector("#ring-f03 .ring-value");
+  circle.style.strokeDasharray = c;
+  circle.style.strokeDashoffset = c;
+  const num = document.getElementById("ring-f03-num");
+  num.textContent = "0%";
+  return {circle, c, target: D.facts.F03.value};
+}
+let ringState;
+function playRing(){
+  const {circle, c, target} = ringState;
+  circle.style.transition = "none";
+  circle.style.strokeDashoffset = c;
+  circle.getBoundingClientRect();
+  circle.style.transition = "stroke-dashoffset 1200ms var(--out)";
+  const offset = c - (target/100)*c;
+  requestAnimationFrame(()=>{ circle.style.strokeDashoffset = offset; });
+  const num = document.getElementById("ring-f03-num");
+  const start = performance.now();
+  const dur = 1200;
+  function tick(now){
+    const p = Math.min(1, (now-start)/dur);
+    const eased = 1 - Math.pow(1-p, 3);
+    num.textContent = (eased*target).toFixed(1) + "%";
+    if(p<1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+// --- Headline count-up for F11 ---
+function playHeadline(){
+  const el = document.querySelector('.headline-number[data-fact="F11"]');
+  const target = D.facts.F11.value;
+  const start = performance.now();
+  const dur = 1200;
+  function tick(now){
+    const p = Math.min(1, (now-start)/dur);
+    const eased = 1 - Math.pow(1-p, 3);
+    el.textContent = (eased*target).toFixed(1);
+    if(p<1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+function splitWords(){
+  document.querySelectorAll(".split-words").forEach(h=>{
+    const words = h.textContent.trim().split(/\s+/);
+    h.innerHTML = words.map((w,i)=>`<span class="word" style="transition-delay:${i*80}ms;">${w}&nbsp;</span>`).join("");
+  });
+}
+
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function initObservers(){
+  const sections = document.querySelectorAll("section");
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        if(entry.target.classList.contains("belief") && ringState) playRing();
+        if(entry.target.classList.contains("decision")) playHeadline();
+        if(entry.target.classList.contains("uncertainty") && !reducedMotion) playLineDraw();
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:.3});
+  sections.forEach(s=> io.observe(s));
+}
+
+document.querySelectorAll("[data-replay]").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    const target = btn.getAttribute("data-replay");
+    if(target === "ring-f03-section"){ playRing(); return; }
+    const section = btn.closest("section");
+    section.classList.remove("visible");
+    section.getBoundingClientRect();
+    requestAnimationFrame(()=>{
+      section.classList.add("visible");
+      if(target === "uncertainty" && !reducedMotion) playLineDraw();
+      if(target === "decision") playHeadline();
+    });
+  });
+});
+
+populateFacts();
+splitWords();
+buildRevealChart();
+buildMechanismChart();
+buildUncertaintyChart();
+ringState = setupRing();
+initObservers();
+</script>
+</body>
+</html>

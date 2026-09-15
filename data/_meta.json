@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "seed": 42,
+  "clean": false,
+  "generated": "2026-09-15T20:06:03",
+  "rows": {
+    "calls": 9274,
+    "rota": 492,
+    "enquiries": 3302,
+    "spend": 18
+  },
+  "true_calls_before_messiness": 9162
+}
