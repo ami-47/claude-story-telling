@@ -7,6 +7,20 @@ Start Claude Code in this folder first, so it picks up `.claude/`.
 
 ---
 
+## 0 · The cold open
+
+Run this once, before the room, straight after `answers/facts.json` is
+populated. It is not shown as a prompt live: it produces the artifact the
+cold open in `RUNBOOK.md` opens on.
+
+> Use the dashwright. Build the conventional operations dashboard at
+> `output/dashboard/dashboard.html`: a sidebar, a KPI row, a few charts,
+> the kind of tool a practice manager already owns. Every number still comes
+> from the ledger, by fact id, same discipline as the story. Screenshot it
+> yourself before telling me it's done.
+
+---
+
 ## 1 · Profile
 
 > Four files from a client are in `data/`. Northgate Health, a private clinic,
@@ -39,7 +53,10 @@ Start Claude Code in this folder first, so it picks up `.claude/`.
 ### optional, needs Supabase set up. See SUPABASE.md
 
 The loading happened before the session, offstage. This stage is the querying,
-and it runs through the Supabase MCP server, read only.
+and it runs through the Supabase MCP server, read only. It is additional, not
+a replacement for the local files: if the database or the network is
+unreachable, skip this stage and keep going, nothing later in the session
+depends on it.
 
 > The cleaned tables are already in Postgres. Using the Supabase tools, list
 > what is in the `northgate` schema and read me the definition that the

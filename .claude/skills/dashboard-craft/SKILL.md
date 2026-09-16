@@ -1,6 +1,6 @@
 ---
 name: dashboard-craft
-description: The visual rules for the Northgate "conventional dashboard" artifact, the cold-open contrast piece in RUNBOOK.md. Use whenever building or editing rehearsal/dashboard/*.html. Covers palette, card system, chart form and the honesty rules that stop a dashboard from becoming a mockup.
+description: The visual rules for the Northgate "conventional dashboard" artifact, the cold-open contrast piece in RUNBOOK.md. Use whenever building or editing output/dashboard/dashboard.html (or a rehearsal/dashboard/ dry run of it). Covers palette, card system, chart form and the honesty rules that stop a dashboard from becoming a mockup.
 ---
 
 # Dashboard craft
@@ -108,8 +108,11 @@ everything it *does* show is true:
 
 Run both scanners and read the result, don't just trust the exit code:
 
-    python3 ~/.claude/skills/tastemaker/scripts/anti_slop_scan.py rehearsal/dashboard/<file>.html
-    python3 ~/.claude/skills/tastemaker/scripts/audit_motion.py rehearsal/dashboard/<file>.html
+    python3 ~/.claude/skills/tastemaker/scripts/anti_slop_scan.py output/dashboard/dashboard.html
+    python3 ~/.claude/skills/tastemaker/scripts/audit_motion.py output/dashboard/dashboard.html
+
+(a rehearsal build not meant to overwrite the real one goes under
+`rehearsal/dashboard/` instead, same two commands, different path)
 
 Then screenshot it yourself (Playwright, full page, real viewport width, not
 just a static wait) and look at the image before reporting anything as

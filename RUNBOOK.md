@@ -8,6 +8,20 @@ For whoever is driving. Everything below is what to do and what to say, in order
     python3 verify_calls.py
     python3 build_story.py
 
+Then build the cold-open dashboard once, offstage, with prompt 0 in
+`prompts/DEMO.md` (uses the `dashwright` agent and the `dashboard-craft`
+skill). It writes to `output/dashboard/dashboard.html`. Rebuilding it live
+in front of the room is not the point; the story build is the live moment,
+the dashboard is a prop that has to already exist.
+
+**Local files stay in the repo either way.** Supabase is an additional live
+stage layered on top of the same verified facts, not a replacement for the
+local pipeline: `data/*.csv` and `answers/facts.json` are what the database
+was loaded from, prompts 1 to 4 all read and write them directly, and they
+are the backup if the database, the network or the MCP auth misbehaves in
+front of the room. If Supabase is unreachable on the day, skip stage 2b and
+run the rest exactly as written; nothing else in the session depends on it.
+
 If you are using the Supabase stage, open the project dashboard the day before
 and run one query, or it will have paused. Free projects pause after about
 seven days of low activity. Then load it:
@@ -26,20 +40,22 @@ Run all four demo prompts once yourself. When the page is finished, copy
 you touch anything again — `output/` gets overwritten by every later build, so
 `fallback/` is the only copy that survives a stall.
 
-Have `output/story.html`, `arch/pipeline.html` and `prompts/DEMO.md` open in
-tabs before you start. Copy each prompt from the DEMO.md tab, never retype one
-from memory.
+Have `output/story.html`, `output/dashboard/dashboard.html`,
+`arch/pipeline.html` and `prompts/DEMO.md` open in tabs before you start.
+Copy each prompt from the DEMO.md tab, never retype one from memory.
 
 ---
 
 ## Open cold
 
-Scroll `output/story.html` end to end, saying almost nothing. Then ask the room one
-question: **what would you do on Monday?**
+Open `output/dashboard/dashboard.html` first, the conventional dashboard.
+Let the room look at it, say almost nothing, then ask: **what would you do
+on Monday?** It looks complete. It answers nothing, because nothing on it is
+scoped to the hour that actually matters.
 
-Then show the same numbers as a conventional dashboard. Same facts, and nobody
-can answer. That contrast is the argument for the whole session and it takes
-ninety seconds.
+Then scroll `output/story.html` end to end. Same facts, but now the question
+has an answer. That contrast is the argument for the whole session and it
+takes ninety seconds.
 
 ---
 
@@ -137,7 +153,7 @@ sent a client.
 
 ## The framework
 
-Open `.claude/`. Three skills, three subagents. Read one of them aloud and point
+Open `.claude/`. Four skills, four subagents. Read one of them aloud and point
 out that it mentions no clinic, no calls and no client.
 
 Then run the second case. Same four prompts, different question, and it works
@@ -152,6 +168,8 @@ That is the moment the session stops being a demo.
 **A generation stalls.** "Let me show you the one I ran this morning." Open
 `fallback/story.html`. Keep talking. Do not wait, do not apologise, do not
 debug on screen. Debugging live teaches nothing and costs four minutes.
+`fallback/dashboard.html` is the same insurance for the cold open, in case
+`output/dashboard/` ever gets touched by accident.
 
 **A connector fails.** Skip it. Nothing in the pipeline depends on one. Point at
 the architecture map instead and make the same point in words.

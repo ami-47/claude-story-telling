@@ -10,12 +10,14 @@ Everything needed to run the live build, in one folder.
     build_story.py        substitutes the ledger into the page template
     story.template.html   the page, holding placeholders, containing no numbers
     arch/pipeline.html    the architecture map
-    .claude/skills/       data-profile · fact-ledger · story-craft
-    .claude/agents/       analyst · sceptic · storywright
-    prompts/DEMO.md       the four prompts, to paste in order
+    .claude/skills/       data-profile · fact-ledger · story-craft · dashboard-craft
+    .claude/agents/       analyst · sceptic · storywright · dashwright
+    prompts/DEMO.md       the four live prompts, plus the offstage cold-open build
     RUNBOOK.md            what to type, what to say, what to do if it stalls
     output/               where every build lands, overwritten every run
+    output/dashboard/     the cold-open dashboard, built offstage, once
     fallback/             a saved copy of a working build, never overwritten
+    rehearsal/dashboard/  proof-of-concept dry runs only, not the real prop
     load_to_supabase.py   pushes the cleaned tables into Postgres, optional
     SUPABASE.md           ten minute setup for the database stage
 

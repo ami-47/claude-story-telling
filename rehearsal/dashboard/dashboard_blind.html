@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northgate Health: Front Desk Operations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F1F5F3;
+    --surface:#FFFFFF;
+    --line:#E7ECE8;
+    --ink:#122420;
+    --ink-2:#5B6B60;
+    --teal-1:#025864;
+    --teal-2:#3D7581;
+    --teal-3:#7FA3AC;
+    --teal-4:#BFD2D6;
+    --green-1:#00D47E;
+    --green-deep:#026B44;
+    --green-tint:#CFF4DE;
+    --radius-lg:20px;
+    --radius-sm:12px;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 28px -14px rgba(0,0,0,.14);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    min-height:100dvh;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  .shell{display:flex;min-height:100dvh;}
+
+  /* ---------- sidebar ---------- */
+  .sidebar{
+    width:230px;flex:0 0 230px;
+    background:var(--surface);
+    border-right:1px solid var(--line);
+    padding:24px 18px;
+    display:flex;flex-direction:column;
+    gap:28px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand-mark{
+    width:34px;height:34px;border-radius:10px;
+    background:var(--teal-1);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:800;font-size:15px;
+  }
+  .brand-name{font-weight:700;font-size:14.5px;line-height:1.2;}
+  .brand-sub{font-size:11px;color:var(--ink-2);font-family:'IBM Plex Mono',monospace;letter-spacing:.02em;}
+
+  .nav{display:flex;flex-direction:column;gap:2px;}
+  .nav-label{
+    font-size:10.5px;color:var(--ink-2);text-transform:uppercase;
+    letter-spacing:.08em;font-family:'IBM Plex Mono',monospace;
+    padding:0 10px;margin-bottom:6px;
+  }
+  .nav-item{
+    display:flex;align-items:center;gap:10px;
+    padding:9px 10px;border-radius:10px;
+    font-size:13.5px;font-weight:500;color:var(--ink-2);
+    cursor:default;
+  }
+  .nav-item svg{width:16px;height:16px;flex:0 0 16px;}
+  .nav-item.active{
+    background:var(--teal-4);
+    color:var(--teal-1);
+    font-weight:600;
+  }
+  .nav-item.active svg{stroke:var(--teal-1);}
+  .nav-item:not(.active) svg{stroke:var(--ink-2);}
+
+  .sidebar-foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);}
+  .avatar-row{display:flex;align-items:center;gap:10px;}
+  .avatar{
+    width:32px;height:32px;border-radius:999px;
+    background:var(--green-deep);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:12px;font-weight:700;
+  }
+  .avatar-name{font-size:13px;font-weight:600;}
+  .avatar-role{font-size:11px;color:var(--ink-2);}
+
+  /* ---------- main ---------- */
+  .main{flex:1;min-width:0;padding:28px 32px 48px;}
+
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-bottom:22px;gap:20px;
+  }
+  .topbar h1{font-size:22px;font-weight:800;margin:0 0 4px;}
+  .topbar .period{font-size:13px;color:var(--ink-2);font-family:'IBM Plex Mono',monospace;}
+  .search{
+    display:flex;align-items:center;gap:8px;
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:999px;padding:9px 16px;width:280px;
+    color:var(--ink-2);font-size:13px;
+  }
+  .search svg{width:15px;height:15px;stroke:var(--ink-2);flex:0 0 15px;}
+  .topbar-right{display:flex;align-items:center;gap:14px;}
+
+  /* ---------- kpi row ---------- */
+  .kpi-row{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:16px;margin-bottom:16px;
+  }
+  .kpi{
+    border-radius:var(--radius-lg);
+    padding:20px 20px 18px;
+    box-shadow:var(--shadow);
+    display:flex;flex-direction:column;gap:10px;
+    min-height:120px;
+  }
+  .kpi.solid-teal{background:var(--teal-1);color:#fff;}
+  .kpi.solid-green{background:var(--green-deep);color:#fff;}
+  .kpi.plain{background:var(--surface);border:1px solid var(--line);}
+  .kpi-top{display:flex;align-items:center;justify-content:space-between;}
+  .kpi-icon{
+    width:30px;height:30px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .kpi.plain .kpi-icon.teal{background:var(--teal-4);}
+  .kpi.plain .kpi-icon.teal svg{stroke:var(--teal-1);}
+  .kpi.plain .kpi-icon.green{background:var(--green-tint);}
+  .kpi.plain .kpi-icon.green svg{stroke:var(--green-deep);}
+  .kpi.solid-teal .kpi-icon, .kpi.solid-green .kpi-icon{background:rgba(255,255,255,.16);}
+  .kpi.solid-teal .kpi-icon svg, .kpi.solid-green .kpi-icon svg{stroke:#fff;}
+  .kpi-icon svg{width:16px;height:16px;}
+  .kpi-label{font-size:12.5px;font-weight:600;opacity:.85;}
+  .kpi.plain .kpi-label{color:var(--ink-2);opacity:1;}
+  .kpi-value{font-size:30px;font-weight:800;line-height:1;}
+  .kpi-scope{
+    font-size:10.5px;font-family:'IBM Plex Mono',monospace;
+    opacity:.75;letter-spacing:.01em;
+  }
+  .kpi.plain .kpi-scope{color:var(--ink-2);opacity:1;}
+
+  /* ---------- content grid ---------- */
+  .grid-row{
+    display:grid;grid-template-columns:1.6fr 1fr 1fr;
+    gap:16px;margin-bottom:16px;
+  }
+  .card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow);
+    padding:20px 22px 18px;
+    display:flex;flex-direction:column;
+  }
+  .card-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;}
+  .card-title{font-size:14.5px;font-weight:700;}
+  .card-scope{
+    font-size:10.5px;color:var(--ink-2);
+    font-family:'IBM Plex Mono',monospace;
+    background:var(--bg);border:1px solid var(--line);
+    padding:3px 9px;border-radius:999px;white-space:nowrap;
+  }
+
+  /* diverging bar chart */
+  .bar-chart{flex:1;display:flex;flex-direction:column;}
+  .bar-plot{position:relative;height:210px;}
+  .bar-cols{display:flex;height:100%;align-items:stretch;gap:6px;}
+  .bar-col{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;}
+  .bar-up{background:var(--teal-1);border-radius:4px 4px 0 0;width:100%;align-self:flex-end;}
+  .bar-down{background:var(--green-1);border-radius:0 0 4px 4px;width:100%;}
+  .bar-zero{height:1px;background:var(--line);width:100%;}
+  .bar-hours{display:flex;gap:6px;margin-top:8px;}
+  .bar-hour{flex:1;text-align:center;font-size:10px;color:var(--ink-2);font-family:'IBM Plex Mono',monospace;}
+  .legend{display:flex;gap:16px;margin-top:12px;}
+  .legend-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--ink-2);}
+  .legend-dot{width:9px;height:9px;border-radius:3px;}
+
+  /* ring chart */
+  .ring-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;}
+  .ring-figure{position:relative;width:150px;height:150px;}
+  .ring-center{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+  }
+  .ring-value{font-size:26px;font-weight:800;color:var(--teal-1);}
+  .ring-caption{font-size:10.5px;color:var(--ink-2);text-align:center;max-width:120px;margin-top:2px;}
+  .ring-n{font-size:10.5px;font-family:'IBM Plex Mono',monospace;color:var(--ink-2);}
+
+  /* row list */
+  .rate-list{display:flex;flex-direction:column;gap:0;flex:1;}
+  .rate-row{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:11px 0;border-bottom:1px solid var(--line);
+  }
+  .rate-row:last-child{border-bottom:none;}
+  .rate-left{display:flex;align-items:center;gap:10px;}
+  .rate-dot{width:9px;height:9px;border-radius:999px;flex:0 0 9px;}
+  .rate-name{font-size:12.5px;font-weight:600;}
+  .rate-scope{font-size:10px;color:var(--ink-2);font-family:'IBM Plex Mono',monospace;}
+  .rate-value{font-size:16px;font-weight:800;}
+
+  /* roster table */
+  .roster-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .roster-table th{
+    text-align:left;font-size:10.5px;color:var(--ink-2);
+    font-weight:600;text-transform:uppercase;letter-spacing:.04em;
+    padding:0 8px 8px 0;border-bottom:1px solid var(--line);
+  }
+  .roster-table td{padding:9px 8px 9px 0;border-bottom:1px solid var(--line);}
+  .roster-table tr:last-child td{border-bottom:none;}
+  .roster-name{display:flex;align-items:center;gap:8px;font-weight:600;}
+  .roster-avatar{
+    width:22px;height:22px;border-radius:999px;background:var(--teal-3);
+    color:#fff;font-size:9.5px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;flex:0 0 22px;
+  }
+  .pill{
+    display:inline-block;font-size:10.5px;font-family:'IBM Plex Mono',monospace;
+    padding:3px 8px;border-radius:999px;background:var(--teal-4);color:var(--teal-1);
+  }
+
+  /* coverage stat pair */
+  .coverage-wrap{flex:1;display:flex;flex-direction:column;gap:16px;justify-content:center;}
+  .coverage-item{display:flex;flex-direction:column;gap:6px;}
+  .coverage-top{display:flex;align-items:baseline;justify-content:space-between;}
+  .coverage-num{font-size:22px;font-weight:800;}
+  .coverage-label{font-size:11.5px;color:var(--ink-2);}
+  .coverage-track{height:8px;border-radius:999px;background:var(--bg);overflow:hidden;}
+  .coverage-fill{height:100%;border-radius:999px;}
+
+  /* delta stats */
+  .delta-wrap{flex:1;display:flex;flex-direction:column;gap:18px;justify-content:center;}
+  .delta-item{display:flex;flex-direction:column;gap:4px;}
+  .delta-top{display:flex;align-items:center;gap:8px;}
+  .delta-badge{
+    display:flex;align-items:center;gap:3px;
+    font-size:12.5px;font-weight:700;padding:2px 8px;border-radius:999px;
+  }
+  .delta-badge.up-teal{background:var(--teal-4);color:var(--teal-1);}
+  .delta-badge.up-green{background:var(--green-tint);color:var(--green-deep);}
+  .delta-label{font-size:12.5px;font-weight:600;}
+  .delta-scope{font-size:10.5px;color:var(--ink-2);font-family:'IBM Plex Mono',monospace;}
+
+  @media (max-width: 1180px){
+    .kpi-row{grid-template-columns:repeat(2,1fr);}
+    .grid-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">N</div>
+      <div>
+        <div class="brand-name">Northgate Health</div>
+        <div class="brand-sub">FRONT DESK OPS</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-label">Workspace</div>
+      <div class="nav-item active">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+        Overview
+      </div>
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+        Calls
+      </div>
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Staffing
+      </div>
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-3-3L3 18"/></svg>
+        Marketing
+      </div>
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        Reports
+      </div>
+      <div class="nav-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </div>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="avatar-row">
+        <div class="avatar">AT</div>
+        <div>
+          <div class="avatar-name">Admin Team</div>
+          <div class="avatar-role">Practice manager</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h1>Front Desk Operations</h1>
+        <div class="period">5 Jan – 30 Jun 2026 · patient call line</div>
+      </div>
+      <div class="topbar-right">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          Search calls, staff, reports…
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI ROW -->
+    <section class="kpi-row">
+      <div class="kpi solid-teal">
+        <div class="kpi-top">
+          <div class="kpi-label">Patient calls received</div>
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg></div>
+        </div>
+        <div class="kpi-value">9,162</div>
+        <div class="kpi-scope">F01 · whole period</div>
+      </div>
+
+      <div class="kpi solid-green">
+        <div class="kpi-top">
+          <div class="kpi-label">Calls not answered</div>
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div>
+        </div>
+        <div class="kpi-value">1,299</div>
+        <div class="kpi-scope">F02 · missed, abandoned or voicemail</div>
+      </div>
+
+      <div class="kpi plain">
+        <div class="kpi-top">
+          <div class="kpi-label">New patient calls</div>
+          <div class="kpi-icon teal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg></div>
+        </div>
+        <div class="kpi-value">3,248</div>
+        <div class="kpi-scope">F08 · whole period, New Patients line</div>
+      </div>
+
+      <div class="kpi plain">
+        <div class="kpi-top">
+          <div class="kpi-label">Calls per receptionist / hr</div>
+          <div class="kpi-icon green"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        </div>
+        <div class="kpi-value">13.8</div>
+        <div class="kpi-scope">F16 · mean talk time, answered calls</div>
+      </div>
+    </section>
+
+    <!-- ROW 1 -->
+    <section class="grid-row">
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <div class="card-title">Calls answered vs. not answered</div>
+          </div>
+          <div class="card-scope">by hour of day · whole period</div>
+        </div>
+        <div class="bar-chart">
+          <div class="bar-plot" id="barPlot"></div>
+          <div class="bar-hours" id="barHours"></div>
+          <div class="legend">
+            <div class="legend-item"><span class="legend-dot" style="background:var(--teal-1)"></span>Answered</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--green-1)"></span>Not answered</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">Unanswered share</div>
+          <div class="card-scope">New Patients line</div>
+        </div>
+        <div class="ring-wrap">
+          <div class="ring-figure">
+            <svg viewBox="0 0 150 150" width="150" height="150">
+              <circle cx="75" cy="75" r="62" fill="none" stroke="var(--teal-4)" stroke-width="16"/>
+              <circle id="ringArc" cx="75" cy="75" r="62" fill="none" stroke="var(--teal-1)" stroke-width="16"
+                stroke-linecap="round" transform="rotate(-90 75 75)"/>
+            </svg>
+            <div class="ring-center">
+              <div class="ring-value">13.5%</div>
+            </div>
+          </div>
+          <div class="ring-caption">F10 · unanswered ÷ received, New Patients line only</div>
+          <div class="ring-n">n = 3,248</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">Unanswered rate</div>
+          <div class="card-scope">by scope</div>
+        </div>
+        <div class="rate-list">
+          <div class="rate-row">
+            <div class="rate-left">
+              <span class="rate-dot" style="background:var(--teal-1)"></span>
+              <div>
+                <div class="rate-name">12:30–13:30 window</div>
+                <div class="rate-scope">F05 · n=1,473</div>
+              </div>
+            </div>
+            <div class="rate-value">53.8%</div>
+          </div>
+          <div class="rate-row">
+            <div class="rate-left">
+              <span class="rate-dot" style="background:var(--teal-2)"></span>
+              <div>
+                <div class="rate-name">Whole line, all hours</div>
+                <div class="rate-scope">F03 · n=9,162</div>
+              </div>
+            </div>
+            <div class="rate-value">14.2%</div>
+          </div>
+          <div class="rate-row">
+            <div class="rate-left">
+              <span class="rate-dot" style="background:var(--teal-2)"></span>
+              <div>
+                <div class="rate-name">New Patients line</div>
+                <div class="rate-scope">F10 · n=3,248</div>
+              </div>
+            </div>
+            <div class="rate-value">13.5%</div>
+          </div>
+          <div class="rate-row">
+            <div class="rate-left">
+              <span class="rate-dot" style="background:var(--green-1)"></span>
+              <div>
+                <div class="rate-name">Outside 12:30–13:30</div>
+                <div class="rate-scope">F06 · n=7,689</div>
+              </div>
+            </div>
+            <div class="rate-value">6.6%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROW 2 -->
+    <section class="grid-row">
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">Reception roster</div>
+          <div class="card-scope">rota.csv · pattern repeats, shown for 30 Jun 2026</div>
+        </div>
+        <table class="roster-table">
+          <thead>
+            <tr><th>Staff</th><th>Shift</th><th>Break</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="roster-name"><span class="roster-avatar">PN</span>Priya Nandakumar</div></td>
+              <td class="mono">08:00–16:30</td>
+              <td><span class="pill">12:30–13:30</span></td>
+            </tr>
+            <tr>
+              <td><div class="roster-name"><span class="roster-avatar">TB</span>Tom Beckett</div></td>
+              <td class="mono">08:00–16:30</td>
+              <td><span class="pill">12:30–13:30</span></td>
+            </tr>
+            <tr>
+              <td><div class="roster-name"><span class="roster-avatar">HO</span>Hannah Osei</div></td>
+              <td class="mono">09:30–18:00</td>
+              <td><span class="pill">12:30–13:30</span></td>
+            </tr>
+            <tr>
+              <td><div class="roster-name"><span class="roster-avatar">MF</span>Marco Ferreira</div></td>
+              <td class="mono">09:30–18:00</td>
+              <td><span class="pill">13:30–14:30</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">Phone coverage</div>
+          <div class="card-scope">rota.csv</div>
+        </div>
+        <div class="coverage-wrap">
+          <div class="coverage-item">
+            <div class="coverage-top">
+              <div class="coverage-label">12:30–13:30 window</div>
+              <div class="coverage-num">1</div>
+            </div>
+            <div class="coverage-track"><div class="coverage-fill" style="width:25%;background:var(--teal-1)"></div></div>
+            <div class="rate-scope">F12 · minimum staff on shift, not on break</div>
+          </div>
+          <div class="coverage-item">
+            <div class="coverage-top">
+              <div class="coverage-label">Busiest other time</div>
+              <div class="coverage-num">4</div>
+            </div>
+            <div class="coverage-track"><div class="coverage-fill" style="width:100%;background:var(--teal-3)"></div></div>
+            <div class="rate-scope">F13 · maximum staff on shift, not on break</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-title">Marketing &amp; demand</div>
+          <div class="card-scope">Q1 vs Q2 2026</div>
+        </div>
+        <div class="delta-wrap">
+          <div class="delta-item">
+            <div class="delta-top">
+              <span class="delta-badge up-teal">▲ 47.1%</span>
+              <span class="delta-label">Advertising spend</span>
+            </div>
+            <div class="delta-scope">F14 · total spend, Q2 over Q1</div>
+          </div>
+          <div class="delta-item">
+            <div class="delta-top">
+              <span class="delta-badge up-green">▲ 10.4%</span>
+              <span class="delta-label">Enquiries per working day</span>
+            </div>
+            <div class="delta-scope">F15 · Q2 over Q1, per working day</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+  // by_hour series, copied verbatim from answers/facts.json (series.by_hour)
+  var byHour = [
+    {hour:8,  calls:1028, unanswered:140},
+    {hour:9,  calls:1580, unanswered:202},
+    {hour:10, calls:1212, unanswered:28},
+    {hour:11, calls:620,  unanswered:2},
+    {hour:12, calls:1050, unanswered:395},
+    {hour:13, calls:1056, unanswered:400},
+    {hour:14, calls:352,  unanswered:0},
+    {hour:15, calls:608,  unanswered:0},
+    {hour:16, calls:978,  unanswered:67},
+    {hour:17, calls:678,  unanswered:65}
+  ];
+
+  var maxAnswered = Math.max.apply(null, byHour.map(function(d){return d.calls - d.unanswered;}));
+  var maxUnanswered = Math.max.apply(null, byHour.map(function(d){return d.unanswered;}));
+  var maxAll = Math.max(maxAnswered, maxUnanswered);
+  var upMaxPx = 132;   // px available above the zero line
+  var downMaxPx = 60;  // px available below the zero line
+
+  var plot = document.getElementById('barPlot');
+  var hoursRow = document.getElementById('barHours');
+  var cols = document.createElement('div');
+  cols.className = 'bar-cols';
+
+  byHour.forEach(function(d){
+    var answered = d.calls - d.unanswered;
+    var upPx = Math.round((answered / maxAll) * upMaxPx);
+    var downPx = Math.round((d.unanswered / maxAll) * upMaxPx);
+
+    var col = document.createElement('div');
+    col.className = 'bar-col';
+    col.style.justifyContent = 'flex-end';
+    col.style.height = '100%';
+
+    var up = document.createElement('div');
+    up.className = 'bar-up';
+    up.style.height = upPx + 'px';
+    up.title = answered + ' answered, ' + d.hour + ':00';
+
+    var zero = document.createElement('div');
+    zero.className = 'bar-zero';
+
+    var down = document.createElement('div');
+    down.className = 'bar-down';
+    down.style.height = downPx + 'px';
+    down.title = d.unanswered + ' not answered, ' + d.hour + ':00';
+
+    col.appendChild(up);
+    col.appendChild(zero);
+    col.appendChild(down);
+    cols.appendChild(col);
+
+    var lbl = document.createElement('div');
+    lbl.className = 'bar-hour';
+    lbl.textContent = d.hour + ':00';
+    hoursRow.appendChild(lbl);
+  });
+  plot.appendChild(cols);
+
+  // ring: F10 = 13.5%
+  var pct = 13.5;
+  var r = 62;
+  var circumference = 2 * Math.PI * r;
+  var arc = document.getElementById('ringArc');
+  arc.style.strokeDasharray = circumference;
+  arc.style.strokeDashoffset = circumference - (pct / 100) * circumference;
+</script>
+</body>
+</html>
