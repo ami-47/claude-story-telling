@@ -188,14 +188,14 @@
     "F15": {
       "id": "F15",
       "label": "Change in enquiries per working day, Q1 to Q2",
-      "value": 10.4,
+      "value": 18.7,
       "unit": "percent",
       "method": "enquiries per working day, Q2 over Q1. Per day, not total, because Q1 opens on 5 January and has fewer working days",
       "sources": [
         "enquiries.csv",
         "rota.csv"
       ],
-      "n": 2230,
+      "n": 3302,
       "note": "Q1 62 working days, Q2 61"
     },
     "F16": {
@@ -505,32 +505,32 @@
     "monthly": [
       {
         "month": "2026-01",
-        "enquiries_per_day": 17.45,
+        "enquiries_per_day": 25.55,
         "spend": 8200
       },
       {
         "month": "2026-02",
-        "enquiries_per_day": 16.5,
+        "enquiries_per_day": 23.75,
         "spend": 8350
       },
       {
         "month": "2026-03",
-        "enquiries_per_day": 17.73,
+        "enquiries_per_day": 24.41,
         "spend": 8400
       },
       {
         "month": "2026-04",
-        "enquiries_per_day": 19.3,
+        "enquiries_per_day": 29.4,
         "spend": 11950
       },
       {
         "month": "2026-05",
-        "enquiries_per_day": 18.79,
+        "enquiries_per_day": 29.37,
         "spend": 12400
       },
       {
         "month": "2026-06",
-        "enquiries_per_day": 19.0,
+        "enquiries_per_day": 28.77,
         "spend": 12350
       }
     ]

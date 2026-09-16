@@ -61,7 +61,7 @@ Copy each prompt from the DEMO.md tab, never retype one from memory.
 ---
 
 ## Open cold
-`Slide 01, before slide one` · about 90 seconds, no explanation first
+`Slide 01, before slide one` · Demo 3 is what's opened in step 3 · about 90 seconds, no explanation first
 
 Four steps, in this order, matching the deck exactly:
 
@@ -78,7 +78,7 @@ the argument. Do not rescue the silence after step 4.
 ---
 
 ## Stage 1 · Profile
-`Slide 14`
+`Slide 14` · Demo 1
 
 **While it runs.** This is the step everyone skips. You have a client waiting,
 so you go straight to the answer, and three weeks later somebody finds the join
@@ -94,7 +94,7 @@ Ask the room how they would have caught it.
 ---
 
 ## Stage 2 · Compute
-`Slide 15`
+`Slide 15` · Demo 1
 
 **While it runs.** A model that writes a percentage into a sentence is
 generating digits. It might be right. You cannot tell by reading it, and neither
@@ -111,7 +111,7 @@ stage three better than any explanation of stage three.
 ---
 
 ## Stage 2b · Into the database
-`Slide 16` · optional, skip it entirely if Supabase is asleep or the wifi is bad
+`Slide 16` · Demo 2 · optional, skip it entirely if Supabase is asleep or the wifi is bad
 
 **Why it is here.** Everything so far produced an answer. This produces a source
 the practice can keep asking. It is also the only place in the session where the
@@ -127,6 +127,8 @@ the reason two people in the same firm quote two different numbers.
 
 **What to point at.** The question was in English. The SQL is on screen. The
 database did the arithmetic. Nobody wrote a query, and anybody can read one.
+It should come back the exact same 53.8 / 6.6 percent Demo 1 already found —
+say that out loud, since same answer, different mechanism is the point.
 
 **Thirty seconds on security.** Point out that the server is running
 **read only** and **scoped to one project**. Claude cannot drop a table here
@@ -142,7 +144,7 @@ after it runs from the CSVs exactly as before.
 ---
 
 ## Stage 3 · Attack
-`Slide 17`
+`Slide 17` · Demo 4
 
 **While it runs.** Anyone can find a correlation in twenty seconds now. What a
 client pays you for is being able to say what else you ruled out, because that
@@ -159,7 +161,7 @@ fails is not checking anything.
 ---
 
 ## Stage 4 · Compose
-`Slide 18` · the mechanism is Slide 19, the receipts are Slide 20
+`Slide 18` · Demo 4 · the mechanism is Slide 19, the receipts are Slide 20
 
 **What to point at.** Open the template beside the finished page. Left side has
 the placeholders. Right side has the rendered sentence. Nobody typed a number
