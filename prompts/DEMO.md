@@ -8,10 +8,11 @@ Start Claude Code in this folder first, so it picks up `.claude/`.
 ---
 
 ## 0 · The cold open
+### builds the prop for Slide 01, not shown as a prompt live
 
 Run this once, before the room, straight after `answers/facts.json` is
-populated. It is not shown as a prompt live: it produces the artifact the
-cold open in `RUNBOOK.md` opens on.
+populated. It produces the artifact Slide 01 ("Before slide one") opens on,
+alongside `output/story.html`.
 
 > Use the dashwright. Build the conventional operations dashboard at
 > `output/dashboard/dashboard.html`: a sidebar, a KPI row, a few charts,
@@ -22,6 +23,7 @@ cold open in `RUNBOOK.md` opens on.
 ---
 
 ## 1 · Profile
+### Slide 14
 
 > Four files from a client are in `data/`. Northgate Health, a private clinic,
 > six months of inbound calls plus the rota, CRM enquiries and ad spend.
@@ -36,6 +38,7 @@ cold open in `RUNBOOK.md` opens on.
 ---
 
 ## 2 · Compute
+### Slide 15
 
 > Now clean and join properly, handling everything you just found. Write the
 > code to a file. Show me row counts before and after every join.
@@ -50,7 +53,7 @@ cold open in `RUNBOOK.md` opens on.
 ---
 
 ## 2b · Put it where it can be asked again
-### optional, needs Supabase set up. See SUPABASE.md
+### Slide 16 · optional, needs Supabase set up. See SUPABASE.md
 
 The loading happened before the session, offstage. This stage is the querying,
 and it runs through the Supabase MCP server, read only. It is additional, not
@@ -85,6 +88,7 @@ damaged by a bad query.
 ---
 
 ## 3 · Attack
+### Slide 17
 
 > Use the sceptic. Recompute the headline your own way from the raw files
 > first, before reading the analysis.
@@ -96,6 +100,7 @@ damaged by a bad query.
 ---
 
 ## 4 · Compose
+### Slide 18 · the mechanism (Slide 19) and receipts (Slide 20) are both on the finished page
 
 > Use the storywright. Write the story in five beats: the belief, the question,
 > the reveal, the mechanism, and the decision with its uncertainty.
@@ -107,6 +112,7 @@ damaged by a bad query.
 ---
 
 # The second case
+### Slide 22
 
 Same four prompts, one different question. This is the part that shows the
 folder is the deliverable rather than the story.

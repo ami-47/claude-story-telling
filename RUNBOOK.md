@@ -1,6 +1,20 @@
 # Runbook
 
-For whoever is driving. Everything below is what to do and what to say, in order.
+For whoever is driving. Everything below is what to do and what to say, in
+order, kept in sync with the deck by hand. If this and the deck ever
+disagree, the deck is right, and this file should be corrected to match it.
+
+Twenty six slides, roughly two hours.
+
+    Movement one · Why this matters          ~20 min · no terminal · Slides 01-08
+    Movement two · Getting at the data       ~14 min · no terminal · Slides 09-12
+    Movement three · Build it from the ground up  ~50 min · terminal on screen · Slides 13-20
+    Movement four · What you keep            ~22 min · off the terminal · Slides 21-24
+    Close                                     ~6 min · Slides 25-26
+
+This runbook covers the driving of Movement three (the live build) and the
+Open cold / framework beats either side of it. What to say for the
+slides-only movements lives in the deck's own speaker notes.
 
 ## Before the room
 
@@ -47,19 +61,24 @@ Copy each prompt from the DEMO.md tab, never retype one from memory.
 ---
 
 ## Open cold
+`Slide 01, before slide one` · about 90 seconds, no explanation first
 
-Open `output/dashboard/dashboard.html` first, the conventional dashboard.
-Let the room look at it, say almost nothing, then ask: **what would you do
-on Monday?** It looks complete. It answers nothing, because nothing on it is
-scoped to the hour that actually matters.
+Four steps, in this order, matching the deck exactly:
 
-Then scroll `output/story.html` end to end. Same facts, but now the question
-has an answer. That contrast is the argument for the whole session and it
-takes ninety seconds.
+    1 · Open output/story.html. Scroll it end to end. Say nothing.
+    2 · Ask: what would you do on Monday?
+    3 · Open output/dashboard/dashboard.html. Same data, same build.
+    4 · Ask again. Let the silence sit.
+
+Do not explain what they are looking at before they look at it. The story
+gives them enough to answer step 2. The dashboard, built from the identical
+ledger, does not, and the point is that the gap is not in the data, it is in
+the argument. Do not rescue the silence after step 4.
 
 ---
 
 ## Stage 1 · Profile
+`Slide 14`
 
 **While it runs.** This is the step everyone skips. You have a client waiting,
 so you go straight to the answer, and three weeks later somebody finds the join
@@ -75,6 +94,7 @@ Ask the room how they would have caught it.
 ---
 
 ## Stage 2 · Compute
+`Slide 15`
 
 **While it runs.** A model that writes a percentage into a sentence is
 generating digits. It might be right. You cannot tell by reading it, and neither
@@ -91,7 +111,7 @@ stage three better than any explanation of stage three.
 ---
 
 ## Stage 2b · Into the database
-### optional, skip it entirely if Supabase is asleep or the wifi is bad
+`Slide 16` · optional, skip it entirely if Supabase is asleep or the wifi is bad
 
 **Why it is here.** Everything so far produced an answer. This produces a source
 the practice can keep asking. It is also the only place in the session where the
@@ -122,6 +142,7 @@ after it runs from the CSVs exactly as before.
 ---
 
 ## Stage 3 · Attack
+`Slide 17`
 
 **While it runs.** Anyone can find a correlation in twenty seconds now. What a
 client pays you for is being able to say what else you ruled out, because that
@@ -138,6 +159,7 @@ fails is not checking anything.
 ---
 
 ## Stage 4 · Compose
+`Slide 18` · the mechanism is Slide 19, the receipts are Slide 20
 
 **What to point at.** Open the template beside the finished page. Left side has
 the placeholders. Right side has the rendered sentence. Nobody typed a number
@@ -152,12 +174,20 @@ sent a client.
 ---
 
 ## The framework
+`Slide 21` · point it at the folder, not the story page
 
-Open `.claude/`. Four skills, four subagents. Read one of them aloud and point
-out that it mentions no clinic, no calls and no client.
+Open `.claude/`. Three skills, three subagents (`data-profile`, `fact-ledger`,
+`story-craft`; `analyst`, `sceptic`, `storywright`), and not one of them
+mentions a clinic, a call or a client. Read one aloud. That is the
+generalisable pipeline: point it at a different engagement and the same
+four stages run.
 
-Then run the second case. Same four prompts, different question, and it works
-without anyone rewriting anything.
+(`dashboard-craft` and `dashwright` are a separate pair, used only to build
+the cold-open prop offstage before the room, per Slide 01. They are not part
+of this count and not part of what "runs on a different client's data.")
+
+Then run the second case (`Slide 22`). Same four prompts, different question,
+and it works without anyone rewriting anything.
 
 That is the moment the session stops being a demo.
 

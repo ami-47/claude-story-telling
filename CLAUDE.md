@@ -15,11 +15,15 @@ Four stages, in order. Do not skip one because the answer seems obvious.
    client does.
 4. **Compose.** Use the `storywright` subagent and the `story-craft` skill.
    Five beats. Placeholders, not numbers.
-5. **The cold open, built offstage.** Use the `dashwright` subagent and the
-   `dashboard-craft` skill to build `output/dashboard/dashboard.html`, the
-   conventional dashboard the cold open contrasts against the story. Same
-   ledger, same fact-id discipline, different artifact: it is meant to look
-   complete while answering nothing.
+
+These four stages are the generalisable pipeline: point them at a different
+client's data and the same four stages run, unchanged.
+
+**Separately, offstage, once:** the `dashwright` subagent and the
+`dashboard-craft` skill build `output/dashboard/dashboard.html`, the
+conventional dashboard the cold open contrasts against the story before the
+room ever sees stage one. Same ledger, same fact-id discipline, different
+artifact, and not one of the four stages above.
 
 ## Hard rules
 
