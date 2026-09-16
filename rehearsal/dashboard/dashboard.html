@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northgate Health - Operations Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F2F5F3;
+    --surface:#FFFFFF;
+    --surface-2:#FBFCFB;
+    --border:#E1E8E4;
+    --border-strong:#CBD6D0;
+    --text:#182420;
+    --text-muted:#5C6D66;
+    --text-faint:#8B9C94;
+
+    --sidebar-bg:#0E1F1B;
+    --sidebar-bg-2:#132922;
+    --sidebar-text:#B9CBC3;
+    --sidebar-text-dim:#75897F;
+    --sidebar-active:#173028;
+
+    --teal:#0E7C6E;
+    --teal-dark:#0A5F54;
+    --teal-tint:#DCF0EA;
+    --teal-tint-border:#B7E0D3;
+
+    --coral:#D0552F;
+    --coral-dark:#A9401F;
+    --coral-tint:#FBE4DA;
+    --coral-tint-border:#F2C1AC;
+
+    --amber:#B07817;
+    --amber-dark:#8C5F0D;
+    --amber-tint:#F7EAD2;
+    --amber-tint-border:#EBD3A0;
+
+    --slate:#33628A;
+    --slate-dark:#254A69;
+    --slate-tint:#DCE7F0;
+    --slate-tint-border:#B9CFE1;
+
+    --sage:#4B7A57;
+    --sage-dark:#375B41;
+    --sage-tint:#E1EDE2;
+    --sage-tint-border:#BEDAC4;
+
+    --radius-md:10px;
+    --radius-lg:14px;
+    --shadow-card:0 1px 2px rgba(15,30,25,0.04), 0 4px 14px rgba(15,30,25,0.05);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:14px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.font-head{font-family:'Manrope',system-ui,sans-serif;}
+  .num{font-family:'IBM Plex Mono',ui-monospace,monospace;}
+
+  a{color:inherit;text-decoration:none;}
+
+  /* ---------- Layout shell ---------- */
+  .shell{
+    display:grid;
+    grid-template-columns:240px 1fr;
+    min-height:100dvh;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    background:linear-gradient(180deg,var(--sidebar-bg) 0%, var(--sidebar-bg-2) 100%);
+    color:var(--sidebar-text);
+    padding:22px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:26px;
+    position:sticky;
+    top:0;
+    height:100dvh;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 8px;
+  }
+  .brand-mark{
+    width:32px;height:32px;border-radius:8px;
+    background:linear-gradient(135deg,var(--teal) 0%, #14A08E 100%);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .brand-mark svg{width:18px;height:18px;}
+  .brand-name{font-family:'Manrope';font-weight:800;font-size:15px;color:#EDF5F2;letter-spacing:-0.01em;}
+  .brand-sub{font-size:10.5px;color:var(--sidebar-text-dim);letter-spacing:.06em;text-transform:uppercase;margin-top:1px;}
+
+  .nav-group-label{
+    font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--sidebar-text-dim);padding:0 10px;margin-bottom:6px;font-weight:600;
+  }
+  .nav{display:flex;flex-direction:column;gap:2px;}
+  .nav-item{
+    display:flex;align-items:center;gap:10px;
+    padding:9px 10px;border-radius:8px;
+    font-size:13.5px;font-weight:500;color:var(--sidebar-text);
+    cursor:default;
+  }
+  .nav-item svg{width:16px;height:16px;flex-shrink:0;opacity:.85;}
+  .nav-item.active{background:var(--sidebar-active);color:#F2F8F6;font-weight:600;}
+  .nav-item.active svg{opacity:1;}
+  .nav-item:not(.active):hover{background:rgba(255,255,255,0.04);}
+
+  .sidebar-footer{margin-top:auto;padding:12px 10px;border-top:1px solid rgba(255,255,255,0.06);}
+  .sidebar-user{display:flex;align-items:center;gap:9px;}
+  .sidebar-avatar{width:28px;height:28px;border-radius:7px;background:var(--slate-tint);color:var(--slate-dark);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;font-family:'Manrope';flex-shrink:0;}
+  .sidebar-user-name{font-size:12.5px;font-weight:600;color:#EAF2EF;}
+  .sidebar-user-role{font-size:11px;color:var(--sidebar-text-dim);}
+
+  /* ---------- Main ---------- */
+  .main{padding:0 32px 48px;}
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 0 18px;
+    position:sticky;top:0;background:var(--bg);z-index:5;
+  }
+  .topbar-title{font-size:20px;font-weight:800;letter-spacing:-0.015em;}
+  .topbar-meta{font-size:12.5px;color:var(--text-muted);margin-top:3px;}
+  .topbar-right{display:flex;align-items:center;gap:10px;}
+  .search{
+    display:flex;align-items:center;gap:7px;
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:8px;padding:8px 12px;color:var(--text-faint);font-size:12.5px;
+    width:220px;
+  }
+  .search svg{width:14px;height:14px;flex-shrink:0;}
+  .icon-btn{
+    width:34px;height:34px;border-radius:8px;background:var(--surface);
+    border:1px solid var(--border);display:flex;align-items:center;justify-content:center;
+    color:var(--text-muted);
+  }
+  .icon-btn svg{width:16px;height:16px;}
+
+  section{margin-top:6px;}
+  .section-head{display:flex;align-items:baseline;justify-content:space-between;margin:28px 0 12px;}
+  .section-head h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin:0;}
+  .section-note{font-size:11.5px;color:var(--text-faint);}
+
+  /* ---------- KPI tiles ---------- */
+  .kpi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
+  .kpi-grid.secondary{grid-template-columns:repeat(6,1fr);}
+  .kpi-tile{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:var(--radius-lg);
+    padding:16px 16px 15px;
+    box-shadow:var(--shadow-card);
+    position:relative;
+    overflow:hidden;
+  }
+  .kpi-tile::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:var(--accent,var(--teal));
+  }
+  .kpi-icon{
+    width:30px;height:30px;border-radius:8px;
+    background:var(--accent-tint,var(--teal-tint));
+    display:flex;align-items:center;justify-content:center;margin-bottom:12px;
+  }
+  .kpi-icon svg{width:16px;height:16px;color:var(--accent,var(--teal));}
+  .kpi-value{font-family:'IBM Plex Mono';font-weight:600;font-size:26px;letter-spacing:-0.02em;color:var(--text);}
+  .kpi-unit{font-size:12px;color:var(--text-faint);font-weight:500;margin-left:3px;}
+  .kpi-label{font-size:12.5px;font-weight:600;color:var(--text);margin-top:6px;}
+  .kpi-scope{font-size:11px;color:var(--text-faint);margin-top:3px;line-height:1.4;}
+
+  .kpi-tile.compact{padding:13px 14px 12px;}
+  .kpi-tile.compact .kpi-value{font-size:19px;}
+  .kpi-tile.compact .kpi-icon{width:24px;height:24px;margin-bottom:8px;border-radius:6px;}
+  .kpi-tile.compact .kpi-icon svg{width:13px;height:13px;}
+  .kpi-tile.compact .kpi-label{font-size:11.5px;}
+  .kpi-tile.compact .kpi-scope{font-size:10.3px;}
+
+  /* ---------- Chart panels ---------- */
+  .chart-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;}
+  .panel{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+    padding:18px 20px 16px;box-shadow:var(--shadow-card);
+  }
+  .span-8{grid-column:span 8;}
+  .span-4{grid-column:span 4;}
+  .span-6{grid-column:span 6;}
+  .span-12{grid-column:span 12;}
+
+  .panel-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;}
+  .panel-title{font-size:13.5px;font-weight:700;color:var(--text);}
+  .panel-sub{font-size:11.3px;color:var(--text-faint);margin-top:2px;}
+  .panel-stat{text-align:right;}
+  .panel-stat .num{font-size:18px;font-weight:600;}
+  .panel-stat .lbl{font-size:10.5px;color:var(--text-faint);}
+
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;}
+  .legend-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--text-muted);}
+  .legend-swatch{width:9px;height:9px;border-radius:2px;flex-shrink:0;}
+
+  .chart-svg{width:100%;height:auto;display:block;overflow:visible;}
+  .axis-label{font-size:9.5px;fill:var(--text-faint);font-family:'Inter';}
+  .grid-line{stroke:var(--border);stroke-width:1;}
+  .bar-answered{fill:var(--teal);}
+  .bar-unanswered{fill:var(--coral);}
+  .bar-answered:hover, .bar-unanswered:hover{filter:brightness(0.92);}
+
+  details.data-table{margin-top:12px;}
+  details.data-table summary{
+    font-size:11px;color:var(--text-muted);cursor:pointer;font-weight:600;
+    list-style:none;display:inline-flex;align-items:center;gap:4px;
+  }
+  details.data-table summary::-webkit-details-marker{display:none;}
+  details.data-table summary:before{content:"▸";font-size:9px;}
+  details.data-table[open] summary:before{content:"▾";}
+  table.tbl{width:100%;border-collapse:collapse;margin-top:8px;font-size:11px;}
+  table.tbl th, table.tbl td{
+    text-align:right;padding:5px 8px;border-bottom:1px solid var(--border);
+    color:var(--text-muted);
+  }
+  table.tbl th:first-child, table.tbl td:first-child{text-align:left;color:var(--text);}
+  table.tbl th{font-weight:600;color:var(--text-faint);font-size:10px;text-transform:uppercase;letter-spacing:.04em;}
+
+  .footer-strip{
+    margin-top:34px;padding-top:16px;border-top:1px solid var(--border);
+    display:flex;justify-content:space-between;font-size:11px;color:var(--text-faint);
+  }
+
+  @media (max-width: 1180px){
+    .kpi-grid, .kpi-grid.secondary{grid-template-columns:repeat(3,1fr);}
+    .span-8,.span-6,.span-4{grid-column:span 12;}
+  }
+  @media (max-width: 720px){
+    .shell{grid-template-columns:1fr;}
+    .sidebar{display:none;}
+    .kpi-grid, .kpi-grid.secondary{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9.3C.5 8 2 4 6 4c2.4 0 3.8 1.3 6 3.5C14.2 5.3 15.6 4 18 4c4 0 5.5 4 4 7.7C19.5 16.4 12 21 12 21z"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Northgate Health</div>
+        <div class="brand-sub">Front desk ops</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="nav-group-label">Workspace</div>
+      <nav class="nav">
+        <a class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2z"/></svg>Calls</a>
+        <a class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Rota</a>
+        <a class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Enquiries</a>
+        <a class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Patients</a>
+        <a class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Reports</a>
+      </nav>
+    </div>
+
+    <div>
+      <div class="nav-group-label">System</div>
+      <nav class="nav">
+        <a class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Settings</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">PM</div>
+        <div>
+          <div class="sidebar-user-name">Practice Manager</div>
+          <div class="sidebar-user-role">Northgate Health</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="topbar-title">Dashboard</div>
+        <div class="topbar-meta">Inbound calls · 5 Jan – 30 Jun 2026 · 123 working days</div>
+      </div>
+      <div class="topbar-right">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          Search
+        </div>
+        <div class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>
+        </div>
+        <div class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PRIMARY KPI TILES ========== -->
+    <section>
+      <div class="section-head">
+        <h2>Call volume overview</h2>
+        <span class="section-note">Whole period unless noted</span>
+      </div>
+      <div class="kpi-grid">
+
+        <div class="kpi-tile" style="--accent:var(--teal); --accent-tint:var(--teal-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 3a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .7a2 2 0 0 1 1.6 2z"/></svg></div>
+          <div><span class="kpi-value">9,162</span><span class="kpi-unit">calls</span></div>
+          <div class="kpi-label">Patient calls received</div>
+          <div class="kpi-scope">All lines, 5 Jan – 30 Jun 2026</div>
+        </div>
+
+        <div class="kpi-tile" style="--accent:var(--coral); --accent-tint:var(--coral-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.7V19a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.4 19.4 0 0 1-6-6 19.8 19.8 0 0 1-3.08-8.67A2 2 0 0 1 4.11 1h2.28a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11z"/><path d="M23 1 1 23"/></svg></div>
+          <div><span class="kpi-value">1,299</span><span class="kpi-unit">calls</span></div>
+          <div class="kpi-label">Calls not answered by a person</div>
+          <div class="kpi-scope">Missed, abandoned or voicemail · whole period</div>
+        </div>
+
+        <div class="kpi-tile" style="--accent:var(--teal); --accent-tint:var(--teal-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+          <div><span class="kpi-value">85.8</span><span class="kpi-unit">%</span></div>
+          <div class="kpi-label">Answer rate</div>
+          <div class="kpi-scope">100% − share not answered (14.2%), whole period</div>
+        </div>
+
+        <div class="kpi-tile" style="--accent:var(--amber); --accent-tint:var(--amber-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><span class="kpi-value">1,473</span><span class="kpi-unit">calls</span></div>
+          <div class="kpi-label">Calls received, 12:30–13:30</div>
+          <div class="kpi-scope">Sum across all days in the export</div>
+        </div>
+
+        <div class="kpi-tile" style="--accent:var(--coral); --accent-tint:var(--coral-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="m10.29 3.86-8.18 14.14A1.5 1.5 0 0 0 3.4 20.5h17.2a1.5 1.5 0 0 0 1.3-2.5L13.71 3.86a1.5 1.5 0 0 0-2.42 0Z"/></svg></div>
+          <div><span class="kpi-value">53.8</span><span class="kpi-unit">%</span></div>
+          <div class="kpi-label">Unanswered rate, 12:30–13:30</div>
+          <div class="kpi-scope">Within the window only, not the daily rate</div>
+        </div>
+
+        <div class="kpi-tile" style="--accent:var(--slate); --accent-tint:var(--slate-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
+          <div><span class="kpi-value">1</span><span class="kpi-unit">person</span></div>
+          <div class="kpi-label">Minimum staff on phones, 12:30–13:30</div>
+          <div class="kpi-scope">Rota minimum during the window</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== SECONDARY KPI TILES ========== -->
+    <section>
+      <div class="section-head">
+        <h2>Segment detail</h2>
+        <span class="section-note">Scoped as labeled</span>
+      </div>
+      <div class="kpi-grid secondary">
+
+        <div class="kpi-tile compact" style="--accent:var(--coral); --accent-tint:var(--coral-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div>
+          <div><span class="kpi-value">61.0</span><span class="kpi-unit">%</span></div>
+          <div class="kpi-label">Share of all unanswered calls</div>
+          <div class="kpi-scope">Falling inside the 12:30–13:30 window</div>
+        </div>
+
+        <div class="kpi-tile compact" style="--accent:var(--sage); --accent-tint:var(--sage-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div><span class="kpi-value">3,248</span><span class="kpi-unit">calls</span></div>
+          <div class="kpi-label">New patient calls received</div>
+          <div class="kpi-scope">"New Patients" line, whole period</div>
+        </div>
+
+        <div class="kpi-tile compact" style="--accent:var(--coral); --accent-tint:var(--coral-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div>
+          <div><span class="kpi-value">13.5</span><span class="kpi-unit">%</span></div>
+          <div class="kpi-label">Unanswered rate, New Patients line</div>
+          <div class="kpi-scope">437 of 3,248 calls on that line</div>
+        </div>
+
+        <div class="kpi-tile compact" style="--accent:var(--slate); --accent-tint:var(--slate-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><span class="kpi-value">4</span><span class="kpi-unit">people</span></div>
+          <div class="kpi-label">Peak staff on phones</div>
+          <div class="kpi-scope">Maximum across the day, rota data</div>
+        </div>
+
+        <div class="kpi-tile compact" style="--accent:var(--teal); --accent-tint:var(--teal-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/></svg></div>
+          <div><span class="kpi-value">13.8</span><span class="kpi-unit">/hr</span></div>
+          <div class="kpi-label">Calls one receptionist can handle</div>
+          <div class="kpi-scope">60 ÷ mean talk time of answered calls</div>
+        </div>
+
+        <div class="kpi-tile compact" style="--accent:var(--amber); --accent-tint:var(--amber-tint);">
+          <div class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div><span class="kpi-value">12.0</span><span class="kpi-unit">/day</span></div>
+          <div class="kpi-label">Average calls in the lunch window</div>
+          <div class="kpi-scope">1,473 calls ÷ 123 working days</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== CHARTS ========== -->
+    <section>
+      <div class="section-head">
+        <h2>Charts</h2>
+        <span class="section-note">Hover a mark for its exact value</span>
+      </div>
+
+      <div class="chart-grid">
+
+        <!-- Calls by hour -->
+        <div class="panel span-8">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Calls received, by hour of day</div>
+              <div class="panel-sub">Answered vs. not answered · summed across all days, 5 Jan – 30 Jun 2026</div>
+            </div>
+          </div>
+          <svg id="chart-hour" class="chart-svg" viewBox="0 0 720 260" preserveAspectRatio="xMidYMid meet"></svg>
+          <div class="legend">
+            <div class="legend-item"><span class="legend-swatch" style="background:var(--teal)"></span>Answered</div>
+            <div class="legend-item"><span class="legend-swatch" style="background:var(--coral)"></span>Not answered</div>
+          </div>
+          <details class="data-table">
+            <summary>View data table</summary>
+            <table class="tbl" id="tbl-hour">
+              <thead><tr><th>Hour</th><th>Calls</th><th>Answered</th><th>Not answered</th><th>Rate</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </details>
+        </div>
+
+        <!-- Donut: share not answered -->
+        <div class="panel span-4">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Share of calls not answered</div>
+              <div class="panel-sub">All calls, whole period</div>
+            </div>
+          </div>
+          <svg id="chart-donut" class="chart-svg" viewBox="0 0 260 200" preserveAspectRatio="xMidYMid meet"></svg>
+          <div class="legend">
+            <div class="legend-item"><span class="legend-swatch" style="background:var(--teal)"></span>Answered - 85.8%</div>
+            <div class="legend-item"><span class="legend-swatch" style="background:var(--coral)"></span>Not answered - 14.2%</div>
+          </div>
+        </div>
+
+        <!-- Unanswered rate by segment -->
+        <div class="panel span-6">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Unanswered rate by segment</div>
+              <div class="panel-sub">Each bar scoped to its own segment, not the daily average</div>
+            </div>
+          </div>
+          <svg id="chart-segment" class="chart-svg" viewBox="0 0 480 220" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+
+        <!-- Staff coverage across the day -->
+        <div class="panel span-6">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Receptionists on the phones, by time of day</div>
+              <div class="panel-sub">Rota coverage, staff on shift and not on break</div>
+            </div>
+          </div>
+          <svg id="chart-coverage" class="chart-svg" viewBox="0 0 480 220" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+
+        <!-- Enquiries per working day -->
+        <div class="panel span-6">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Enquiries per working day, by month</div>
+              <div class="panel-sub">Jan – Jun 2026</div>
+            </div>
+            <div class="panel-stat">
+              <div class="num" style="color:var(--sage-dark)">+10.4%</div>
+              <div class="lbl">Q1 → Q2, per working day</div>
+            </div>
+          </div>
+          <svg id="chart-enquiries" class="chart-svg" viewBox="0 0 480 200" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+
+        <!-- Advertising spend -->
+        <div class="panel span-6">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Advertising spend, by month</div>
+              <div class="panel-sub">Jan – Jun 2026, £ GBP</div>
+            </div>
+            <div class="panel-stat">
+              <div class="num" style="color:var(--amber-dark)">+47.1%</div>
+              <div class="lbl">Q1 → Q2, total spend</div>
+            </div>
+          </div>
+          <svg id="chart-spend" class="chart-svg" viewBox="0 0 480 200" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="footer-strip">
+      <span>Northgate Health · Operations dashboard</span>
+      <span>Source: calls.csv, rota.csv, enquiries.csv, marketing_spend.csv</span>
+    </div>
+
+  </main>
+</div>
+
+<script>
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs){
+  const e = document.createElementNS(NS, tag);
+  for(const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+function title(e, text){
+  const t = document.createElementNS(NS, "title");
+  t.textContent = text;
+  e.appendChild(t);
+  return e;
+}
+const css = getComputedStyle(document.documentElement);
+const C = (name) => css.getPropertyValue(name).trim();
+
+/* ---------------- Calls by hour (stacked bar) ---------------- */
+(function(){
+  const data = [
+    {h:"8:00", calls:1028, unanswered:140},
+    {h:"9:00", calls:1580, unanswered:202},
+    {h:"10:00", calls:1212, unanswered:28},
+    {h:"11:00", calls:620, unanswered:2},
+    {h:"12:00", calls:1050, unanswered:395},
+    {h:"13:00", calls:1056, unanswered:400},
+    {h:"14:00", calls:352, unanswered:0},
+    {h:"15:00", calls:608, unanswered:0},
+    {h:"16:00", calls:978, unanswered:67},
+    {h:"17:00", calls:678, unanswered:65},
+  ];
+  const svg = document.getElementById("chart-hour");
+  const W=720,H=260, padL=40, padB=28, padT=10, padR=6;
+  const plotW = W-padL-padR, plotH = H-padT-padB;
+  const max = 1600;
+  const n = data.length;
+  const gap = 14;
+  const barW = (plotW - gap*(n-1))/n;
+
+  // gridlines
+  [0,400,800,1200,1600].forEach(v=>{
+    const y = padT + plotH - (v/max)*plotH;
+    svg.appendChild(el("line",{x1:padL,x2:W-padR,y1:y,y2:y,class:"grid-line"}));
+    const t = el("text",{x:padL-8,y:y+3,class:"axis-label","text-anchor":"end"});
+    t.textContent = v;
+    svg.appendChild(t);
+  });
+
+  const tbody = document.querySelector("#tbl-hour tbody");
+  data.forEach((d,i)=>{
+    const answered = d.calls - d.unanswered;
+    const x = padL + i*(barW+gap);
+    const hAns = (answered/max)*plotH;
+    const hUn = (d.unanswered/max)*plotH;
+    const yBase = padT+plotH;
+
+    const rAns = el("rect",{x:x,y:yBase-hAns,width:barW,height:hAns,class:"bar-answered",rx:2});
+    title(rAns, `${d.h} - answered: ${answered.toLocaleString()} calls`);
+    svg.appendChild(rAns);
+
+    if(hUn>0){
+      const rUn = el("rect",{x:x,y:yBase-hAns-hUn-(hUn>0?2:0),width:barW,height:hUn,class:"bar-unanswered",rx:2});
+      title(rUn, `${d.h} - not answered: ${d.unanswered.toLocaleString()} calls`);
+      svg.appendChild(rUn);
+    }
+
+    const lbl = el("text",{x:x+barW/2,y:H-8,class:"axis-label","text-anchor":"middle"});
+    lbl.textContent = d.h.split(":")[0];
+    svg.appendChild(lbl);
+
+    const rate = ((d.unanswered/d.calls)*100).toFixed(1);
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${d.h}</td><td>${d.calls.toLocaleString()}</td><td>${answered.toLocaleString()}</td><td>${d.unanswered.toLocaleString()}</td><td>${rate}%</td>`;
+    tbody.appendChild(tr);
+  });
+})();
+
+/* ---------------- Donut: share not answered ---------------- */
+(function(){
+  const svg = document.getElementById("chart-donut");
+  const cx=90, cy=100, r=70, stroke=26;
+  const pct = 14.2;
+  const circumference = 2*Math.PI*r;
+  const bg = el("circle",{cx:cx,cy:cy,r:r,fill:"none",stroke:C('--teal'),"stroke-width":stroke});
+  title(bg, "Answered - 85.8% of all calls");
+  svg.appendChild(bg);
+  const seg = el("circle",{cx:cx,cy:cy,r:r,fill:"none",stroke:C('--coral'),"stroke-width":stroke,
+    "stroke-dasharray": `${circumference*(pct/100)} ${circumference}`,
+    "stroke-dashoffset": 0,
+    transform:`rotate(-90 ${cx} ${cy})`,"stroke-linecap":"butt"});
+  title(seg, "Not answered - 14.2% of all calls");
+  svg.appendChild(seg);
+
+  const t1 = el("text",{x:cx,y:cy-2,"text-anchor":"middle",class:"num",style:"font-size:26px;font-weight:600;fill:"+C('--text')});
+  t1.textContent = "14.2%";
+  svg.appendChild(t1);
+  const t2 = el("text",{x:cx,y:cy+18,"text-anchor":"middle",class:"axis-label"});
+  t2.textContent = "not answered";
+  svg.appendChild(t2);
+
+  const t3 = el("text",{x:200,y:70,"text-anchor":"middle",style:"font-size:11px;fill:"+C('--text-faint')});
+  t3.textContent = "1,299 of";
+  svg.appendChild(t3);
+  const t4 = el("text",{x:200,y:88,"text-anchor":"middle",style:"font-size:13px;font-weight:600;fill:"+C('--text')});
+  t4.textContent = "9,162 calls";
+  svg.appendChild(t4);
+})();
+
+/* ---------------- Unanswered rate by segment (horizontal bar, sequential coral) ---------------- */
+(function(){
+  const data = [
+    {label:"Outside 12:30–13:30", value:6.6, note:"Rest of the day, 7,689 calls"},
+    {label:"All calls, whole period", value:14.2, note:"9,162 calls"},
+    {label:"New Patients line", value:13.5, note:"3,248 calls"},
+    {label:"Inside 12:30–13:30", value:53.8, note:"1,473 calls"},
+  ];
+  const svg = document.getElementById("chart-segment");
+  const W=480,H=220, padL=150, padR=50, padT=10, padB=20;
+  const plotW = W-padL-padR, plotH = H-padT-padB;
+  const max = 60;
+  const n = data.length;
+  const gap = 14;
+  const barH = (plotH-gap*(n-1))/n;
+
+  [0,20,40,60].forEach(v=>{
+    const x = padL + (v/max)*plotW;
+    svg.appendChild(el("line",{x1:x,x2:x,y1:padT,y2:H-padB,class:"grid-line"}));
+    const t = el("text",{x:x,y:H-padB+14,class:"axis-label","text-anchor":"middle"});
+    t.textContent = v+"%";
+    svg.appendChild(t);
+  });
+
+  data.forEach((d,i)=>{
+    const y = padT + i*(barH+gap);
+    const w = (d.value/max)*plotW;
+    // sequential lightness by magnitude
+    const shade = 0.35 + (d.value/max)*0.65;
+    const color = `color-mix(in srgb, ${C('--coral')} ${Math.round(shade*100)}%, #F3D9CB)`;
+
+    const lbl = el("text",{x:padL-10,y:y+barH/2+4,class:"axis-label","text-anchor":"end"});
+    lbl.textContent = d.label;
+    svg.appendChild(lbl);
+
+    const r = el("rect",{x:padL,y:y,width:Math.max(w,2),height:barH,rx:3,fill:color});
+    title(r, `${d.label} - ${d.value}% unanswered (${d.note})`);
+    svg.appendChild(r);
+
+    const vt = el("text",{x:padL+w+8,y:y+barH/2+4,style:"font-size:11.5px;font-weight:600;fill:"+C('--text')});
+    vt.textContent = d.value+"%";
+    svg.appendChild(vt);
+  });
+})();
+
+/* ---------------- Staff coverage across the day (step area, slate) ---------------- */
+(function(){
+  const data = [
+    {m:480,s:2},{m:510,s:2},{m:540,s:2},{m:570,s:4},{m:600,s:4},{m:630,s:4},
+    {m:660,s:4},{m:690,s:4},{m:720,s:4},{m:750,s:1},{m:780,s:1},{m:810,s:3},
+    {m:840,s:3},{m:870,s:4},{m:900,s:4},{m:930,s:4},{m:960,s:4},{m:990,s:2},
+    {m:1020,s:2},{m:1050,s:2},
+  ];
+  const svg = document.getElementById("chart-coverage");
+  const W=480,H=220, padL=30, padR=10, padT=14, padB=26;
+  const plotW = W-padL-padR, plotH = H-padT-padB;
+  const minM=480, maxM=1080, maxS=5;
+
+  [0,1,2,3,4].forEach(v=>{
+    const y = padT+plotH-(v/maxS)*plotH;
+    svg.appendChild(el("line",{x1:padL,x2:W-padR,y1:y,y2:y,class:"grid-line"}));
+    const t = el("text",{x:padL-6,y:y+3,class:"axis-label","text-anchor":"end"});
+    t.textContent=v;
+    svg.appendChild(t);
+  });
+  // lunch window band
+  const x1 = padL + ((750-minM)/(maxM-minM))*plotW;
+  const x2 = padL + ((810-minM)/(maxM-minM))*plotW;
+  const band = el("rect",{x:x1,y:padT,width:x2-x1,height:plotH,fill:C('--coral-tint'),opacity:0.7});
+  svg.appendChild(band);
+
+  let path = "";
+  data.forEach((d,i)=>{
+    const x = padL + ((d.m-minM)/(maxM-minM))*plotW;
+    const y = padT + plotH - (d.s/maxS)*plotH;
+    path += (i===0?`M ${x} ${y}`:` L ${x} ${y}`);
+    if(i<data.length-1){
+      const xNext = padL + ((data[i+1].m-minM)/(maxM-minM))*plotW;
+      path += ` L ${xNext} ${y}`;
+    }
+  });
+  const lastX = padL + ((1080-minM)/(maxM-minM))*plotW;
+  const lastY = padT + plotH - (data[data.length-1].s/maxS)*plotH;
+  path += ` L ${lastX} ${lastY}`;
+
+  const areaPath = path + ` L ${lastX} ${padT+plotH} L ${padL} ${padT+plotH} Z`;
+  svg.appendChild(el("path",{d:areaPath, fill:C('--slate'), opacity:0.12}));
+  svg.appendChild(el("path",{d:path, fill:"none", stroke:C('--slate'), "stroke-width":2}));
+
+  data.forEach(d=>{
+    const x = padL + ((d.m-minM)/(maxM-minM))*plotW;
+    const y = padT + plotH - (d.s/maxS)*plotH;
+    const h = Math.floor(d.m/60), mm = d.m%60;
+    const time = `${h}:${mm===0?'00':mm}`;
+    const c = el("circle",{cx:x,cy:y,r:2.6,fill:C('--slate')});
+    title(c, `${time} - ${d.s} on the phones`);
+    svg.appendChild(c);
+  });
+
+  [480,600,720,840,960,1080].forEach(m=>{
+    const x = padL + ((m-minM)/(maxM-minM))*plotW;
+    const h = Math.floor(m/60);
+    const t = el("text",{x:x,y:H-8,class:"axis-label","text-anchor":"middle"});
+    t.textContent = h+":00";
+    svg.appendChild(t);
+  });
+})();
+
+/* ---------------- Enquiries per working day (line, sage) ---------------- */
+(function(){
+  const data = [
+    {m:"Jan",v:17.45},{m:"Feb",v:16.5},{m:"Mar",v:17.73},
+    {m:"Apr",v:19.3},{m:"May",v:18.79},{m:"Jun",v:19.0},
+  ];
+  const svg = document.getElementById("chart-enquiries");
+  const W=480,H=200, padL=32, padR=14, padT=14, padB=26;
+  const plotW=W-padL-padR, plotH=H-padT-padB;
+  const min=14, max=20;
+
+  [14,16,18,20].forEach(v=>{
+    const y = padT+plotH-((v-min)/(max-min))*plotH;
+    svg.appendChild(el("line",{x1:padL,x2:W-padR,y1:y,y2:y,class:"grid-line"}));
+    const t = el("text",{x:padL-6,y:y+3,class:"axis-label","text-anchor":"end"});
+    t.textContent=v;
+    svg.appendChild(t);
+  });
+
+  const n=data.length;
+  const step = plotW/(n-1);
+  let path="";
+  data.forEach((d,i)=>{
+    const x = padL+i*step;
+    const y = padT+plotH-((d.v-min)/(max-min))*plotH;
+    path += (i===0?`M ${x} ${y}`:` L ${x} ${y}`);
+  });
+  svg.appendChild(el("path",{d:path,fill:"none",stroke:C('--sage'),"stroke-width":2.5}));
+  data.forEach((d,i)=>{
+    const x = padL+i*step;
+    const y = padT+plotH-((d.v-min)/(max-min))*plotH;
+    const c = el("circle",{cx:x,cy:y,r:3.6,fill:C('--sage')});
+    title(c, `${d.m} 2026 - ${d.v} enquiries per working day`);
+    svg.appendChild(c);
+    const t = el("text",{x:x,y:H-8,class:"axis-label","text-anchor":"middle"});
+    t.textContent=d.m;
+    svg.appendChild(t);
+  });
+})();
+
+/* ---------------- Advertising spend (bar, amber) ---------------- */
+(function(){
+  const data = [
+    {m:"Jan",v:8200},{m:"Feb",v:8350},{m:"Mar",v:8400},
+    {m:"Apr",v:11950},{m:"May",v:12400},{m:"Jun",v:12350},
+  ];
+  const svg = document.getElementById("chart-spend");
+  const W=480,H=200, padL=38, padR=14, padT=14, padB=26;
+  const plotW=W-padL-padR, plotH=H-padT-padB;
+  const max=14000;
+
+  [0,7000,14000].forEach(v=>{
+    const y = padT+plotH-(v/max)*plotH;
+    svg.appendChild(el("line",{x1:padL,x2:W-padR,y1:y,y2:y,class:"grid-line"}));
+    const t = el("text",{x:padL-6,y:y+3,class:"axis-label","text-anchor":"end"});
+    t.textContent = "£"+(v/1000)+"k";
+    svg.appendChild(t);
+  });
+
+  const n=data.length, gap=16;
+  const barW=(plotW-gap*(n-1))/n;
+  data.forEach((d,i)=>{
+    const x = padL+i*(barW+gap);
+    const h = (d.v/max)*plotH;
+    const y = padT+plotH-h;
+    const r = el("rect",{x:x,y:y,width:barW,height:h,rx:3,fill:C('--amber')});
+    title(r, `${d.m} 2026 - £${d.v.toLocaleString()} advertising spend`);
+    svg.appendChild(r);
+    const t = el("text",{x:x+barW/2,y:H-8,class:"axis-label","text-anchor":"middle"});
+    t.textContent=d.m;
+    svg.appendChild(t);
+  });
+})();
+</script>
+</body>
+</html>
