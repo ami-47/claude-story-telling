@@ -1,8 +1,9 @@
 {
+  "_comment": "Read-only, project-scoped Supabase MCP server for the Northgate teaching kit. project_ref points at our own Supabase project (mvgqoktpqmjwqhwzysyb) so the instructor doesn't have to swap it in before the session. This ref alone grants no access on its own — authentication still happens per person via the browser OAuth flow (claude, then /mcp, then Authenticate). If you fork this repo for your own client data, point it at your own project instead.",
   "mcpServers": {
     "supabase": {
       "type": "http",
-      "url": "https://mcp.supabase.com/mcp?project_ref=YOUR_PROJECT_REF&read_only=true&features=database%2Cdocs"
+      "url": "https://mcp.supabase.com/mcp?project_ref=mvgqoktpqmjwqhwzysyb&read_only=true&features=database%2Cdocs"
     }
   }
 }

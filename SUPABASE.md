@@ -47,15 +47,17 @@ editor: there is now a `northgate` schema.
 
 ## Part two, querying, live
 
-`.mcp.json` is already in this folder, with a placeholder project ref. It
-points at the remote Supabase MCP server, **read only**, scoped to **one
-project**, with only the `database` and `docs` feature groups enabled.
+`.mcp.json` is already in this folder, pointed at our own Supabase project ref,
+so the instructor does not have to edit anything before the session. It points
+at the remote Supabase MCP server, **read only**, scoped to **one project**,
+with only the `database` and `docs` feature groups enabled.
 
-**Swap the placeholder before using it.** Open `.mcp.json` and replace
-`YOUR_PROJECT_REF` with the string in your own dashboard URL,
-`dashboard/project/<this bit>`. Never commit your real project ref to a public
-repository unless you mean to publish it. This repository ships the placeholder
-on purpose.
+**If you fork this repo for a different client's data, swap the ref.** Open
+`.mcp.json` and replace the `project_ref` value with the string in your own
+dashboard URL, `dashboard/project/<this bit>`. The ref alone grants no access
+by itself, since every person still authenticates separately over OAuth, but
+it does identify which project is being pointed at, so treat it the same way
+you would any other identifier you'd rather not publish unnecessarily.
 
 ### Authenticate, once
 
