@@ -1,21 +1,16 @@
 # The prompts
 
-Four demos. Paste each `>` block in order, one at a time, waiting for it to
-finish before pasting the next. What to say while each one runs is in
-`RUNBOOK.md`. Everything outside a `>` block here is context for whoever is
-driving, not something to paste.
+Four demos. Each one below is a set of prompts to paste into Claude Code, in
+order, one at a time — wait for one to finish before pasting the next.
+What to say while each one runs is in `RUNBOOK.md`.
 
 Start Claude Code in this folder first, so it picks up `.claude/`.
 
 ---
 
 # Demo 1 · Generate insights directly from the files
-### Slides 14-15 · local CSVs, no database
 
-The baseline. Everything below comes from `data/*.csv` on disk, read and
-computed fresh, no prior answer trusted.
-
-## 1 · Profile
+Prompts to Claude Code, using only the raw files in `data/`. No database.
 
 > Four files from a client are in `data/`. Northgate Health, a private clinic,
 > six months of inbound calls plus the rota, CRM enquiries and ad spend.
@@ -27,8 +22,6 @@ computed fresh, no prior answer trusted.
 > same thing under two names, and which of these problems produce no error if I
 > get them wrong.
 
-## 2 · Compute
-
 > Now clean and join properly, handling everything you just found. Write the
 > code to a file. Show me row counts before and after every join.
 >
@@ -39,54 +32,56 @@ computed fresh, no prior answer trusted.
 > even across the day. Report the sample size beside every figure, and write
 > every result into the ledger with its method and its sources.
 
-**What this produces.** ~14.2% of calls unanswered overall; 53.8% inside the
-12:30-13:30 window against 6.6% outside it. This is the number Demo 2
-reproduces through a different mechanism.
+**Where it saves.** The cleaning code goes into a file you can rerun.
+Every figure goes into `answers/facts.json`, the ledger — this is the file
+every later demo reads from, so Demo 1 has to run before Demos 3 and 4.
+
+**What it should find.** ~14.2% of calls unanswered overall; 53.8% inside the
+12:30–13:30 window against 6.6% outside it. Demo 2 reproduces this same
+number a different way.
 
 ---
 
 # Demo 2 · Do the same with MCP
-### Slide 16 · optional, needs Supabase set up. See SUPABASE.md
+### optional, needs Supabase set up first — see SUPABASE.md
 
-Same headline, same underlying rows, asked through the Supabase MCP server
-instead of read off disk. It is additional, not a replacement for Demo 1: if
-the database or the network is unreachable, skip this demo entirely and keep
-going, nothing later depends on it.
+Prompts to Claude Code, using the Supabase MCP server instead of the files.
+Needs the data already loaded into Postgres (a one-time step done before the
+session, not live) and the MCP server authenticated (`claude`, then `/mcp`,
+then Authenticate).
 
 > The cleaned tables are already in Postgres. Using the Supabase tools, list
 > what is in the `northgate` schema and read me the definition that the
 > `v_calls` view carries. Do not query anything yet.
-
-Then, the direct mirror of Demo 1's headline number, so the room can compare
-the two side by side:
 
 > What share of calls went unanswered, inside the 12:30-13:30 window and
 > outside it? Show me the SQL before you run it, and show the result beside
 > it. Use the view. Do not redefine unanswered inside your own query.
 
 **It should come back 53.8% and 6.6%, matching Demo 1 exactly.** If it
-doesn't, something is wrong (the view's definition has drifted from the local
-computation, or the load is stale) and it needs fixing before this stage is
-shown live, not explained away on stage.
+doesn't, something is wrong (the view's definition drifted from the local
+computation, or the database load is stale) and needs fixing before this is
+shown, not explained away on the day.
 
-If there's time, extend it:
+If there's time, extend it with two more of the same shape:
 
-> Two more, the same way: which half hour of the day is worst, and how many
-> calls does that rest on? And which line is hit hardest?
+> Which half hour of the day is worst, and how many calls does that rest on?
+> And which line is hit hardest?
 
-**Why this stage exists.** Demo 1 produced an answer once, from a snapshot.
-This produces something the practice can keep asking, from a source, with one
-definition of "unanswered" written once in the view rather than re-decided by
-every query.
+**Where it saves.** Nothing, by design. This demo only reads from the
+database and prints results in the conversation — it doesn't write to
+`answers/facts.json` or any file. That's the point of it: a source you can
+keep asking, not a new snapshot to maintain.
+
+**If Supabase is unreachable, skip this demo entirely.** Nothing later
+depends on it.
 
 ---
 
 # Demo 3 · Dashboard
-### builds the prop for Slide 01, not shown as a prompt live
 
-Run this once, before the room, straight after `answers/facts.json` is
-populated by Demo 1. It produces the artifact Slide 01 ("Before slide one")
-opens on, alongside `output/story.html` from Demo 4.
+One prompt to Claude Code, run once before the session, not live. Needs
+Demo 1 to have already populated `answers/facts.json`.
 
 > Use the dashwright. Build the conventional operations dashboard at
 > `output/dashboard/dashboard.html`: a sidebar, a KPI row, a few charts,
@@ -94,16 +89,17 @@ opens on, alongside `output/story.html` from Demo 4.
 > from the ledger, by fact id, same discipline as the story. Screenshot it
 > yourself before telling me it's done.
 
-**What this produces.** The same facts as Demo 1 and Demo 4, laid out as a
-competent-looking conventional dashboard that answers nothing about the
-lunch-hour mechanism. That contrast is Slide 01's whole cold open.
+**Where it saves.** `output/dashboard/dashboard.html`. This is a prop, built
+once and left alone — never rebuilt live.
+
+**What it produces.** The same facts as Demo 1, laid out as a dashboard that
+looks complete and answers nothing about why the lunch hour is different.
 
 ---
 
 # Demo 4 · Skills-based creation of the storytelling page
-### Slides 17-20
 
-## 3 · Attack
+Prompts to Claude Code, using the ledger Demo 1 wrote.
 
 > Use the sceptic. Recompute the headline your own way from the raw files
 > first, before reading the analysis.
@@ -112,8 +108,6 @@ lunch-hour mechanism. That contrast is Slide 01's whole cold open.
 > one. Tell me which you ruled out, how, and what this data cannot settle at
 > all. Give me a verdict.
 
-## 4 · Compose
-
 > Use the storywright. Write the story in five beats: the belief, the question,
 > the reveal, the mechanism, and the decision with its uncertainty.
 >
@@ -121,17 +115,20 @@ lunch-hour mechanism. That contrast is Slide 01's whole cold open.
 > build the page from `story.template.html` and the ledger, and tell me if any
 > number on the page was not looked up.
 
-**What this produces.** `output/story.html`, the same facts as Demos 1-3, now
-with the mechanism and a decision. This is the page Slide 01 opens with.
+**Where it saves.** The sceptic's verdict stays in the conversation only —
+it doesn't write a file. The storywright's page saves to `output/story.html`
+and `output/story.artifact.html`.
+
+**What it produces.** The same facts as Demos 1–3, now with the mechanism
+and a decision attached. This is the page the session opens with.
 
 ---
 
 # The second case
-### Slide 22
 
-Same four prompts (Demo 1 and Demo 4 only; Demo 2 and 3 don't need repeating
-to make the point), one different question. This is the part that shows the
-folder is the deliverable rather than the story.
+Run Demo 1 and Demo 4 again (Demo 2 and Demo 3 don't need repeating to make
+the point), one different question. Shows that the folder is the deliverable,
+not the story.
 
 > Different question, same pipeline. `marketing_spend.csv` and `enquiries.csv`
 > hold six months of paid channels and what came of them.
