@@ -35,6 +35,38 @@ Start Claude Code in this folder first, so it picks up `.claude/`.
 
 ---
 
+## 2b · Put it where it can be asked again
+### optional, needs Supabase set up. See SUPABASE.md
+
+The loading happened before the session, offstage. This stage is the querying,
+and it runs through the Supabase MCP server, read only.
+
+> The cleaned tables are already in Postgres. Using the Supabase tools, list
+> what is in the `northgate` schema and read me the definition that the
+> `v_calls` view carries. Do not query anything yet.
+
+Then:
+
+> Answer these three from the database. Show me the SQL before you run it, and
+> show the result beside it.
+>
+> 1. What share of calls went unanswered, inside the lunch window and outside it?
+> 2. Which half hour of the day is worst, and how many calls does that rest on?
+> 3. Which line is hit hardest?
+>
+> Use the view. Do not redefine unanswered inside your own query.
+
+**Why this stage exists.** Everything before it produced an answer. This produces
+something the practice can keep asking. The raw export was a snapshot. The
+database is a source.
+
+It is also the only moment in the session where the third architecture is shown
+rather than described: the question is in English, the SQL is on screen, the
+database did the arithmetic, and the connection is read only so nothing can be
+damaged by a bad query.
+
+---
+
 ## 3 · Attack
 
 > Use the sceptic. Recompute the headline your own way from the raw files

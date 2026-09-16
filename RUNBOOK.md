@@ -8,6 +8,19 @@ For whoever is driving. Everything below is what to do and what to say, in order
     python3 verify_calls.py
     python3 build_story.py
 
+If you are using the Supabase stage, open the project dashboard the day before
+and run one query, or it will have paused. Free projects pause after about
+seven days of low activity. Then load it:
+
+    python3 load_to_supabase.py
+
+Authenticate the MCP server once, in a normal terminal, not an IDE extension:
+
+    claude
+    /mcp
+
+Select supabase, then Authenticate. A browser opens. No token needed.
+
 Run all four demo prompts once yourself. When the page is finished, copy
 `output/story.html` and `output/story.artifact.html` into `fallback/` before
 you touch anything again — `output/` gets overwritten by every later build, so
@@ -58,6 +71,37 @@ percent outside it, with the whole day's damage concentrated in that one window.
 **If it declares a service line or a channel catastrophic, let it sit.** Ask the
 room what they would do about it. Then reveal the sample size. That beat sells
 stage three better than any explanation of stage three.
+
+---
+
+## Stage 2b · Into the database
+### optional, skip it entirely if Supabase is asleep or the wifi is bad
+
+**Why it is here.** Everything so far produced an answer. This produces a source
+the practice can keep asking. It is also the only place in the session where the
+third architecture is shown rather than described.
+
+**The beat to land.** Open the `v_calls` view and read the definition line out
+loud. Unanswered means missed, abandoned or voicemail, written once, in the
+database, where everyone hits it.
+
+Then ask the room: how many different definitions of one metric are floating
+around your clients right now? That question is why the view matters, and it is
+the reason two people in the same firm quote two different numbers.
+
+**What to point at.** The question was in English. The SQL is on screen. The
+database did the arithmetic. Nobody wrote a query, and anybody can read one.
+
+**Thirty seconds on security.** Point out that the server is running
+**read only** and **scoped to one project**. Claude cannot drop a table here
+even if a prompt told it to, and it cannot see any other project on the account.
+
+Then the honest part: the loading earlier used a full database password, which
+is unscoped and not revocable per person. For a real client you issue a read
+only role for the analyst. Say it, do not dwell. Their IT team will ask first.
+
+**If it fails, skip it.** Nothing downstream depends on this stage. Everything
+after it runs from the CSVs exactly as before.
 
 ---
 

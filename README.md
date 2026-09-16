@@ -16,6 +16,8 @@ Everything needed to run the live build, in one folder.
     RUNBOOK.md            what to type, what to say, what to do if it stalls
     output/               where every build lands, overwritten every run
     fallback/             a saved copy of a working build, never overwritten
+    load_to_supabase.py   pushes the cleaned tables into Postgres, optional
+    SUPABASE.md           ten minute setup for the database stage
 
 ## Running it
 

@@ -34,6 +34,20 @@ the missed calls question. Read them before building a second one. The pattern
 is: template holds placeholders, `verify_calls.py` writes the ledger,
 `build_story.py` substitutes. Follow it rather than inventing a new one.
 
+## Postgres, when it is set up
+
+`load_to_supabase.py` pushes the **cleaned** tables into a `northgate` schema,
+plus a `v_calls` view that carries the definition of unanswered. The raw export
+stays messy on disk on purpose.
+
+When answering a question against the database:
+
+- **Use the view.** Never redefine unanswered inside your own query. If the
+  definition is wrong, change the view, not the query.
+- Show the SQL before you run it, and show it beside its result.
+- The connection string lives in `.env` as `SUPABASE_DB_URL`. Never print it,
+  never write it into a file, never put it in a commit.
+
 ## Regenerating
 
     python3 generate_calls.py --seed 42     # reproducible raw files
