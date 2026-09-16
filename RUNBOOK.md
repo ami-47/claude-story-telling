@@ -66,6 +66,15 @@ the argument. Do not rescue the silence after step 4.
 
 ## Demo 1 · Generate insights directly from the files
 
+**Setup, before it runs.** From a spreadsheet to a finding. We open a set of
+raw operational files, profile them, and get to one claim worth putting in
+front of the client.
+
+**What to watch**
+- The files are exactly what a client would send
+- Nothing is cleaned beforehand
+- Watch where it asks rather than guesses
+
 **While profiling runs.** This is the step everyone skips. You have a client
 waiting, so you go straight to the answer, and three weeks later somebody
 finds the join dropped four hundred rows and the engagement is suspect.
@@ -89,10 +98,28 @@ one window.
 the room what they would do about it. Then reveal the sample size. That beat
 sells Demo 4 better than any explanation of Demo 4.
 
+**Debrief.** One claim, traced back to the rows it came from.
+- The clean up happened in code, so it can be rerun
+- The number can be recomputed on demand
+- The first answer was not the useful one — the practice director's belief
+  ("not enough people are finding us") gets tested here and doesn't hold;
+  the real number is about who answers the phone, not who calls it
+
+**What we got.** The client sent us this file. We sent back a claim, and the
+code that produced it.
+
 ---
 
 ## Demo 2 · Do the same with MCP
 ### optional, skip it entirely if Supabase is asleep or the wifi is bad
+
+**Setup, before it runs.** The same question against live data. Same
+question, but connected to the source rather than a file somebody exported.
+
+**What to watch**
+- No export step and no stale data
+- Access is the constraint, not capability
+- Same method, different plumbing
 
 **Why it is here.** Demo 1 produced an answer, once, from a snapshot. This
 produces a source the practice can keep asking. It is also the only place in
@@ -127,6 +154,14 @@ ask first.
 **If it fails, skip it.** Nothing downstream depends on this demo. Demos 3
 and 4 both run from the ledger Demo 1 already wrote.
 
+**Debrief.** Nothing about the analysis. Everything about repeating it.
+- Runs again next month with no one emailing a file
+- The definitions live in their system, not our spreadsheet
+- Worth asking for on day one of an engagement
+
+**What changed.** Ask for access in the kick off, not in week three when you
+need it.
+
 ---
 
 ## Demo 3 · Dashboard
@@ -135,9 +170,47 @@ Already built, offstage, before the room (see "Before the room" above).
 Nothing to run live — just open `output/dashboard/dashboard.html`, which
 already happened in "Open cold."
 
+**Setup, before it's opened.** Same facts, no argument. The same ledger
+Demo 1 wrote, laid out as the kind of dashboard the room already owns —
+opened before anyone has seen the actual finding, not after.
+
+**What to watch**
+- Same analysis as Demo 1, not a new one — every tile traces to the same
+  ledger
+- A few tiles, each one a real, correctly scoped number
+- Looks exactly as finished as the page that follows it
+
+**This is not a "build it because someone will use it weekly" pitch.** That
+is a real, separate case for a real dashboard, and it's a fair one to make
+with a client — but it isn't what this demo is for. This dashboard exists to
+be wrong in one specific, honest way: nothing on it is scoped to the one
+hour that matters, and it still looks complete. If someone asks whether a
+dashboard like this is worth building for a client, the answer is the
+standard one — only if someone will actually look at it on a schedule, not
+because it's now cheap to build — but say that as a side note, not the
+point of this demo.
+
+**Debrief.** It looks complete. It answers nothing.
+- Every tile is true and none of them says why the lunch hour is different
+- A dashboard can be honest tile by tile and still miss the whole point
+- The gap the room just felt, in "Open cold," was never in the data
+
+**Why this exists.** Not because someone will use it — because it proves the
+gap was in the argument, not the numbers.
+
 ---
 
 ## Demo 4 · Skills-based creation of the storytelling page
+
+**Setup, before it runs.** Writing the client-facing page. Turning the
+finding into the page you would actually send, using a skill that holds our
+structure.
+
+**What to watch**
+- The five beats, applied by the skill: belief, question, reveal, mechanism,
+  decision
+- Every number pinned to its source
+- Same structure whoever runs it
 
 **While the sceptic runs.** Anyone can find a correlation in twenty seconds
 now. What a client pays you for is being able to say what else you ruled
@@ -159,6 +232,14 @@ method in one screen.
 **The close.** Scroll to the receipts. Every figure, its method, its
 sources, its sample size. Ask who in the room could produce that for the
 last analysis they sent a client.
+
+**Debrief.** The writing is generated. The numbers are not.
+- Figures are substituted in, never typed by the model
+- A check recomputes them before it goes out
+- This is the part that makes it safe to send
+
+**Why it holds up.** This is the artefact the client keeps. Everything
+before it was how we got here.
 
 ---
 

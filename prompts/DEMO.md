@@ -40,6 +40,9 @@ every later demo reads from, so Demo 1 has to run before Demos 3 and 4.
 12:30–13:30 window against 6.6% outside it. Demo 2 reproduces this same
 number a different way.
 
+**What we got.** The client sent us this file. We sent back a claim, and the
+code that produced it.
+
 ---
 
 # Demo 2 · Do the same with MCP
@@ -76,6 +79,9 @@ keep asking, not a new snapshot to maintain.
 **If Supabase is unreachable, skip this demo entirely.** Nothing later
 depends on it.
 
+**What changed.** Ask for access in the kick off, not in week three when you
+need it.
+
 ---
 
 # Demo 3 · Dashboard
@@ -94,6 +100,12 @@ once and left alone — never rebuilt live.
 
 **What it produces.** The same facts as Demo 1, laid out as a dashboard that
 looks complete and answers nothing about why the lunch hour is different.
+
+**Why this exists.** Not because someone will use it — because it proves the
+gap the room feels in "Open cold" was in the argument, not the numbers. (A
+real client dashboard is a different, legitimate case: build one because
+someone will actually look at it on a schedule, not because it's now cheap
+to build. That's not what this one is for.)
 
 ---
 
@@ -121,6 +133,11 @@ and `output/story.artifact.html`.
 
 **What it produces.** The same facts as Demos 1–3, now with the mechanism
 and a decision attached. This is the page the session opens with.
+
+**Why it holds up.** This is the artefact the client keeps. Everything
+before it was how we got here. The writing is generated; the numbers are
+not — they're substituted in, never typed by the model, and the sceptic
+checked them before this step ever ran.
 
 ---
 
