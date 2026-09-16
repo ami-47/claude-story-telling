@@ -16,8 +16,14 @@ Four stages, in order. Do not skip one because the answer seems obvious.
 4. **Compose.** Use the `storywright` subagent and the `story-craft` skill.
    Five beats. Placeholders, not numbers.
 
-These four stages are the generalisable pipeline: point them at a different
-client's data and the same four stages run, unchanged.
+Stages 1 to 3 are the generalisable pipeline: point them at a different
+client's data and profile, compute and attack all run unchanged. Stage 4 is
+the exception. `story.template.html` is one specific, hand-written page, and
+`build_story.py` only substitutes fact values into that same fixed prose —
+it does not write new prose. Reusing it for a different question would
+either break (a referenced fact id that doesn't exist) or silently show new
+numbers next to old, unrelated sentences. A genuinely different story means
+writing a new template by hand, a real task, not a prompt away.
 
 **Separately, offstage, once:** the `dashwright` subagent and the
 `dashboard-craft` skill build `output/dashboard/dashboard.html`, the

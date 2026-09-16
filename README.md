@@ -35,8 +35,13 @@ the skills and subagents are live immediately.
 ## The point of the folder
 
 Nothing in `.claude/` mentions clinics, calls, or Northgate. Point it at a
-different client's data and the same four stages run. That is the deliverable.
-The story page is only the proof that it works.
+different client's data and profile, compute and attack all run unchanged.
+That is the deliverable. Composing a finished story page is the one
+exception: `story.template.html` is a specific, hand-written page, and
+`build_story.py` only ever substitutes values into that same fixed prose. A
+genuinely different story means writing a new template, not a prompt away.
+The story page here is proof the first three stages work; it is not proof
+the fourth generalises for free.
 
 ## A note on the data
 

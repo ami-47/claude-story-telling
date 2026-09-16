@@ -166,15 +166,23 @@ last analysis they sent a client.
 
 Open `.claude/`. Three skills, three subagents (`data-profile`,
 `fact-ledger`, `story-craft`; `analyst`, `sceptic`, `storywright`), and not
-one of them mentions a clinic, a call or a client. Read one aloud. That is
-the generalisable pipeline: point it at a different engagement and Demos 1
-and 4 both run unchanged.
+one of them mentions a clinic, a call or a client. Read one aloud.
 
 (`dashboard-craft` and `dashwright` are a separate pair, used only to build
 the Demo 3 prop offstage before the room. They are not part of this count.)
 
-Then run the second case. Same prompts, different question, and it works
-without anyone rewriting anything.
+**Be precise about what generalises and what doesn't.** Profile, Compute and
+the sceptic genuinely do: fresh code, fresh ledger, fresh verdict, whatever
+the question. Composing a finished page doesn't, not with this pipeline —
+`story.template.html` is one specific, hand-written page, and reusing it for
+a different question would silently show new numbers next to old, unrelated
+prose. Say that limit out loud rather than let the room assume otherwise;
+it's a more honest and more interesting claim than "everything generalises."
+
+Then run the second case (profile, compute, sceptic only — see
+`prompts/DEMO.md`). Same prompts, different question, and it works without
+anyone rewriting anything, up to the point where a finished page would need
+writing.
 
 That is the moment the session stops being a demo.
 

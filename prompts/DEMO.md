@@ -126,12 +126,25 @@ and a decision attached. This is the page the session opens with.
 
 # The second case
 
-Run Demo 1 and Demo 4 again (Demo 2 and Demo 3 don't need repeating to make
-the point), one different question. Shows that the folder is the deliverable,
-not the story.
+Run Demo 1 again, then the sceptic half of Demo 4 (skip the storywright half
+— see below for why). One different question. Shows that the folder is the
+deliverable, not the story.
 
 > Different question, same pipeline. `marketing_spend.csv` and `enquiries.csv`
 > hold six months of paid channels and what came of them.
 >
-> Which channel actually produced patients, rather than clicks? Run the four
-> stages. Watch the sample sizes.
+> Which channel actually produced patients, rather than clicks? Profile,
+> compute, then use the sceptic. Watch the sample sizes and watch the ranking
+> change depending on which denominator you use.
+
+**Why not the storywright half too.** Demo 1 through the sceptic genuinely
+generalises — fresh code, fresh ledger, fresh verdict, whatever the question.
+Composing a finished page doesn't, not with this pipeline: `story.template.html`
+is one specific, hand-written page about the missed-calls story, and
+`build_story.py` only ever substitutes fact values into that same fixed
+prose. Pointed at a different question, it would either break (referencing a
+fact id that doesn't exist) or silently show new numbers next to old,
+unrelated sentences — exactly the kind of quiet mismatch this whole kit
+exists to prevent. A genuinely different story page means writing a new
+template by hand, which is real work, not a one-prompt live demo. Don't
+imply otherwise on stage.
